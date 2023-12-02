@@ -84,7 +84,7 @@ console.log(json);
 
  // Fix
 ### Basic Usage
-  // Fix
+ // Fix
 
  // Optimization
 ```typescript
