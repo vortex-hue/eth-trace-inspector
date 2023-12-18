@@ -55,6 +55,7 @@ export async function inspectTransaction(
  ]);
 
  // Get block timestamp
+  // TODO
  const timestamp = await getBlockTimestamp(provider, receipt.blockNumber).catch(
   () => undefined
  );
