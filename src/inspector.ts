@@ -55,6 +55,7 @@ export async function inspectTransaction(
  ]);
 
  // Get block timestamp
+  // TODO
  const timestamp = await getBlockTimestamp(provider, receipt.blockNumber).catch(
   () => undefined
  );
@@ -166,6 +167,7 @@ export async function inspectTransaction(
   status: receipt.status === 1,
   callStack,
   events,
+  // TODO
   revertReason,
   chainId: finalChainId,
   timestamp,
@@ -208,3 +210,4 @@ function collectAddressesFromTrace(
 
 
 // Fix
+
