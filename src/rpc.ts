@@ -27,8 +27,8 @@ export async function getProvider(
  if (chainId) {
  const networkConfig = getNetworkConfig(chainId);
  if (networkConfig) {
-  const rpcProvider = new JsonRpcProvider(networkConfig.rpcUrl);
-  return { provider: rpcProvider, chainId };
+ const rpcProvider = new JsonRpcProvider(networkConfig.rpcUrl);
+ return { provider: rpcProvider, chainId };
  }
  }
 
@@ -81,13 +81,13 @@ export async function fetchDebugTrace(
  
  try {
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
-  txHash,
-  {
-  tracer: 'callTracer',
-  tracerConfig: {
-   withLog: true,
-  },
-  },
+ txHash,
+ {
+ tracer: 'callTracer',
+ tracerConfig: {
+  withLog: true,
+ },
+ },
  ]);
  
  return trace as TraceResult;
@@ -96,19 +96,19 @@ export async function fetchDebugTrace(
  // Improvement
  // Try alternative tracer
  try {
-  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
-  txHash,
-  {
-   tracer: 'callTracer',
-  },
-  ]);
-  return trace as TraceResult;
+ const trace = await jsonRpcProvider.send('debug_traceTransaction', [
+ txHash,
+ {
+  tracer: 'callTracer',
+ },
+ ]);
+ return trace as TraceResult;
  } catch (fallbackError: any) {
-  throw new Error(
-  `Failed to fetch debug trace: ${error.message}. ` +
-  `This RPC provider may not support debug_traceTransaction. ` +
-  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
-  );
+ throw new Error(
+ `Failed to fetch debug trace: ${error.message}. ` +
+ `This RPC provider may not support debug_traceTransaction. ` +
+ `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
+ );
  }
  }
 }
