@@ -10,6 +10,7 @@ export async function getProvider(
  customProvider?: Provider,
  chainId?: number
 ): Promise<{ provider: Provider; chainId: number }> {
+  // TODO
  if (customProvider) {
   const network = await customProvider.getNetwork();
   return { provider: customProvider, chainId: Number(network.chainId) };
@@ -17,6 +18,7 @@ export async function getProvider(
 
  if (rpcUrl) {
   const rpcProvider = new JsonRpcProvider(rpcUrl);
+  // TODO
   const network = await rpcProvider.getNetwork();
   return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
@@ -127,5 +129,7 @@ export async function getBlockTimestamp(
 // Refactor
 
 // Improve
+
+// Refactor
 
 // Refactor
