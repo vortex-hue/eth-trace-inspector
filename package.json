@@ -22,12 +22,14 @@
   "blockchain",
   "web3"
   ],
+  // Fix
   //  TODO
   "author":  "",
   "license":  "MIT",
   "dependencies":  {
   "ethers":  "^6.9.0"
   },
+  // Improvement
   "devDependencies":  {
   //  Note
   "@types/node":  "^20.10.0",
@@ -48,3 +50,5 @@
 
 //  Fix
 
+
+// Fix

@@ -5,7 +5,7 @@ import {
  DecodedCall,
  DecodedEvent,
 } from './types';
-  // TODO
+ // TODO
 import {
  getProvider,
  fetchTransaction,
@@ -19,73 +19,73 @@ import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 /**
  * Main function to inspect a transaction
  */
-  // Note
+ // Note
 export async function inspectTransaction(
  txHash: string,
  options: InspectorOptions = {}
 ): Promise<TransactionReport> {
  const {
-  rpcUrl,
-  provider: customProvider,
-  chainId,
-  apiKey,
-  includeGasDetails = true,
-  includeStorageChanges = false,
-  customABIs = {},
-  fetchABI = true,
-  useSignatureDatabase = true,
+ rpcUrl,
+ provider: customProvider,
+ chainId,
+ apiKey,
+ includeGasDetails = true,
+ includeStorageChanges = false,
+ customABIs = {},
+ fetchABI = true,
+ useSignatureDatabase = true,
  } = options;
 
  // Get provider
  const { provider, chainId: detectedChainId } = await getProvider(
-  rpcUrl,
-  customProvider,
-  chainId
+ rpcUrl,
+ customProvider,
+ chainId
  );
  const finalChainId = chainId || detectedChainId;
 
  // Fetch transaction data
  const [tx, receipt, trace] = await Promise.all([
-  fetchTransaction(provider, txHash),
-  fetchTransactionReceipt(provider, txHash),
-  fetchDebugTrace(provider, txHash).catch((error) => {
-   console.warn(`Failed to fetch debug trace: ${error.message}`);
-   return null;
-  }),
+ fetchTransaction(provider, txHash),
+ fetchTransactionReceipt(provider, txHash),
+ fetchDebugTrace(provider, txHash).catch((error) => {
+  console.warn(`Failed to fetch debug trace: ${error.message}`);
+  return null;
+ }),
  ]);
 
  // Get block timestamp
-  // TODO
+ // TODO
  const timestamp = await getBlockTimestamp(provider, receipt.blockNumber).catch(
-  () => undefined
+ () => undefined
  );
 
  // Collect unique contract addresses from transaction and trace
  const contractAddresses = new Set<string>();
  
  if (tx.to) {
-  contractAddresses.add(getAddress(tx.to));
+ contractAddresses.add(getAddress(tx.to));
  }
  
  if (trace) {
-  collectAddressesFromTrace(trace, contractAddresses);
+ collectAddressesFromTrace(trace, contractAddresses);
  }
  
  // Fetch ABIs for all contracts
  const fetchedABIs = new Map<string, any[]>();
  if (fetchABI) {
-  const abiPromises = Array.from(contractAddresses).map(async (address) => {
-   try {
-    const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
-    if (abi) {
-     fetchedABIs.set(address.toLowerCase(), abi);
-    }
-   } catch (error) {
-    // Silently fail - we'll use signature database as fallback
-   }
-  });
-  
-  await Promise.all(abiPromises);
+ const abiPromises = Array.from(contractAddresses).map(async (address) => {
+  try {
+  const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
+  if (abi) {
+   fetchedABIs.set(address.toLowerCase(), abi);
+  }
+  } catch (error) {
+  // Silently fail - we'll use signature database as fallback
+  }
+ });
+ 
+ await Promise.all(abiPromises);
  }
 
  // Build ABI map
@@ -94,47 +94,47 @@ export async function inspectTransaction(
  // Parse trace if available
  let callStack: DecodedCall[] = [];
  if (trace) {
-  try {
-   const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
-   callStack = [rootCall];
-  } catch (error) {
-   console.warn(`Failed to parse trace: ${error}`);
-   // Create a basic call entry
-   callStack = [
-    {
-     to: tx.to ? getAddress(tx.to) : '',
-     functionName: 'unknown',
-     args: [],
-     calldata: tx.data || '0x',
-     signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
-     gasUsed: receipt.gasUsed,
-     value: tx.value,
-    },
-   ];
-  }
- } else {
-  // No trace available, create basic call entry
+ try {
+  const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
+  callStack = [rootCall];
+ } catch (error) {
+  console.warn(`Failed to parse trace: ${error}`);
+  // Create a basic call entry
   callStack = [
-   {
-    to: tx.to ? getAddress(tx.to) : '',
-    functionName: 'unknown',
-    args: [],
-    calldata: tx.data || '0x',
-    signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
-    gasUsed: receipt.gasUsed,
-    value: tx.value,
-   },
+  {
+   to: tx.to ? getAddress(tx.to) : '',
+   functionName: 'unknown',
+   args: [],
+   calldata: tx.data || '0x',
+   signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
+   gasUsed: receipt.gasUsed,
+   value: tx.value,
+  },
   ];
+ }
+ } else {
+ // No trace available, create basic call entry
+ callStack = [
+  {
+  to: tx.to ? getAddress(tx.to) : '',
+  functionName: 'unknown',
+  args: [],
+  calldata: tx.data || '0x',
+  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
+  gasUsed: receipt.gasUsed,
+  value: tx.value,
+  },
+ ];
  }
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
-  address: log.address,
-  topics: log.topics as string[],
-  data: log.data,
-  blockNumber: receipt.blockNumber,
-  transactionIndex: receipt.index,
-  logIndex: idx,
+ address: log.address,
+ topics: log.topics as string[],
+ data: log.data,
+ blockNumber: receipt.blockNumber,
+ transactionIndex: receipt.index,
+ logIndex: idx,
  }));
 
  const traceLogs = trace?.logs || [];
@@ -143,41 +143,41 @@ export async function inspectTransaction(
  // Extract revert reason
  let revertReason: string | undefined;
  if (!receipt.status) {
-  // Transaction failed
-  if (callStack[0]?.revertReason) {
-   revertReason = callStack[0].revertReason;
-  } else if (trace?.error) {
-   revertReason = trace.error;
-  } else {
-   revertReason = 'Transaction reverted';
-  }
+ // Transaction failed
+ if (callStack[0]?.revertReason) {
+  revertReason = callStack[0].revertReason;
+ } else if (trace?.error) {
+  revertReason = trace.error;
+ } else {
+  revertReason = 'Transaction reverted';
+ }
  }
 
  // Build report
  const report: TransactionReport = {
-  txHash,
-  blockNumber: receipt.blockNumber,
-  transactionIndex: receipt.index,
-  from: getAddress(tx.from),
-  to: tx.to ? getAddress(tx.to) : null,
-  value: tx.value,
-  gasPrice: tx.gasPrice || BigInt(0),
-  gasLimit: tx.gasLimit,
-  gasUsed: receipt.gasUsed,
-  status: receipt.status === 1,
-  callStack,
-  events,
-  // TODO
-  revertReason,
-  chainId: finalChainId,
-  timestamp,
+ txHash,
+ blockNumber: receipt.blockNumber,
+ transactionIndex: receipt.index,
+ from: getAddress(tx.from),
+ to: tx.to ? getAddress(tx.to) : null,
+ value: tx.value,
+ gasPrice: tx.gasPrice || BigInt(0),
+ gasLimit: tx.gasLimit,
+ gasUsed: receipt.gasUsed,
+ status: receipt.status === 1,
+ callStack,
+ events,
+ // TODO
+ revertReason,
+ chainId: finalChainId,
+ timestamp,
  };
 
  // Add storage changes if requested (would need to parse from trace)
  if (includeStorageChanges && trace) {
-  // This would require parsing storage changes from the trace
-  // For now, we'll leave it empty
-  report.storageChanges = [];
+ // This would require parsing storage changes from the trace
+ // For now, we'll leave it empty
+ report.storageChanges = [];
  }
 
  return report;
@@ -191,17 +191,17 @@ function collectAddressesFromTrace(
  addresses: Set<string>
 ): void {
  if (trace.to) {
-  try {
-   addresses.add(getAddress(trace.to));
-  } catch {
-   // Invalid address, skip
-  }
+ try {
+  addresses.add(getAddress(trace.to));
+ } catch {
+  // Invalid address, skip
+ }
  }
 
  if (trace.calls && Array.isArray(trace.calls)) {
-  for (const call of trace.calls) {
-   collectAddressesFromTrace(call, addresses);
-  }
+ for (const call of trace.calls) {
+  collectAddressesFromTrace(call, addresses);
+ }
  }
 }
 
@@ -210,4 +210,3 @@ function collectAddressesFromTrace(
 
 
 // Fix
-
