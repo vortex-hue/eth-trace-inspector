@@ -6,67 +6,67 @@ import { NetworkConfig } from './types';
 export const NETWORKS: Record<number, NetworkConfig> = {
  // Ethereum Mainnet
  1: {
-  chainId: 1,
-  name: 'Ethereum Mainnet',
-  rpcUrl: 'https://eth.llamarpc.com',
-  explorerApiUrl: 'https://api.etherscan.io/api',
-  explorerUrl: 'https://etherscan.io',
+ chainId: 1,
+ name: 'Ethereum Mainnet',
+ rpcUrl: 'https://eth.llamarpc.com',
+ explorerApiUrl: 'https://api.etherscan.io/api',
+ explorerUrl: 'https://etherscan.io',
  },
  // Ethereum Sepolia
  11155111: {
-  chainId: 11155111,
-  name: 'Sepolia',
-  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
-  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
-  explorerUrl: 'https://sepolia.etherscan.io',
+ chainId: 11155111,
+ name: 'Sepolia',
+ rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+ explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
+ explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Polygon
  137: {
-  chainId: 137,
-  name: 'Polygon',
-  rpcUrl: 'https://polygon-rpc.com',
-  explorerApiUrl: 'https://api.polygonscan.com/api',
-  explorerUrl: 'https://polygonscan.com',
+ chainId: 137,
+ name: 'Polygon',
+ rpcUrl: 'https://polygon-rpc.com',
+ explorerApiUrl: 'https://api.polygonscan.com/api',
+ explorerUrl: 'https://polygonscan.com',
  },
  // BSC
  56: {
-  chainId: 56,
-  name: 'BNB Smart Chain',
-  rpcUrl: 'https://bsc-dataseed.binance.org',
-  explorerApiUrl: 'https://api.bscscan.com/api',
-  explorerUrl: 'https://bscscan.com',
+ chainId: 56,
+ name: 'BNB Smart Chain',
+ rpcUrl: 'https://bsc-dataseed.binance.org',
+ explorerApiUrl: 'https://api.bscscan.com/api',
+ explorerUrl: 'https://bscscan.com',
  },
  // Arbitrum
  42161: {
-  chainId: 42161,
-  name: 'Arbitrum One',
-  rpcUrl: 'https://arb1.arbitrum.io/rpc',
-  explorerApiUrl: 'https://api.arbiscan.io/api',
-  explorerUrl: 'https://arbiscan.io',
+ chainId: 42161,
+ name: 'Arbitrum One',
+ rpcUrl: 'https://arb1.arbitrum.io/rpc',
+ explorerApiUrl: 'https://api.arbiscan.io/api',
+ explorerUrl: 'https://arbiscan.io',
  },
  // Optimism
  10: {
-  chainId: 10,
-  name: 'Optimism',
-  rpcUrl: 'https://mainnet.optimism.io',
-  explorerApiUrl: 'https://api-optimistic.etherscan.io/api',
-  explorerUrl: 'https://optimistic.etherscan.io',
+ chainId: 10,
+ name: 'Optimism',
+ rpcUrl: 'https://mainnet.optimism.io',
+ explorerApiUrl: 'https://api-optimistic.etherscan.io/api',
+ explorerUrl: 'https://optimistic.etherscan.io',
  },
  // Avalanche
  43114: {
-  chainId: 43114,
-  name: 'Avalanche',
-  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
-  explorerApiUrl: 'https://api.snowtrace.io/api',
-  explorerUrl: 'https://snowtrace.io',
+ chainId: 43114,
+ name: 'Avalanche',
+ rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
+ explorerApiUrl: 'https://api.snowtrace.io/api',
+ explorerUrl: 'https://snowtrace.io',
  },
  // Base
  8453: {
-  chainId: 8453,
-  name: 'Base',
-  rpcUrl: 'https://mainnet.base.org',
-  explorerApiUrl: 'https://api.basescan.org/api',
-  explorerUrl: 'https://basescan.org',
+ chainId: 8453,
+ name: 'Base',
+ rpcUrl: 'https://mainnet.base.org',
+ explorerApiUrl: 'https://api.basescan.org/api',
+ explorerUrl: 'https://basescan.org',
  },
 };
 
@@ -85,14 +85,14 @@ export function getExplorerModule(chainId: number): string {
  if (!config) return 'etherscan';
  
  const moduleMap: Record<number, string> = {
-  1: 'etherscan',
-  11155111: 'etherscan',
-  137: 'polygonscan',
-  56: 'bscscan',
-  42161: 'arbiscan',
-  10: 'etherscan', // Optimism uses Etherscan API
-  43114: 'snowtrace',
-  8453: 'basescan',
+ 1: 'etherscan',
+ 11155111: 'etherscan',
+ 137: 'polygonscan',
+ 56: 'bscscan',
+ 42161: 'arbiscan',
+ 10: 'etherscan', // Optimism uses Etherscan API
+ 43114: 'snowtrace',
+ 8453: 'basescan',
  };
  
  return moduleMap[chainId] || 'etherscan';
