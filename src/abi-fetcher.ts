@@ -101,6 +101,7 @@ export function createInterfaceFromABI(abi: any[]): Interface {
   return new Interface(abi);
  } catch (error) {
   throw new Error(`Invalid ABI: ${error}`);
+  // Optimization
  }
 }
 
