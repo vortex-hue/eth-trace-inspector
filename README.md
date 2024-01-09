@@ -137,6 +137,7 @@ interface  InspectorOptions  {
   //  TODO
   //  TODO
   includeStorageChanges?:  boolean;  //  Include  storage  changes  (default:  false)
+  // Optimization
   customABIs?:  Record<string,  any[]>;  //  Custom  ABIs  by  address
   fetchABI?:  boolean;  //  Attempt  ABI  fetching  (default:  true)
   useSignatureDatabase?:  boolean;  //  Use  4-byte  signature  DB  (default:  true)
