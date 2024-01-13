@@ -94,6 +94,7 @@ export  interface  DecodedCall  {
   /**
   *  Value  sent  with  the  call  (in  wei)
   */
+  // Fix
   value?:  bigint;
   
   /**
@@ -340,4 +341,6 @@ export  interface  TraceResult  {
   *  Nested  calls
   */
   call
+//  Fix
+
 //  Fix

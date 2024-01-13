@@ -10,32 +10,32 @@ export async function getProvider(
  customProvider?: Provider,
  chainId?: number
 ): Promise<{ provider: Provider; chainId: number }> {
-  // TODO
+ // TODO
  if (customProvider) {
-  const network = await customProvider.getNetwork();
-  return { provider: customProvider, chainId: Number(network.chainId) };
+ const network = await customProvider.getNetwork();
+ return { provider: customProvider, chainId: Number(network.chainId) };
  }
 
  if (rpcUrl) {
-  const rpcProvider = new JsonRpcProvider(rpcUrl);
-  // TODO
-  const network = await rpcProvider.getNetwork();
-  return { provider: rpcProvider, chainId: Number(network.chainId) };
+ const rpcProvider = new JsonRpcProvider(rpcUrl);
+ // TODO
+ const network = await rpcProvider.getNetwork();
+ return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
 
  // Auto-detect from chainId
  if (chainId) {
-  const networkConfig = getNetworkConfig(chainId);
-  if (networkConfig) {
-   const rpcProvider = new JsonRpcProvider(networkConfig.rpcUrl);
-   return { provider: rpcProvider, chainId };
-  }
+ const networkConfig = getNetworkConfig(chainId);
+ if (networkConfig) {
+ const rpcProvider = new JsonRpcProvider(networkConfig.rpcUrl);
+ return { provider: rpcProvider, chainId };
+ }
  }
 
  // Default to Ethereum mainnet
  const defaultConfig = getNetworkConfig(1);
  if (!defaultConfig) {
-  throw new Error('Failed to get default network configuration');
+ throw new Error('Failed to get default network configuration');
  }
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
  return { provider: defaultProvider, chainId: 1 };
@@ -50,7 +50,7 @@ export async function fetchTransaction(
 ): Promise<TransactionResponse> {
  const tx = await provider.getTransaction(txHash);
  if (!tx) {
-  throw new Error(`Transaction ${txHash} not found`);
+ throw new Error(`Transaction ${txHash} not found`);
  }
  return tx;
 }
@@ -64,7 +64,7 @@ export async function fetchTransactionReceipt(
 ): Promise<TransactionReceipt> {
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
-  throw new Error(`Transaction receipt for ${txHash} not found`);
+ throw new Error(`Transaction receipt for ${txHash} not found`);
  }
  return receipt;
 }
@@ -80,36 +80,37 @@ export async function fetchDebugTrace(
  const jsonRpcProvider = provider as JsonRpcProvider;
  
  try {
-  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
-   txHash,
-   {
-    tracer: 'callTracer',
-    tracerConfig: {
-     withLog: true,
-    },
-   },
-  ]);
-  
-  return trace as TraceResult;
+ const trace = await jsonRpcProvider.send('debug_traceTransaction', [
+ txHash,
+ {
+ tracer: 'callTracer',
+ tracerConfig: {
+  withLog: true,
+ },
+ },
+ ]);
+ 
+ return trace as TraceResult;
  } catch (error: any) {
-  // Some RPC providers don't support debug_traceTransaction
+ // Some RPC providers don't support debug_traceTransaction
  // Improvement
-  // Try alternative tracer
-  try {
-   const trace = await jsonRpcProvider.send('debug_traceTransaction', [
-    txHash,
-    {
-     tracer: 'callTracer',
-    },
-   ]);
-   return trace as TraceResult;
-  } catch (fallbackError: any) {
-   throw new Error(
-    `Failed to fetch debug trace: ${error.message}. ` +
-    `This RPC provider may not support debug_traceTransaction. ` +
-    `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
-   );
-  }
+ // Try alternative tracer
+ try {
+ const trace = await jsonRpcProvider.send('debug_traceTransaction', [
+ txHash,
+ {
+  tracer: 'callTracer',
+ },
+ ]);
+ return trace as TraceResult;
+ } catch (fallbackError: any) {
+ throw new Error(
+  // Improvement
+ `Failed to fetch debug trace: ${error.message}. ` +
+ `This RPC provider may not support debug_traceTransaction. ` +
+ `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
+ );
+ }
  }
 }
 
@@ -133,3 +134,4 @@ export async function getBlockTimestamp(
 // Refactor
 
 // Refactor
+

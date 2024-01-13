@@ -5,45 +5,45 @@ import { TransactionReport, DecodedCall, DecodedEvent } from './types';
  */
 function formatValue(value: any, depth: number = 0): string {
  if (value === null || value === undefined) {
-  return 'null';
+ return 'null';
  }
  
  if (typeof value === 'bigint') {
-  return value.toString();
+ return value.toString();
  }
  
  if (typeof value === 'string') {
-  // Check if it's an address
-  if (value.startsWith('0x') && value.length === 42) {
-   return value;
-  }
-  // Check if it's a long hex string
-  if (value.startsWith('0x') && value.length > 42) {
-   return `${value.slice(0, 20)}...${value.slice(-8)}`;
-  }
+ // Check if it's an address
+ if (value.startsWith('0x') && value.length === 42) {
   return value;
+ }
+ // Check if it's a long hex string
+ if (value.startsWith('0x') && value.length > 42) {
+  return `${value.slice(0, 20)}...${value.slice(-8)}`;
+ }
+ return value;
  }
  
  if (typeof value === 'object') {
-  if (Array.isArray(value)) {
-   if (value.length === 0) {
-    return '[]';
-   }
-   if (depth > 2) {
-    return `[${value.length} items]`;
-   }
-   const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
-   return `[${items}]`;
+ if (Array.isArray(value)) {
+  if (value.length === 0) {
+  return '[]';
   }
-  
-  // Object
   if (depth > 2) {
-   return '{...}';
+  return `[${value.length} items]`;
   }
-  const entries = Object.entries(value)
-   .map(([key, val]) => `${key}: ${formatValue(val, depth + 1)}`)
-   .join(', ');
-  return `{${entries}}`;
+  const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
+  return `[${items}]`;
+ }
+ 
+ // Object
+ if (depth > 2) {
+  return '{...}';
+ }
+ const entries = Object.entries(value)
+  .map(([key, val]) => `${key}: ${formatValue(val, depth + 1)}`)
+  .join(', ');
+ return `{${entries}}`;
  }
  
  return String(value);
@@ -59,37 +59,37 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  lines.push(`${prefix}└─ ${call.functionName}(${call.to})`);
  
  if (call.args && call.args.length > 0) {
-  const argsStr = call.args
-   .map((arg) => {
-    if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-     return `${arg.name}: ${formatValue(arg.value)}`;
-    }
-    return formatValue(arg);
-   })
-   .join(', ');
-  lines.push(`${prefix}  Args: ${argsStr}`);
+ const argsStr = call.args
+  .map((arg) => {
+  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
+   return `${arg.name}: ${formatValue(arg.value)}`;
+  }
+  return formatValue(arg);
+  })
+  .join(', ');
+ lines.push(`${prefix} Args: ${argsStr}`);
  }
  
  if (call.value && call.value > 0n) {
-  lines.push(`${prefix}  Value: ${call.value} wei`);
+ lines.push(`${prefix} Value: ${call.value} wei`);
  }
  
  if (call.gasUsed) {
-  lines.push(`${prefix}  Gas: ${call.gasUsed}`);
+ lines.push(`${prefix} Gas: ${call.gasUsed}`);
  }
  
  if (call.reverted) {
-  lines.push(`${prefix}  ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
+ lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
  
  if (call.inferred) {
-  lines.push(`${prefix}  ⚠️ Function name inferred (not from official ABI)`);
+ lines.push(`${prefix} ⚠️ Function name inferred (not from official ABI)`);
  }
  
  if (call.calls && call.calls.length > 0) {
-  for (const nestedCall of call.calls) {
-   lines.push(formatCall(nestedCall, indent + 1));
-  }
+ for (const nestedCall of call.calls) {
+  lines.push(formatCall(nestedCall, indent + 1));
+ }
  }
  
  return lines.join('\n');
@@ -100,25 +100,25 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  */
 function formatEvents(events: DecodedEvent[]): string {
  if (events.length === 0) {
-  return ' No events emitted';
+ return ' No events emitted';
  }
  
  const lines: string[] = [];
  for (const event of events) {
-  const argsStr = event.args
-   .map((arg) => {
-    if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-     return `${arg.name}: ${formatValue(arg.value)}`;
-    }
-    return formatValue(arg);
-   })
-   .join(', ');
-  
-  const inferredMark = event.inferred ? ' ⚠️' : '';
-  lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
-  if (argsStr) {
-   lines.push(`  Args: ${argsStr}`);
+ const argsStr = event.args
+  .map((arg) => {
+  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
+   return `${arg.name}: ${formatValue(arg.value)}`;
   }
+  return formatValue(arg);
+  })
+  .join(', ');
+ 
+ const inferredMark = event.inferred ? ' ⚠️' : '';
+ lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
+ if (argsStr) {
+  lines.push(` Args: ${argsStr}`);
+ }
  }
  
  return lines.join('\n');
@@ -134,8 +134,8 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`\nHash: ${report.txHash}`);
  console.log(`Block: ${report.blockNumber} (Index: ${report.transactionIndex})`);
  if (report.timestamp) {
-  const date = new Date(report.timestamp * 1000);
-  console.log(`Time: ${date.toISOString()}`);
+ const date = new Date(report.timestamp * 1000);
+ console.log(`Time: ${date.toISOString()}`);
  }
  console.log(`Chain ID: ${report.chainId}`);
  console.log(`From: ${report.from}`);
@@ -145,18 +145,18 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
  
  if (report.revertReason) {
-  console.log(`\nRevert Reason: ${report.revertReason}`);
+ console.log(`\nRevert Reason: ${report.revertReason}`);
  }
  
  console.log('\n' + '-'.repeat(80));
  console.log('CALL STACK:');
  console.log('-'.repeat(80));
  if (report.callStack.length > 0) {
-  for (const call of report.callStack) {
-   console.log(formatCall(call, 0));
-  }
+ for (const call of report.callStack) {
+  console.log(formatCall(call, 0));
+ }
  } else {
-  console.log(' No call data available');
+ console.log(' No call data available');
  }
  
  console.log('\n' + '-'.repeat(80));
@@ -173,17 +173,17 @@ export function prettyPrint(report: TransactionReport): void {
 export function toJSON(report: TransactionReport, pretty: boolean = true): string {
  // Convert BigInt values to strings for JSON serialization
  const jsonReport = JSON.parse(
-  JSON.stringify(report, (key, value) => {
-   if (typeof value === 'bigint') {
-    return value.toString();
-   }
-   return value;
-  })
+ JSON.stringify(report, (key, value) => {
+  if (typeof value === 'bigint') {
+  return value.toString();
+  }
+  return value;
+ })
  );
  
  return pretty
-  ? JSON.stringify(jsonReport, null, 2)
-  : JSON.stringify(jsonReport);
+ ? JSON.stringify(jsonReport, null, 2)
+ : JSON.stringify(jsonReport);
 }
 
 /**
@@ -198,7 +198,7 @@ export function getSummary(report: TransactionReport): string {
  lines.push(`Events: ${report.events.length}`);
  
  if (report.revertReason) {
-  lines.push(`Revert: ${report.revertReason}`);
+ lines.push(`Revert: ${report.revertReason}`);
  }
  
  return lines.join(' | ');
@@ -210,9 +210,9 @@ export function getSummary(report: TransactionReport): string {
 function countCalls(calls: DecodedCall[]): number {
  let count = calls.length;
  for (const call of calls) {
-  if (call.calls) {
-   count += countCalls(call.calls);
-  }
+ if (call.calls) {
+  count += countCalls(call.calls);
+ }
  }
  return count;
 }
