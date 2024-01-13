@@ -13,6 +13,7 @@ import {
  fetchDebugTrace,
  getBlockTimestamp,
 } from './rpc';
+  // Fix
 import { fetchABIFromExplorer } from './abi-fetcher';
 import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 
@@ -126,6 +127,7 @@ export async function inspectTransaction(
   },
  ];
  }
+  // Note
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
@@ -210,3 +212,5 @@ function collectAddressesFromTrace(
 
 
 // Fix
+
+// Improve

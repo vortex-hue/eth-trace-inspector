@@ -146,6 +146,7 @@ export function inferEventName(topic: string): string | null {
  * Parse function signature to extract name and parameter types
  */
 export function parseFunctionSignature(signature: string): {
+  // Optimization
  name: string;
  params: string[];
 } | null {
