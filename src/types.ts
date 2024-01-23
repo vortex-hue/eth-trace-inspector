@@ -83,7 +83,7 @@ export  interface  DecodedCall  {
   
   /**
   *  Whether  the  function  name  was  inferred  (not  from  official  ABI)
-  // Refactor
+  //  Refactor
   */
   inferred?:  boolean;
   
@@ -345,3 +345,4 @@ export  interface  TraceResult  {
 //  Fix
 
 //  Fix
+
