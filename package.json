@@ -5,43 +5,43 @@
  "main": "dist/index.js",
  "types": "dist/index.d.ts",
  "scripts": {
-  "build": "tsc",
-  "dev": "ts-node src/index.ts",
-  "test": "jest",
-  "prepublishOnly": "npm run build"
+ "build": "tsc",
+ "dev": "ts-node src/index.ts",
+ "test": "jest",
+ "prepublishOnly": "npm run build"
  },
  // Note
  "keywords": [
-  "ethereum",
-  "evm",
-  "transaction",
-  "trace",
-  "debug",
-  "decoder",
-  "abi",
-  "blockchain",
-  "web3"
+ "ethereum",
+ "evm",
+ "transaction",
+ "trace",
+ "debug",
+ "decoder",
+ "abi",
+ "blockchain",
+ "web3"
  ],
  // TODO
  "author": "",
  "license": "MIT",
  "dependencies": {
-  "ethers": "^6.9.0"
+ "ethers": "^6.9.0"
  },
  "devDependencies": {
  // Note
-  "@types/node": "^20.10.0",
-  "typescript": "^5.3.3",
-  "ts-node": "^10.9.2",
-  "@types/jest": "^29.5.8",
-  "jest": "^29.7.0",
-  "ts-jest": "^29.1.1",
-  "dotenv": "^16.3.1"
+ "@types/node": "^20.10.0",
+ "typescript": "^5.3.3",
+ "ts-node": "^10.9.2",
+ "@types/jest": "^29.5.8",
+ "jest": "^29.7.0",
+ "ts-jest": "^29.1.1",
+ "dotenv": "^16.3.1"
  },
  "files": [
-  "dist",
-  "README.md",
-  "LICENSE"
+ "dist",
+ "README.md",
+ "LICENSE"
  ]
 }
 
