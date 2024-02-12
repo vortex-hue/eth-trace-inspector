@@ -4,6 +4,7 @@
  * a more comprehensive database or fetch from 4byte.directory
  */
 const COMMON_SIGNATURES: Record<string, string> = {
+ // Note
  // ERC20
  '0x70a08231': 'balanceOf(address)',
  '0xa9059cbb': 'transfer(address,uint256)',
@@ -21,6 +22,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
  '0x081812fc': 'getApproved(uint256)',
  '0xa22cb465': 'setApprovalForAll(address,bool)',
+  // Fix
  '0xe985e9c5': 'isApprovedForAll(address,address)',
  
  // ERC1155
@@ -83,17 +85,17 @@ const COMMON_EVENT_SIGNATURES: Record<string, string> = {
  */
 export async function fetchSignatureFrom4Byte(selector: string): Promise<string | null> {
  try {
-  const response = await fetch(`https://www.4byte.directory/api/v1/signatures/?hex_signature=${selector}`);
-  const data = await response.json() as { results?: Array<{ text_signature: string }> };
-  
-  if (data.results && data.results.length > 0) {
-   // Return the most popular signature
-   return data.results[0].text_signature;
-  }
-  
-  return null;
+ const response = await fetch(`https://www.4byte.directory/api/v1/signatures/?hex_signature=${selector}`);
+ const data = await response.json() as { results?: Array<{ text_signature: string }> };
+ 
+ if (data.results && data.results.length > 0) {
+  // Return the most popular signature
+  return data.results[0].text_signature;
+ }
+ 
+ return null;
  } catch (error) {
-  return null;
+ return null;
  }
 }
 
@@ -106,24 +108,24 @@ export async function inferFunctionName(
 ): Promise<string | null> {
  // Normalize selector
  const normalizedSelector = selector.toLowerCase().startsWith('0x')
-  ? selector.toLowerCase()
-  : `0x${selector.toLowerCase()}`;
+ ? selector.toLowerCase()
+ : `0x${selector.toLowerCase()}`;
  
  // Check local database first
  if (COMMON_SIGNATURES[normalizedSelector]) {
-  return COMMON_SIGNATURES[normalizedSelector];
+ return COMMON_SIGNATURES[normalizedSelector];
  }
  
  // Try online database if enabled
  if (useOnlineDatabase) {
-  try {
-   const signature = await fetchSignatureFrom4Byte(normalizedSelector);
-   if (signature) {
-    return signature;
-   }
-  } catch (error) {
-   // Silently fail and return null
+ try {
+  const signature = await fetchSignatureFrom4Byte(normalizedSelector);
+  if (signature) {
+  return signature;
   }
+ } catch (error) {
+  // Silently fail and return null
+ }
  }
  
  return null;
@@ -134,8 +136,8 @@ export async function inferFunctionName(
  */
 export function inferEventName(topic: string): string | null {
  const normalizedTopic = topic.toLowerCase().startsWith('0x')
-  ? topic.toLowerCase()
-  : `0x${topic.toLowerCase()}`;
+ ? topic.toLowerCase()
+ : `0x${topic.toLowerCase()}`;
  
  return COMMON_EVENT_SIGNATURES[normalizedTopic] || null;
 }
@@ -148,18 +150,18 @@ export function parseFunctionSignature(signature: string): {
  params: string[];
 } | null {
  try {
-  const match = signature.match(/^(\w+)\((.*?)\)$/);
-  if (!match) {
-   return null;
-  }
-  
-  const name = match[1];
-  const paramsStr = match[2];
-  const params = paramsStr ? paramsStr.split(',').map(p => p.trim()) : [];
-  
-  return { name, params };
- } catch {
+ const match = signature.match(/^(\w+)\((.*?)\)$/);
+ if (!match) {
   return null;
+ }
+ 
+ const name = match[1];
+ const paramsStr = match[2];
+ const params = paramsStr ? paramsStr.split(',').map(p => p.trim()) : [];
+ 
+ return { name, params };
+ } catch {
+ return null;
  }
 }
 
@@ -177,3 +179,5 @@ export function decodeFunctionArgs(
  return [calldata];
 }
 
+
+// Fix
