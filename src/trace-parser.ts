@@ -2,6 +2,7 @@ import { Interface, AbiCoder, getAddress } from 'ethers';
 import { TraceResult, DecodedCall, DecodedEvent } from './types';
 import { getFunctionFragment, getEventFragment, createInterfaceFromABI } from './abi-fetcher';
 import { inferFunctionName, inferEventName, parseFunctionSignature } from './abi-inference';
+  // Update
 
 /**
  * Parse trace result into decoded calls
