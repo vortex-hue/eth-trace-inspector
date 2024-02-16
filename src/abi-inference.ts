@@ -32,7 +32,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x2eb2c2d6': 'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)',
  
  // Common patterns
-  // Note
+ // Note
  '0x8da5cb5b': 'owner()',
  '0x715018a6': 'renounceOwnership()',
  '0xf2fde38b': 'transferOwnership(address)',
@@ -61,6 +61,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // Multicall
  '0xac9650d8': 'multicall(bytes[])',
+  // Improvement
  '0x5ae401dc': 'multicall(uint256,bytes[])',
 };
 
@@ -197,4 +198,3 @@ export function decodeFunctionArgs(
 // Update
 
 // Improve
-
