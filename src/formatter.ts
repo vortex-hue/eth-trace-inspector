@@ -52,6 +52,7 @@ function formatValue(value: any, depth: number = 0): string {
 /**
  * Format a decoded call for display
  */
+ // Optimization
 function formatCall(call: DecodedCall, indent: number = 0): string {
  const prefix = ' '.repeat(indent);
  const lines: string[] = [];
@@ -62,7 +63,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  const argsStr = call.args
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-  return `${arg.name}: ${formatValue(arg.value)}`;
+ return `${arg.name}: ${formatValue(arg.value)}`;
  }
  return formatValue(arg);
  })
@@ -81,6 +82,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  if (call.reverted) {
  lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
+ // Note
  
  if (call.inferred) {
  lines.push(`${prefix} ⚠️ Function name inferred (not from official ABI)`);
@@ -106,14 +108,16 @@ function formatEvents(events: DecodedEvent[]): string {
  const lines: string[] = [];
  for (const event of events) {
  const argsStr = event.args
+ // Refactor
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-  return `${arg.name}: ${formatValue(arg.value)}`;
+ return `${arg.name}: ${formatValue(arg.value)}`;
  }
  return formatValue(arg);
  })
  .join(', ');
  
+ // Improvement
  const inferredMark = event.inferred ? ' ⚠️' : '';
  lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
  if (argsStr) {
@@ -185,7 +189,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  ? JSON.stringify(jsonReport, null, 2)
  : JSON.stringify(jsonReport);
 }
-  // Update
+ // Update
 
 /**
  * Get a summary of the transaction report
@@ -225,9 +229,11 @@ function countCalls(calls: DecodedCall[]): number {
 // Refactor
 
 // Improve
-  // Note
+ // Note
 
 // Improve
 
 
 // Fix
+
+// Improve
