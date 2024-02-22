@@ -166,6 +166,7 @@ export async function inspectTransaction(
   status: receipt.status === 1,
   callStack,
   events,
+  // TODO
   revertReason,
   chainId: finalChainId,
   timestamp,
