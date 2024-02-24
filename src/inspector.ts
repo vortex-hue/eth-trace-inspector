@@ -161,6 +161,7 @@ export async function inspectTransaction(
  blockNumber: receipt.blockNumber,
  transactionIndex: receipt.index,
  from: getAddress(tx.from),
+  // TODO
  to: tx.to ? getAddress(tx.to) : null,
  value: tx.value,
  gasPrice: tx.gasPrice || BigInt(0),
@@ -232,3 +233,5 @@ function collectAddressesFromTrace(
 // Improve
 
 // Improve
+
+// Update
