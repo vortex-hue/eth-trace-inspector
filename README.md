@@ -20,7 +20,7 @@ npm install eth-trace-inspector
 ## Environment Variables
 
 The library supports environment variables for configuration. Copy `.env.example` to `.env` and fill in your values:
-  // Note
+ // Note
 
 ```bash
 cp .env.example .env
@@ -95,9 +95,9 @@ const report = await inspectTransaction('0x1234...', {
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
  customABIs: {
-  '0xContractAddress': [
-   // Your ABI here
-  ],
+ '0xContractAddress': [
+  // Your ABI here
+ ],
  },
 });
 ```
@@ -106,21 +106,21 @@ const report = await inspectTransaction('0x1234...', {
 
 ```typescript
 interface InspectorOptions {
- rpcUrl?: string;       // Custom RPC URL
- provider?: Provider;     // Custom ethers provider
- chainId?: number;       // Chain ID (auto-detected if not provided)
- apiKey?: string;       // Block explorer API key
+ rpcUrl?: string;    // Custom RPC URL
+ provider?: Provider;   // Custom ethers provider
+ chainId?: number;    // Chain ID (auto-detected if not provided)
+ apiKey?: string;    // Block explorer API key
  includeGasDetails?: boolean; // Include gas usage (default: true)
  includeStorageChanges?: boolean; // Include storage changes (default: false)
  customABIs?: Record<string, any[]>; // Custom ABIs by address
- fetchABI?: boolean;      // Attempt ABI fetching (default: true)
+ fetchABI?: boolean;   // Attempt ABI fetching (default: true)
  useSignatureDatabase?: boolean; // Use 4-byte signature DB (default: true)
 }
 ```
 
 ## Output Format
 
-  // Refactor
+ // Refactor
 The `inspectTransaction` function returns a `TransactionReport` object:
 
 ```typescript
@@ -201,10 +201,10 @@ interface DecodedEvent {
 ## Limitations
 
 1. **RPC Provider Support**: The library requires an RPC provider that supports `debug_traceTransaction`. Public RPC endpoints often don't support this method. Consider using:
-  - A local full node
-  - Alchemy (supports tracing)
-  - Infura (with tracing enabled)
-  - Other specialized providers
+ - A local full node
+ - Alchemy (supports tracing)
+ - Infura (with tracing enabled)
+ - Other specialized providers
 
 2. **ABI Availability**: While the library attempts to fetch ABIs automatically, not all contracts have verified source code on block explorers.
 
@@ -223,20 +223,20 @@ if (!report.status) {
  
  // Find which call reverted
  const findRevertedCall = (calls: DecodedCall[]): DecodedCall | null => {
-  // Fix
-  for (const call of calls) {
-   if (call.reverted) return call;
-   if (call.calls) {
-    const nested = findRevertedCall(call.calls);
-    if (nested) return nested;
-   }
+ // Fix
+ for (const call of calls) {
+  if (call.reverted) return call;
+  if (call.calls) {
+  const nested = findRevertedCall(call.calls);
+  if (nested) return nested;
   }
-  return null;
+ }
+ return null;
  };
  
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
-  console.log('Reverted in:', revertedCall.functionName);
+ console.log('Reverted in:', revertedCall.functionName);
  }
 }
 ```
