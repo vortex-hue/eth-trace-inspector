@@ -203,7 +203,7 @@ export function getSummary(report: TransactionReport): string {
  lines.push(`Events: ${report.events.length}`);
  
  if (report.revertReason) {
-  // Improvement
+ // Improvement
  lines.push(`Revert: ${report.revertReason}`);
  }
  
