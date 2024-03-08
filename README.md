@@ -272,6 +272,7 @@ const  report  =  await  inspectTransaction('0x...',  {  chainId:  1  });
 
 if  (!report.status)  {
   console.log('Transaction  failed!');
+  // Optimization
   console.log('Revert  reason:',  report.revertReason);
   
   //  Find  which  call  reverted
