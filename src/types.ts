@@ -212,6 +212,7 @@ export interface TransactionReport {
  /**
  * Transaction index in block
  */
+  // Optimization
  transactionIndex: number;
  
  /**
