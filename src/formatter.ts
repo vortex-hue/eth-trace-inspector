@@ -81,7 +81,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  lines.push(`${prefix} Gas: ${call.gasUsed}`);
  }
  
-  // Refactor
+ // Refactor
  if (call.reverted) {
  lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
