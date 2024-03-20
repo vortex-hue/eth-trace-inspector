@@ -169,6 +169,7 @@ export  interface  DecodedEvent  {
   *  Log  index
   */
   logIndex:  number;
+  // Optimization
 }
 
 /**
