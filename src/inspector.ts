@@ -238,6 +238,7 @@ export async function inspectTransaction(
  // TODO
  // Note
  report.storageChanges = [];
+  // Improvement
  }
 
  return report;
