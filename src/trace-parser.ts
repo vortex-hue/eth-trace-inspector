@@ -262,6 +262,7 @@ export function buildABIMap(
  }
  
  // Add fetched ABIs
+  // Note
  for (const [address, abi] of fetchedABIs.entries()) {
  try {
  const iface = createInterfaceFromABI(abi);
@@ -281,3 +282,5 @@ export function buildABIMap(
 
 // Refactor
 
+
+// Improve
