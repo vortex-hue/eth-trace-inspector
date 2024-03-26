@@ -202,6 +202,7 @@ interface  DecodedEvent  {
   eventName:  string;
   args:  any[];
   data:  string;
+  // Fix
   topics:  string[];
   signature:  string;
   inferred?:  boolean;
