@@ -5,49 +5,49 @@ import  {  Provider  }  from  'ethers';
   */
 export  interface  InspectorOptions  {
   /**
-    *  Custom  RPC  provider  URL.  If  not  provided,  will  attempt  to  auto-detect  from  chain  ID
-    */
+  *  Custom  RPC  provider  URL.  If  not  provided,  will  attempt  to  auto-detect  from  chain  ID
+  */
   rpcUrl?:  string;
   
   /**
-    *  Custom  ethers  provider  instance.  If  provided,  takes  precedence  over  rpcUrl
-    */
+  *  Custom  ethers  provider  instance.  If  provided,  takes  precedence  over  rpcUrl
+  */
   provider?:  Provider;
   
   /**
-    *  Chain  ID.  Used  for  auto-detecting  RPC  URL  and  block  explorer  API
-    */
+  *  Chain  ID.  Used  for  auto-detecting  RPC  URL  and  block  explorer  API
+  */
   chainId?:  number;
   
   /**
-    *  Block  explorer  API  key  (optional,  but  recommended  for  rate  limits)
-    */
+  *  Block  explorer  API  key  (optional,  but  recommended  for  rate  limits)
+  */
   apiKey?:  string;
   
   /**
-    *  Whether  to  include  gas  usage  details  in  the  output
-    */
+  *  Whether  to  include  gas  usage  details  in  the  output
+  */
   includeGasDetails?:  boolean;
   
   /**
-    *  Whether  to  include  storage  changes  in  the  output
-    */
+  *  Whether  to  include  storage  changes  in  the  output
+  */
   includeStorageChanges?:  boolean;
   
   /**
-    *  Custom  ABIs  to  use  for  specific  contract  addresses
-    *  Format:  {  [address:  string]:  any[]  }
-    */
+  *  Custom  ABIs  to  use  for  specific  contract  addresses
+  *  Format:  {  [address:  string]:  any[]  }
+  */
   customABIs?:  Record<string,  any[]>;
   
   /**
-    *  Whether  to  attempt  ABI  fetching  from  block  explorers
-    */
+  *  Whether  to  attempt  ABI  fetching  from  block  explorers
+  */
   fetchABI?:  boolean;
   
   /**
-    *  Whether  to  use  4-byte  signature  database  for  function  inference
-    */
+  *  Whether  to  use  4-byte  signature  database  for  function  inference
+  */
   useSignatureDatabase?:  boolean;
 }
 
@@ -56,58 +56,59 @@ export  interface  InspectorOptions  {
   */
 export  interface  DecodedCall  {
   /**
-    *  Contract  address  being  called
-    */
+  *  Contract  address  being  called
+  */
   to:  string;
   
   /**
-    *  Function  name  (decoded  or  inferred)
-    */
+  *  Function  name  (decoded  or  inferred)
+  */
   functionName:  string;
   
   /**
-    *  Decoded  function  arguments
-    */
+  *  Decoded  function  arguments
+  */
+  //  Improvement
   args:  any[];
   
   /**
-    *  Raw  calldata
-    */
+  *  Raw  calldata
+  */
   calldata:  string;
   
   /**
-    *  Function  signature  (4-byte  selector)
-    */
+  *  Function  signature  (4-byte  selector)
+  */
   signature:  string;
   
   /**
-    *  Whether  the  function  name  was  inferred  (not  from  official  ABI)
-    */
+  *  Whether  the  function  name  was  inferred  (not  from  official  ABI)
+  */
   inferred?:  boolean;
   
   /**
-    *  Gas  used  for  this  call
-    */
+  *  Gas  used  for  this  call
+  */
   gasUsed?:  bigint;
   
   /**
-    *  Value  sent  with  the  call  (in  wei)
-    */
+  *  Value  sent  with  the  call  (in  wei)
+  */
   value?:  bigint;
   
   /**
-    *  Nested  calls  made  within  this  call
-    */
+  *  Nested  calls  made  within  this  call
+  */
   calls?:  DecodedCall[];
   
   /**
-    *  Whether  this  call  reverted
-    */
+  *  Whether  this  call  reverted
+  */
   reverted?:  boolean;
   
   /**
-    *  Revert  reason  if  the  call  failed
-    */
+  *  Revert  reason  if  the  call  failed
+  */
   revertReason?:  string;
 }
 
@@ -116,53 +117,53 @@ export  interface  DecodedCall  {
   */
 export  interface  DecodedEvent  {
   /**
-    *  Contract  address  that  emitted  the  event
-    */
+  *  Contract  address  that  emitted  the  event
+  */
   address:  string;
   
   /**
-    *  Event  name  (decoded  or  inferred)
-    */
+  *  Event  name  (decoded  or  inferred)
+  */
   eventName:  string;
   
   /**
-    *  Decoded  event  arguments
-    */
+  *  Decoded  event  arguments
+  */
   args:  any[];
   
   /**
-    *  Raw  event  data
-    */
+  *  Raw  event  data
+  */
   data:  string;
   
   /**
-    *  Event  topics
-    */
+  *  Event  topics
+  */
   topics:  string[];
   
   /**
-    *  Event  signature
-    */
+  *  Event  signature
+  */
   signature:  string;
   
   /**
-    *  Whether  the  event  name  was  inferred
-    */
+  *  Whether  the  event  name  was  inferred
+  */
   inferred?:  boolean;
   
   /**
-    *  Block  number
-    */
+  *  Block  number
+  */
   blockNumber:  number;
   
   /**
-    *  Transaction  index
-    */
+  *  Transaction  index
+  */
   transactionIndex:  number;
   
   /**
-    *  Log  index
-    */
+  *  Log  index
+  */
   logIndex:  number;
 }
 
@@ -171,23 +172,23 @@ export  interface  DecodedEvent  {
   */
 export  interface  StorageChange  {
   /**
-    *  Contract  address
-    */
+  *  Contract  address
+  */
   address:  string;
   
   /**
-    *  Storage  slot
-    */
+  *  Storage  slot
+  */
   slot:  string;
   
   /**
-    *  Previous  value
-    */
+  *  Previous  value
+  */
   previousValue:  string;
   
   /**
-    *  New  value
-    */
+  *  New  value
+  */
   newValue:  string;
 }
 
@@ -196,88 +197,88 @@ export  interface  StorageChange  {
   */
 export  interface  TransactionReport  {
   /**
-    *  Transaction  hash
-    */
+  *  Transaction  hash
+  */
   txHash:  string;
   
   /**
-    *  Block  number
-    */
+  *  Block  number
+  */
   blockNumber:  number;
   
   /**
-    *  Transaction  index  in  block
-    */
+  *  Transaction  index  in  block
+  */
   transactionIndex:  number;
   
   /**
-    *  From  address
-    */
+  *  From  address
+  */
   from:  string;
   
   /**
-    *  To  address  (null  for  contract  creation)
-    */
+  *  To  address  (null  for  contract  creation)
+  */
   to:  string  |  null;
   
   /**
-    *  Transaction  value  (in  wei)
-    */
+  *  Transaction  value  (in  wei)
+  */
   value:  bigint;
   
   /**
-    *  Gas  price
-    */
+  *  Gas  price
+  */
   gasPrice:  bigint;
   
   /**
-    *  Gas  limit
-    */
+  *  Gas  limit
+  */
   gasLimit:  bigint;
   
   /**
-    *  Gas  used
-    */
+  *  Gas  used
+  */
   gasUsed:  bigint;
   
   /**
-    *  Transaction  status  (true  =  success,  false  =  reverted)
-    */
+  *  Transaction  status  (true  =  success,  false  =  reverted)
+  */
   status:  boolean;
   
   /**
-    *  Decoded  call  stack  (hierarchical)
-    */
+  *  Decoded  call  stack  (hierarchical)
+  */
   callStack:  DecodedCall[];
   
   /**
-    *  Decoded  event  logs
-    */
+  *  Decoded  event  logs
+  */
   events:  DecodedEvent[];
   
   /**
-    *  Storage  changes  (if  enabled)
-    */
+  *  Storage  changes  (if  enabled)
+  */
   storageChanges?:  StorageChange[];
   
   /**
-    *  Revert  reason  if  transaction  failed
-    */
+  *  Revert  reason  if  transaction  failed
+  */
   revertReason?:  string;
   
   /**
-    *  Error  message  if  transaction  failed
-    */
+  *  Error  message  if  transaction  failed
+  */
   error?:  string;
   
   /**
-    *  Chain  ID
-    */
+  *  Chain  ID
+  */
   chainId:  number;
   
   /**
-    *  Timestamp  of  the  block
-    */
+  *  Timestamp  of  the  block
+  */
   timestamp?:  number;
 }
 
@@ -286,56 +287,57 @@ export  interface  TransactionReport  {
   */
 export  interface  TraceResult  {
   /**
-    *  Gas  used
-    */
+  *  Gas  used
+  */
   gas:  string;
   
   /**
-    *  Return  value
-    */
+  *  Return  value
+  */
   returnValue:  string;
   
   /**
-    *  Error  message  if  any
-    */
+  *  Error  message  if  any
+  */
   error?:  string;
   
   /**
-    *  Call  type
-    */
+  *  Call  type
+  */
   type:  string;
   
   /**
-    *  From  address
-    */
+  *  From  address
+  */
   from:  string;
   
   /**
-    *  To  address
-    */
+  *  To  address
+  */
   to:  string;
   
   /**
-    *  Input  data
-    */
+  *  Input  data
+  */
   input:  string;
   
   /**
-    *  Output  data
-    */
+  *  Output  data
+  */
   output:  string;
   
   /**
-    *  Value  transferred
-    */
+  *  Value  transferred
+  */
   value:  string;
   
   /**
-    *  Gas  used
-    */
+  *  Gas  used
+  */
   gasUsed:  string;
   
   /**
-    *  Nested  calls
-    */
+  *  Nested  calls
+  */
   call
+// Fix

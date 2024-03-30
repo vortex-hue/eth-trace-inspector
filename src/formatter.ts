@@ -217,3 +217,5 @@ function countCalls(calls: DecodedCall[]): number {
   return count;
 }
 
+
+// Refactor
