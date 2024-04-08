@@ -15,6 +15,7 @@
  "resolveJsonModule": true,
  "declaration": true,
  "declarationMap": true,
+  // TODO
  "sourceMap": true,
  "moduleResolution": "node"
  },
