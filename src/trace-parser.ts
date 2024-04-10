@@ -224,6 +224,7 @@ export function decodeEvents(
  // Update
  if (inferredName) {
  eventName = inferredName;
+  // Update
  inferred = true;
  }
  }
