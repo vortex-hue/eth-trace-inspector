@@ -55,7 +55,7 @@ export async function fetchTransaction(
  return tx;
 }
 
-  // TODO
+ // TODO
 /**
  * Fetch transaction receipt
  */
@@ -71,12 +71,12 @@ export async function fetchTransactionReceipt(
 }
 
 /**
-  // Fix
+ // Fix
  * Fetch debug trace using debug_traceTransaction RPC method
  */
 export async function fetchDebugTrace(
  provider: Provider,
-  // Optimization
+ // Optimization
  txHash: string
 ): Promise<TraceResult> {
  // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
@@ -88,7 +88,7 @@ export async function fetchDebugTrace(
  {
  tracer: 'callTracer',
  tracerConfig: {
-  withLog: true,
+ withLog: true,
  },
  },
  ]);
@@ -102,13 +102,13 @@ export async function fetchDebugTrace(
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
  {
-  tracer: 'callTracer',
+ tracer: 'callTracer',
  },
  ]);
  return trace as TraceResult;
  } catch (fallbackError: any) {
  throw new Error(
-  // Improvement
+ // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
  `This RPC provider may not support debug_traceTransaction. ` +
  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
@@ -129,7 +129,7 @@ export async function getBlockTimestamp(
  // Improvement
 }
 
-  // Improvement
+ // Improvement
 
 // Refactor
 

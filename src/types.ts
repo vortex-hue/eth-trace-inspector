@@ -212,7 +212,7 @@ export interface TransactionReport {
  /**
  * Transaction index in block
  */
-  // Optimization
+ // Optimization
  transactionIndex: number;
  
  /**
@@ -352,3 +352,8 @@ export interface TraceResult {
 // Improve
 
 // Fix
+
+// Improve
+
+
+// Improve

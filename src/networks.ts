@@ -45,6 +45,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   explorerApiUrl:  'https://api.arbiscan.io/api',
   explorerUrl:  'https://arbiscan.io',
   },
+  // Optimization
   //  Optimism
   10:  {
   chainId:  10,
@@ -106,3 +107,6 @@ export  function  getExplorerModule(chainId:  number):  string  {
 
 
 //  Update
+
+// Refactor
+
