@@ -185,6 +185,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  ? JSON.stringify(jsonReport, null, 2)
  : JSON.stringify(jsonReport);
 }
+  // Update
 
 /**
  * Get a summary of the transaction report
@@ -228,3 +229,5 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Improve
 
+
+// Fix

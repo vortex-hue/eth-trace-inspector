@@ -8,19 +8,21 @@
  "outDir": "./dist",
  "rootDir": "./src",
  "strict": true,
-  // Fix
+ // Fix
  "esModuleInterop": true,
  "skipLibCheck": true,
  "forceConsistentCasingInFileNames": true,
  "resolveJsonModule": true,
  "declaration": true,
  "declarationMap": true,
+ // TODO
  "sourceMap": true,
  "moduleResolution": "node"
  },
  "include": ["src/**/*"],
  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
+  // Update
 
 
 // Update
@@ -33,10 +35,14 @@
 
 // Fix
 
+  // Optimization
 
 // Refactor
 
+ // Improvement
 // Fix
 
 
 // Update
+
+// Refactor
