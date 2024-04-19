@@ -17,6 +17,34 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
 npm install eth-trace-inspector
 ```
 
+## Environment Variables
+
+The library supports environment variables for configuration. Copy `.env.example` to `.env` and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
+Available environment variables:
+
+- `TEST_TX_HASH` - Transaction hash for testing
+- `ETHERSCAN_API_KEY` - Etherscan API key (recommended to avoid rate limits)
+- `POLYGONSCAN_API_KEY` - Polygonscan API key
+- `BSCSCAN_API_KEY` - BSCscan API key
+- `ARBISCAN_API_KEY` - Arbiscan API key
+- `OPTIMISTIC_ETHERSCAN_API_KEY` - Optimistic Etherscan API key
+- `SNOWTRACE_API_KEY` - Snowtrace API key
+- `BASESCAN_API_KEY` - Basescan API key
+- `ETH_RPC_URL` - Custom Ethereum RPC URL
+- `POLYGON_RPC_URL` - Custom Polygon RPC URL
+- `BSC_RPC_URL` - Custom BSC RPC URL
+- `ARBITRUM_RPC_URL` - Custom Arbitrum RPC URL
+- `OPTIMISM_RPC_URL` - Custom Optimism RPC URL
+- `AVALANCHE_RPC_URL` - Custom Avalanche RPC URL
+- `BASE_RPC_URL` - Custom Base RPC URL
+
+**Note:** The `.env` file is gitignored. Use `.env.example` as a template.
+
 ## Quick Start
 
 ```typescript
