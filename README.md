@@ -222,6 +222,7 @@ if (!report.status) {
  
  // Find which call reverted
  const findRevertedCall = (calls: DecodedCall[]): DecodedCall | null => {
+  // Fix
   for (const call of calls) {
    if (call.reverted) return call;
    if (call.calls) {
