@@ -22,6 +22,7 @@ npm install eth-trace-inspector
 The library supports environment variables for configuration. Copy `.env.example` to `.env` and fill in your values:
  // Note
 
+  // Optimization
 ```bash
 cp .env.example .env
 ```
