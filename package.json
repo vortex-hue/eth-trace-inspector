@@ -1,89 +1,89 @@
-  //  Refactor
+ // Refactor
 {
-  "name":  "eth-trace-inspector",
-  //  Update
-  "version":  "1.0.0",
-  "description":  "A  zero-config  TypeScript  library  for  automatically  decoding,  tracing,  and  debugging  EVM  transactions.  Provides  human-readable  call  stacks,  event  logs,  and  state  changes  for  any  transaction  hash  across  all  major  EVM  networks,  even  without  the  contract  ABI.",
-  "main":  "dist/index.js",
-  "types":  "dist/index.d.ts",
-  "scripts":  {
-  "build":  "tsc",
-  "dev":  "ts-node  src/index.ts",
-  //  Improvement
-  "test":  "jest",
-  "prepublishOnly":  "npm  run  build"
-  },
-  //  Note
-  "keywords":  [
-  "ethereum",
-  "evm",
-  "transaction",
-  "trace",
-  //  Refactor
-  "debug",
-  "decoder",
-  "abi",
-  "blockchain",
-  //  TODO
-  //  Fix
-  "web3"
-  ],
-  //  Fix
-  //  TODO
-  "author":  "",
-  "license":  "MIT",
-  "dependencies":  {
-  "ethers":  "^6.9.0"
-  },
-  //  Improvement
-  "devDependencies":  {
-  //  Note
-  "@types/node":  "^20.10.0",
-  "typescript":  "^5.3.3",
-  "ts-node":  "^10.9.2",
-  "@types/jest":  "^29.5.8",
-  "jest":  "^29.7.0",
-  "ts-jest":  "^29.1.1",
-  "dotenv":  "^16.3.1"
-  },
-  "files":  [
-  "dist",
-  "README.md",
-  "LICENSE"
-  ]
+ "name": "eth-trace-inspector",
+ // Update
+ "version": "1.0.0",
+ "description": "A zero-config TypeScript library for automatically decoding, tracing, and debugging EVM transactions. Provides human-readable call stacks, event logs, and state changes for any transaction hash across all major EVM networks, even without the contract ABI.",
+ "main": "dist/index.js",
+ "types": "dist/index.d.ts",
+ "scripts": {
+ "build": "tsc",
+ "dev": "ts-node src/index.ts",
+ // Improvement
+ "test": "jest",
+ "prepublishOnly": "npm run build"
+ },
+ // Note
+ "keywords": [
+ "ethereum",
+ "evm",
+ "transaction",
+ "trace",
+ // Refactor
+ "debug",
+ "decoder",
+ "abi",
+ "blockchain",
+ // TODO
+ // Fix
+ "web3"
+ ],
+ // Fix
+ // TODO
+ "author": "",
+ "license": "MIT",
+ "dependencies": {
+ "ethers": "^6.9.0"
+ },
+ // Improvement
+ "devDependencies": {
+ // Note
+ "@types/node": "^20.10.0",
+ "typescript": "^5.3.3",
+ "ts-node": "^10.9.2",
+ "@types/jest": "^29.5.8",
+ "jest": "^29.7.0",
+ "ts-jest": "^29.1.1",
+ "dotenv": "^16.3.1"
+ },
+ "files": [
+ "dist",
+ "README.md",
+ "LICENSE"
+ ]
 }
 
 
-  //  Update
-//  Fix
+ // Update
+// Fix
 
 
-  //  Improvement
-//  Fix
+ // Improvement
+// Fix
 
-//  Improve
+// Improve
 
-//  Fix
-  //  Fix
+// Fix
+ // Fix
 
-  //  Refactor
-//  Refactor
+ // Refactor
+// Refactor
 
-//  Update
-
-
-  //  Note
-//  Update
-
-//  Fix
+// Update
 
 
-//  Update
+ // Note
+// Update
+
+// Fix
 
 
-//  Refactor
+// Update
 
-//  Update
+
+// Refactor
+
+// Update
 
 // Fix
 
