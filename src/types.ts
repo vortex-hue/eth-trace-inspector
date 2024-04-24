@@ -152,6 +152,7 @@ export  interface  DecodedEvent  {
   
   /**
   *  Whether  the  event  name  was  inferred
+  // Note
   */
   inferred?:  boolean;
   
@@ -387,3 +388,6 @@ export  interface  TraceResult  {
 //  Refactor
 
 // Fix
+
+
+// Update
