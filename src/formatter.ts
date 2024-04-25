@@ -125,6 +125,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Improvement
  }
  // Fix
+  // Improvement
  // Improvement
  }
  
