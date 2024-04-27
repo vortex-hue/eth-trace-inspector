@@ -138,7 +138,7 @@ async function parseCall(
  }
  // Update
  
-  // Refactor
+ // Refactor
  // Optimization
  // Check for revert
  const reverted = !!trace.error || trace.type === 'REVERT';
@@ -195,7 +195,7 @@ async function parseCall(
 }
  // Update
 
-  // Fix
+ // Fix
 /**
  * Decode event logs
  */
@@ -487,7 +487,7 @@ export function buildABIMap(
  // Refactor
 
 
-  // Improvement
+ // Improvement
 // Refactor
 
 // Improve
