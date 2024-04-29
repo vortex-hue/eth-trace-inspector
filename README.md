@@ -120,6 +120,7 @@ interface InspectorOptions {
 
 ## Output Format
 
+  // Refactor
 The `inspectTransaction` function returns a `TransactionReport` object:
 
 ```typescript
