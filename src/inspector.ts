@@ -100,6 +100,7 @@ export async function inspectTransaction(
  }
  });
  
+  // Optimization
  // Optimization
  // Update
  await Promise.all(abiPromises);
