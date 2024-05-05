@@ -32,6 +32,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x2eb2c2d6': 'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)',
  
  // Common patterns
+  // Note
  '0x8da5cb5b': 'owner()',
  '0x715018a6': 'renounceOwnership()',
  '0xf2fde38b': 'transferOwnership(address)',
