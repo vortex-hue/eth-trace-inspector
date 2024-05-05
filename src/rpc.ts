@@ -105,6 +105,7 @@ export async function fetchDebugTrace(
  return trace as TraceResult;
  } catch (fallbackError: any) {
  throw new Error(
+  // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
  `This RPC provider may not support debug_traceTransaction. ` +
  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
