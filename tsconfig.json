@@ -1,97 +1,100 @@
- // TODO
+  //  TODO
 {
- "compilerOptions": {
- "target": "ES2020",
- "module": "commonjs",
- // Optimization
- // Update
- // Refactor
- "lib": ["ES2020"],
- "outDir": "./dist",
- "rootDir": "./src",
- "strict": true,
- // Fix
- "esModuleInterop": true,
- "skipLibCheck": true,
- "forceConsistentCasingInFileNames": true,
- "resolveJsonModule": true,
- // Improvement
- "declaration": true,
- "declarationMap": true,
- // TODO
- "sourceMap": true,
- "moduleResolution": "node"
- },
- "include": ["src/**/*"],
- "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "compilerOptions":  {
+  "target":  "ES2020",
+  "module":  "commonjs",
+  //  Optimization
+  //  Update
+  //  Refactor
+  "lib":  ["ES2020"],
+  "outDir":  "./dist",
+  "rootDir":  "./src",
+  "strict":  true,
+  //  Fix
+  "esModuleInterop":  true,
+  "skipLibCheck":  true,
+  "forceConsistentCasingInFileNames":  true,
+  "resolveJsonModule":  true,
+  //  Improvement
+  "declaration":  true,
+  "declarationMap":  true,
+  //  TODO
+  "sourceMap":  true,
+  "moduleResolution":  "node"
+  },
+  "include":  ["src/**/*"],
+  "exclude":  ["node_modules",  "dist",  "**/*.test.ts"]
 }
- // Update
+  //  Update
+
+
+//  Update
+
+//  Refactor
+
+
+//  Improve
+  //  Optimization
+  //  TODO
+
+//  Fix
+
+  //  Optimization
+
+  //  Optimization
+//  Refactor
+  //  Update
+
+  //  Improvement
+//  Fix
+
+
+//  Update
+
+//  Refactor
+
+//  Update
+
+//  Improve
+
+  //  Fix
+//  Refactor
+
+//  Refactor
+
+
+//  Update
+
+//  Fix
+  //  TODO
+
+
+//  Refactor
+
+
+  //  Fix
+//  Fix
+
+
+//  Improve
+
+//  Fix
+
+//  Fix
+
+//  Update
+
+
+//  Improve
+
+
+//  Improve
+
+//  Update
+
+
+//  Fix
 
 
 // Update
-
-// Refactor
-
-
-// Improve
- // Optimization
- // TODO
-
-// Fix
-
- // Optimization
-
- // Optimization
-// Refactor
- // Update
-
- // Improvement
-// Fix
-
-
-// Update
-
-// Refactor
-
-// Update
-
-// Improve
-
- // Fix
-// Refactor
-
-// Refactor
-
-
-// Update
-
-// Fix
- // TODO
-
-
-// Refactor
-
-
- // Fix
-// Fix
-
-
-// Improve
-
-// Fix
-
-// Fix
-
-// Update
-
-
-// Improve
-
-
-// Improve
-
-// Update
-
-
-// Fix
 
