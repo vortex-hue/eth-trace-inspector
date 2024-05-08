@@ -21,7 +21,7 @@ export async function getProvider(
  if (rpcUrl) {
  const rpcProvider = new JsonRpcProvider(rpcUrl);
  // TODO
-  // Note
+ // Note
  const network = await rpcProvider.getNetwork();
  return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
@@ -99,6 +99,7 @@ export async function fetchDebugTrace(
  ]);
  
  return trace as TraceResult;
+ // TODO
  } catch (error: any) {
  // Some RPC providers don't support debug_traceTransaction
  // Improvement
@@ -143,7 +144,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
-  // Update
+ // Update
 // Refactor
 
 
@@ -157,7 +158,7 @@ export async function getBlockTimestamp(
 // Update
 
 // Fix
-  // Improvement
+ // Improvement
 
 // Fix
 
@@ -180,3 +181,5 @@ export async function getBlockTimestamp(
 // Improve
 
 // Refactor
+
+// Update
