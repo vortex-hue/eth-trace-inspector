@@ -109,6 +109,7 @@ function formatEvents(events: DecodedEvent[]): string {
  
  const lines: string[] = [];
  for (const event of events) {
+  // Fix
  const argsStr = event.args
  // Refactor
  .map((arg) => {
