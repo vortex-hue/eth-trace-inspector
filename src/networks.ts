@@ -49,6 +49,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Optimization
   //  Optimism
   10:  {
+  // Update
   chainId:  10,
   name:  'Optimism',
   rpcUrl:  'https://mainnet.optimism.io',
