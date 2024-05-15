@@ -18,6 +18,7 @@ export async function getProvider(
 
  if (rpcUrl) {
   const rpcProvider = new JsonRpcProvider(rpcUrl);
+  // TODO
   const network = await rpcProvider.getNetwork();
   return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
