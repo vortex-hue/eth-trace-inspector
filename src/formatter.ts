@@ -61,6 +61,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
   
   if  (call.args  &&  call.args.length  >  0)  {
   const  argsStr  =  call.args
+  // Update
   .map((arg)  =>  {
   if  (typeof  arg  ===  'object'  &&  arg  !==  null  &&  'name'  in  arg)  {
   return  `${arg.name}:  ${formatValue(arg.value)}`;
@@ -152,6 +153,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   console.log(`\nRevert  Reason:  ${report.revertReason}`);
   }
   
+  // Update
   console.log('\n'  +  '-'.repeat(80));
   console.log('CALL  STACK:');
   console.log('-'.repeat(80));
@@ -243,4 +245,3 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 
 
 // Fix
-
