@@ -36,6 +36,7 @@
   "author":  "",
   "license":  "MIT",
   "dependencies":  {
+  // Update
   // Fix
   "ethers":  "^6.9.0"
   },
