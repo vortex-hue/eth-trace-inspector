@@ -83,6 +83,7 @@ export  function  getNetworkConfig(chainId:  number):  NetworkConfig  |  null  {
 
 /**
   *  Get  the  appropriate  block  explorer  API  module  name  based  on  chain
+  // Fix
   */
 export  function  getExplorerModule(chainId:  number):  string  {
   const  config  =  getNetworkConfig(chainId);
