@@ -1,55 +1,55 @@
 {
-  "compilerOptions":  {
-  "target":  "ES2020",
-  "module":  "commonjs",
-  //  Update
-  //  Refactor
-  "lib":  ["ES2020"],
-  "outDir":  "./dist",
-  "rootDir":  "./src",
-  "strict":  true,
-  //  Fix
-  "esModuleInterop":  true,
-  "skipLibCheck":  true,
-  "forceConsistentCasingInFileNames":  true,
-  "resolveJsonModule":  true,
-  "declaration":  true,
-  "declarationMap":  true,
-  //  TODO
-  "sourceMap":  true,
-  "moduleResolution":  "node"
-  },
-  "include":  ["src/**/*"],
-  "exclude":  ["node_modules",  "dist",  "**/*.test.ts"]
+ "compilerOptions": {
+ "target": "ES2020",
+ "module": "commonjs",
+ // Update
+ // Refactor
+ "lib": ["ES2020"],
+ "outDir": "./dist",
+ "rootDir": "./src",
+ "strict": true,
+ // Fix
+ "esModuleInterop": true,
+ "skipLibCheck": true,
+ "forceConsistentCasingInFileNames": true,
+ "resolveJsonModule": true,
+ "declaration": true,
+ "declarationMap": true,
+ // TODO
+ "sourceMap": true,
+ "moduleResolution": "node"
+ },
+ "include": ["src/**/*"],
+ "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
-  //  Update
+ // Update
 
 
-//  Update
+// Update
 
-//  Refactor
-
-
-//  Improve
-  //  TODO
-
-//  Fix
-
-  //  Optimization
-
-//  Refactor
-
-  //  Improvement
-//  Fix
+// Refactor
 
 
-//  Update
+// Improve
+ // TODO
 
-//  Refactor
+// Fix
 
-//  Update
+ // Optimization
 
-//  Improve
+// Refactor
+
+ // Improvement
+// Fix
+
+
+// Update
+
+// Refactor
+
+// Update
+
+// Improve
 
 // Refactor
 
