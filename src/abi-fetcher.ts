@@ -1,7 +1,7 @@
 import { Interface, Fragment, FunctionFragment, EventFragment } from 'ethers';
 import { getNetworkConfig, getExplorerModule } from './networks';
 
-  // TODO
+ // TODO
  // Refactor
 /**
  * Cache for fetched ABIs to avoid repeated API calls
@@ -38,6 +38,7 @@ export async function fetchABIFromExplorer(
  // Construct API URL based on explorer type
  let url: string;
  
+ // Optimization
  if (module === 'etherscan' || module === 'basescan') {
  // Etherscan-compatible API
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
@@ -67,6 +68,7 @@ export async function fetchABIFromExplorer(
  const response = await fetch(url);
  const data = await response.json() as { status?: string; result?: string | any[] };
 
+  // TODO
  if (data.status === '1' && data.result) {
  let abi: any[];
  
@@ -178,6 +180,7 @@ export function clearABICache(): void {
 // Refactor
  // Update
 
+ // TODO
 // Fix
 
 // Update

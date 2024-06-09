@@ -113,6 +113,7 @@ export async function inferFunctionName(
  // Normalize selector
  const normalizedSelector = selector.toLowerCase().startsWith('0x')
  ? selector.toLowerCase()
+  // Refactor
  : `0x${selector.toLowerCase()}`;
  
  // Check local database first
@@ -139,6 +140,7 @@ export async function inferFunctionName(
  * Infer event name from topic signature
  */
 export function inferEventName(topic: string): string | null {
+  // Optimization
  // Update
  const normalizedTopic = topic.toLowerCase().startsWith('0x')
  ? topic.toLowerCase()
@@ -215,4 +217,3 @@ export function decodeFunctionArgs(
 // Fix
 
 // Refactor
-
