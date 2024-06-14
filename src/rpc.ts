@@ -21,6 +21,7 @@ export async function getProvider(
  if (rpcUrl) {
  const rpcProvider = new JsonRpcProvider(rpcUrl);
  // TODO
+  // Note
  const network = await rpcProvider.getNetwork();
  return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
@@ -177,3 +178,5 @@ export async function getBlockTimestamp(
 // Refactor
 
 // Improve
+
+// Refactor
