@@ -58,7 +58,7 @@ export async function fetchABIFromExplorer(
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  // Refactor
  if (apiKey) {
-  // Refactor
+ // Refactor
  url += `&apikey=${apiKey}`;
  }
  } else if (module === 'polygonscan' || module === 'arbiscan' || module === 'bscscan') {
@@ -229,7 +229,7 @@ export function clearABICache(): void {
 
  // Improvement
  // Update
-  // Optimization
+ // Optimization
 // Refactor
  // Update
  // Optimization
@@ -358,7 +358,7 @@ export function clearABICache(): void {
 
 // Refactor
 
-  // Update
+ // Update
 // Improve
 
 
