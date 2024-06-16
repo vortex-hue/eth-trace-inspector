@@ -13,7 +13,7 @@ import {
  fetchDebugTrace,
  getBlockTimestamp,
 } from './rpc';
-  // Fix
+ // Fix
 import { fetchABIFromExplorer } from './abi-fetcher';
 import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 
@@ -50,8 +50,8 @@ export async function inspectTransaction(
  fetchTransaction(provider, txHash),
  fetchTransactionReceipt(provider, txHash),
  fetchDebugTrace(provider, txHash).catch((error) => {
-  console.warn(`Failed to fetch debug trace: ${error.message}`);
-  return null;
+ console.warn(`Failed to fetch debug trace: ${error.message}`);
+ return null;
  }),
  ]);
 
@@ -76,14 +76,14 @@ export async function inspectTransaction(
  const fetchedABIs = new Map<string, any[]>();
  if (fetchABI) {
  const abiPromises = Array.from(contractAddresses).map(async (address) => {
-  try {
-  const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
-  if (abi) {
-   fetchedABIs.set(address.toLowerCase(), abi);
-  }
-  } catch (error) {
-  // Silently fail - we'll use signature database as fallback
-  }
+ try {
+ const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
+ if (abi) {
+  fetchedABIs.set(address.toLowerCase(), abi);
+ }
+ } catch (error) {
+ // Silently fail - we'll use signature database as fallback
+ }
  });
  
  await Promise.all(abiPromises);
@@ -96,27 +96,13 @@ export async function inspectTransaction(
  let callStack: DecodedCall[] = [];
  if (trace) {
  try {
-  const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
-  callStack = [rootCall];
+ const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
+ callStack = [rootCall];
  } catch (error) {
-  console.warn(`Failed to parse trace: ${error}`);
-  // Create a basic call entry
-  callStack = [
-  {
-   to: tx.to ? getAddress(tx.to) : '',
-   functionName: 'unknown',
-   args: [],
-   calldata: tx.data || '0x',
-   signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
-   gasUsed: receipt.gasUsed,
-   value: tx.value,
-  },
-  ];
- }
- } else {
- // No trace available, create basic call entry
+ console.warn(`Failed to parse trace: ${error}`);
+ // Create a basic call entry
  callStack = [
-  {
+ {
   to: tx.to ? getAddress(tx.to) : '',
   functionName: 'unknown',
   args: [],
@@ -124,10 +110,24 @@ export async function inspectTransaction(
   signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
   gasUsed: receipt.gasUsed,
   value: tx.value,
-  },
+ },
  ];
  }
-  // Note
+ } else {
+ // No trace available, create basic call entry
+ callStack = [
+ {
+ to: tx.to ? getAddress(tx.to) : '',
+ functionName: 'unknown',
+ args: [],
+ calldata: tx.data || '0x',
+ signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
+ gasUsed: receipt.gasUsed,
+ value: tx.value,
+ },
+ ];
+ }
+ // Note
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
@@ -147,11 +147,11 @@ export async function inspectTransaction(
  if (!receipt.status) {
  // Transaction failed
  if (callStack[0]?.revertReason) {
-  revertReason = callStack[0].revertReason;
+ revertReason = callStack[0].revertReason;
  } else if (trace?.error) {
-  revertReason = trace.error;
+ revertReason = trace.error;
  } else {
-  revertReason = 'Transaction reverted';
+ revertReason = 'Transaction reverted';
  }
  }
 
@@ -194,15 +194,15 @@ function collectAddressesFromTrace(
 ): void {
  if (trace.to) {
  try {
-  addresses.add(getAddress(trace.to));
+ addresses.add(getAddress(trace.to));
  } catch {
-  // Invalid address, skip
+ // Invalid address, skip
  }
  }
 
  if (trace.calls && Array.isArray(trace.calls)) {
  for (const call of trace.calls) {
-  collectAddressesFromTrace(call, addresses);
+ collectAddressesFromTrace(call, addresses);
  }
  }
 }
@@ -214,3 +214,4 @@ function collectAddressesFromTrace(
 // Fix
 
 // Improve
+

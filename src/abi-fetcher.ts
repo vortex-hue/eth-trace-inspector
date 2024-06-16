@@ -15,6 +15,7 @@ export async function fetchABIFromExplorer(
  apiKey?: string
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
+  // Fix
  
  // Check cache first
  if (abiCache.has(cacheKey)) {
@@ -34,57 +35,57 @@ export async function fetchABIFromExplorer(
  let url: string;
  
  if (module === 'etherscan' || module === 'basescan') {
-  // Etherscan-compatible API
-  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
-  if (apiKey) {
-  url += `&apikey=${apiKey}`;
-  }
+ // Etherscan-compatible API
+ url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
+ if (apiKey) {
+ url += `&apikey=${apiKey}`;
+ }
  } else if (module === 'polygonscan' || module === 'arbiscan' || module === 'bscscan') {
-  // Polygonscan/Arbiscan/BSCscan use same format
-  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
-  if (apiKey) {
-  url += `&apikey=${apiKey}`;
-  }
+ // Polygonscan/Arbiscan/BSCscan use same format
+ url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
+ if (apiKey) {
+ url += `&apikey=${apiKey}`;
+ }
  } else if (module === 'snowtrace') {
-  // Snowtrace (Avalanche)
-  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
-  if (apiKey) {
-  url += `&apikey=${apiKey}`;
-  }
+ // Snowtrace (Avalanche)
+ url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
+ if (apiKey) {
+ url += `&apikey=${apiKey}`;
+ }
  } else {
-  // Default to Etherscan format
-  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
-  if (apiKey) {
-  url += `&apikey=${apiKey}`;
-  }
+ // Default to Etherscan format
+ url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
+ if (apiKey) {
+ url += `&apikey=${apiKey}`;
+ }
  }
 
  const response = await fetch(url);
  const data = await response.json() as { status?: string; result?: string | any[] };
 
  if (data.status === '1' && data.result) {
-  let abi: any[];
-  
-  // Handle different response formats
-  if (typeof data.result === 'string') {
-  try {
-   abi = JSON.parse(data.result);
-  } catch {
-   return null;
-  }
-  } else if (Array.isArray(data.result)) {
-  abi = data.result;
-  } else {
+ let abi: any[];
+ 
+ // Handle different response formats
+ if (typeof data.result === 'string') {
+ try {
+  abi = JSON.parse(data.result);
+ } catch {
   return null;
-  }
+ }
+ } else if (Array.isArray(data.result)) {
+ abi = data.result;
+ } else {
+ return null;
+ }
 
-  // Validate ABI
-  if (Array.isArray(abi) && abi.length > 0) {
+ // Validate ABI
+ if (Array.isArray(abi) && abi.length > 0) {
  // Fix
-  // Cache the ABI
-  abiCache.set(cacheKey, abi);
-  return abi;
-  }
+ // Cache the ABI
+ abiCache.set(cacheKey, abi);
+ return abi;
+ }
  }
 
  return null;
@@ -95,6 +96,7 @@ export async function fetchABIFromExplorer(
 }
 
 /**
+  // Optimization
  * Create an Interface from ABI
  */
 export function createInterfaceFromABI(abi: any[]): Interface {
@@ -154,4 +156,9 @@ export function clearABICache(): void {
 // Refactor
 
 // Improve
+
+
+// Fix
+
+// Update
 

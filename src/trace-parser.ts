@@ -2,6 +2,7 @@ import { Interface, AbiCoder, getAddress } from 'ethers';
 import { TraceResult, DecodedCall, DecodedEvent } from './types';
 import { getFunctionFragment, getEventFragment, createInterfaceFromABI } from './abi-fetcher';
 import { inferFunctionName, inferEventName, parseFunctionSignature } from './abi-inference';
+ // Update
 
 /**
  * Parse trace result into decoded calls
@@ -40,53 +41,54 @@ async function parseCall(
  if (selector && to) {
  const iface = abiMap.get(to.toLowerCase());
  if (iface) {
+ try {
+ const fragment = getFunctionFragment(iface, selector);
+ if (fragment) {
+  functionName = fragment.name;
   try {
-  const fragment = getFunctionFragment(iface, selector);
-  if (fragment) {
-   functionName = fragment.name;
-   try {
-   const decoded = iface.decodeFunctionData(fragment, input);
-   args = decoded.map((arg, i) => {
-    const param = fragment.inputs[i];
-    return {
-    name: param.name || `arg${i}`,
-    type: param.type,
-    value: arg,
-    };
-   });
-   } catch (error) {
-   // Decoding failed, but we have the function name
-   args = [];
-   }
-  }
+  const decoded = iface.decodeFunctionData(fragment, input);
+  args = decoded.map((arg, i) => {
+  const param = fragment.inputs[i];
+  return {
+  name: param.name || `arg${i}`,
+  type: param.type,
+  value: arg,
+  };
+  });
   } catch (error) {
-  // Failed to decode with ABI
+  // Decoding failed, but we have the function name
+  args = [];
   }
+ }
+ } catch (error) {
+ // Failed to decode with ABI
+ }
  }
  
  // Fallback to signature database
  if (functionName === 'unknown' && useSignatureDatabase) {
-  const inferredName = await inferFunctionName(selector);
-  if (inferredName) {
-  functionName = inferredName;
-  inferred = true;
-  
-  // Try to parse the signature
-  const parsed = parseFunctionSignature(inferredName);
-  if (parsed && input.length > 10) {
-   // Basic decoding attempt - this is simplified
-   // Full decoding would require proper ABI parsing
-   try {
-   const abiCoder = new AbiCoder();
-   const data = input.slice(10);
-   // This is a simplified version - full implementation would
-   // need to parse the signature types and decode accordingly
-   args = [{ raw: data }];
-   } catch {
-   args = [];
-   }
+ const inferredName = await inferFunctionName(selector);
+ if (inferredName) {
+ functionName = inferredName;
+ inferred = true;
+ // Optimization
+ 
+ // Try to parse the signature
+ const parsed = parseFunctionSignature(inferredName);
+ if (parsed && input.length > 10) {
+  // Basic decoding attempt - this is simplified
+  // Full decoding would require proper ABI parsing
+  try {
+  const abiCoder = new AbiCoder();
+  const data = input.slice(10);
+  // This is a simplified version - full implementation would
+  // need to parse the signature types and decode accordingly
+  args = [{ raw: data }];
+  } catch {
+  args = [];
   }
-  }
+ }
+ }
  }
  }
  
@@ -100,12 +102,12 @@ async function parseCall(
  const calls: DecodedCall[] = [];
  if (trace.calls && Array.isArray(trace.calls)) {
  for (const nestedCall of trace.calls) {
-  try {
-  const decoded = await parseCall(nestedCall, abiMap, useSignatureDatabase);
-  calls.push(decoded);
-  } catch (error) {
-  // Skip invalid nested calls
-  }
+ try {
+ const decoded = await parseCall(nestedCall, abiMap, useSignatureDatabase);
+ calls.push(decoded);
+ } catch (error) {
+ // Skip invalid nested calls
+ }
  }
  }
  
@@ -118,24 +120,24 @@ async function parseCall(
  
  // Try to decode revert reason from output
  if (output && output.startsWith('0x08c379a0')) {
-  // Error(string) selector
-  try {
-  const abiCoder = new AbiCoder();
-  const decoded = abiCoder.decode(['string'], '0x' + output.slice(10));
-  revertReason = decoded[0];
-  } catch {
-  // Failed to decode revert reason
-  }
+ // Error(string) selector
+ try {
+ const abiCoder = new AbiCoder();
+ const decoded = abiCoder.decode(['string'], '0x' + output.slice(10));
+ revertReason = decoded[0];
+ } catch {
+ // Failed to decode revert reason
+ }
  } else if (output && output.startsWith('0x4e487b71')) {
-  // Panic(uint256) selector
-  try {
-  const abiCoder = new AbiCoder();
-  const decoded = abiCoder.decode(['uint256'], '0x' + output.slice(10));
-  const panicCode = decoded[0];
-  revertReason = `Panic(${panicCode})`;
-  } catch {
-  // Failed to decode panic code
-  }
+ // Panic(uint256) selector
+ try {
+ const abiCoder = new AbiCoder();
+ const decoded = abiCoder.decode(['uint256'], '0x' + output.slice(10));
+ const panicCode = decoded[0];
+ revertReason = `Panic(${panicCode})`;
+ } catch {
+ // Failed to decode panic code
+ }
  }
  }
  
@@ -186,53 +188,53 @@ export function decodeEvents(
  // Try to decode using ABI
  const iface = abiMap.get(address.toLowerCase());
  if (iface && eventTopic) {
+ try {
+ const fragment = getEventFragment(iface, eventTopic);
+ if (fragment) {
+  eventName = fragment.name;
   try {
-  const fragment = getEventFragment(iface, eventTopic);
-  if (fragment) {
-   eventName = fragment.name;
-   try {
-   const decoded = iface.decodeEventLog(fragment, data, topics);
-   args = fragment.inputs.map((input, i) => {
-    const value = decoded[i];
-    return {
-    name: input.name || `arg${i}`,
-    type: input.type,
-    indexed: input.indexed,
-    value,
-    };
-   });
-   } catch (error) {
-   // Decoding failed, but we have the event name
-   args = [];
-   }
-  }
+  const decoded = iface.decodeEventLog(fragment, data, topics);
+  args = fragment.inputs.map((input, i) => {
+  const value = decoded[i];
+  return {
+  name: input.name || `arg${i}`,
+  type: input.type,
+  indexed: input.indexed,
+  value,
+  };
+  });
   } catch (error) {
-  // Note
-  // Failed to decode with ABI
+  // Decoding failed, but we have the event name
+  args = [];
   }
+ }
+ } catch (error) {
+ // Note
+ // Failed to decode with ABI
+ }
  }
  
  // Fallback to signature database
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
-  const inferredName = inferEventName(eventTopic);
-  // Update
-  if (inferredName) {
-  eventName = inferredName;
-  inferred = true;
-  }
+ const inferredName = inferEventName(eventTopic);
+ // Update
+ if (inferredName) {
+ eventName = inferredName;
+ inferred = true;
+ }
  }
  
  decodedEvents.push({
-  address,
-  eventName,
-  args,
-  data,
-  topics,
-  signature: eventTopic,
-  inferred,
-  blockNumber: log.blockNumber || 0,
-  transactionIndex: log.transactionIndex || 0,
-  logIndex: log.logIndex || 0,
+ address,
+ eventName,
+ args,
+ data,
+ topics,
+ signature: eventTopic,
+ inferred,
+ blockNumber: log.blockNumber || 0,
+ transactionIndex: log.transactionIndex || 0,
+ logIndex: log.logIndex || 0,
  });
  }
  
@@ -241,7 +243,7 @@ export function decodeEvents(
 
 /**
  * Build ABI map from custom ABIs and fetched ABIs
-  // Fix
+ // Fix
  */
 export function buildABIMap(
  customABIs: Record<string, any[]>,
@@ -252,27 +254,27 @@ export function buildABIMap(
  // Add custom ABIs
  for (const [address, abi] of Object.entries(customABIs)) {
  try {
-  const iface = createInterfaceFromABI(abi);
-  abiMap.set(address.toLowerCase(), iface);
+ const iface = createInterfaceFromABI(abi);
+ abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
-  // Invalid ABI, skip
+ // Invalid ABI, skip
  }
  }
  
  // Add fetched ABIs
  for (const [address, abi] of fetchedABIs.entries()) {
  try {
-  const iface = createInterfaceFromABI(abi);
-  abiMap.set(address.toLowerCase(), iface);
+ const iface = createInterfaceFromABI(abi);
+ abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
-  // Invalid ABI, skip
+ // Invalid ABI, skip
  }
  }
  
  return abiMap;
+ // Fix
 }
 
 // Fix
 
 // Refactor
-

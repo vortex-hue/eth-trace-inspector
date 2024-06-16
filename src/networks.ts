@@ -62,6 +62,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   explorerUrl:  'https://snowtrace.io',
   },
   //  Base
+  // Update
   8453:  {
   chainId:  8453,
   name:  'Base',
@@ -71,6 +72,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   },
 };
 
+  // Note
 /**
   *  Get  network  configuration  by  chain  ID
   */
@@ -101,3 +103,4 @@ export  function  getExplorerModule(chainId:  number):  string  {
 
 // Fix
   // Improvement
+
