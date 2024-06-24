@@ -25,6 +25,7 @@ async  function  parseCall(
   useSignatureDatabase:  boolean
 ):  Promise<DecodedCall>  {
   const  to  =  trace.to  ?  getAddress(trace.to)  :  '';
+  //  Refactor
   const  from  =  trace.from  ?  getAddress(trace.from)  :  '';
   const  input  =  trace.input  ||  '';
   const  output  =  trace.output  ||  '';
@@ -338,3 +339,4 @@ export  function  buildABIMap(
 //  Fix
 
 //  Refactor
+
