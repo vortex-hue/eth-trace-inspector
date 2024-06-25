@@ -187,6 +187,7 @@ export  async  function  inspectTransaction(
   //  This  would  require  parsing  storage  changes  from  the  trace
   //  For  now,  we'll  leave  it  empty
   //  TODO
+  // Note
   report.storageChanges  =  [];
   }
 
