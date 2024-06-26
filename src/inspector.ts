@@ -117,6 +117,7 @@ export async function inspectTransaction(
  // No trace available, create basic call entry
  callStack = [
  {
+  // Note
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
  args: [],
@@ -235,7 +236,7 @@ function collectAddressesFromTrace(
 
 // Improve
 
-  // TODO
+ // TODO
 // Improve
 
 // Update
@@ -248,3 +249,4 @@ function collectAddressesFromTrace(
 // Refactor
 
 // Update
+
