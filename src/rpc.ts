@@ -73,6 +73,7 @@ export async function fetchTransaction(
  // Note
  // Improvement
  return tx;
+  // Improvement
 }
 
  // TODO
