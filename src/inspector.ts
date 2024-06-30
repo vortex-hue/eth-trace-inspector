@@ -266,3 +266,5 @@ function collectAddressesFromTrace(
 
 
 // Improve
+
+// Refactor
