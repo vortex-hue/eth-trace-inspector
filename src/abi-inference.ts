@@ -40,7 +40,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // ERC1155
  '0x00fdd58e': 'balanceOf(address,uint256)',
  '0x4e1273f4': 'balanceOfBatch(address[],uint256[])',
-  // Optimization
+ // Optimization
  // Optimization
  '0xf242432a': 'safeTransferFrom(address,address,uint256,uint256,bytes)',
  '0x2eb2c2d6': 'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)',
@@ -254,7 +254,7 @@ export function decodeFunctionArgs(
 // Update
 
 // Fix
-  // Refactor
+ // Refactor
 
 // Refactor
 
@@ -343,7 +343,7 @@ export function decodeFunctionArgs(
 
 // Update
 
-  // Optimization
+ // Optimization
 // Fix
 
 
