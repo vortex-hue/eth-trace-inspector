@@ -55,6 +55,7 @@ export  async  function  fetchTransaction(
   if  (!tx)  {
   throw  new  Error(`Transaction  ${txHash}  not  found`);
   }
+  // Note
   //  Improvement
   return  tx;
 }
