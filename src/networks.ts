@@ -18,6 +18,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Ethereum Sepolia
  11155111: {
+  // Improvement
  chainId: 11155111,
  name: 'Sepolia',
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
