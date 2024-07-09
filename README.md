@@ -52,8 +52,8 @@ import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
 
 // Inspect a transaction
 const report = await inspectTransaction('0x...', {
-  chainId: 1, // Ethereum mainnet
-  apiKey: 'your-api-key', // Optional, but recommended for rate limits
+ chainId: 1, // Ethereum mainnet
+ apiKey: 'your-api-key', // Optional, but recommended for rate limits
 });
 
 // Pretty print to console
@@ -72,7 +72,7 @@ console.log(json);
 import { inspectTransaction } from 'eth-trace-inspector';
 
 const report = await inspectTransaction('0x1234...', {
-  chainId: 1,
+ chainId: 1,
 });
 ```
 
@@ -84,7 +84,7 @@ import { inspectTransaction } from 'eth-trace-inspector';
 
 const provider = new JsonRpcProvider('https://your-rpc-url.com');
 const report = await inspectTransaction('0x1234...', {
-  provider,
+ provider,
 });
 ```
 
@@ -92,12 +92,12 @@ const report = await inspectTransaction('0x1234...', {
 
 ```typescript
 const report = await inspectTransaction('0x1234...', {
-  chainId: 1,
-  customABIs: {
-    '0xContractAddress': [
-      // Your ABI here
-    ],
-  },
+ chainId: 1,
+ customABIs: {
+  '0xContractAddress': [
+   // Your ABI here
+  ],
+ },
 });
 ```
 
@@ -105,15 +105,15 @@ const report = await inspectTransaction('0x1234...', {
 
 ```typescript
 interface InspectorOptions {
-  rpcUrl?: string;              // Custom RPC URL
-  provider?: Provider;          // Custom ethers provider
-  chainId?: number;              // Chain ID (auto-detected if not provided)
-  apiKey?: string;              // Block explorer API key
-  includeGasDetails?: boolean;  // Include gas usage (default: true)
-  includeStorageChanges?: boolean; // Include storage changes (default: false)
-  customABIs?: Record<string, any[]>; // Custom ABIs by address
-  fetchABI?: boolean;           // Attempt ABI fetching (default: true)
-  useSignatureDatabase?: boolean; // Use 4-byte signature DB (default: true)
+ rpcUrl?: string;       // Custom RPC URL
+ provider?: Provider;     // Custom ethers provider
+ chainId?: number;       // Chain ID (auto-detected if not provided)
+ apiKey?: string;       // Block explorer API key
+ includeGasDetails?: boolean; // Include gas usage (default: true)
+ includeStorageChanges?: boolean; // Include storage changes (default: false)
+ customABIs?: Record<string, any[]>; // Custom ABIs by address
+ fetchABI?: boolean;      // Attempt ABI fetching (default: true)
+ useSignatureDatabase?: boolean; // Use 4-byte signature DB (default: true)
 }
 ```
 
@@ -123,21 +123,21 @@ The `inspectTransaction` function returns a `TransactionReport` object:
 
 ```typescript
 interface TransactionReport {
-  txHash: string;
-  blockNumber: number;
-  transactionIndex: number;
-  from: string;
-  to: string | null;
-  value: bigint;
-  gasPrice: bigint;
-  gasLimit: bigint;
-  gasUsed: bigint;
-  status: boolean;
-  callStack: DecodedCall[];
-  events: DecodedEvent[];
-  revertReason?: string;
-  chainId: number;
-  timestamp?: number;
+ txHash: string;
+ blockNumber: number;
+ transactionIndex: number;
+ from: string;
+ to: string | null;
+ value: bigint;
+ gasPrice: bigint;
+ gasLimit: bigint;
+ gasUsed: bigint;
+ status: boolean;
+ callStack: DecodedCall[];
+ events: DecodedEvent[];
+ revertReason?: string;
+ chainId: number;
+ timestamp?: number;
 }
 ```
 
@@ -145,17 +145,17 @@ interface TransactionReport {
 
 ```typescript
 interface DecodedCall {
-  to: string;
-  functionName: string;
-  args: any[];
-  calldata: string;
-  signature: string;
-  inferred?: boolean;  // true if function name was inferred
-  gasUsed?: bigint;
-  value?: bigint;
-  calls?: DecodedCall[];  // Nested calls
-  reverted?: boolean;
-  revertReason?: string;
+ to: string;
+ functionName: string;
+ args: any[];
+ calldata: string;
+ signature: string;
+ inferred?: boolean; // true if function name was inferred
+ gasUsed?: bigint;
+ value?: bigint;
+ calls?: DecodedCall[]; // Nested calls
+ reverted?: boolean;
+ revertReason?: string;
 }
 ```
 
@@ -163,16 +163,16 @@ interface DecodedCall {
 
 ```typescript
 interface DecodedEvent {
-  address: string;
-  eventName: string;
-  args: any[];
-  data: string;
-  topics: string[];
-  signature: string;
-  inferred?: boolean;
-  blockNumber: number;
-  transactionIndex: number;
-  logIndex: number;
+ address: string;
+ eventName: string;
+ args: any[];
+ data: string;
+ topics: string[];
+ signature: string;
+ inferred?: boolean;
+ blockNumber: number;
+ transactionIndex: number;
+ logIndex: number;
 }
 ```
 
@@ -191,18 +191,18 @@ interface DecodedEvent {
 
 - Node.js 18+
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
-  - Full nodes (Geth, Erigon, etc.)
-  - Alchemy
-  - Infura (with tracing enabled)
-  - Other providers with tracing support
+ - Full nodes (Geth, Erigon, etc.)
+ - Alchemy
+ - Infura (with tracing enabled)
+ - Other providers with tracing support
 
 ## Limitations
 
 1. **RPC Provider Support**: The library requires an RPC provider that supports `debug_traceTransaction`. Public RPC endpoints often don't support this method. Consider using:
-   - A local full node
-   - Alchemy (supports tracing)
-   - Infura (with tracing enabled)
-   - Other specialized providers
+  - A local full node
+  - Alchemy (supports tracing)
+  - Infura (with tracing enabled)
+  - Other specialized providers
 
 2. **ABI Availability**: While the library attempts to fetch ABIs automatically, not all contracts have verified source code on block explorers.
 
@@ -216,25 +216,25 @@ interface DecodedEvent {
 const report = await inspectTransaction('0x...', { chainId: 1 });
 
 if (!report.status) {
-  console.log('Transaction failed!');
-  console.log('Revert reason:', report.revertReason);
-  
-  // Find which call reverted
-  const findRevertedCall = (calls: DecodedCall[]): DecodedCall | null => {
-    for (const call of calls) {
-      if (call.reverted) return call;
-      if (call.calls) {
-        const nested = findRevertedCall(call.calls);
-        if (nested) return nested;
-      }
-    }
-    return null;
-  };
-  
-  const revertedCall = findRevertedCall(report.callStack);
-  if (revertedCall) {
-    console.log('Reverted in:', revertedCall.functionName);
+ console.log('Transaction failed!');
+ console.log('Revert reason:', report.revertReason);
+ 
+ // Find which call reverted
+ const findRevertedCall = (calls: DecodedCall[]): DecodedCall | null => {
+  for (const call of calls) {
+   if (call.reverted) return call;
+   if (call.calls) {
+    const nested = findRevertedCall(call.calls);
+    if (nested) return nested;
+   }
   }
+  return null;
+ };
+ 
+ const revertedCall = findRevertedCall(report.callStack);
+ if (revertedCall) {
+  console.log('Reverted in:', revertedCall.functionName);
+ }
 }
 ```
 
