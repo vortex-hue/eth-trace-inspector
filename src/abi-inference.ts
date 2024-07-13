@@ -22,7 +22,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
  '0x081812fc': 'getApproved(uint256)',
  '0xa22cb465': 'setApprovalForAll(address,bool)',
-  // Fix
+ // Fix
  '0xe985e9c5': 'isApprovedForAll(address,address)',
  
  // ERC1155
@@ -89,8 +89,8 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  const data = await response.json() as { results?: Array<{ text_signature: string }> };
  
  if (data.results && data.results.length > 0) {
-  // Return the most popular signature
-  return data.results[0].text_signature;
+ // Return the most popular signature
+ return data.results[0].text_signature;
  }
  
  return null;
@@ -119,12 +119,12 @@ export async function inferFunctionName(
  // Try online database if enabled
  if (useOnlineDatabase) {
  try {
-  const signature = await fetchSignatureFrom4Byte(normalizedSelector);
-  if (signature) {
-  return signature;
-  }
+ const signature = await fetchSignatureFrom4Byte(normalizedSelector);
+ if (signature) {
+ return signature;
+ }
  } catch (error) {
-  // Silently fail and return null
+ // Silently fail and return null
  }
  }
  
@@ -146,14 +146,14 @@ export function inferEventName(topic: string): string | null {
  * Parse function signature to extract name and parameter types
  */
 export function parseFunctionSignature(signature: string): {
-  // Optimization
+ // Optimization
  name: string;
  params: string[];
 } | null {
  try {
  const match = signature.match(/^(\w+)\((.*?)\)$/);
  if (!match) {
-  return null;
+ return null;
  }
  
  const name = match[1];
