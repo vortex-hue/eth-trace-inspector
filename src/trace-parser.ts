@@ -60,6 +60,7 @@ async function parseCall(
  args = [];
  }
  }
+  // Refactor
  } catch (error) {
  // Failed to decode with ABI
  }
@@ -298,4 +299,3 @@ export function buildABIMap(
 // Update
 
 // Update
-
