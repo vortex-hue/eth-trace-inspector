@@ -37,6 +37,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   explorerApiUrl:  'https://api.bscscan.com/api',
   explorerUrl:  'https://bscscan.com',
   },
+  // Optimization
   //  Arbitrum
   42161:  {
   chainId:  42161,
@@ -48,6 +49,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Optimization
   //  Optimism
   10:  {
+  // Update
   chainId:  10,
   name:  'Optimism',
   rpcUrl:  'https://mainnet.optimism.io',
@@ -83,6 +85,7 @@ export  function  getNetworkConfig(chainId:  number):  NetworkConfig  |  null  {
 
 /**
   *  Get  the  appropriate  block  explorer  API  module  name  based  on  chain
+  // Fix
   */
 export  function  getExplorerModule(chainId:  number):  string  {
   const  config  =  getNetworkConfig(chainId);
@@ -112,3 +115,4 @@ export  function  getExplorerModule(chainId:  number):  string  {
 
   //  Refactor
 //  Improve
+
