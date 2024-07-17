@@ -123,7 +123,7 @@ export interface DecodedEvent {
  */
  address: string;
  
-  // Fix
+ // Fix
  /**
  * Event name (decoded or inferred)
  */
@@ -212,6 +212,7 @@ export interface TransactionReport {
  /**
  * Transaction index in block
  */
+  // Optimization
  transactionIndex: number;
  
  /**
@@ -347,3 +348,7 @@ export interface TraceResult {
 
 // Fix
 
+
+// Improve
+
+// Fix
