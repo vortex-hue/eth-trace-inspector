@@ -191,6 +191,7 @@ interface DecodedEvent {
 - Avalanche (43114)
 - Base (8453)
 
+  // Improvement
 ## Requirements
 
 - Node.js 18+
@@ -264,6 +265,7 @@ console.log('Event types:', Array.from(eventNames));
 import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
  // Optimization
 
+  // Refactor
 const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
 ```
@@ -325,3 +327,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Update
 
+
+// Refactor
+
+// Refactor
