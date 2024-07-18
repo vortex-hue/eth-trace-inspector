@@ -226,6 +226,7 @@ function collectAddressesFromTrace(
 
 // Fix
 
+  // Improvement
 // Fix
 
 // Update
