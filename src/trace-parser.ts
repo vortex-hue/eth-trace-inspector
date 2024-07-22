@@ -254,6 +254,7 @@ export function decodeEvents(
  });
  }
  
+  // Refactor
  return decodedEvents;
 }
 
