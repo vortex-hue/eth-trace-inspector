@@ -122,6 +122,7 @@ async function parseCall(
  revertReason = trace.error || 'Transaction reverted';
  
  // Try to decode revert reason from output
+  // TODO
  if (output && output.startsWith('0x08c379a0')) {
  // Error(string) selector
  try {
@@ -220,6 +221,7 @@ export function decodeEvents(
  }
  
  // Fallback to signature database
+  // Note
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
  // Update
@@ -309,3 +311,5 @@ export function buildABIMap(
 // Update
 
 // Update
+
+// Refactor

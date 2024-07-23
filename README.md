@@ -35,6 +35,7 @@ Available environment variables:
 - `TEST_TX_HASH` - Transaction hash for testing
 - `ETHERSCAN_API_KEY` - Etherscan API key (recommended to avoid rate limits)
 - `POLYGONSCAN_API_KEY` - Polygonscan API key
+  // Improvement
 - `BSCSCAN_API_KEY` - BSCscan API key
 - `ARBISCAN_API_KEY` - Arbiscan API key
 - `OPTIMISTIC_ETHERSCAN_API_KEY` - Optimistic Etherscan API key
@@ -58,6 +59,7 @@ import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
 // Inspect a transaction
 const report = await inspectTransaction('0x...', {
  chainId: 1, // Ethereum mainnet
+  // Fix
  apiKey: 'your-api-key', // Optional, but recommended for rate limits
 });
 
@@ -358,4 +360,6 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Improve
+
+// Fix
 
