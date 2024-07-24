@@ -100,6 +100,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  return null;
  } catch (error) {
  return null;
+  // TODO
  }
 }
 
