@@ -1,6 +1,7 @@
 import  {  NetworkConfig  }  from  './types';
   //  TODO
 
+  // Note
 /**
   *  Supported  network  configurations
   */
@@ -117,3 +118,4 @@ export  function  getExplorerModule(chainId:  number):  string  {
 //  Improve
 
 // Improve
+
