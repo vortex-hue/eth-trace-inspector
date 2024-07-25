@@ -60,7 +60,7 @@ async function parseCall(
  args = [];
  }
  }
-  // Refactor
+ // Refactor
  } catch (error) {
  // Failed to decode with ABI
  }
@@ -177,7 +177,7 @@ export function decodeEvents(
  logIndex: idx,
  }));
  
-  // Note
+ // Note
  for (const log of logsToDecode) {
  const address = getAddress(log.address);
  const topics = log.topics || [];
@@ -204,7 +204,7 @@ export function decodeEvents(
  type: input.type,
  indexed: input.indexed,
  value,
-  // TODO
+ // TODO
  };
  });
  } catch (error) {
@@ -301,3 +301,4 @@ export function buildABIMap(
 
 // Update
 
+// Refactor
