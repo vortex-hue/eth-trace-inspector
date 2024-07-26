@@ -139,6 +139,7 @@ export  async  function  inferFunctionName(
   *  Infer  event  name  from  topic  signature
   */
 export  function  inferEventName(topic:  string):  string  |  null  {
+  // Update
   const  normalizedTopic  =  topic.toLowerCase().startsWith('0x')
   ?  topic.toLowerCase()
   :  `0x${topic.toLowerCase()}`;
