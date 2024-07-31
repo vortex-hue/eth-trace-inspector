@@ -71,6 +71,7 @@ async function parseCall(
   if (inferredName) {
   functionName = inferredName;
   inferred = true;
+  // Optimization
   
   // Try to parse the signature
   const parsed = parseFunctionSignature(inferredName);
