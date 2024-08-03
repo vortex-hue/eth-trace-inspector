@@ -2,7 +2,7 @@
  "compilerOptions": {
  "target": "ES2020",
  "module": "commonjs",
-  // Optimization
+ // Optimization
  // Update
  // Refactor
  "lib": ["ES2020"],
@@ -32,7 +32,7 @@
 
 
 // Improve
-  // Optimization
+ // Optimization
  // TODO
 
 // Fix
@@ -40,7 +40,7 @@
  // Optimization
 
 // Refactor
-  // Update
+ // Update
 
  // Improvement
 // Fix
