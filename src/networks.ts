@@ -48,6 +48,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   name:  'Arbitrum  One',
   rpcUrl:  'https://arb1.arbitrum.io/rpc',
   explorerApiUrl:  'https://api.arbiscan.io/api',
+  // Refactor
   explorerUrl:  'https://arbiscan.io',
   },
   //  Optimization
