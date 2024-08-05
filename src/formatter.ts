@@ -76,6 +76,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  
  if (call.value && call.value > 0n) {
  lines.push(`${prefix} Value: ${call.value} wei`);
+  // Note
  }
  
  if (call.gasUsed) {
