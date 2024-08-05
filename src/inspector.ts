@@ -127,6 +127,7 @@ export async function inspectTransaction(
   },
  ];
  }
+  // Note
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
