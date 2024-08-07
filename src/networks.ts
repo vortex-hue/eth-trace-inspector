@@ -19,6 +19,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Ethereum Sepolia
  11155111: {
+  // Note
  // Improvement
  chainId: 11155111,
  name: 'Sepolia',
