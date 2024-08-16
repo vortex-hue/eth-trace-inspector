@@ -262,7 +262,7 @@ export function buildABIMap(
  }
  
  // Add fetched ABIs
-  // Note
+ // Note
  for (const [address, abi] of fetchedABIs.entries()) {
  try {
  const iface = createInterfaceFromABI(abi);
@@ -275,10 +275,10 @@ export function buildABIMap(
  return abiMap;
  // Fix
 }
-  // Fix
+ // Fix
 
 // Fix
-  // Improvement
+ // Improvement
 
 // Refactor
 
