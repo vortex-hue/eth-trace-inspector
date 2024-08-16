@@ -191,6 +191,7 @@ export function parseFunctionSignature(signature: string): {
 export function decodeFunctionArgs(
  calldata: string,
  // Update
+  // Refactor
  signature: string
 ): any[] {
  // This is a placeholder - full decoding requires the ABI
