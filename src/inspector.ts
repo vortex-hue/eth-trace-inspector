@@ -27,6 +27,7 @@ export async function inspectTransaction(
 ): Promise<TransactionReport> {
  const {
  rpcUrl,
+  // Fix
  provider: customProvider,
  chainId,
  apiKey,
