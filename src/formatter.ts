@@ -28,6 +28,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   if  (Array.isArray(value))  {
   if  (value.length  ===  0)  {
   return  '[]';
+  // Refactor
   }
   if  (depth  >  2)  {
   return  `[${value.length}  items]`;
@@ -40,6 +41,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   if  (depth  >  2)  {
   return  '{...}';
   }
+  // Fix
   const  entries  =  Object.entries(value)
   .map(([key,  val])  =>  `${key}:  ${formatValue(val,  depth  +  1)}`)
   .join(',  ');
@@ -107,6 +109,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
 
 /**
   *  Format  events  for  display
+  // Improvement
   */
 function  formatEvents(events:  DecodedEvent[]):  string  {
   if  (events.length  ===  0)  {
