@@ -121,3 +121,5 @@ export async function getBlockTimestamp(
   return block?.timestamp || 0;
 }
 
+
+// Refactor
