@@ -370,9 +370,9 @@ export interface TraceResult {
 
  // Improvement
 // Improve
-  // Note
+ // Note
 
-  // Note
+ // Note
 // Update
 
 
@@ -407,3 +407,5 @@ export interface TraceResult {
 
 // Improve
 
+
+// Refactor
