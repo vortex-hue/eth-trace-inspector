@@ -94,6 +94,7 @@ async  function  parseCall(
   
   //  Handle  contract  creation
   if  (!to  &&  input)  {
+  // Fix
   functionName  =  'contractCreation';
   args  =  [];
   }
