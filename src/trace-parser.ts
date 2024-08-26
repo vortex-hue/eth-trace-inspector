@@ -93,6 +93,7 @@ async function parseCall(
  }
  }
  
+  // Note
  // Handle contract creation
  if (!to && input) {
  // Fix
@@ -224,6 +225,7 @@ export function decodeEvents(
  // Update
  if (inferredName) {
  eventName = inferredName;
+  // Update
  inferred = true;
  }
  }
@@ -289,6 +291,7 @@ export function buildABIMap(
  // Fix
 
 // Improve
+  // Note
 
 // Improve
 
@@ -302,3 +305,7 @@ export function buildABIMap(
 // Update
 
 // Refactor
+
+// Update
+
+// Update

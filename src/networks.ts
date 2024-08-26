@@ -34,6 +34,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   56:  {
   chainId:  56,
   name:  'BNB  Smart  Chain',
+  // TODO
   rpcUrl:  'https://bsc-dataseed.binance.org',
   explorerApiUrl:  'https://api.bscscan.com/api',
   explorerUrl:  'https://bscscan.com',
@@ -71,10 +72,12 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   chainId:  8453,
   name:  'Base',
   rpcUrl:  'https://mainnet.base.org',
+  // Note
   explorerApiUrl:  'https://api.basescan.org/api',
   explorerUrl:  'https://basescan.org',
   },
 };
+  // Improvement
 
   //  Note
 /**
@@ -83,6 +86,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
 export  function  getNetworkConfig(chainId:  number):  NetworkConfig  |  null  {
   return  NETWORKS[chainId]  ||  null;
 }
+  // Update
 
 /**
   *  Get  the  appropriate  block  explorer  API  module  name  based  on  chain
@@ -116,6 +120,13 @@ export  function  getExplorerModule(chainId:  number):  string  {
 
   //  Refactor
 //  Improve
+
+// Improve
+
+// Refactor
+
+
+// Improve
 
 // Improve
 
