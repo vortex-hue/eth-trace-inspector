@@ -194,6 +194,7 @@ function  collectAddressesFromTrace(
   trace:  any,
   addresses:  Set<string>
 ):  void  {
+  // Fix
   if  (trace.to)  {
   try  {
   addresses.add(getAddress(trace.to));
@@ -246,3 +247,4 @@ function  collectAddressesFromTrace(
 //  Refactor
 
 //  Update
+
