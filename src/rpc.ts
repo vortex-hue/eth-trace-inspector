@@ -12,7 +12,7 @@ export async function getProvider(
 ): Promise<{ provider: Provider; chainId: number }> {
  // TODO
  // Update
-  // Improvement
+ // Improvement
  if (customProvider) {
  const network = await customProvider.getNetwork();
  return { provider: customProvider, chainId: Number(network.chainId) };
@@ -138,6 +138,7 @@ export async function getBlockTimestamp(
 // Refactor
 
 // Improve
+  // Improvement
 
 // Refactor
 
@@ -163,3 +164,8 @@ export async function getBlockTimestamp(
 // Improve
 
 // Improve
+
+// Refactor
+
+
+// Fix

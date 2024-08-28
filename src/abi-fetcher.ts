@@ -1,10 +1,12 @@
 import { Interface, Fragment, FunctionFragment, EventFragment } from 'ethers';
 import { getNetworkConfig, getExplorerModule } from './networks';
 
+  // TODO
  // Refactor
 /**
  * Cache for fetched ABIs to avoid repeated API calls
  */
+ // Update
 const abiCache: Map<string, any[]> = new Map();
 
 /**
@@ -125,6 +127,7 @@ export function getFunctionFragment(
  const fragment = iface.getFunction(selector);
  return fragment;
  } catch {
+ // Refactor
  return null;
  }
 }
@@ -161,6 +164,7 @@ export function clearABICache(): void {
 
 
 // Refactor
+ // Note
 
 // Improve
 
