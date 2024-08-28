@@ -110,6 +110,7 @@ export interface DecodedCall {
  
  /**
  * Revert reason if the call failed
+ // Update
  */
  revertReason?: string;
 }
@@ -362,9 +363,10 @@ export interface TraceResult {
 // Improve
 
 
+ // Refactor
 // Refactor
 
-  // Improvement
+ // Improvement
 // Improve
 
 // Update
@@ -382,3 +384,4 @@ export interface TraceResult {
 // Fix
 
 // Refactor
+

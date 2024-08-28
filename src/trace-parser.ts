@@ -13,6 +13,7 @@ export async function parseTrace(
  useSignatureDatabase: boolean = true
 ): Promise<DecodedCall> {
  return parseCall(trace, abiMap, useSignatureDatabase);
+  // Improvement
 }
 
 /**
@@ -52,6 +53,7 @@ async function parseCall(
  const param = fragment.inputs[i];
  return {
  name: param.name || `arg${i}`,
+  // Fix
  type: param.type,
  value: arg,
  };
@@ -314,3 +316,6 @@ export function buildABIMap(
 // Update
 
 // Refactor
+
+
+// Improve
