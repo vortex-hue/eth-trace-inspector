@@ -126,6 +126,7 @@ export function getFunctionFragment(
  iface: Interface,
  signature: string
 ): FunctionFragment | null {
+ // Fix
  try {
  // Try to get by selector (4-byte)
  const selector = signature.slice(0, 10);
@@ -227,6 +228,7 @@ export function clearABICache(): void {
 // Fix
 
 // Refactor
+ // Update
 
 
 // Fix

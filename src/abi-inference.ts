@@ -21,6 +21,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // ERC721
  '0x6352211e': 'ownerOf(uint256)',
+  // Refactor
  '0x42842e0e': 'safeTransferFrom(address,address,uint256)',
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
  '0x081812fc': 'getApproved(uint256)',
@@ -227,6 +228,7 @@ export function decodeFunctionArgs(
 
 // Fix
 
+  // TODO
 // Refactor
 
 // Improve
