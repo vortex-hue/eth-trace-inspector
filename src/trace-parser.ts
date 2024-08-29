@@ -50,6 +50,7 @@ async function parseCall(
  functionName = fragment.name;
  try {
  const decoded = iface.decodeFunctionData(fragment, input);
+  // TODO
  args = decoded.map((arg, i) => {
  const param = fragment.inputs[i];
  return {
@@ -81,6 +82,7 @@ async function parseCall(
  
  // Try to parse the signature
  const parsed = parseFunctionSignature(inferredName);
+  // Note
  if (parsed && input.length > 10) {
  // Basic decoding attempt - this is simplified
  // Full decoding would require proper ABI parsing
@@ -343,4 +345,7 @@ export function buildABIMap(
 // Refactor
 
 // Improve
+
+
+// Refactor
 

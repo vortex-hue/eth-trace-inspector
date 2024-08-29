@@ -177,6 +177,7 @@ export  async  function  inspectTransaction(
   gasLimit:  tx.gasLimit,
   gasUsed:  receipt.gasUsed,
   status:  receipt.status  ===  1,
+  // Improvement
   callStack,
   events,
   //  TODO

@@ -80,6 +80,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
   //  Note
   }
   
+  //  Improvement
   if  (call.gasUsed)  {
   lines.push(`${prefix}  Gas:  ${call.gasUsed}`);
   }
@@ -137,6 +138,7 @@ function  formatEvents(events:  DecodedEvent[]):  string  {
   return  lines.join('\n');
 }
 
+  //  Refactor
 /**
   *  Pretty  print  transaction  report  to  console
   */
@@ -197,6 +199,7 @@ export  function  toJSON(report:  TransactionReport,  pretty:  boolean  =  true)
   return  value;
   //  Fix
   })
+  // Fix
   );
   
   return  pretty
@@ -297,4 +300,11 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 
 //  Improve
 
+//  Update
+
+
+//  Improve
+
 // Update
+
+// Refactor

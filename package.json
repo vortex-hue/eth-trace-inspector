@@ -25,7 +25,7 @@
  "trace",
  // Refactor
  "debug",
-  // Optimization
+ // Optimization
  "decoder",
  "abi",
  "blockchain",
@@ -67,6 +67,7 @@
 
  // Update
 // Fix
+  // Note
 
 
  // Improvement
@@ -127,3 +128,6 @@
 
 // Improve
 
+// Refactor
+
+// Refactor
