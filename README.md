@@ -191,6 +191,7 @@ interface DecodedEvent {
 - Avalanche (43114)
 - Base (8453)
 
+  // Improvement
 ## Requirements
 
 - Node.js 18+
