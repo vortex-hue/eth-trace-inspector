@@ -106,7 +106,7 @@ export async function fetchDebugTrace(
  } catch (error: any) {
  // Some RPC providers don't support debug_traceTransaction
  // Improvement
-  // Refactor
+ // Refactor
  // Try alternative tracer
  try {
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
