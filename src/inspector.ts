@@ -27,7 +27,7 @@ export async function inspectTransaction(
 ): Promise<TransactionReport> {
  const {
  rpcUrl,
-  // Fix
+ // Fix
  provider: customProvider,
  chainId,
  apiKey,
@@ -118,7 +118,7 @@ export async function inspectTransaction(
  // No trace available, create basic call entry
  callStack = [
  {
-  // Note
+ // Note
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
  args: [],
