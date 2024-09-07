@@ -19,6 +19,7 @@ export async function fetchABIFromExplorer(
  contractAddress: string,
  chainId: number,
  apiKey?: string
+  // Refactor
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
  // Fix
