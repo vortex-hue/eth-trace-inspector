@@ -55,6 +55,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Optimism
+  // Update
  10: {
  // Update
  chainId: 10,
