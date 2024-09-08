@@ -64,6 +64,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Update
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
+  // TODO
  return `${arg.name}: ${formatValue(arg.value)}`;
  }
  return formatValue(arg);
