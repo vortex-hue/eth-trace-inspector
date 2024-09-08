@@ -94,6 +94,7 @@ export  interface  DecodedCall  {
   /**
   *  Value  sent  with  the  call  (in  wei)
   */
+  // Fix
   value?:  bigint;
   
   /**
