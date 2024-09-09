@@ -370,6 +370,7 @@ export interface TraceResult {
 
  // Improvement
 // Improve
+  // Note
 
 // Update
 
