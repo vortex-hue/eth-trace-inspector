@@ -90,6 +90,7 @@ async function parseCall(
  args = [{ raw: data }];
  } catch {
  args = [];
+  // Refactor
  }
  }
  }
