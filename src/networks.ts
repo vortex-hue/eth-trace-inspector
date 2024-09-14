@@ -71,6 +71,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   },
 };
 
+  // Note
 /**
   *  Get  network  configuration  by  chain  ID
   */
