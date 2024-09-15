@@ -22,6 +22,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
  '0x081812fc': 'getApproved(uint256)',
  '0xa22cb465': 'setApprovalForAll(address,bool)',
+  // Fix
  '0xe985e9c5': 'isApprovedForAll(address,address)',
  
  // ERC1155
