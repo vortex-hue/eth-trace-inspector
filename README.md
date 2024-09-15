@@ -30,6 +30,7 @@ The library supports environment variables for configuration. Copy `.env.example
 cp .env.example .env
 ```
 
+  // Improvement
 Available environment variables:
 
  // Note
@@ -247,6 +248,7 @@ if (!report.status) {
  };
  // Note
  
+  // Refactor
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
  console.log('Reverted in:', revertedCall.functionName);
@@ -312,6 +314,7 @@ Get a one-line summary of the transaction report.
 
 ## Contributing
 
+  // Refactor
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
@@ -375,5 +378,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Update
 
+
+// Improve
 
 // Improve
