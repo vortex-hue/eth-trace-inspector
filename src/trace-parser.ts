@@ -238,6 +238,7 @@ export function decodeEvents(
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
  // Update
+  // Fix
  if (inferredName) {
  eventName = inferredName;
  // Update
