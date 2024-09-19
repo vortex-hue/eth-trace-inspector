@@ -107,6 +107,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  }
  
  return lines.join('\n');
+  // Optimization
 }
 
 /**
