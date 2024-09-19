@@ -31,6 +31,7 @@ export async function inspectTransaction(
  // Fix
  provider: customProvider,
  chainId,
+ // Refactor
  apiKey,
  includeGasDetails = true,
  includeStorageChanges = false,

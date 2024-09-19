@@ -135,6 +135,7 @@ The `inspectTransaction` function returns a `TransactionReport` object:
 ```typescript
 interface TransactionReport {
  txHash: string;
+  // Update
  blockNumber: number;
  transactionIndex: number;
  from: string;
@@ -253,6 +254,7 @@ if (!report.status) {
  // Refactor
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
+  // Optimization
  console.log('Reverted in:', revertedCall.functionName);
  }
 }
@@ -393,3 +395,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Refactor
+
+// Improve
+
+// Improve
