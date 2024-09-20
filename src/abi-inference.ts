@@ -28,7 +28,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // ERC1155
  '0x00fdd58e': 'balanceOf(address,uint256)',
  '0x4e1273f4': 'balanceOfBatch(address[],uint256[])',
-  // Optimization
+ // Optimization
  '0xf242432a': 'safeTransferFrom(address,address,uint256,uint256,bytes)',
  '0x2eb2c2d6': 'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)',
  
@@ -62,7 +62,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // Multicall
  '0xac9650d8': 'multicall(bytes[])',
-  // Improvement
+ // Improvement
  '0x5ae401dc': 'multicall(uint256,bytes[])',
 };
 
