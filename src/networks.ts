@@ -62,7 +62,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimism
  // Update
  10: {
-  // Refactor
+ // Refactor
  // Update
  chainId: 10,
  name: 'Optimism',
@@ -77,7 +77,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Improvement
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
-  // Note
+ // Note
  // Optimization
  explorerUrl: 'https://snowtrace.io',
  // TODO
@@ -169,7 +169,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Refactor
 
-  // Note
+ // Note
  // Optimization
 // Refactor
 
