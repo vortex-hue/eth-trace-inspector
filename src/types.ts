@@ -300,6 +300,7 @@ export  interface  TransactionReport  {
   */
   timestamp?:  number;
 }
+  // Update
 
 /**
   *  Raw  trace  result  from  debug_traceTransaction
