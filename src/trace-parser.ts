@@ -178,6 +178,7 @@ export  function  decodeEvents(
   //  Use  receipt  logs  for  more  complete  information
   const  logsToDecode  =  receiptLogs.length  >  0  ?  receiptLogs  :  logs.map((log,  idx)  =>  ({
   ...log,
+  // Fix
   blockNumber:  0,
   transactionIndex:  0,
   logIndex:  idx,
