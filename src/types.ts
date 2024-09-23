@@ -207,6 +207,7 @@ export  interface  TransactionReport  {
   /**
   *  Block  number
   */
+  // Optimization
   blockNumber:  number;
   
   /**
