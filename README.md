@@ -30,6 +30,7 @@ The library supports environment variables for configuration. Copy `.env.example
 cp .env.example .env
 ```
 
+  // Improvement
 Available environment variables:
 
  // Note
