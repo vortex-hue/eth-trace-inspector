@@ -104,6 +104,7 @@ export  async  function  inspectTransaction(
   }  catch  (error)  {
   console.warn(`Failed  to  parse  trace:  ${error}`);
   //  Create  a  basic  call  entry
+  // Fix
   callStack  =  [
   {
   to:  tx.to  ?  getAddress(tx.to)  :  '',
