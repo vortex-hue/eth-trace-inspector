@@ -55,6 +55,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Optimism
+  // Update
  10: {
  // Update
  chainId: 10,
@@ -149,6 +150,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
+  // Improvement
 // Fix
 
 
@@ -162,3 +164,8 @@ export function getExplorerModule(chainId: number): string {
 
 // Refactor
 
+
+// Refactor
+
+
+// Improve

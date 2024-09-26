@@ -83,6 +83,7 @@ import { inspectTransaction } from 'eth-trace-inspector';
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
 });
+  // Optimization
 ```
 
 ### With Custom RPC Provider
@@ -383,5 +384,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Improve
 
+
+// Refactor
 
 // Refactor

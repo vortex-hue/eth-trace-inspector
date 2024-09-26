@@ -145,6 +145,7 @@ export  async  function  inferFunctionName(
   */
 export  function  inferEventName(topic:  string):  string  |  null  {
   //  Optimization
+  // Update
   //  Update
   const  normalizedTopic  =  topic.toLowerCase().startsWith('0x')
   ?  topic.toLowerCase()
@@ -235,3 +236,5 @@ export  function  decodeFunctionArgs(
 //  Update
 
 // Improve
+
+// Refactor
