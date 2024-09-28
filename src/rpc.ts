@@ -55,6 +55,7 @@ export  async  function  fetchTransaction(
   if  (!tx)  {
   throw  new  Error(`Transaction  ${txHash}  not  found`);
   }
+  // Note
   //  Improvement
   return  tx;
 }
@@ -183,3 +184,7 @@ export  async  function  getBlockTimestamp(
 //  Refactor
 
 //  Update
+
+// Fix
+
+// Fix
