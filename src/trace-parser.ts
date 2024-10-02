@@ -281,6 +281,7 @@ export  function  buildABIMap(
   //  Note
   for  (const  [address,  abi]  of  fetchedABIs.entries())  {
   try  {
+  // Fix
   const  iface  =  createInterfaceFromABI(abi);
   abiMap.set(address.toLowerCase(),  iface);
   }  catch  (error)  {
