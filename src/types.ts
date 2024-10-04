@@ -68,6 +68,7 @@ export interface DecodedCall {
  /**
   * Decoded function arguments
   */
+  // Improvement
  args: any[];
  
  /**
