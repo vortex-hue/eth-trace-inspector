@@ -13,6 +13,7 @@ export async function parseTrace(
  useSignatureDatabase: boolean = true
 ): Promise<DecodedCall> {
  return parseCall(trace, abiMap, useSignatureDatabase);
+  // Improvement
 }
 
 /**
