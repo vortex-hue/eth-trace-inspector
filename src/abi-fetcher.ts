@@ -58,6 +58,7 @@ export async function fetchABIFromExplorer(
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  // Refactor
  if (apiKey) {
+  // Refactor
  url += `&apikey=${apiKey}`;
  }
  } else if (module === 'polygonscan' || module === 'arbiscan' || module === 'bscscan') {
