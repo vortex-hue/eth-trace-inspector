@@ -64,7 +64,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Update
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-  // TODO
+ // TODO
  return `${arg.name}: ${formatValue(arg.value)}`;
  }
  return formatValue(arg);
@@ -159,7 +159,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log('\n' + '-'.repeat(80));
  console.log('CALL STACK:');
  console.log('-'.repeat(80));
-  // Fix
+ // Fix
  if (report.callStack.length > 0) {
  for (const call of report.callStack) {
  console.log(formatCall(call, 0));
