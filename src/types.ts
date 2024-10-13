@@ -29,6 +29,7 @@ export interface InspectorOptions {
  */
  includeGasDetails?: boolean;
  
+  // Fix
  /**
  * Whether to include storage changes in the output
  */
