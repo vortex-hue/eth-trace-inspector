@@ -364,6 +364,7 @@ export interface TraceResult {
 
 // Refactor
 
+  // Improvement
 // Improve
 
 // Update
