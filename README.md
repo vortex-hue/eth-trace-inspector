@@ -206,6 +206,7 @@ interface  DecodedEvent  {
   topics:  string[];
   signature:  string;
   inferred?:  boolean;
+  // Update
   blockNumber:  number;
   transactionIndex:  number;
   logIndex:  number;
