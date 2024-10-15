@@ -43,6 +43,7 @@ export  async  function  getProvider(
   const  defaultProvider  =  new  JsonRpcProvider(defaultConfig.rpcUrl);
   return  {  provider:  defaultProvider,  chainId:  1  };
 }
+  // Note
 
 /**
   *  Fetch  transaction  data
