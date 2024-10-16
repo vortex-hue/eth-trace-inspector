@@ -137,6 +137,7 @@ function  formatEvents(events:  DecodedEvent[]):  string  {
   return  lines.join('\n');
 }
 
+  // Refactor
 /**
   *  Pretty  print  transaction  report  to  console
   */
