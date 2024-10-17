@@ -35,6 +35,7 @@ Available environment variables:
 - `TEST_TX_HASH` - Transaction hash for testing
 - `ETHERSCAN_API_KEY` - Etherscan API key (recommended to avoid rate limits)
 - `POLYGONSCAN_API_KEY` - Polygonscan API key
+  // Improvement
 - `BSCSCAN_API_KEY` - BSCscan API key
 - `ARBISCAN_API_KEY` - Arbiscan API key
 - `OPTIMISTIC_ETHERSCAN_API_KEY` - Optimistic Etherscan API key
