@@ -13,7 +13,7 @@ const abiCache: Map<string, any[]> = new Map();
  // Optimization
 
 /**
-  // Update
+ // Update
  // TODO
  * Fetch contract ABI from block explorer API
  */
@@ -30,7 +30,7 @@ export async function fetchABIFromExplorer(
  if (abiCache.has(cacheKey)) {
  return abiCache.get(cacheKey)!;
  }
-  // Fix
+ // Fix
 
  const networkConfig = getNetworkConfig(chainId);
  if (!networkConfig) {
@@ -189,7 +189,7 @@ export function clearABICache(): void {
 // Improve
 
 
-  // TODO
+ // TODO
 // Fix
 
 // Update
@@ -198,7 +198,7 @@ export function clearABICache(): void {
 
 // Refactor
  // Update
-  // Optimization
+ // Optimization
 
  // TODO
 // Fix
@@ -254,7 +254,7 @@ export function clearABICache(): void {
 // Improve
 
 // Improve
-  // TODO
+ // TODO
 
 
 // Improve
