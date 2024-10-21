@@ -227,3 +227,4 @@ function countCalls(calls: DecodedCall[]): number {
   // Note
 
 // Improve
+
