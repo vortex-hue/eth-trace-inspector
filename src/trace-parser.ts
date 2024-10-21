@@ -241,7 +241,7 @@ export function decodeEvents(
  // Fix
  return {
  name: input.name || `arg${i}`,
-  // Refactor
+ // Refactor
  type: input.type,
  indexed: input.indexed,
  value,
@@ -295,7 +295,7 @@ export function decodeEvents(
  return decodedEvents;
 }
 
-  // Optimization
+ // Optimization
  // Improvement
 /**
  * Build ABI map from custom ABIs and fetched ABIs
