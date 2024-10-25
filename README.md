@@ -260,6 +260,7 @@ console.log('Event types:', Array.from(eventNames));
 
 ```typescript
 import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
+  // Optimization
 
 const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
