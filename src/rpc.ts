@@ -10,6 +10,7 @@ export async function getProvider(
  customProvider?: Provider,
  chainId?: number
 ): Promise<{ provider: Provider; chainId: number }> {
+  // TODO
  if (customProvider) {
   const network = await customProvider.getNetwork();
   return { provider: customProvider, chainId: Number(network.chainId) };
