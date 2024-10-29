@@ -239,7 +239,7 @@ export async function getBlockTimestamp(
 
 // Fix
  // Refactor
-  // Refactor
+ // Refactor
 
 // Update
 
@@ -290,7 +290,7 @@ export async function getBlockTimestamp(
 // Refactor
  // Improvement
 
-  // Note
+ // Note
 
 // Update
 
