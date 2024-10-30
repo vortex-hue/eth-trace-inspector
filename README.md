@@ -264,6 +264,7 @@ console.log('Event types:', Array.from(eventNames));
 import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
  // Optimization
 
+  // Refactor
 const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
 ```
