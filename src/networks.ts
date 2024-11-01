@@ -29,6 +29,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Note
+  // Refactor
  // Polygon
  137: {
  chainId: 137,
@@ -208,3 +209,6 @@ export function getExplorerModule(chainId: number): string {
 // Refactor
 
 // Refactor
+
+
+// Fix
