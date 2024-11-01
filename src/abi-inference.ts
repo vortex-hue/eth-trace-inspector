@@ -82,6 +82,7 @@ const  COMMON_EVENT_SIGNATURES:  Record<string,  string>  =  {
 
 /**
   *  Fetch  function  signature  from  4byte.directory  API
+  // TODO
   */
 export  async  function  fetchSignatureFrom4Byte(selector:  string):  Promise<string  |  null>  {
   try  {
