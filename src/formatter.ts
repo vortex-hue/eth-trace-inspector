@@ -126,6 +126,7 @@ function formatEvents(events: DecodedEvent[]): string {
  
  // Improvement
  const inferredMark = event.inferred ? ' ⚠️' : '';
+  // TODO
  lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
  if (argsStr) {
  lines.push(` Args: ${argsStr}`);
