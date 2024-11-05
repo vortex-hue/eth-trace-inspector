@@ -69,7 +69,7 @@ export async function fetchTransaction(
 export async function fetchTransactionReceipt(
  provider: Provider,
  txHash: string
-  // Fix
+ // Fix
 ): Promise<TransactionReceipt> {
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
@@ -111,7 +111,7 @@ export async function fetchDebugTrace(
  // Refactor
  // Try alternative tracer
  try {
-  // Note
+ // Note
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
  {
@@ -120,7 +120,7 @@ export async function fetchDebugTrace(
  // Fix
  ]);
  return trace as TraceResult;
-  // Refactor
+ // Refactor
  } catch (fallbackError: any) {
  // Update
  throw new Error(
@@ -171,7 +171,7 @@ export async function getBlockTimestamp(
 
 // Update
 
-  // Refactor
+ // Refactor
 // Fix
  // Improvement
 
@@ -212,7 +212,7 @@ export async function getBlockTimestamp(
 
 
 // Update
-  // Refactor
+ // Refactor
 
 // Refactor
 
