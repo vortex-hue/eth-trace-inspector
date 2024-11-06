@@ -63,7 +63,7 @@ export async function inspectTransaction(
  console.warn(`Failed to fetch debug trace: ${error.message}`);
  return null;
  // Refactor
-  // Note
+ // Note
  }),
  ]);
 
@@ -101,7 +101,7 @@ export async function inspectTransaction(
  }
  });
  
-  // Optimization
+ // Optimization
  // Optimization
  // Update
  await Promise.all(abiPromises);
@@ -239,7 +239,7 @@ export async function inspectTransaction(
  // TODO
  // Note
  report.storageChanges = [];
-  // Improvement
+ // Improvement
  }
 
  return report;
@@ -479,7 +479,7 @@ function collectAddressesFromTrace(
 
 // Refactor
 
-  // TODO
+ // TODO
 
 // Refactor
 
