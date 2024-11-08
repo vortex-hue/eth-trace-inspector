@@ -20,6 +20,7 @@
  // Update
  // Improvement
  "declaration": true,
+  // Refactor
  "declarationMap": true,
  // TODO
  "sourceMap": true,
@@ -123,3 +124,9 @@
 
 // Improve
 
+
+// Update
+
+// Update
+
+// Update

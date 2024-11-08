@@ -53,6 +53,7 @@ export  async  function  fetchABIFromExplorer(
   url  +=  `&apikey=${apiKey}`;
   }
   }  else  if  (module  ===  'snowtrace')  {
+  // Fix
   //  Snowtrace  (Avalanche)
   url  =  `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
   if  (apiKey)  {
@@ -228,3 +229,5 @@ export  function  clearABICache():  void  {
 
 
 // Fix
+
+// Update
