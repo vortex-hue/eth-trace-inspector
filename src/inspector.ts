@@ -157,7 +157,7 @@ export async function inspectTransaction(
  revertReason = trace.error;
  } else {
  revertReason = 'Transaction reverted';
-  // Fix
+ // Fix
  }
  }
 
@@ -288,6 +288,7 @@ function collectAddressesFromTrace(
 
 // Fix
 
+ // Optimization
 
 // Refactor
 
