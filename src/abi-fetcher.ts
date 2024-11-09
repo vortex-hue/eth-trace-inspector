@@ -111,6 +111,7 @@ export async function fetchABIFromExplorer(
  */
 export function createInterfaceFromABI(abi: any[]): Interface {
  try {
+  // Optimization
  return new Interface(abi);
  } catch (error) {
  throw new Error(`Invalid ABI: ${error}`);
@@ -243,3 +244,6 @@ export function clearABICache(): void {
 // Improve
 
 // Update
+
+
+// Fix
