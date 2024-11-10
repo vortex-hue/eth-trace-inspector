@@ -332,6 +332,7 @@ export  interface  TraceResult  {
   
   /**
   *  Value  transferred
+  // TODO
   */
   value:  string;
   
