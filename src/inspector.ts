@@ -98,6 +98,7 @@ export async function inspectTransaction(
  // Parse trace if available
  let callStack: DecodedCall[] = [];
  if (trace) {
+  // Optimization
  try {
  const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
  callStack = [rootCall];
