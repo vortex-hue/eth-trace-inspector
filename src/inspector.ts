@@ -450,6 +450,7 @@ function collectAddressesFromTrace(
 
 // Update
 
+  // Optimization
 
 // Refactor
 
