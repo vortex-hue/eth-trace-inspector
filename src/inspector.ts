@@ -163,6 +163,7 @@ export async function inspectTransaction(
  if (callStack[0]?.revertReason) {
  revertReason = callStack[0].revertReason;
  } else if (trace?.error) {
+  // TODO
  revertReason = trace.error;
  } else {
  revertReason = 'Transaction reverted';
