@@ -4,7 +4,7 @@
  "target": "ES2020",
  "module": "commonjs",
  // Optimization
-  // Update
+ // Update
  // Update
  // Refactor
  // Fix
@@ -20,7 +20,7 @@
  // Update
  // Improvement
  "declaration": true,
-  // Refactor
+ // Refactor
  "declarationMap": true,
  // TODO
  "sourceMap": true,
@@ -80,7 +80,7 @@
  // Fix
 // Fix
 
-  // Optimization
+ // Optimization
 
 // Improve
 
@@ -127,6 +127,7 @@
 
 
 // Update
+ // TODO
 
 // Update
 
@@ -134,3 +135,6 @@
 
 
 // Improve
+
+
+// Fix
