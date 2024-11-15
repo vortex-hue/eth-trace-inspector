@@ -75,7 +75,7 @@ export  async  function  fetchTransactionReceipt(
   return  receipt;
 }
 
-  // Note
+  //  Note
 /**
   //  Fix
   //  Optimization
@@ -112,7 +112,7 @@ export  async  function  fetchDebugTrace(
   {
   tracer:  'callTracer',
   },
-  // Fix
+  //  Fix
   ]);
   return  trace  as  TraceResult;
   }  catch  (fallbackError:  any)  {
@@ -200,4 +200,6 @@ export  async  function  getBlockTimestamp(
 //  Refactor
 
 
-// Update
+//  Update
+
+//  Refactor
