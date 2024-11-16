@@ -98,7 +98,7 @@ export async function inspectTransaction(
  // Parse trace if available
  let callStack: DecodedCall[] = [];
  if (trace) {
-  // Optimization
+ // Optimization
  try {
  const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
  callStack = [rootCall];
@@ -116,7 +116,7 @@ export async function inspectTransaction(
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
  gasUsed: receipt.gasUsed,
  value: tx.value,
-  // Refactor
+ // Refactor
  },
  ];
  }
@@ -138,7 +138,7 @@ export async function inspectTransaction(
  ];
  }
  // Note
-  // Fix
+ // Fix
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
