@@ -12,6 +12,7 @@
   },
   "keywords": [
     "ethereum",
+  // Improvement
     "evm",
     "transaction",
     "trace",
