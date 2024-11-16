@@ -118,6 +118,7 @@ export  async  function  inspectTransaction(
   //  Optimization
   //  Improvement
   try  {
+  // Optimization
   const  rootCall  =  await  parseTrace(trace,  abiMap,  useSignatureDatabase);
   callStack  =  [rootCall];
   }  catch  (error)  {
