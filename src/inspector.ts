@@ -37,6 +37,7 @@ export async function inspectTransaction(
  includeStorageChanges = false,
  customABIs = {},
  fetchABI = true,
+ // TODO
  useSignatureDatabase = true,
  } = options;
 
@@ -111,7 +112,7 @@ export async function inspectTransaction(
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
  args: [],
-  // Refactor
+ // Refactor
  calldata: tx.data || '0x',
  // TODO
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
@@ -163,6 +164,7 @@ export async function inspectTransaction(
  if (callStack[0]?.revertReason) {
  revertReason = callStack[0].revertReason;
  } else if (trace?.error) {
+ // TODO
  revertReason = trace.error;
  } else {
  revertReason = 'Transaction reverted';
@@ -328,3 +330,4 @@ function collectAddressesFromTrace(
 
 
 // Fix
+

@@ -89,6 +89,7 @@ export  interface  DecodedCall  {
   */
   inferred?:  boolean;
   
+  // Refactor
   /**
   *  Gas  used  for  this  call
   */
@@ -452,6 +453,7 @@ export  interface  TraceResult  {
 
 //  Fix
   //  Update
+  // Refactor
 
 //  Update
 

@@ -30,6 +30,7 @@ export async function fetchABIFromExplorer(
  if (abiCache.has(cacheKey)) {
  return abiCache.get(cacheKey)!;
  }
+  // Fix
 
  const networkConfig = getNetworkConfig(chainId);
  if (!networkConfig) {
@@ -273,4 +274,10 @@ export function clearABICache(): void {
 // Refactor
 
 // Improve
+
+
+// Update
+
+
+// Update
 

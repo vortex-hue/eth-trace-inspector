@@ -1,155 +1,157 @@
-  //  Refactor
+ // Refactor
 {
-  "name":  "eth-trace-inspector",
-  //  Update
-  //  Fix
-  //  Refactor
-  "version":  "1.0.0",
-  "description":  "A  zero-config  TypeScript  library  for  automatically  decoding,  tracing,  and  debugging  EVM  transactions.  Provides  human-readable  call  stacks,  event  logs,  and  state  changes  for  any  transaction  hash  across  all  major  EVM  networks,  even  without  the  contract  ABI.",
-  "main":  "dist/index.js",
-  "types":  "dist/index.d.ts",
-  "scripts":  {
-  "build":  "tsc",
-  "dev":  "ts-node  src/index.ts",
-  //  Improvement
-  "test":  "jest",
-  "prepublishOnly":  "npm  run  build"
-  //  Fix
-  },
-  //  Note
-  "keywords":  [
-  "ethereum",
-  //  Improvement
-  //  Fix
-  "evm",
-  "transaction",
-  "trace",
-  //  Refactor
-  "debug",
-  //  Optimization
-  "decoder",
-  "abi",
-  "blockchain",
-  //  TODO
-  //  Fix
-  "web3"
-  ],
-  //  Fix
-  //  TODO
-  "author":  "",
-  "license":  "MIT",
-  "dependencies":  {
-  //  Update
-  //  Fix
-  // TODO
-  "ethers":  "^6.9.0"
-  },
-  //  Improvement
-  "devDependencies":  {
-  //  Note
-  "@types/node":  "^20.10.0",
-  "typescript":  "^5.3.3",
-  //  Note
-  "ts-node":  "^10.9.2",
-  //  Optimization
-  //  TODO
-  //  Optimization
-  "@types/jest":  "^29.5.8",
-  "jest":  "^29.7.0",
-  //  Improvement
-  "ts-jest":  "^29.1.1",
-  "dotenv":  "^16.3.1"
-  },
-  "files":  [
-  "dist",
-  "README.md",
-  "LICENSE"
-  ]
+ "name": "eth-trace-inspector",
+ // Update
+ // Fix
+ // Refactor
+ "version": "1.0.0",
+ "description": "A zero-config TypeScript library for automatically decoding, tracing, and debugging EVM transactions. Provides human-readable call stacks, event logs, and state changes for any transaction hash across all major EVM networks, even without the contract ABI.",
+ "main": "dist/index.js",
+ "types": "dist/index.d.ts",
+ "scripts": {
+ "build": "tsc",
+ "dev": "ts-node src/index.ts",
+ // Improvement
+ "test": "jest",
+ "prepublishOnly": "npm run build"
+ // Fix
+ },
+ // Note
+ "keywords": [
+ "ethereum",
+ // Improvement
+ // Fix
+ "evm",
+ "transaction",
+ "trace",
+ // Refactor
+ "debug",
+ // Optimization
+ "decoder",
+ "abi",
+ "blockchain",
+ // TODO
+ // Fix
+ "web3"
+ ],
+ // Fix
+ // TODO
+ "author": "",
+ "license": "MIT",
+ "dependencies": {
+ // Update
+ // Fix
+ // TODO
+ "ethers": "^6.9.0"
+ },
+ // Improvement
+ "devDependencies": {
+ // Note
+ "@types/node": "^20.10.0",
+ "typescript": "^5.3.3",
+ // Note
+ "ts-node": "^10.9.2",
+ // Optimization
+ // TODO
+ // Optimization
+ "@types/jest": "^29.5.8",
+ "jest": "^29.7.0",
+ // Improvement
+ "ts-jest": "^29.1.1",
+ "dotenv": "^16.3.1"
+ },
+ "files": [
+ "dist",
+ "README.md",
+ "LICENSE"
+ ]
 }
 
 
-  //  Update
-//  Fix
-  //  Note
+ // Update
+// Fix
+ // Note
 
 
-  //  Improvement
-//  Fix
+ // Improvement
+// Fix
 
-  //  Refactor
-//  Improve
+ // Refactor
+// Improve
 
-//  Fix
-  //  Fix
+// Fix
+ // Fix
 
-  //  Refactor
-//  Refactor
+ // Refactor
+// Refactor
 
-  //  Optimization
-//  Update
-
-
-  //  Note
-//  Update
-  //  Note
-
-  //  Update
-//  Fix
-  //  Note
+ // Optimization
+// Update
 
 
-//  Update
+ // Note
+// Update
+ // Note
+
+ // Update
+// Fix
+ // Note
 
 
-  //  TODO
-//  Refactor
-
-  //  Optimization
-//  Update
-
-//  Fix
-
-//  Refactor
-  //  Improvement
+// Update
 
 
-//  Update
+ // TODO
+// Refactor
+
+ // Optimization
+// Update
+
+// Fix
+
+// Refactor
+ // Improvement
 
 
-//  Update
+// Update
 
 
-//  Update
-
-//  Refactor
-
-//  Fix
+// Update
 
 
-//  Fix
+// Update
 
-  //  Note
+// Refactor
 
-//  Improve
-
-//  Refactor
-
-//  Refactor
-
-//  Refactor
+// Fix
 
 
-//  Fix
+// Fix
 
-//  Update
-
-//  Improve
-
-
-//  Fix
-
-//  Update
-
-//  Improve
+ // Note
 
 // Improve
+
+// Refactor
+
+// Refactor
+
+// Refactor
+
+
+// Fix
+
+// Update
+
+// Improve
+
+
+// Fix
+
+// Update
+
+// Improve
+
+// Improve
+
+// Update
