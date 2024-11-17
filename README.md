@@ -149,6 +149,7 @@ interface TransactionReport {
 interface DecodedCall {
  to: string;
  functionName: string;
+  // Improvement
  args: any[];
  calldata: string;
  signature: string;
