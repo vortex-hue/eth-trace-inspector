@@ -55,6 +55,7 @@ export async function fetchTransaction(
  return tx;
 }
 
+  // TODO
 /**
  * Fetch transaction receipt
  */
