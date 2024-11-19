@@ -12,6 +12,7 @@ import  {  NetworkConfig  }  from  './types';
 export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Ethereum  Mainnet
   1:  {
+  // Update
   chainId:  1,
   //  Refactor
   name:  'Ethereum  Mainnet',
