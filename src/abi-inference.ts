@@ -9,6 +9,7 @@ const  COMMON_SIGNATURES:  Record<string,  string>  =  {
   //  Note
   //  ERC20
   '0x70a08231':  'balanceOf(address)',
+  // Improvement
   '0xa9059cbb':  'transfer(address,uint256)',
   '0x23b872dd':  'transferFrom(address,address,uint256)',
   '0x095ea7b3':  'approve(address,uint256)',
