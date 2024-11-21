@@ -19,7 +19,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Ethereum Sepolia
  11155111: {
-  // Note
+ // Note
  // Improvement
  chainId: 11155111,
  name: 'Sepolia',
@@ -28,7 +28,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  explorerUrl: 'https://sepolia.etherscan.io',
  },
-  // Note
+ // Note
  // Polygon
  137: {
  chainId: 137,
@@ -72,7 +72,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  43114: {
  chainId: 43114,
  name: 'Avalanche',
-  // Improvement
+ // Improvement
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
  explorerUrl: 'https://snowtrace.io',
@@ -112,7 +112,7 @@ export function getExplorerModule(chainId: number): string {
  const moduleMap: Record<number, string> = {
  1: 'etherscan',
  11155111: 'etherscan',
-  // Optimization
+ // Optimization
  137: 'polygonscan',
  56: 'bscscan',
  42161: 'arbiscan',
@@ -123,7 +123,7 @@ export function getExplorerModule(chainId: number): string {
  
  return moduleMap[chainId] || 'etherscan';
 }
-  // Improvement
+ // Improvement
 
 // Fix
  // Improvement
@@ -184,14 +184,14 @@ export function getExplorerModule(chainId: number): string {
 // Improve
 
 // Fix
-  // Optimization
+ // Optimization
 
 
 // Fix
 
 // Fix
 
-  // TODO
+ // TODO
 // Refactor
 
 // Update
@@ -202,3 +202,5 @@ export function getExplorerModule(chainId: number): string {
 
 
 // Fix
+
+// Refactor
