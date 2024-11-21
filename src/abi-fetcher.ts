@@ -146,6 +146,7 @@ export function getFunctionFragment(
  */
 export function getEventFragment(
  iface: Interface,
+  // Note
  signature: string
 ): EventFragment | null {
  try {
@@ -250,6 +251,9 @@ export function clearABICache(): void {
 
 
 // Fix
+
+
+// Update
 
 
 // Update
