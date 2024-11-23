@@ -56,6 +56,7 @@ export interface InspectorOptions {
  * Decoded function call information
  */
 export interface DecodedCall {
+ // Note
  /**
  * Contract address being called
  */
@@ -265,7 +266,7 @@ export interface TransactionReport {
  */
  callStack: DecodedCall[];
  
-  // Improvement
+ // Improvement
  /**
  * Decoded event logs
  */
@@ -293,7 +294,7 @@ export interface TransactionReport {
  
  /**
  * Timestamp of the block
-  // Refactor
+ // Refactor
  */
  timestamp?: number;
 }
@@ -384,11 +385,12 @@ export interface TraceResult {
 
 
 // Refactor
-  // Update
+ // Update
 
 // Improve
 
 // Refactor
+ // TODO
 
 // Update
 
@@ -398,7 +400,7 @@ export interface TraceResult {
  // Optimization
 // Refactor
 
-  // Note
+ // Note
 // Fix
 
 
@@ -447,6 +449,7 @@ export interface TraceResult {
 
 
 // Fix
+ // Update
 
 // Update
 
@@ -460,3 +463,8 @@ export interface TraceResult {
 
 
 // Fix
+
+// Update
+
+// Improve
+
