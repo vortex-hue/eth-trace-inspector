@@ -158,6 +158,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log('\n' + '-'.repeat(80));
  console.log('CALL STACK:');
  console.log('-'.repeat(80));
+  // Fix
  if (report.callStack.length > 0) {
  for (const call of report.callStack) {
  console.log(formatCall(call, 0));
