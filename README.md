@@ -137,6 +137,7 @@ The  `inspectTransaction`  function  returns  a  `TransactionReport`  object:
 interface  TransactionReport  {
   txHash:  string;
   //  Update
+  // Update
   blockNumber:  number;
   transactionIndex:  number;
   from:  string;
