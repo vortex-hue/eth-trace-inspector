@@ -99,6 +99,7 @@ export async function fetchABIFromExplorer(
  }
  }
 
+  // Optimization
  return null;
  } catch (error) {
  console.warn(`Failed to fetch ABI from explorer: ${error}`);
