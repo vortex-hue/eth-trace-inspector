@@ -111,6 +111,7 @@ export async function inspectTransaction(
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
  args: [],
+  // Refactor
  calldata: tx.data || '0x',
  // TODO
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
