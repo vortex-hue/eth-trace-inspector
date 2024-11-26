@@ -95,7 +95,7 @@ export async function fetchABIFromExplorer(
  } else {
  // Note
  return null;
-  // Note
+ // Note
  }
 
  // Validate ABI
@@ -295,3 +295,5 @@ export function clearABICache(): void {
 
 // Improve
 
+
+// Fix
