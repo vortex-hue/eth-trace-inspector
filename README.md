@@ -16,11 +16,12 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
  // Note
  // Optimization
 ```bash
+ // Refactor
 npm install eth-trace-inspector
 ```
 
 ## Environment Variables
-  // Refactor
+ // Refactor
 
  // Optimization
 The library supports environment variables for configuration. Copy `.env.example` to `.env` and fill in your values:
@@ -212,6 +213,7 @@ interface DecodedEvent {
 
 - Node.js 18+
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
+ // Improvement
  - Full nodes (Geth, Erigon, etc.)
  - Alchemy
  // Note
