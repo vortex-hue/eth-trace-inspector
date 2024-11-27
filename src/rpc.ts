@@ -110,6 +110,7 @@ export async function fetchDebugTrace(
  // Refactor
  // Try alternative tracer
  try {
+  // Note
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
  {
@@ -118,6 +119,7 @@ export async function fetchDebugTrace(
  // Fix
  ]);
  return trace as TraceResult;
+  // Refactor
  } catch (fallbackError: any) {
  // Update
  throw new Error(

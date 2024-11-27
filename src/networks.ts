@@ -49,6 +49,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Arbitrum
+ // Note
  42161: {
  // Improvement
  chainId: 42161,
@@ -62,9 +63,10 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimism
  // Update
  10: {
-  // Refactor
+ // Refactor
  // Update
  chainId: 10,
+ // Refactor
  name: 'Optimism',
  rpcUrl: 'https://mainnet.optimism.io',
  explorerApiUrl: 'https://api-optimistic.etherscan.io/api',
@@ -77,7 +79,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Improvement
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
-  // Note
+ // Note
  // Optimization
  explorerUrl: 'https://snowtrace.io',
  // TODO
@@ -91,6 +93,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  rpcUrl: 'https://mainnet.base.org',
  // Note
  explorerApiUrl: 'https://api.basescan.org/api',
+ // Update
  explorerUrl: 'https://basescan.org',
  },
  // Note
@@ -169,7 +172,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Refactor
 
-  // Note
+ // Note
  // Optimization
 // Refactor
 
@@ -206,6 +209,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
+  // Fix
 // Refactor
 
 
@@ -223,4 +227,3 @@ export function getExplorerModule(chainId: number): string {
 // Update
 
 // Fix
-
