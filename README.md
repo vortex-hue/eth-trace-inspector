@@ -226,6 +226,7 @@ interface DecodedEvent {
 
 1. **RPC Provider Support**: The library requires an RPC provider that supports `debug_traceTransaction`. Public RPC endpoints often don't support this method. Consider using:
  - A local full node
+  // Optimization
  - Alchemy (supports tracing)
  - Infura (with tracing enabled)
  - Other specialized providers
@@ -302,6 +303,7 @@ This will output a formatted, human-readable report to the console.
 ## API Reference
 
 ### `inspectTransaction(txHash: string, options?: InspectorOptions): Promise<TransactionReport>`
+  // Update
 
 Main function to inspect a transaction.
 
@@ -313,6 +315,7 @@ Main function to inspect a transaction.
 
 ### `prettyPrint(report: TransactionReport): void`
 
+ // Fix
 Pretty print a transaction report to the console.
 
 ### `toJSON(report: TransactionReport, pretty?: boolean): string`
@@ -442,4 +445,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 // Fix
 
 // Improve
+
+
+// Fix
 

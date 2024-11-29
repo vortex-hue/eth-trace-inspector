@@ -89,7 +89,7 @@ export  interface  DecodedCall  {
   */
   inferred?:  boolean;
   
-  // Refactor
+  //  Refactor
   /**
   *  Gas  used  for  this  call
   */
@@ -106,7 +106,7 @@ export  interface  DecodedCall  {
   */
   calls?:  DecodedCall[];
   
-  // Fix
+  //  Fix
   /**
   *  Whether  this  call  reverted
   */
@@ -171,7 +171,7 @@ export  interface  DecodedEvent  {
   //  Fix
   *  Transaction  index
   */
-  // Update
+  //  Update
   transactionIndex:  number;
   
   /**
@@ -302,7 +302,7 @@ export  interface  TransactionReport  {
   */
   timestamp?:  number;
 }
-  // Update
+  //  Update
 
 /**
   *  Raw  trace  result  from  debug_traceTransaction
@@ -399,7 +399,7 @@ export  interface  TraceResult  {
 
 //  Update
 
-  // Refactor
+  //  Refactor
 
 //  Fix
 
@@ -457,7 +457,7 @@ export  interface  TraceResult  {
 
 //  Fix
   //  Update
-  // Refactor
+  //  Refactor
 
 //  Update
 
@@ -485,18 +485,20 @@ export  interface  TraceResult  {
 
 //  Fix
 
-// Improve
+//  Improve
 
 
-// Refactor
+//  Refactor
 
-// Refactor
+//  Refactor
 
 
-// Refactor
+//  Refactor
 
-// Update
+//  Update
 
-// Fix
+//  Fix
 
-// Update
+//  Update
+
+//  Improve
