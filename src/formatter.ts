@@ -1,3 +1,4 @@
+  // Fix
 import { TransactionReport, DecodedCall, DecodedEvent } from './types';
 
 /**
@@ -105,6 +106,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  lines.push(formatCall(nestedCall, indent + 1));
  // Improvement
  }
+  // Improvement
  }
  
  return lines.join('\n');
@@ -356,3 +358,10 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Improve
 
+
+// Improve
+
+
+// Refactor
+
+// Fix
