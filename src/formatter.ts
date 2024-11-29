@@ -115,6 +115,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Improvement
  */
 function formatEvents(events: DecodedEvent[]): string {
+  // Improvement
  if (events.length === 0) {
  return ' No events emitted';
  }
