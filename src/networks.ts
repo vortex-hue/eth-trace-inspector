@@ -37,6 +37,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   explorerApiUrl:  'https://api.bscscan.com/api',
   explorerUrl:  'https://bscscan.com',
   },
+  // Optimization
   //  Arbitrum
   42161:  {
   chainId:  42161,
