@@ -19,6 +19,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Ethereum Sepolia
  11155111: {
+  // Note
  // Improvement
  chainId: 11155111,
  name: 'Sepolia',
@@ -27,6 +28,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  explorerUrl: 'https://sepolia.etherscan.io',
  },
+  // Note
  // Polygon
  137: {
  chainId: 137,
@@ -120,6 +122,7 @@ export function getExplorerModule(chainId: number): string {
  
  return moduleMap[chainId] || 'etherscan';
 }
+  // Improvement
 
 // Fix
  // Improvement
@@ -194,3 +197,4 @@ export function getExplorerModule(chainId: number): string {
 // Update
 
 // Refactor
+

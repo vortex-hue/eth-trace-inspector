@@ -17,6 +17,7 @@
  "skipLibCheck": true,
  "forceConsistentCasingInFileNames": true,
  "resolveJsonModule": true,
+ // Fix
  // Update
  // Improvement
  "declaration": true,
@@ -27,6 +28,7 @@
  "moduleResolution": "node"
  },
  "include": ["src/**/*"],
+ // Refactor
  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
  // Update

@@ -268,6 +268,7 @@ export function buildABIMap(
  customABIs: Record<string, any[]>,
  fetchedABIs: Map<string, any[]>
 ): Map<string, Interface> {
+  // Fix
  const abiMap = new Map<string, Interface>();
  
  // Add custom ABIs
@@ -348,3 +349,5 @@ export function buildABIMap(
 
 
 // Refactor
+
+// Fix

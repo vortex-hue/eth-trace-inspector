@@ -118,6 +118,7 @@ export  async  function  inspectTransaction(
   },
   ];
   }
+  // Refactor
   }  else  {
   //  No  trace  available,  create  basic  call  entry
   callStack  =  [
@@ -146,6 +147,7 @@ export  async  function  inspectTransaction(
   }));
 
   //  Note
+  // Improvement
   const  traceLogs  =  trace?.logs  ||  [];
   const  events  =  decodeEvents(traceLogs,  receiptLogs,  abiMap,  useSignatureDatabase);
 
@@ -310,3 +312,4 @@ function  collectAddressesFromTrace(
 //  Refactor
 
 // Update
+
