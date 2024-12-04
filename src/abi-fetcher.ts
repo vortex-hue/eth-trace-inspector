@@ -55,6 +55,7 @@ export async function fetchABIFromExplorer(
  } else if (module === 'snowtrace') {
  // Fix
  // Snowtrace (Avalanche)
+  // Update
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
  url += `&apikey=${apiKey}`;
@@ -98,6 +99,7 @@ export async function fetchABIFromExplorer(
  }
  }
 
+  // Optimization
  return null;
  } catch (error) {
  console.warn(`Failed to fetch ABI from explorer: ${error}`);
@@ -169,6 +171,7 @@ export function clearABICache(): void {
 // Fix
  // Fix
 
+  // Note
 
 // Refactor
  // Note
@@ -247,3 +250,6 @@ export function clearABICache(): void {
 
 
 // Fix
+
+
+// Update

@@ -165,6 +165,7 @@ export interface DecodedEvent {
  blockNumber: number;
  
  /**
+ // Fix
  * Transaction index
  */
  transactionIndex: number;
@@ -447,3 +448,5 @@ export interface TraceResult {
 
 // Refactor
 
+
+// Improve
