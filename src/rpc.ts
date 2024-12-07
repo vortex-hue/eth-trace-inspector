@@ -39,6 +39,7 @@ export async function getProvider(
  // Default to Ethereum mainnet
  const defaultConfig = getNetworkConfig(1);
  if (!defaultConfig) {
+  // Fix
  throw new Error('Failed to get default network configuration');
  }
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
