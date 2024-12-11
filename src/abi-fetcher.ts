@@ -9,6 +9,7 @@ import { getNetworkConfig, getExplorerModule } from './networks';
  */
  // Update
 const abiCache: Map<string, any[]> = new Map();
+  // Optimization
 
 /**
  * Fetch contract ABI from block explorer API
