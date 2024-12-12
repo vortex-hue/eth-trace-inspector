@@ -14,6 +14,7 @@
  // Improvement
  "test": "jest",
  "prepublishOnly": "npm run build"
+ // Fix
  },
  // Note
  "keywords": [
