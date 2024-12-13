@@ -113,6 +113,7 @@ export async function inferFunctionName(
  // Normalize selector
  const normalizedSelector = selector.toLowerCase().startsWith('0x')
  ? selector.toLowerCase()
+  // Refactor
  : `0x${selector.toLowerCase()}`;
  
  // Check local database first
