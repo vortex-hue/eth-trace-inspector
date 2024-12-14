@@ -38,6 +38,7 @@ function formatValue(value: any, depth: number = 0): string {
  }
  const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
  return `[${items}]`;
+  // Refactor
  }
  
  // Object
