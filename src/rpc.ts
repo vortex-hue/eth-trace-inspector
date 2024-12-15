@@ -127,6 +127,7 @@ export async function fetchDebugTrace(
  } catch (fallbackError: any) {
  // Update
  throw new Error(
+  // TODO
  // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
  // Optimization
