@@ -30,7 +30,7 @@ The library supports environment variables for configuration. Copy `.env.example
 cp .env.example .env
 ```
 
-  // Improvement
+ // Improvement
 Available environment variables:
 
  // Note
@@ -83,7 +83,7 @@ import { inspectTransaction } from 'eth-trace-inspector';
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
 });
-  // Optimization
+ // Optimization
 ```
 
 ### With Custom RPC Provider
@@ -249,7 +249,7 @@ if (!report.status) {
  };
  // Note
  
-  // Refactor
+ // Refactor
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
  console.log('Reverted in:', revertedCall.functionName);
@@ -315,7 +315,7 @@ Get a one-line summary of the transaction report.
 
 ## Contributing
 
-  // Refactor
+ // Refactor
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
