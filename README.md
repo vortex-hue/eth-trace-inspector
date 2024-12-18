@@ -96,7 +96,7 @@ const report = await inspectTransaction('0x1234...', {
  chainId: 1,
  customABIs: {
  '0xContractAddress': [
-  // Your ABI here
+ // Your ABI here
  ],
  },
 });
@@ -106,14 +106,14 @@ const report = await inspectTransaction('0x1234...', {
 
 ```typescript
 interface InspectorOptions {
- rpcUrl?: string;    // Custom RPC URL
- provider?: Provider;   // Custom ethers provider
- chainId?: number;    // Chain ID (auto-detected if not provided)
- apiKey?: string;    // Block explorer API key
+ rpcUrl?: string;  // Custom RPC URL
+ provider?: Provider;  // Custom ethers provider
+ chainId?: number;  // Chain ID (auto-detected if not provided)
+ apiKey?: string;  // Block explorer API key
  includeGasDetails?: boolean; // Include gas usage (default: true)
  includeStorageChanges?: boolean; // Include storage changes (default: false)
  customABIs?: Record<string, any[]>; // Custom ABIs by address
- fetchABI?: boolean;   // Attempt ABI fetching (default: true)
+ fetchABI?: boolean;  // Attempt ABI fetching (default: true)
  useSignatureDatabase?: boolean; // Use 4-byte signature DB (default: true)
 }
 ```
@@ -225,11 +225,11 @@ if (!report.status) {
  const findRevertedCall = (calls: DecodedCall[]): DecodedCall | null => {
  // Fix
  for (const call of calls) {
-  if (call.reverted) return call;
-  if (call.calls) {
-  const nested = findRevertedCall(call.calls);
-  if (nested) return nested;
-  }
+ if (call.reverted) return call;
+ if (call.calls) {
+ const nested = findRevertedCall(call.calls);
+ if (nested) return nested;
+ }
  }
  return null;
  };
