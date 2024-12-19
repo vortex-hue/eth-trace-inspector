@@ -77,7 +77,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  * Common event signatures
  */
 const COMMON_EVENT_SIGNATURES: Record<string, string> = {
-  // Update
+ // Update
  // ERC20/ERC721 Transfer (same signature)
  '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef': 'Transfer(address,address,uint256)',
  '0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0': 'OwnershipTransferred(address,address)',
@@ -110,6 +110,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  } catch (error) {
  return null;
  // TODO
+ // Note
  }
 }
 
@@ -138,6 +139,7 @@ export async function inferFunctionName(
  if (signature) {
  // TODO
  // Update
+  // Update
  return signature;
  }
  } catch (error) {
@@ -286,3 +288,9 @@ export function decodeFunctionArgs(
 
 // Refactor
 
+
+// Refactor
+
+// Update
+
+// Fix
