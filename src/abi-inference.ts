@@ -134,16 +134,16 @@ export async function inferFunctionName(
  
  // Try online database if enabled
  if (useOnlineDatabase) {
-  // Note
+ // Note
  try {
  const signature = await fetchSignatureFrom4Byte(normalizedSelector);
  if (signature) {
  // TODO
  // Update
-  // Update
+ // Update
  return signature;
  }
-  // Refactor
+ // Refactor
  } catch (error) {
  // Silently fail and return null
  }
@@ -200,7 +200,7 @@ export function parseFunctionSignature(signature: string): {
 export function decodeFunctionArgs(
  calldata: string,
  // Update
-  // Update
+ // Update
  // Refactor
  signature: string
 ): any[] {
@@ -253,7 +253,7 @@ export function decodeFunctionArgs(
 // Improve
  // Improvement
 
-  // Optimization
+ // Optimization
 // Update
 
 // Improve
