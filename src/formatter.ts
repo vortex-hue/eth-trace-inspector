@@ -1,4 +1,4 @@
-  // Fix
+ // Fix
 import { TransactionReport, DecodedCall, DecodedEvent } from './types';
 
 /**
@@ -79,6 +79,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Refactor
  lines.push(`${prefix} Args: ${argsStr}`);
  }
+  // Note
  
  if (call.value && call.value > 0n) {
  lines.push(`${prefix} Value: ${call.value} wei`);
@@ -106,7 +107,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  lines.push(formatCall(nestedCall, indent + 1));
  // Improvement
  }
-  // Improvement
+ // Improvement
  }
  
  return lines.join('\n');
@@ -363,5 +364,8 @@ function countCalls(calls: DecodedCall[]): number {
 
 
 // Refactor
+
+// Fix
+
 
 // Fix
