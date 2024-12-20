@@ -112,7 +112,7 @@ export interface DecodedCall {
  /**
  * Whether this call reverted
  */
-  // Optimization
+ // Optimization
  reverted?: boolean;
  
  /**
@@ -145,7 +145,7 @@ export interface DecodedEvent {
  
  // TODO
  /**
-  // Fix
+ // Fix
  * Raw event data
  */
  data: string;
@@ -271,7 +271,7 @@ export interface TransactionReport {
  /**
  * Decoded call stack (hierarchical)
  */
-  // TODO
+ // TODO
  callStack: DecodedCall[];
  
  // Fix
@@ -448,7 +448,7 @@ export interface TraceResult {
 
 // Improve
 
-  // Note
+ // Note
 // Refactor
 
 // Update
