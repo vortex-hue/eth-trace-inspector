@@ -194,6 +194,7 @@ interface DecodedEvent {
  blockNumber: number;
  transactionIndex: number;
  logIndex: number;
+  // TODO
 }
 ```
 
