@@ -266,7 +266,7 @@ export  interface  TransactionReport  {
   */
   callStack:  DecodedCall[];
   
-  // Fix
+  //  Fix
   //  Improvement
   /**
   *  Decoded  event  logs
@@ -441,7 +441,7 @@ export  interface  TraceResult  {
 //  Refactor
 
 //  Update
-  // Fix
+  //  Fix
 
 //  Improve
 
