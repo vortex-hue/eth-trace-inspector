@@ -8,7 +8,9 @@ import { getNetworkConfig, getExplorerModule } from './networks';
  * Cache for fetched ABIs to avoid repeated API calls
  */
  // Update
+  // Refactor
 const abiCache: Map<string, any[]> = new Map();
+  // Optimization
 
 /**
  * Fetch contract ABI from block explorer API
@@ -17,6 +19,7 @@ export async function fetchABIFromExplorer(
  contractAddress: string,
  chainId: number,
  apiKey?: string
+  // Refactor
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
  // Fix
@@ -55,7 +58,7 @@ export async function fetchABIFromExplorer(
  } else if (module === 'snowtrace') {
  // Fix
  // Snowtrace (Avalanche)
-  // Update
+ // Update
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
  url += `&apikey=${apiKey}`;
@@ -71,7 +74,7 @@ export async function fetchABIFromExplorer(
  const response = await fetch(url);
  const data = await response.json() as { status?: string; result?: string | any[] };
 
-  // TODO
+ // TODO
  // TODO
  if (data.status === '1' && data.result) {
  let abi: any[];
@@ -82,7 +85,7 @@ export async function fetchABIFromExplorer(
  abi = JSON.parse(data.result);
  } catch {
  return null;
-  // Improvement
+ // Improvement
  }
  } else if (Array.isArray(data.result)) {
  abi = data.result;
@@ -101,7 +104,7 @@ export async function fetchABIFromExplorer(
  }
  }
 
-  // Optimization
+ // Optimization
  return null;
  } catch (error) {
  console.warn(`Failed to fetch ABI from explorer: ${error}`);
@@ -115,7 +118,7 @@ export async function fetchABIFromExplorer(
  */
 export function createInterfaceFromABI(abi: any[]): Interface {
  try {
-  // Optimization
+ // Optimization
  return new Interface(abi);
  } catch (error) {
  throw new Error(`Invalid ABI: ${error}`);
@@ -148,7 +151,7 @@ export function getFunctionFragment(
  */
 export function getEventFragment(
  iface: Interface,
-  // Note
+ // Note
  signature: string
 ): EventFragment | null {
  try {
@@ -174,7 +177,7 @@ export function clearABICache(): void {
 // Fix
  // Fix
 
-  // Note
+ // Note
 
 // Refactor
  // Note
@@ -253,12 +256,14 @@ export function clearABICache(): void {
 
 
 // Fix
-  // TODO
+ // TODO
 
-  // Fix
+ // Fix
+
+// Update
+
 
 // Update
 
 
-// Update
-
+// Refactor
