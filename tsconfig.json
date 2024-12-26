@@ -1,99 +1,99 @@
-  //  TODO
+ // TODO
 {
-  "compilerOptions":  {
-  "target":  "ES2020",
-  "module":  "commonjs",
-  //  Optimization
-  //  Update
-  //  Refactor
-  "lib":  ["ES2020"],
-  "outDir":  "./dist",
-  "rootDir":  "./src",
-  "strict":  true,
-  //  Fix
-  "esModuleInterop":  true,
-  "skipLibCheck":  true,
-  "forceConsistentCasingInFileNames":  true,
-  "resolveJsonModule":  true,
-  //  Improvement
-  "declaration":  true,
-  "declarationMap":  true,
-  //  TODO
-  "sourceMap":  true,
-  "moduleResolution":  "node"
-  },
-  "include":  ["src/**/*"],
-  "exclude":  ["node_modules",  "dist",  "**/*.test.ts"]
+ "compilerOptions": {
+ "target": "ES2020",
+ "module": "commonjs",
+ // Optimization
+ // Update
+ // Refactor
+ "lib": ["ES2020"],
+ "outDir": "./dist",
+ "rootDir": "./src",
+ "strict": true,
+ // Fix
+ "esModuleInterop": true,
+ "skipLibCheck": true,
+ "forceConsistentCasingInFileNames": true,
+ "resolveJsonModule": true,
+ // Improvement
+ "declaration": true,
+ "declarationMap": true,
+ // TODO
+ "sourceMap": true,
+ "moduleResolution": "node"
+ },
+ "include": ["src/**/*"],
+ "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
-  //  Update
+ // Update
 
 
-//  Update
+// Update
 
-//  Refactor
-
-
-//  Improve
-  //  Optimization
-  //  TODO
-
-//  Fix
-
-  //  Optimization
-
-  //  Optimization
-//  Refactor
-  //  Update
-
-  //  Improvement
-//  Fix
+// Refactor
 
 
-//  Update
+// Improve
+ // Optimization
+ // TODO
 
-//  Refactor
+// Fix
 
-//  Update
+ // Optimization
 
-//  Improve
+ // Optimization
+// Refactor
+ // Update
 
-  //  Fix
-//  Refactor
-
-//  Refactor
-
-
-//  Update
-
-//  Fix
-  //  TODO
+ // Improvement
+// Fix
 
 
-//  Refactor
+// Update
+
+// Refactor
+
+// Update
+
+// Improve
+
+ // Fix
+// Refactor
+
+// Refactor
 
 
-  //  Fix
-//  Fix
+// Update
+
+// Fix
+ // TODO
 
 
-//  Improve
-
-//  Fix
-
-//  Fix
-
-//  Update
+// Refactor
 
 
-//  Improve
+ // Fix
+// Fix
 
 
-//  Improve
+// Improve
 
-//  Update
+// Fix
+
+// Fix
+
+// Update
 
 
-//  Fix
+// Improve
+
+
+// Improve
+
+// Update
+
+
+// Fix
 
 
 // Update
