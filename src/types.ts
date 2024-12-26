@@ -106,6 +106,7 @@ export  interface  DecodedCall  {
   */
   calls?:  DecodedCall[];
   
+  // Fix
   /**
   *  Whether  this  call  reverted
   */
@@ -170,6 +171,7 @@ export  interface  DecodedEvent  {
   //  Fix
   *  Transaction  index
   */
+  // Update
   transactionIndex:  number;
   
   /**
@@ -491,3 +493,5 @@ export  interface  TraceResult  {
 
 
 // Refactor
+
+// Update

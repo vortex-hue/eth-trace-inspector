@@ -61,6 +61,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  const prefix = ' '.repeat(indent);
  const lines: string[] = [];
  
+  // Refactor
  lines.push(`${prefix}└─ ${call.functionName}(${call.to})`);
  
  if (call.args && call.args.length > 0) {
@@ -350,3 +351,7 @@ function countCalls(calls: DecodedCall[]): number {
 // Refactor
 
 // Update
+
+// Improve
+
+// Improve
