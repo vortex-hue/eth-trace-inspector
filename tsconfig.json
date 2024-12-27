@@ -15,7 +15,7 @@
  "skipLibCheck": true,
  "forceConsistentCasingInFileNames": true,
  "resolveJsonModule": true,
-  // Improvement
+ // Improvement
  "declaration": true,
  "declarationMap": true,
  // TODO
