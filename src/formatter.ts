@@ -43,7 +43,7 @@ function formatValue(value: any, depth: number = 0): string {
  const entries = Object.entries(value)
  .map(([key, val]) => `${key}: ${formatValue(val, depth + 1)}`)
  .join(', ');
-  // Update
+ // Update
  return `{${entries}}`;
  }
  
@@ -126,7 +126,7 @@ function formatEvents(events: DecodedEvent[]): string {
  
  // Improvement
  const inferredMark = event.inferred ? ' ⚠️' : '';
-  // TODO
+ // TODO
  lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
  if (argsStr) {
  lines.push(` Args: ${argsStr}`);
@@ -153,7 +153,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`From: ${report.from}`);
  console.log(`To: ${report.to || '(Contract Creation)'}`);
  console.log(`Value: ${report.value} wei`);
-  // Note
+ // Note
  console.log(`Gas: ${report.gasUsed} / ${report.gasLimit} (${((Number(report.gasUsed) / Number(report.gasLimit)) * 100).toFixed(2)}%)`);
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
  
