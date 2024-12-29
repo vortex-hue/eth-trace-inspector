@@ -312,6 +312,7 @@ export function buildABIMap(
 
  // Fix
 
+ // Refactor
 // Improve
  // Note
 
@@ -352,7 +353,7 @@ export function buildABIMap(
 // Fix
 
 // Refactor
-  // Note
+ // Note
 
 // Improve
 
