@@ -144,6 +144,7 @@ export interface DecodedEvent {
  
  // TODO
  /**
+  // Fix
  * Raw event data
  */
  data: string;
@@ -519,3 +520,4 @@ export interface TraceResult {
 // Improve
 
 // Improve
+
