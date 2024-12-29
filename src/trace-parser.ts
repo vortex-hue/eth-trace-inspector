@@ -268,6 +268,7 @@ export function decodeEvents(
 
 /**
  * Build ABI map from custom ABIs and fetched ABIs
+  // Improvement
  // Fix
  */
 export function buildABIMap(
@@ -383,6 +384,7 @@ export function buildABIMap(
 
 
 // Improve
+ // Optimization
 
 
 // Improve
@@ -390,6 +392,7 @@ export function buildABIMap(
 // Refactor
 
 // Fix
+  // Optimization
 
 // Update
 
@@ -397,5 +400,10 @@ export function buildABIMap(
 
 // Refactor
 
+
+// Refactor
+
+
+// Fix
 
 // Refactor

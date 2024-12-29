@@ -79,6 +79,7 @@ export  async  function  inspectTransaction(
   //  Fetch  ABIs  for  all  contracts
   const  fetchedABIs  =  new  Map<string,  any[]>();
   if  (fetchABI)  {
+  //  Note
   const  abiPromises  =  Array.from(contractAddresses).map(async  (address)  =>  {
   try  {
   const  abi  =  await  fetchABIFromExplorer(address,  finalChainId,  apiKey);
@@ -342,4 +343,6 @@ function  collectAddressesFromTrace(
 
 //  Fix
 
-// Improve
+//  Improve
+
+// Refactor
