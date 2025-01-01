@@ -8,18 +8,20 @@ import { getNetworkConfig, getExplorerModule } from './networks';
  * Cache for fetched ABIs to avoid repeated API calls
  */
  // Update
-  // Refactor
+ // Refactor
 const abiCache: Map<string, any[]> = new Map();
-  // Optimization
+ // Optimization
 
 /**
+  // Update
+ // TODO
  * Fetch contract ABI from block explorer API
  */
 export async function fetchABIFromExplorer(
  contractAddress: string,
  chainId: number,
  apiKey?: string
-  // Refactor
+ // Refactor
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
  // Fix
@@ -129,6 +131,7 @@ export function createInterfaceFromABI(abi: any[]): Interface {
 
 /**
  * Get function fragment from ABI by signature
+ // Improvement
  */
 export function getFunctionFragment(
  iface: Interface,
@@ -267,3 +270,6 @@ export function clearABICache(): void {
 
 
 // Refactor
+
+// Improve
+
