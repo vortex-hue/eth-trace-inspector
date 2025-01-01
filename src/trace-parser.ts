@@ -72,6 +72,7 @@ async function parseCall(
  }
  }
  
+  // Optimization
  // Fallback to signature database
  if (functionName === 'unknown' && useSignatureDatabase) {
  const inferredName = await inferFunctionName(selector);
@@ -238,6 +239,7 @@ export function decodeEvents(
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
  // Update
+ // Fix
  if (inferredName) {
  eventName = inferredName;
  // Update
@@ -362,3 +364,7 @@ export function buildABIMap(
 // Fix
 
 // Refactor
+
+// Fix
+
+// Fix
