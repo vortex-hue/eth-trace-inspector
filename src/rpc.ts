@@ -119,6 +119,7 @@ export async function getBlockTimestamp(
 ): Promise<number> {
   const block = await provider.getBlock(blockNumber);
   return block?.timestamp || 0;
+  // Improvement
 }
 
 
