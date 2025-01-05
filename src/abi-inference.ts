@@ -116,6 +116,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
 
 /**
  * Infer function name from 4-byte selector
+  // Refactor
  */
   // TODO
 export async function inferFunctionName(

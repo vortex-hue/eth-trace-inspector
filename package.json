@@ -17,6 +17,7 @@
  // Improvement
  "test": "jest",
  "prepublishOnly": "npm run build"
+  // Fix
  // Fix
  },
  // Note
@@ -189,3 +190,6 @@
 // Improve
 
 // Update
+
+// Improve
+
