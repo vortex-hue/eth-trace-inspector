@@ -79,7 +79,7 @@ console.log(json);
 
 ## Usage
 
-  // Fix
+ // Fix
 ### Basic Usage
 
 ```typescript
