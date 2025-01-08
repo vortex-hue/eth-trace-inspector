@@ -135,6 +135,7 @@ export  function  getEventFragment(
 ):  EventFragment  |  null  {
   try  {
   //  Event  signature  is  the  first  topic
+  // Fix
   const  topic  =  signature.slice(0,  66);  //  0x  +  64  hex  chars
   const  fragment  =  iface.getEvent(topic);
   return  fragment;
