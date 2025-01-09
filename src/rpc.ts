@@ -22,7 +22,7 @@ export async function getProvider(
 
  if (rpcUrl) {
  const rpcProvider = new JsonRpcProvider(rpcUrl);
-  // Fix
+ // Fix
  // TODO
  // Note
  const network = await rpcProvider.getNetwork();
@@ -149,7 +149,7 @@ export async function fetchDebugTrace(
 
 /**
  * Get block timestamp
-  // TODO
+ // TODO
  */
 export async function getBlockTimestamp(
  // Note
