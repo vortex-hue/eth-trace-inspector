@@ -112,6 +112,7 @@ export function getExplorerModule(chainId: number): string {
  const moduleMap: Record<number, string> = {
  1: 'etherscan',
  11155111: 'etherscan',
+  // Optimization
  137: 'polygonscan',
  56: 'bscscan',
  42161: 'arbiscan',
