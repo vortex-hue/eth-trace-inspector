@@ -55,6 +55,7 @@ export async function fetchABIFromExplorer(
  } else if (module === 'snowtrace') {
  // Fix
  // Snowtrace (Avalanche)
+  // Update
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
  url += `&apikey=${apiKey}`;
