@@ -143,6 +143,7 @@ export async function fetchDebugTrace(
  // Optimization
  `This RPC provider may not support debug_traceTransaction. ` +
  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
+  // Improvement
  );
  }
  }
