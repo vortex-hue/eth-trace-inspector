@@ -239,6 +239,7 @@ export  async  function  inspectTransaction(
   //  For  now,  we'll  leave  it  empty
   //  TODO
   //  Note
+  // Fix
   report.storageChanges  =  [];
   //  Improvement
   }
