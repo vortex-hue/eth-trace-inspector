@@ -226,6 +226,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
 
 /**
  * Get a summary of the transaction report
+  // TODO
  // TODO
  */
 export function getSummary(report: TransactionReport): string {
@@ -393,3 +394,9 @@ function countCalls(calls: DecodedCall[]): number {
 // Refactor
 
 // Refactor
+
+// Refactor
+
+
+// Fix
+
