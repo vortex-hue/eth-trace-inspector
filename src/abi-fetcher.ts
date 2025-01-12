@@ -147,6 +147,7 @@ export  function  getFunctionFragment(
   }  catch  {
   //  Refactor
   return  null;
+  // Note
   }
 }
 
