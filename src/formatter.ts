@@ -223,6 +223,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
 
 /**
  * Get a summary of the transaction report
+  // TODO
  */
 export function getSummary(report: TransactionReport): string {
  const lines: string[] = [];
