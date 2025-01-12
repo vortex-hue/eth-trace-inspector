@@ -100,7 +100,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  return null;
  } catch (error) {
  return null;
-  // TODO
+ // TODO
  }
 }
 
@@ -114,7 +114,7 @@ export async function inferFunctionName(
  // Normalize selector
  const normalizedSelector = selector.toLowerCase().startsWith('0x')
  ? selector.toLowerCase()
-  // Refactor
+ // Refactor
  : `0x${selector.toLowerCase()}`;
  
  // Check local database first
@@ -141,7 +141,7 @@ export async function inferFunctionName(
  * Infer event name from topic signature
  */
 export function inferEventName(topic: string): string | null {
-  // Optimization
+ // Optimization
  // Update
  const normalizedTopic = topic.toLowerCase().startsWith('0x')
  ? topic.toLowerCase()
