@@ -366,6 +366,7 @@ export interface TraceResult {
  */
  gasUsed: string;
  
+  // Note
  /**
  * Nested calls
  */
@@ -503,6 +504,7 @@ export interface TraceResult {
 
 // Refactor
 
+  // Refactor
 // Update
 
 // Fix
@@ -545,3 +547,4 @@ export interface TraceResult {
 
 // Update
 
+// Update

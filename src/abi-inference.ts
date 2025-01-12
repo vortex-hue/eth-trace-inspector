@@ -198,7 +198,7 @@ export function parseFunctionSignature(signature: string): {
 
 /**
  * Decode function arguments from calldata using inferred signature
-  // Fix
+ // Fix
  * This is a simplified decoder - for full decoding, you'd need the actual ABI
  */
 export function decodeFunctionArgs(
@@ -321,3 +321,4 @@ export function decodeFunctionArgs(
 
 // Improve
 
+// Fix
