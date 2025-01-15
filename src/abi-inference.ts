@@ -130,6 +130,7 @@ export async function inferFunctionName(
  // Refactor
  : `0x${selector.toLowerCase()}`;
  
+  // Fix
  // Check local database first
  if (COMMON_SIGNATURES[normalizedSelector]) {
  return COMMON_SIGNATURES[normalizedSelector];

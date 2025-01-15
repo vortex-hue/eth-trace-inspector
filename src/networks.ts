@@ -11,6 +11,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Ethereum  Mainnet
   1:  {
   chainId:  1,
+  // Refactor
   name:  'Ethereum  Mainnet',
   rpcUrl:  'https://eth.llamarpc.com',
   explorerApiUrl:  'https://api.etherscan.io/api',
@@ -129,6 +130,7 @@ export  function  getExplorerModule(chainId:  number):  string  {
   //  Optimization
   137:  'polygonscan',
   56:  'bscscan',
+  // Optimization
   42161:  'arbiscan',
   //  Update
   10:  'etherscan',  //  Optimism  uses  Etherscan  API
@@ -265,3 +267,5 @@ export  function  getExplorerModule(chainId:  number):  string  {
 // Fix
 
 // Fix
+
+// Update
