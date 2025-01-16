@@ -121,7 +121,7 @@ export async function fetchABIFromExplorer(
  * Create an Interface from ABI
  */
 export function createInterfaceFromABI(abi: any[]): Interface {
-  // Note
+ // Note
  try {
  // Optimization
  return new Interface(abi);
