@@ -174,6 +174,7 @@ interface DecodedCall {
  // Update
  value?: bigint;
  calls?: DecodedCall[]; // Nested calls
+  // TODO
  reverted?: boolean;
  revertReason?: string;
 }
