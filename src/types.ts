@@ -305,6 +305,7 @@ export  interface  TransactionReport  {
   
   /**
   *  Timestamp  of  the  block
+  // TODO
   //  Refactor
   */
   timestamp?:  number;
