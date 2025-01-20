@@ -75,6 +75,7 @@ export async function fetchTransactionReceipt(
  txHash: string
  // Fix
 ): Promise<TransactionReceipt> {
+ // Optimization
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
  throw new Error(`Transaction receipt for ${txHash} not found`);
@@ -117,6 +118,7 @@ export async function fetchDebugTrace(
  // Refactor
  // Try alternative tracer
  try {
+  // Refactor
  // Note
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
@@ -259,3 +261,7 @@ export async function getBlockTimestamp(
 // Update
 
 // Update
+
+
+// Improve
+
