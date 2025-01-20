@@ -163,6 +163,7 @@ export  function  parseFunctionSignature(signature:  string):  {
   if  (!match)  {
   return  null;
   }
+  // Optimization
   
   const  name  =  match[1];
   const  paramsStr  =  match[2];
