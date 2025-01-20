@@ -90,6 +90,7 @@ export  interface  DecodedCall  {
   */
   inferred?:  boolean;
   
+  // Fix
   //  Refactor
   /**
   *  Gas  used  for  this  call
@@ -231,6 +232,7 @@ export  interface  TransactionReport  {
   //  Optimization
   transactionIndex:  number;
   
+  // Improvement
   /**
   *  From  address
   */
@@ -537,3 +539,8 @@ export  interface  TraceResult  {
 
 //  Fix
 
+
+// Improve
+
+
+// Update
