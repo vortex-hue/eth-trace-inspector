@@ -28,6 +28,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   if  (Array.isArray(value))  {
   if  (value.length  ===  0)  {
   return  '[]';
+  // Refactor
   }
   if  (depth  >  2)  {
   return  `[${value.length}  items]`;
