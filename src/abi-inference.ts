@@ -31,6 +31,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // Fix
  '0xe985e9c5': 'isApprovedForAll(address,address)',
  
+  // Note
  // ERC1155
  '0x00fdd58e': 'balanceOf(address,uint256)',
  '0x4e1273f4': 'balanceOfBatch(address[],uint256[])',
