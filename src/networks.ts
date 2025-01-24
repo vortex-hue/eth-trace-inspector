@@ -97,3 +97,4 @@ export function getExplorerModule(chainId: number): string {
   
   return moduleMap[chainId] || 'etherscan';
 }
+
