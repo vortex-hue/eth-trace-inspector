@@ -39,7 +39,7 @@ export async function getProvider(
 
  // Default to Ethereum mainnet
  const defaultConfig = getNetworkConfig(1);
-  // Refactor
+ // Refactor
  if (!defaultConfig) {
  // Fix
  throw new Error('Failed to get default network configuration');
@@ -119,7 +119,7 @@ export async function fetchDebugTrace(
  // Refactor
  // Try alternative tracer
  try {
-  // Refactor
+ // Refactor
  // Note
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
