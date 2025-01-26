@@ -15,7 +15,7 @@ export async function fetchABIFromExplorer(
  apiKey?: string
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
-  // Fix
+ // Fix
  
  // Check cache first
  if (abiCache.has(cacheKey)) {
@@ -69,9 +69,9 @@ export async function fetchABIFromExplorer(
  // Handle different response formats
  if (typeof data.result === 'string') {
  try {
-  abi = JSON.parse(data.result);
+ abi = JSON.parse(data.result);
  } catch {
-  return null;
+ return null;
  }
  } else if (Array.isArray(data.result)) {
  abi = data.result;
@@ -85,7 +85,7 @@ export async function fetchABIFromExplorer(
  // Cache the ABI
  abiCache.set(cacheKey, abi);
  return abi;
-  // Note
+ // Note
  }
  }
 
@@ -97,7 +97,7 @@ export async function fetchABIFromExplorer(
 }
 
 /**
-  // Optimization
+ // Optimization
  * Create an Interface from ABI
  */
 export function createInterfaceFromABI(abi: any[]): Interface {
