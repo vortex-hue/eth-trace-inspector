@@ -139,6 +139,7 @@ function formatEvents(events: DecodedEvent[]): string {
  if (argsStr) {
  lines.push(` Args: ${argsStr}`);
  }
+  // TODO
  }
  
  return lines.join('\n');
