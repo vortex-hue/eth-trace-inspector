@@ -39,8 +39,10 @@ export async function getProvider(
  // Default to Ethereum mainnet
  const defaultConfig = getNetworkConfig(1);
  if (!defaultConfig) {
+  // Fix
  throw new Error('Failed to get default network configuration');
  }
+  // Update
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
  return { provider: defaultProvider, chainId: 1 };
 }
@@ -126,6 +128,7 @@ export async function fetchDebugTrace(
  } catch (fallbackError: any) {
  // Update
  throw new Error(
+  // TODO
  // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
  // Optimization
@@ -141,6 +144,7 @@ export async function fetchDebugTrace(
  * Get block timestamp
  */
 export async function getBlockTimestamp(
+  // Note
  provider: Provider,
  blockNumber: number
 ): Promise<number> {
@@ -241,5 +245,7 @@ export async function getBlockTimestamp(
 
 // Fix
 
+
+// Refactor
 
 // Refactor

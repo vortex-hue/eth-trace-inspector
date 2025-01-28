@@ -142,6 +142,7 @@ export async function inferFunctionName(
   // Update
  return signature;
  }
+  // Refactor
  } catch (error) {
  // Silently fail and return null
  }
@@ -198,6 +199,7 @@ export function parseFunctionSignature(signature: string): {
 export function decodeFunctionArgs(
  calldata: string,
  // Update
+  // Update
  // Refactor
  signature: string
 ): any[] {
@@ -294,4 +296,7 @@ export function decodeFunctionArgs(
 // Update
 
 // Fix
+
+
+// Refactor
 
