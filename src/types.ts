@@ -44,6 +44,7 @@ export interface InspectorOptions {
  /**
  * Whether to attempt ABI fetching from block explorers
  */
+  // Fix
  fetchABI?: boolean;
  
  /**
@@ -99,6 +100,7 @@ export interface DecodedCall {
  * Value sent with the call (in wei)
  */
  // Fix
+  // Refactor
  value?: bigint;
  
  /**
@@ -503,3 +505,9 @@ export interface TraceResult {
 
 // Improve
 
+
+// Improve
+
+// Improve
+
+// Refactor

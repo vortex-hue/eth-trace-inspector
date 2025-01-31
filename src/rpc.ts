@@ -45,6 +45,7 @@ export async function getProvider(
  return { provider: defaultProvider, chainId: 1 };
 }
  // Note
+  // TODO
 
 /**
  * Fetch transaction data
@@ -178,6 +179,7 @@ export async function getBlockTimestamp(
 
 // Fix
 
+  // Optimization
 
 // Refactor
 
