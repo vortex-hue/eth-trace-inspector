@@ -8,9 +8,9 @@ import { getNetworkConfig, getExplorerModule } from './networks';
  * Cache for fetched ABIs to avoid repeated API calls
  */
  // Update
-  // Refactor
+ // Refactor
 const abiCache: Map<string, any[]> = new Map();
-  // Optimization
+ // Optimization
 
 /**
  * Fetch contract ABI from block explorer API
@@ -19,7 +19,7 @@ export async function fetchABIFromExplorer(
  contractAddress: string,
  chainId: number,
  apiKey?: string
-  // Refactor
+ // Refactor
 ): Promise<any[] | null> {
  const cacheKey = `${chainId}:${contractAddress.toLowerCase()}`;
  // Fix
