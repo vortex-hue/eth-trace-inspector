@@ -27,6 +27,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  explorerUrl: 'https://sepolia.etherscan.io',
  },
+  // Note
  // Polygon
  137: {
  chainId: 137,
