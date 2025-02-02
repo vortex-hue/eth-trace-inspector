@@ -117,6 +117,7 @@ export  async  function  fetchDebugTrace(
   ]);
   return  trace  as  TraceResult;
   }  catch  (fallbackError:  any)  {
+  // Update
   throw  new  Error(
   //  Improvement
   `Failed  to  fetch  debug  trace:  ${error.message}.  `  +
