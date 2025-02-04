@@ -1,151 +1,151 @@
-  //  TODO
+ // TODO
 {
-  "compilerOptions":  {
-  "target":  "ES2020",
-  "module":  "commonjs",
-  //  Optimization
-  //  Update
-  //  Update
-  //  Refactor
-  //  Fix
-  "lib":  ["ES2020"],
-  "outDir":  "./dist",
-  "rootDir":  "./src",
-  "strict":  true,
-  //  Fix
-  "esModuleInterop":  true,
-  "skipLibCheck":  true,
-  "forceConsistentCasingInFileNames":  true,
-  "resolveJsonModule":  true,
-  //  Fix
-  //  Update
-  //  Improvement
-  "declaration":  true,
-  //  Refactor
-  "declarationMap":  true,
-  //  TODO
-  "sourceMap":  true,
-  "moduleResolution":  "node"
-  },
-  "include":  ["src/**/*"],
-  //  Refactor
-  "exclude":  ["node_modules",  "dist",  "**/*.test.ts"]
+ "compilerOptions": {
+ "target": "ES2020",
+ "module": "commonjs",
+ // Optimization
+ // Update
+ // Update
+ // Refactor
+ // Fix
+ "lib": ["ES2020"],
+ "outDir": "./dist",
+ "rootDir": "./src",
+ "strict": true,
+ // Fix
+ "esModuleInterop": true,
+ "skipLibCheck": true,
+ "forceConsistentCasingInFileNames": true,
+ "resolveJsonModule": true,
+ // Fix
+ // Update
+ // Improvement
+ "declaration": true,
+ // Refactor
+ "declarationMap": true,
+ // TODO
+ "sourceMap": true,
+ "moduleResolution": "node"
+ },
+ "include": ["src/**/*"],
+ // Refactor
+ "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
-  //  Update
+ // Update
 
 
-  //  Update
-//  Update
+ // Update
+// Update
 
-//  Refactor
-
-
-//  Improve
-  //  Optimization
-  //  TODO
-
-//  Fix
-  //  Note
-
-  //  Optimization
-
-  //  Optimization
-//  Refactor
-  //  Update
-
-  //  Improvement
-//  Fix
+// Refactor
 
 
-//  Update
+// Improve
+ // Optimization
+ // TODO
 
-//  Refactor
+// Fix
+ // Note
 
-//  Update
+ // Optimization
 
-//  Improve
+ // Optimization
+// Refactor
+ // Update
 
-  //  Fix
-//  Refactor
-
-//  Refactor
-
-
-//  Update
-
-//  Fix
-  //  TODO
+ // Improvement
+// Fix
 
 
-//  Refactor
+// Update
+
+// Refactor
+
+// Update
+
+// Improve
+
+ // Fix
+// Refactor
+
+// Refactor
 
 
-  //  Fix
-//  Fix
+// Update
 
-  //  Optimization
-
-//  Improve
-
-  //  TODO
-//  Fix
-
-//  Fix
-
-//  Update
+// Fix
+ // TODO
 
 
-  // TODO
-//  Improve
+// Refactor
 
 
-//  Improve
+ // Fix
+// Fix
 
-//  Update
+ // Optimization
 
+// Improve
 
-//  Fix
+ // TODO
+// Fix
 
+// Fix
 
-//  Update
-
-
-  //  Fix
-//  Fix
-  //  Update
-
-
-//  Fix
-
-//  Improve
-
-//  Refactor
-
-//  Refactor
-
-//  Update
-
-//  Refactor
-
-//  Improve
+// Update
 
 
-//  Update
-  //  TODO
-
-//  Update
-
-//  Update
+ // TODO
+// Improve
 
 
-  //  TODO
-//  Improve
+// Improve
+
+// Update
 
 
-//  Fix
+// Fix
 
-//  Improve
 
-//  Refactor
+// Update
 
-//  Improve
+
+ // Fix
+// Fix
+ // Update
+
+
+// Fix
+
+// Improve
+
+// Refactor
+
+// Refactor
+
+// Update
+
+// Refactor
+
+// Improve
+
+
+// Update
+ // TODO
+
+// Update
+
+// Update
+
+
+ // TODO
+// Improve
+
+
+// Fix
+
+// Improve
+
+// Refactor
+
+// Improve
