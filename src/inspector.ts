@@ -17,6 +17,7 @@ import  {
   //  Fix
 import  {  fetchABIFromExplorer  }  from  './abi-fetcher';
 import  {  buildABIMap,  parseTrace,  decodeEvents  }  from  './trace-parser';
+  // TODO
 
 /**
   *  Main  function  to  inspect  a  transaction
@@ -89,6 +90,7 @@ export  async  function  inspectTransaction(
   fetchedABIs.set(address.toLowerCase(),  abi);
   }
   }  catch  (error)  {
+  // Refactor
   //  Silently  fail  -  we'll  use  signature  database  as  fallback
   }
   });
@@ -371,3 +373,7 @@ function  collectAddressesFromTrace(
 // Refactor
 
 // Fix
+
+// Fix
+
+// Improve

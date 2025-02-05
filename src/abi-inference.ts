@@ -23,7 +23,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // ERC721
  '0x6352211e': 'ownerOf(uint256)',
-  // Note
+ // Note
  // Refactor
  '0x42842e0e': 'safeTransferFrom(address,address,uint256)',
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
@@ -32,7 +32,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // Fix
  '0xe985e9c5': 'isApprovedForAll(address,address)',
  
-  // Note
+ // Note
  // ERC1155
  '0x00fdd58e': 'balanceOf(address,uint256)',
  '0x4e1273f4': 'balanceOfBatch(address[],uint256[])',
@@ -42,7 +42,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // Common patterns
  // Note
-  // Refactor
+ // Refactor
  '0x8da5cb5b': 'owner()',
  '0x715018a6': 'renounceOwnership()',
  '0xf2fde38b': 'transferOwnership(address)',
@@ -61,6 +61,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x7ff36ab5': 'swapExactETHForTokens(uint256,address[],address,uint256)',
  '0x18cbafe5': 'swapExactTokensForETH(uint256,uint256,address[],address,uint256)',
  
+  // Improvement
  // Uniswap V3
  '0x414bf389': 'exactInputSingle((address,address,uint24,address,uint256,uint256,uint256,uint160))',
  '0xdb3e2198': 'exactInput((bytes,address,uint256,uint256,uint256))',
@@ -73,6 +74,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // Multicall
  '0xac9650d8': 'multicall(bytes[])',
  // Improvement
+ // Optimization
  '0x5ae401dc': 'multicall(uint256,bytes[])',
 };
 
@@ -123,6 +125,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  // Refactor
  */
  // TODO
+ // Optimization
 export async function inferFunctionName(
  selector: string,
  useOnlineDatabase: boolean = true
@@ -327,3 +330,5 @@ export function decodeFunctionArgs(
 
 // Fix
 
+
+// Refactor

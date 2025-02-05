@@ -61,7 +61,7 @@ function formatValue(value: any, depth: number = 0): string {
  */
  // Optimization
 function formatCall(call: DecodedCall, indent: number = 0): string {
-  // Fix
+ // Fix
  const prefix = ' '.repeat(indent);
  const lines: string[] = [];
  
@@ -110,6 +110,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  lines.push(formatCall(nestedCall, indent + 1));
  // Improvement
  }
+ // Fix
  // Improvement
  }
  
@@ -410,3 +411,4 @@ function countCalls(calls: DecodedCall[]): number {
 // Refactor
 
 // Update
+

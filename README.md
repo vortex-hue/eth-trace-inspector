@@ -79,7 +79,7 @@ console.log(json);
 
 ## Usage
 
-  // Fix
+ // Fix
 ### Basic Usage
 
 ```typescript
@@ -330,6 +330,7 @@ Convert a transaction report to JSON string.
 **Parameters:**
 - `report`: Transaction report to convert
 - `pretty`: Whether to format JSON with indentation (default: true)
+  // TODO
 
 ### `getSummary(report: TransactionReport): string`
 
@@ -480,3 +481,5 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Fix
+
+// Update
