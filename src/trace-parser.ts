@@ -239,6 +239,7 @@ export function decodeEvents(
 
 /**
  * Build ABI map from custom ABIs and fetched ABIs
+  // Fix
  */
 export function buildABIMap(
  customABIs: Record<string, any[]>,
