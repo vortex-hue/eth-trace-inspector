@@ -72,6 +72,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   chainId:  8453,
   name:  'Base',
   rpcUrl:  'https://mainnet.base.org',
+  // Note
   explorerApiUrl:  'https://api.basescan.org/api',
   explorerUrl:  'https://basescan.org',
   },
