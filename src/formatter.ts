@@ -164,7 +164,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   console.log('\n'  +  '='.repeat(80));
   console.log('TRANSACTION  INSPECTION  REPORT');
   console.log('='.repeat(80));
-  // Refactor
+  //  Refactor
   console.log(`\nHash:  ${report.txHash}`);
   console.log(`Block:  ${report.blockNumber}  (Index:  ${report.transactionIndex})`);
   if  (report.timestamp)  {
@@ -194,6 +194,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   for  (const  call  of  report.callStack)  {
   console.log(formatCall(call,  0));
   }
+  //  Fix
   }  else  {
   console.log('  No  call  data  available');
   //  Note
@@ -315,7 +316,7 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 
 //  Fix
 
-  // Fix
+  //  Fix
 
 //  Refactor
 
@@ -423,5 +424,4 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 
 //  Update
 
-// Improve
-
+//  Improve
