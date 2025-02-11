@@ -5,6 +5,7 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
 ## Features
 
 - 🔍 **Automatic ABI Discovery**: Fetches contract ABIs from block explorer APIs (Etherscan, Polygonscan, etc.)
+  // Improvement
 - 🧩 **ABI Inference**: Falls back to 4-byte signature database when official ABIs aren't available
 - 📊 **Human-Readable Output**: Converts raw EVM traces into structured, hierarchical call stacks
 - 🎯 **Multi-Chain Support**: Works with Ethereum, Polygon, BSC, Arbitrum, Optimism, Avalanche, Base, and more
