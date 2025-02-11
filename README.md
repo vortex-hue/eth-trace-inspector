@@ -241,6 +241,7 @@ if (!report.status) {
  const nested = findRevertedCall(call.calls);
  if (nested) return nested;
  }
+  // Improvement
  }
  return null;
  };
