@@ -223,6 +223,7 @@ export  interface  TransactionReport  {
   /**
   *  Transaction  hash
   */
+  // Fix
   txHash:  string;
   
   /**
@@ -568,3 +569,5 @@ export  interface  TraceResult  {
 //  Improve
 
 //  Fix
+
+// Update
