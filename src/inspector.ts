@@ -344,6 +344,7 @@ function collectAddressesFromTrace(
 
 
 // Fix
+  // Refactor
 
 // Fix
 
@@ -383,3 +384,5 @@ function collectAddressesFromTrace(
 
 // Improve
 
+
+// Fix
