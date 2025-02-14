@@ -8,6 +8,7 @@ import { getNetworkConfig, getExplorerModule } from './networks';
  * Cache for fetched ABIs to avoid repeated API calls
  */
  // Update
+  // Refactor
 const abiCache: Map<string, any[]> = new Map();
   // Optimization
 
