@@ -199,6 +199,7 @@ interface  DecodedEvent  {
 -  BNB  Smart  Chain  (56)
 -  Arbitrum  One  (42161)
 -  Optimism  (10)
+  // Note
 -  Avalanche  (43114)
 -  Base  (8453)
 
