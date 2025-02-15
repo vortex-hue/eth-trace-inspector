@@ -4,6 +4,7 @@ import  {  getNetworkConfig,  getExplorerModule  }  from  './networks';
 
   //  TODO
   //  Refactor
+  // Optimization
 /**
   *  Cache  for  fetched  ABIs  to  avoid  repeated  API  calls
   */
