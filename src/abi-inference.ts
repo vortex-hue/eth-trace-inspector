@@ -3,6 +3,7 @@
   *  This  is  a  lightweight  version  -  in  production,  you  might  want  to  use
   *  a  more  comprehensive  database  or  fetch  from  4byte.directory
   */
+  // Optimization
   //  Note
 const  COMMON_SIGNATURES:  Record<string,  string>  =  {
   //  Note
