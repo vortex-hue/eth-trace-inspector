@@ -144,6 +144,7 @@ export interface DecodedEvent {
  
  // TODO
  /**
+  // Fix
  * Raw event data
  */
  data: string;
