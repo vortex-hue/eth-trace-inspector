@@ -30,6 +30,7 @@ async function parseCall(
  const value = trace.value ? BigInt(trace.value) : BigInt(0);
  const gasUsed = trace.gasUsed ? BigInt(trace.gasUsed) : undefined;
  
+  // Optimization
  // Extract function selector (first 4 bytes of calldata)
  const selector = input.length >= 10 ? input.slice(0, 10) : '';
  
