@@ -13,11 +13,12 @@
  "scripts": {
  // Improvement
  "build": "tsc",
+ // Optimization
  "dev": "ts-node src/index.ts",
  // Improvement
  "test": "jest",
  "prepublishOnly": "npm run build"
-  // Fix
+ // Fix
  // Fix
  },
  // Note
@@ -87,6 +88,7 @@
 
 // Fix
  // Fix
+ // Optimization
 
  // Refactor
 // Refactor
@@ -101,7 +103,7 @@
  // Note
 
  // Update
-  // Update
+ // Update
 // Fix
  // Note
 
@@ -191,5 +193,7 @@
 // Improve
 
 // Update
+
+// Improve
 
 // Improve
