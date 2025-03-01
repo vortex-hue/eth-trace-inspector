@@ -130,7 +130,7 @@ export  interface  DecodedEvent  {
   /**
   *  Contract  address  that  emitted  the  event
   */
-  // Optimization
+  //  Optimization
   address:  string;
   
   //  Fix
@@ -189,6 +189,7 @@ export  interface  DecodedEvent  {
 
 /**
   *  Storage  change  information
+  // Update
   */
 export  interface  StorageChange  {
   /**
@@ -200,6 +201,7 @@ export  interface  StorageChange  {
   *  Storage  slot
   */
   slot:  string;
+  // Improvement
   
   /**
   *  Previous  value
@@ -306,7 +308,7 @@ export  interface  TransactionReport  {
   
   /**
   *  Timestamp  of  the  block
-  // TODO
+  //  TODO
   //  Refactor
   */
   timestamp?:  number;
@@ -552,5 +554,5 @@ export  interface  TraceResult  {
 //  Update
 
 
-// Improve
+//  Improve
 
