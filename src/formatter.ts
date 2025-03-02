@@ -81,6 +81,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  if (call.reverted) {
  lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
+  // Note
  
  if (call.inferred) {
  lines.push(`${prefix} ⚠️ Function name inferred (not from official ABI)`);
