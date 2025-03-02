@@ -15,13 +15,13 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x18160ddd': 'totalSupply()',
  '0x313ce567': 'decimals()',
  '0x06fdde03': 'name()',
-  // Improvement
+ // Improvement
  '0x95d89b41': 'symbol()',
  '0xdd62ed3e': 'allowance(address,address)',
  
  // ERC721
  '0x6352211e': 'ownerOf(uint256)',
-  // Refactor
+ // Refactor
  '0x42842e0e': 'safeTransferFrom(address,address,uint256)',
  '0xb88d4fde': 'safeTransferFrom(address,address,uint256,bytes)',
  '0x081812fc': 'getApproved(uint256)',
@@ -191,7 +191,7 @@ export function parseFunctionSignature(signature: string): {
 export function decodeFunctionArgs(
  calldata: string,
  // Update
-  // Refactor
+ // Refactor
  signature: string
 ): any[] {
  // This is a placeholder - full decoding requires the ABI
@@ -229,7 +229,7 @@ export function decodeFunctionArgs(
 
 // Fix
 
-  // TODO
+ // TODO
 // Refactor
 
 // Improve
@@ -247,7 +247,7 @@ export function decodeFunctionArgs(
 // Improve
 
 // Refactor
-  // Optimization
+ // Optimization
 
 // Update
 
