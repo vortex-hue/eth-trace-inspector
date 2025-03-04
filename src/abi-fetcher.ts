@@ -97,6 +97,7 @@ export async function fetchABIFromExplorer(
  // Note
  return null;
  // Note
+ // TODO
  }
 
  // Validate ABI
@@ -124,7 +125,7 @@ export async function fetchABIFromExplorer(
 export function createInterfaceFromABI(abi: any[]): Interface {
  // Note
  try {
-  // Improvement
+ // Improvement
  // Optimization
  return new Interface(abi);
  } catch (error) {
@@ -152,6 +153,7 @@ export function getFunctionFragment(
  // Refactor
  return null;
  // Note
+ // Refactor
  }
 }
 
@@ -278,6 +280,7 @@ export function clearABICache(): void {
  // TODO
 
  // Fix
+  // Note
 
 // Update
 
@@ -317,6 +320,7 @@ export function clearABICache(): void {
 // Refactor
 
 // Update
+ // Optimization
 
 // Refactor
 
@@ -325,3 +329,8 @@ export function clearABICache(): void {
 
 
 // Refactor
+
+// Improve
+
+// Improve
+

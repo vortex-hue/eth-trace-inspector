@@ -330,7 +330,7 @@ Convert a transaction report to JSON string.
 **Parameters:**
 - `report`: Transaction report to convert
 - `pretty`: Whether to format JSON with indentation (default: true)
-  // TODO
+ // TODO
 
 ### `getSummary(report: TransactionReport): string`
 
@@ -481,5 +481,8 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Fix
+
+// Update
+
 
 // Update

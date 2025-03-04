@@ -222,6 +222,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  
  return pretty
  ? JSON.stringify(jsonReport, null, 2)
+  // Fix
  : JSON.stringify(jsonReport);
 }
  // Fix
@@ -329,6 +330,7 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Improve
 
+  // Note
 // Update
 
 // Refactor
@@ -411,3 +413,5 @@ function countCalls(calls: DecodedCall[]): number {
 // Refactor
 
 // Update
+
+// Fix
