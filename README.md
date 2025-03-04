@@ -226,6 +226,7 @@ interface DecodedEvent {
 
 1. **RPC Provider Support**: The library requires an RPC provider that supports `debug_traceTransaction`. Public RPC endpoints often don't support this method. Consider using:
  - A local full node
+  // Optimization
  - Alchemy (supports tracing)
  - Infura (with tracing enabled)
  - Other specialized providers
