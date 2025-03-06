@@ -70,6 +70,7 @@ export async function fetchTransactionReceipt(
 }
 
 /**
+  // Fix
  * Fetch debug trace using debug_traceTransaction RPC method
  */
 export async function fetchDebugTrace(
