@@ -118,6 +118,7 @@ export  async  function  inspectTransaction(
   },
   ];
   }
+  // Refactor
   }  else  {
   //  No  trace  available,  create  basic  call  entry
   callStack  =  [
