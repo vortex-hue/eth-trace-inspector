@@ -25,6 +25,7 @@ function formatValue(value: any, depth: number = 0): string {
  return `${value.slice(0, 20)}...${value.slice(-8)}`;
  }
  return value;
+  // Fix
  }
  
  if (typeof value === 'object') {
@@ -408,6 +409,7 @@ function countCalls(calls: DecodedCall[]): number {
 // Fix
 
 
+ // Optimization
 // Fix
 
 // Refactor
@@ -415,3 +417,5 @@ function countCalls(calls: DecodedCall[]): number {
 // Update
 
 // Fix
+
+// Update
