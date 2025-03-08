@@ -77,6 +77,7 @@ prettyPrint(report);
 const  json  =  JSON.stringify(report,  null,  2);
 console.log(json);
 ```
+  // Fix
 
 ##  Usage
 
@@ -449,6 +450,7 @@ This  library  is  provided  as-is  for  debugging  and  educational  purposes. 
 //  Fix
 
 
+  // Improvement
 //  Refactor
 
 //  Fix
