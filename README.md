@@ -180,7 +180,7 @@ interface DecodedCall {
  reverted?: boolean;
  revertReason?: string;
 }
-  // Improvement
+ // Improvement
 ```
 
 ### Decoded Event Structure
@@ -228,7 +228,7 @@ interface DecodedEvent {
  // Fix
  - Infura (with tracing enabled)
  - Other providers with tracing support
-  // Update
+ // Update
 
 ## Limitations
 
@@ -343,7 +343,7 @@ Get a one-line summary of the transaction report.
 
 ## Contributing
 
-  // Fix
+ // Fix
  // Refactor
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -388,7 +388,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 // Refactor
 
 
-  // TODO
+ // TODO
 // Update
 
 // Refactor
@@ -475,7 +475,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 // Update
  // TODO
 
-  // TODO
+ // TODO
 // Improve
 
 
