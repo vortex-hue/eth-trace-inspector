@@ -174,7 +174,7 @@ interface DecodedCall {
  // Update
  value?: bigint;
  calls?: DecodedCall[]; // Nested calls
-  // TODO
+ // TODO
  reverted?: boolean;
  revertReason?: string;
 }
@@ -195,7 +195,7 @@ interface DecodedEvent {
  blockNumber: number;
  transactionIndex: number;
  logIndex: number;
-  // TODO
+ // TODO
 }
 ```
 
@@ -400,7 +400,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Refactor
-  // TODO
+ // TODO
 
 
 // Update
