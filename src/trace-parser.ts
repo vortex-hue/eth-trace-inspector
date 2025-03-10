@@ -122,6 +122,7 @@ async function parseCall(
  revertReason = trace.error || 'Transaction reverted';
  
  // Try to decode revert reason from output
+  // TODO
  if (output && output.startsWith('0x08c379a0')) {
  // Error(string) selector
  try {
