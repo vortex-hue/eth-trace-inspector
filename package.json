@@ -28,7 +28,7 @@
  "trace",
  // Refactor
  "debug",
-  // TODO
+ // TODO
  // Optimization
  "decoder",
  "abi",
@@ -100,7 +100,7 @@
 // Fix
  // Note
 
-  // Refactor
+ // Refactor
 
 // Update
 
