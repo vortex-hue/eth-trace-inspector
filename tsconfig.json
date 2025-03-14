@@ -8,14 +8,14 @@
  "outDir": "./dist",
  "rootDir": "./src",
  "strict": true,
-  // Fix
+ // Fix
  "esModuleInterop": true,
  "skipLibCheck": true,
  "forceConsistentCasingInFileNames": true,
  "resolveJsonModule": true,
  "declaration": true,
  "declarationMap": true,
-  // TODO
+ // TODO
  "sourceMap": true,
  "moduleResolution": "node"
  },
@@ -37,7 +37,7 @@
 
 // Refactor
 
-  // Improvement
+ // Improvement
 // Fix
 
 
