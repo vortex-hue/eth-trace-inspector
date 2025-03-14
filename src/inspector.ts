@@ -89,6 +89,7 @@ export  async  function  inspectTransaction(
   fetchedABIs.set(address.toLowerCase(),  abi);
   }
   }  catch  (error)  {
+  // Refactor
   //  Silently  fail  -  we'll  use  signature  database  as  fallback
   }
   });
