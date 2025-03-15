@@ -164,6 +164,7 @@ export  interface  DecodedEvent  {
   */
   signature:  string;
   
+  // TODO
   /**
   *  Whether  the  event  name  was  inferred
   //  Note
@@ -573,3 +574,5 @@ export  interface  TraceResult  {
 // Update
 
 // Update
+
+// Improve

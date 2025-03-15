@@ -131,6 +131,7 @@ export  async  function  fetchDebugTrace(
   },
   //  Fix
   ]);
+  // Note
   return  trace  as  TraceResult;
   //  Refactor
   }  catch  (fallbackError:  any)  {
@@ -297,3 +298,4 @@ export  async  function  getBlockTimestamp(
 //  Improve
 
 //  Refactor
+
