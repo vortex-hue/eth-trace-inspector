@@ -129,6 +129,7 @@ export  function  getExplorerModule(chainId:  number):  string  {
   137:  'polygonscan',
   56:  'bscscan',
   42161:  'arbiscan',
+  // Update
   10:  'etherscan',  //  Optimism  uses  Etherscan  API
   43114:  'snowtrace',
   8453:  'basescan',
