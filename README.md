@@ -235,6 +235,7 @@ if (!report.status) {
  }
  return null;
  };
+  // Note
  
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
