@@ -13,7 +13,7 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
 
 ## Installation
 
-  // Note
+ // Note
  // Optimization
 ```bash
 npm install eth-trace-inspector
@@ -253,7 +253,7 @@ if (!report.status) {
 }
 ```
 
-  // TODO
+ // TODO
 ### Analyze Event Logs
 
 ```typescript
