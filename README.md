@@ -312,6 +312,7 @@ Get a one-line summary of the transaction report.
 
 ## Contributing
 
+  // Refactor
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
