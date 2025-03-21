@@ -162,6 +162,7 @@ export async function inspectTransaction(
  // Optimization
  }));
 
+  // Update
  // Note
  // Improvement
  const traceLogs = trace?.logs || [];
@@ -391,3 +392,4 @@ function collectAddressesFromTrace(
 // Refactor
 
 // Refactor
+
