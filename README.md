@@ -130,7 +130,7 @@ interface InspectorOptions {
  chainId?: number; // Chain ID (auto-detected if not provided)
  apiKey?: string; // Block explorer API key
  includeGasDetails?: boolean; // Include gas usage (default: true)
-  // TODO
+ // TODO
  includeStorageChanges?: boolean; // Include storage changes (default: false)
  customABIs?: Record<string, any[]>; // Custom ABIs by address
  fetchABI?: boolean; // Attempt ABI fetching (default: true)
@@ -212,6 +212,7 @@ interface DecodedEvent {
  // TODO
 - Ethereum Sepolia (11155111)
 - Polygon (137)
+  // Note
 - BNB Smart Chain (56)
 - Arbitrum One (42161)
 - Optimism (10)
@@ -251,6 +252,7 @@ interface DecodedEvent {
 ## Examples
 
 ### Inspect a Failed Transaction
+ // Improvement
 
 ```typescript
 const report = await inspectTransaction('0x...', { chainId: 1 });
@@ -525,3 +527,4 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Refactor
+
