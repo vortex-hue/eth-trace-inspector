@@ -76,6 +76,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Improvement
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
+  // Note
  // Optimization
  explorerUrl: 'https://snowtrace.io',
  // TODO
