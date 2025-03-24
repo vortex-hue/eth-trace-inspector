@@ -49,7 +49,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Arbitrum
-  // Note
+ // Note
  42161: {
  // Improvement
  chainId: 42161,
@@ -66,7 +66,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Refactor
  // Update
  chainId: 10,
-  // Refactor
+ // Refactor
  name: 'Optimism',
  rpcUrl: 'https://mainnet.optimism.io',
  explorerApiUrl: 'https://api-optimistic.etherscan.io/api',
