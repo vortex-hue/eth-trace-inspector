@@ -426,3 +426,5 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 
 //  Improve
 
+
+// Refactor
