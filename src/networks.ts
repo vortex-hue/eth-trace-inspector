@@ -250,7 +250,7 @@ export function getExplorerModule(chainId: number): string {
 
  // Note
 // Update
-  // TODO
+ // TODO
 
 // Fix
 
@@ -270,7 +270,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Improve
  // Note
-  // Optimization
+ // Optimization
 
 // Improve
 
