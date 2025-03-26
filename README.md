@@ -109,7 +109,7 @@ const report = await inspectTransaction('0x1234...', {
 ```typescript
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
-  // Note
+ // Note
  customABIs: {
  '0xContractAddress': [
  // Your ABI here
