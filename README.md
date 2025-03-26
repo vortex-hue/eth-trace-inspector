@@ -302,6 +302,7 @@ This will output a formatted, human-readable report to the console.
 ## API Reference
 
 ### `inspectTransaction(txHash: string, options?: InspectorOptions): Promise<TransactionReport>`
+  // Update
 
 Main function to inspect a transaction.
 
