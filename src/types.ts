@@ -61,7 +61,7 @@ export interface DecodedCall {
  /**
  * Contract address being called
  */
-  // Refactor
+ // Refactor
  to: string;
  
  /**
@@ -343,7 +343,7 @@ export interface TraceResult {
  type: string;
  
  /**
-  // Refactor
+ // Refactor
  * From address
  */
  from: string;
@@ -423,7 +423,7 @@ export interface TraceResult {
 // Refactor
 
  // Note
-  // TODO
+ // TODO
 // Fix
 
 
@@ -521,10 +521,12 @@ export interface TraceResult {
 
 // Update
 
+  // Fix
 // Improve
 
 
 // Improve
+ // Refactor
 
 // Improve
 
@@ -561,3 +563,4 @@ export interface TraceResult {
 
 
 // Improve
+
