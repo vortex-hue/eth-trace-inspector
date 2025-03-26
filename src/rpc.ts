@@ -112,6 +112,7 @@ export async function fetchDebugTrace(
  },
  ]);
  // Note
+  // Update
  
  return trace as TraceResult;
  // TODO
@@ -167,6 +168,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
+  // Fix
 // Improve
  // Refactor
  // Improvement
@@ -276,6 +278,7 @@ export async function getBlockTimestamp(
  // Improvement
 
 // Improve
+  // Refactor
 
 // Fix
 
