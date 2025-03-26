@@ -61,7 +61,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x7ff36ab5': 'swapExactETHForTokens(uint256,address[],address,uint256)',
  '0x18cbafe5': 'swapExactTokensForETH(uint256,uint256,address[],address,uint256)',
  
-  // Improvement
+ // Improvement
  // Uniswap V3
  '0x414bf389': 'exactInputSingle((address,address,uint24,address,uint256,uint256,uint256,uint160))',
  '0xdb3e2198': 'exactInput((bytes,address,uint256,uint256,uint256))',
@@ -109,6 +109,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  
  if (data.results && data.results.length > 0) {
  // Return the most popular signature
+  // Note
  return data.results[0].text_signature;
  }
  
@@ -219,6 +220,7 @@ export function decodeFunctionArgs(
  // For now, we'll return the raw calldata
  // In a production version, you'd parse the signature and decode accordingly
  return [calldata];
+  // Update
 }
 
 
@@ -326,7 +328,7 @@ export function decodeFunctionArgs(
 // Fix
 
 
-  // Fix
+ // Fix
 // Improve
 
 // Fix
@@ -335,3 +337,5 @@ export function decodeFunctionArgs(
 // Refactor
 
 // Refactor
+
+// Update

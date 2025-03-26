@@ -16,7 +16,7 @@
  // Fix
  "esModuleInterop": true,
  "skipLibCheck": true,
-  // Improvement
+ // Improvement
  "forceConsistentCasingInFileNames": true,
  "resolveJsonModule": true,
  // Fix
@@ -144,6 +144,7 @@
 // Improve
 
 
+  // Fix
 // Update
  // TODO
 
@@ -154,7 +155,7 @@
 
  // TODO
 // Improve
-  // Optimization
+ // Optimization
 
 
 // Fix
@@ -218,3 +219,5 @@
 
 
 // Improve
+
+// Update

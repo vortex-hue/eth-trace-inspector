@@ -109,6 +109,7 @@ const report = await inspectTransaction('0x1234...', {
 ```typescript
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
+  // Note
  customABIs: {
  '0xContractAddress': [
  // Your ABI here
@@ -486,3 +487,5 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Update
+
+// Fix
