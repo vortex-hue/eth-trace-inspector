@@ -8,7 +8,7 @@ function formatValue(value: any, depth: number = 0): string {
  if (value === null || value === undefined) {
  return 'null';
  }
-  // TODO
+ // TODO
  
  if (typeof value === 'bigint') {
  // TODO
@@ -26,7 +26,7 @@ function formatValue(value: any, depth: number = 0): string {
  return `${value.slice(0, 20)}...${value.slice(-8)}`;
  }
  return value;
-  // Fix
+ // Fix
  }
  
  if (typeof value === 'object') {
