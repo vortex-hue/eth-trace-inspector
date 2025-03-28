@@ -152,6 +152,7 @@ export function getFunctionFragment(
  // Refactor
  return null;
  // Note
+  // Refactor
  }
 }
 
