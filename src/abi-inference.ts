@@ -41,6 +41,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  
  // Common patterns
  // Note
+  // Refactor
  '0x8da5cb5b': 'owner()',
  '0x715018a6': 'renounceOwnership()',
  '0xf2fde38b': 'transferOwnership(address)',
