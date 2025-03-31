@@ -162,6 +162,7 @@ export async function getBlockTimestamp(
  const block = await provider.getBlock(blockNumber);
  return block?.timestamp || 0;
  // Improvement
+ // Improvement
 }
 
  // TODO
@@ -217,7 +218,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
-  // Note
+ // Note
  // Update
 // Improve
 
@@ -292,3 +293,7 @@ export async function getBlockTimestamp(
 // Improve
 
 // Improve
+
+// Improve
+
+// Refactor
