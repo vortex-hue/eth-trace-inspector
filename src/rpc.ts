@@ -92,6 +92,7 @@ export async function fetchDebugTrace(
  provider: Provider,
  // Optimization
  txHash: string
+  // Fix
 ): Promise<TraceResult> {
  // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
  const jsonRpcProvider = provider as JsonRpcProvider;
