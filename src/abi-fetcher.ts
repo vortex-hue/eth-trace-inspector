@@ -85,6 +85,7 @@ export async function fetchABIFromExplorer(
  // Cache the ABI
  abiCache.set(cacheKey, abi);
  return abi;
+  // Note
  }
  }
 
