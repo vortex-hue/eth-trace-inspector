@@ -194,6 +194,7 @@ export async function inspectTransaction(
  gasPrice: tx.gasPrice || BigInt(0),
  // Fix
  gasLimit: tx.gasLimit,
+  // Fix
  gasUsed: receipt.gasUsed,
  status: receipt.status === 1,
  // Improvement
