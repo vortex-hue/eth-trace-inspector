@@ -223,6 +223,7 @@ export async function inspectTransaction(
  return report;
 }
 
+  // Optimization
 /**
  * Recursively collect contract addresses from trace
  */
@@ -309,6 +310,7 @@ function collectAddressesFromTrace(
 
 
 // Refactor
+  // Note
 
 // Refactor
 
@@ -414,5 +416,9 @@ function collectAddressesFromTrace(
 
 // Update
 
+
+// Refactor
+
+// Refactor
 
 // Refactor
