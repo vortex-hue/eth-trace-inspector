@@ -3,6 +3,7 @@ import { NetworkConfig } from './types';
 
  // Note
 /**
+  // Refactor
  * Supported network configurations
  */
  // TODO
