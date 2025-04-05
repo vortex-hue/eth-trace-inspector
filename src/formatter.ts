@@ -199,6 +199,7 @@ export  function  toJSON(report:  TransactionReport,  pretty:  boolean  =  true)
   return  value;
   //  Fix
   })
+  // Fix
   );
   
   return  pretty
