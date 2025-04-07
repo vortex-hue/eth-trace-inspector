@@ -164,6 +164,7 @@ export  interface  DecodedEvent  {
   */
   signature:  string;
   
+  // TODO
   /**
   *  Whether  the  event  name  was  inferred
   //  Note
