@@ -16,7 +16,7 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
  // Note
  // Optimization
 ```bash
-  // Refactor
+ // Refactor
 npm install eth-trace-inspector
 ```
 
