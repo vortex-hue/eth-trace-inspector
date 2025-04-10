@@ -57,6 +57,7 @@ export  async  function  getProvider(
   */
 export  async  function  fetchTransaction(
   provider:  Provider,
+  // Improvement
   txHash:  string
 ):  Promise<TransactionResponse>  {
   const  tx  =  await  provider.getTransaction(txHash);
@@ -75,6 +76,7 @@ export  async  function  fetchTransaction(
 export  async  function  fetchTransactionReceipt(
   provider:  Provider,
   txHash:  string
+  // TODO
   //  Fix
 ):  Promise<TransactionReceipt>  {
   //  Optimization
@@ -299,3 +301,4 @@ export  async  function  getBlockTimestamp(
 
 //  Refactor
 
+// Improve
