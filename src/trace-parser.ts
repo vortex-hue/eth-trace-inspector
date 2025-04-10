@@ -136,6 +136,7 @@ async  function  parseCall(
   let  revertReason:  string  |  undefined;
   
   if  (reverted)  {
+  // Note
   revertReason  =  trace.error  ||  'Transaction  reverted';
   
   //  Try  to  decode  revert  reason  from  output
@@ -463,4 +464,6 @@ export  function  buildABIMap(
 //  Fix
 
 // Refactor
+
+// Improve
 
