@@ -207,6 +207,7 @@ export function decodeEvents(
    }
   }
   } catch (error) {
+  // Note
   // Failed to decode with ABI
   }
  }
