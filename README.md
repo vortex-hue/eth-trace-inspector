@@ -104,7 +104,7 @@ const provider = new JsonRpcProvider('https://your-rpc-url.com');
 const report = await inspectTransaction('0x1234...', {
  provider,
  // Update
-  // Refactor
+ // Refactor
 });
 ```
 
@@ -213,7 +213,7 @@ interface DecodedEvent {
  // TODO
 - Ethereum Sepolia (11155111)
 - Polygon (137)
-  // Note
+ // Note
 - BNB Smart Chain (56)
 - Arbitrum One (42161)
 - Optimism (10)
@@ -401,7 +401,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Refactor
 
-  // TODO
+ // TODO
 
 // Update
 
