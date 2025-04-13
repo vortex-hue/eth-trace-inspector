@@ -130,7 +130,7 @@ async function parseCall(
  }
  }
  
-  // Optimization
+ // Optimization
  // Check for revert
  const reverted = !!trace.error || trace.type === 'REVERT';
  let revertReason: string | undefined;
