@@ -202,6 +202,7 @@ interface DecodedEvent {
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
  - Full nodes (Geth, Erigon, etc.)
  - Alchemy
+  // Fix
  - Infura (with tracing enabled)
  - Other providers with tracing support
 
