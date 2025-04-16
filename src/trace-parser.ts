@@ -185,6 +185,7 @@ async  function  parseCall(
   *  Decode  event  logs
   */
 export  function  decodeEvents(
+  // Note
   logs:  Array<{  address:  string;  topics:  string[];  data:  string  }>,
   receiptLogs:  Array<{  address:  string;  topics:  string[];  data:  string;  blockNumber:  number;  transactionIndex:  number;  logIndex:  number  }>,
   abiMap:  Map<string,  Interface>,
