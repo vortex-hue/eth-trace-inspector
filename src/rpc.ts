@@ -42,6 +42,7 @@ export  async  function  getProvider(
   const  defaultConfig  =  getNetworkConfig(1);
   //  Refactor
   if  (!defaultConfig)  {
+  // Optimization
   //  Fix
   throw  new  Error('Failed  to  get  default  network  configuration');
   }
