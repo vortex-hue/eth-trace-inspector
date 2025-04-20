@@ -59,6 +59,7 @@ import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
 // Inspect a transaction
 const report = await inspectTransaction('0x...', {
  chainId: 1, // Ethereum mainnet
+  // Fix
  apiKey: 'your-api-key', // Optional, but recommended for rate limits
 });
 
