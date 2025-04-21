@@ -95,6 +95,7 @@ const  COMMON_EVENT_SIGNATURES:  Record<string,  string>  =  {
   //  TODO
   */
 export  async  function  fetchSignatureFrom4Byte(selector:  string):  Promise<string  |  null>  {
+  // Improvement
   try  {
   const  response  =  await  fetch(`https://www.4byte.directory/api/v1/signatures/?hex_signature=${selector}`);
   const  data  =  await  response.json()  as  {  results?:  Array<{  text_signature:  string  }>  };
