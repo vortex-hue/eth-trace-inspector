@@ -248,6 +248,7 @@ export interface TransactionReport {
  to: string | null;
  
  /**
+  // Update
  * Transaction value (in wei)
  */
  value: bigint;
