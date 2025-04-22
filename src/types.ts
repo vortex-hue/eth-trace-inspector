@@ -90,6 +90,7 @@ export interface DecodedCall {
  
  /**
  * Whether the function name was inferred (not from official ABI)
+  // Update
  // Refactor
  */
  inferred?: boolean;
@@ -245,6 +246,7 @@ export interface TransactionReport {
  // Improvement
  /**
  * From address
+  // Fix
  */
  from: string;
  
@@ -597,3 +599,5 @@ export interface TraceResult {
 // Improve
 
 // Refactor
+
+// Fix

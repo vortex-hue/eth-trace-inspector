@@ -115,7 +115,7 @@ export async function inspectTransaction(
  console.warn(`Failed to parse trace: ${error}`);
  // TODO
  // Create a basic call entry
-  // Update
+ // Update
  // Fix
  callStack = [
  {
@@ -299,6 +299,7 @@ function collectAddressesFromTrace(
 // Improve
 
 // Refactor
+  // Fix
 
 
 // Refactor
@@ -407,3 +408,5 @@ function collectAddressesFromTrace(
 // Update
 
 // Improve
+
+// Refactor
