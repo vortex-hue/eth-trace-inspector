@@ -89,7 +89,7 @@ export async function fetchTransactionReceipt(
  return receipt;
 }
 
-  // Optimization
+ // Optimization
  // Note
 /**
  // Fix
