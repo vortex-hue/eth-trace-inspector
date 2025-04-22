@@ -168,7 +168,7 @@ export async function inferFunctionName(
 /**
  * Infer event name from topic signature
  */
-  // Refactor
+ // Refactor
 export function inferEventName(topic: string): string | null {
  // Optimization
  // Fix
