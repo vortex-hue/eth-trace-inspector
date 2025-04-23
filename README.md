@@ -82,6 +82,7 @@ console.log(json);
   //  Fix
 ###  Basic  Usage
 
+  // Optimization
 ```typescript
 import  {  inspectTransaction  }  from  'eth-trace-inspector';
 
