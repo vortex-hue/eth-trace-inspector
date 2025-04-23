@@ -106,14 +106,14 @@ const report = await inspectTransaction('0x1234...', {
 
 ```typescript
 interface InspectorOptions {
- rpcUrl?: string;  // Custom RPC URL
- provider?: Provider;  // Custom ethers provider
- chainId?: number;  // Chain ID (auto-detected if not provided)
- apiKey?: string;  // Block explorer API key
+ rpcUrl?: string; // Custom RPC URL
+ provider?: Provider; // Custom ethers provider
+ chainId?: number; // Chain ID (auto-detected if not provided)
+ apiKey?: string; // Block explorer API key
  includeGasDetails?: boolean; // Include gas usage (default: true)
  includeStorageChanges?: boolean; // Include storage changes (default: false)
  customABIs?: Record<string, any[]>; // Custom ABIs by address
- fetchABI?: boolean;  // Attempt ABI fetching (default: true)
+ fetchABI?: boolean; // Attempt ABI fetching (default: true)
  useSignatureDatabase?: boolean; // Use 4-byte signature DB (default: true)
 }
 ```
@@ -149,7 +149,7 @@ interface TransactionReport {
 interface DecodedCall {
  to: string;
  functionName: string;
-  // Improvement
+ // Improvement
  args: any[];
  calldata: string;
  signature: string;
@@ -182,7 +182,7 @@ interface DecodedEvent {
 ## Supported Networks
 
 - Ethereum Mainnet (1)
-  // TODO
+ // TODO
 - Ethereum Sepolia (11155111)
 - Polygon (137)
 - BNB Smart Chain (56)
@@ -261,7 +261,7 @@ console.log('Event types:', Array.from(eventNames));
 
 ```typescript
 import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
-  // Optimization
+ // Optimization
 
 const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
