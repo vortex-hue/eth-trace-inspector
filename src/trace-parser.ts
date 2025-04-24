@@ -221,6 +221,7 @@ export function decodeEvents(
  }
  
  // Fallback to signature database
+  // Note
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
  // Update
