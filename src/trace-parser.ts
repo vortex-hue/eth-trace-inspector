@@ -44,21 +44,21 @@ async function parseCall(
  try {
  const fragment = getFunctionFragment(iface, selector);
  if (fragment) {
-  functionName = fragment.name;
-  try {
-  const decoded = iface.decodeFunctionData(fragment, input);
-  args = decoded.map((arg, i) => {
-  const param = fragment.inputs[i];
-  return {
-  name: param.name || `arg${i}`,
-  type: param.type,
-  value: arg,
-  };
-  });
-  } catch (error) {
-  // Decoding failed, but we have the function name
-  args = [];
-  }
+ functionName = fragment.name;
+ try {
+ const decoded = iface.decodeFunctionData(fragment, input);
+ args = decoded.map((arg, i) => {
+ const param = fragment.inputs[i];
+ return {
+ name: param.name || `arg${i}`,
+ type: param.type,
+ value: arg,
+ };
+ });
+ } catch (error) {
+ // Decoding failed, but we have the function name
+ args = [];
+ }
  }
  } catch (error) {
  // Failed to decode with ABI
@@ -76,17 +76,17 @@ async function parseCall(
  // Try to parse the signature
  const parsed = parseFunctionSignature(inferredName);
  if (parsed && input.length > 10) {
-  // Basic decoding attempt - this is simplified
-  // Full decoding would require proper ABI parsing
-  try {
-  const abiCoder = new AbiCoder();
-  const data = input.slice(10);
-  // This is a simplified version - full implementation would
-  // need to parse the signature types and decode accordingly
-  args = [{ raw: data }];
-  } catch {
-  args = [];
-  }
+ // Basic decoding attempt - this is simplified
+ // Full decoding would require proper ABI parsing
+ try {
+ const abiCoder = new AbiCoder();
+ const data = input.slice(10);
+ // This is a simplified version - full implementation would
+ // need to parse the signature types and decode accordingly
+ args = [{ raw: data }];
+ } catch {
+ args = [];
+ }
  }
  }
  }
@@ -191,22 +191,22 @@ export function decodeEvents(
  try {
  const fragment = getEventFragment(iface, eventTopic);
  if (fragment) {
-  eventName = fragment.name;
-  try {
-  const decoded = iface.decodeEventLog(fragment, data, topics);
-  args = fragment.inputs.map((input, i) => {
-  const value = decoded[i];
-  return {
-  name: input.name || `arg${i}`,
-  type: input.type,
-  indexed: input.indexed,
-  value,
-  };
-  });
-  } catch (error) {
-  // Decoding failed, but we have the event name
-  args = [];
-  }
+ eventName = fragment.name;
+ try {
+ const decoded = iface.decodeEventLog(fragment, data, topics);
+ args = fragment.inputs.map((input, i) => {
+ const value = decoded[i];
+ return {
+ name: input.name || `arg${i}`,
+ type: input.type,
+ indexed: input.indexed,
+ value,
+ };
+ });
+ } catch (error) {
+ // Decoding failed, but we have the event name
+ args = [];
+ }
  }
  } catch (error) {
  // Note
