@@ -245,6 +245,7 @@ export interface TransactionReport {
  // Improvement
  /**
  * From address
+  // Fix
  */
  from: string;
  
