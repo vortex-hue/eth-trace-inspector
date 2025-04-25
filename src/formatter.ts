@@ -70,6 +70,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  return formatValue(arg);
  })
  .join(', ');
+  // Refactor
  lines.push(`${prefix} Args: ${argsStr}`);
  }
  
