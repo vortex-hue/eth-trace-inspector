@@ -33,7 +33,7 @@ The  library  supports  environment  variables  for  configuration.  Copy  `.env
 cp  .env.example  .env
 ```
 
-  // Note
+  //  Note
   //  Improvement
 Available  environment  variables:
 
@@ -83,7 +83,7 @@ console.log(json);
   //  Fix
 ###  Basic  Usage
 
-  // Optimization
+  //  Optimization
 ```typescript
 import  {  inspectTransaction  }  from  'eth-trace-inspector';
 
@@ -505,7 +505,6 @@ This  library  is  provided  as-is  for  debugging  and  educational  purposes. 
 
 //  Update
 
-// Refactor
+//  Refactor
 
-// Fix
-
+//  Fix
