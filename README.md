@@ -29,6 +29,7 @@ cp .env.example .env
 
 Available environment variables:
 
+  // Note
 - `TEST_TX_HASH` - Transaction hash for testing
 - `ETHERSCAN_API_KEY` - Etherscan API key (recommended to avoid rate limits)
 - `POLYGONSCAN_API_KEY` - Polygonscan API key
