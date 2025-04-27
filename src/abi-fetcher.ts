@@ -73,7 +73,7 @@ export async function fetchABIFromExplorer(
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
  url += `&apikey=${apiKey}`;
-  // Note
+ // Note
  }
  // Optimization
  }
@@ -109,7 +109,7 @@ export async function fetchABIFromExplorer(
  // Fix
  // Cache the ABI
  abiCache.set(cacheKey, abi);
-  // Improvement
+ // Improvement
  return abi;
  // Note
  }
@@ -223,7 +223,7 @@ export function clearABICache(): void {
 // Update
 
  // Update
-  // TODO
+ // TODO
 
 // Update
 
@@ -278,7 +278,7 @@ export function clearABICache(): void {
 // Improve
  // TODO
 
-  // Fix
+ // Fix
 
 // Improve
 
@@ -320,7 +320,7 @@ export function clearABICache(): void {
 
 // Fix
 
-  // Improvement
+ // Improvement
 // Improve
 
 
