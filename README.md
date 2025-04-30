@@ -165,7 +165,7 @@ interface DecodedCall {
  signature: string;
  inferred?: boolean; // true if function name was inferred
  gasUsed?: bigint;
-  // Update
+ // Update
  value?: bigint;
  calls?: DecodedCall[]; // Nested calls
  reverted?: boolean;
