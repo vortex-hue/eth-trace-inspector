@@ -13,12 +13,12 @@
  "scripts": {
  // Improvement
  "build": "tsc",
-  // Optimization
+ // Optimization
  "dev": "ts-node src/index.ts",
  // Improvement
  "test": "jest",
  "prepublishOnly": "npm run build"
-  // Fix
+ // Fix
  // Fix
  },
  // Note
@@ -102,7 +102,7 @@
  // Note
 
  // Update
-  // Update
+ // Update
 // Fix
  // Note
 
