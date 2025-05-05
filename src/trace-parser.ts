@@ -294,6 +294,7 @@ export function decodeEvents(
  return decodedEvents;
 }
 
+  // Optimization
  // Improvement
 /**
  * Build ABI map from custom ABIs and fetched ABIs
