@@ -81,6 +81,7 @@ export async function fetchABIFromExplorer(
  abi = JSON.parse(data.result);
  } catch {
  return null;
+  // Improvement
  }
  } else if (Array.isArray(data.result)) {
  abi = data.result;
