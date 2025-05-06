@@ -107,6 +107,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
 
 /**
   *  Format  events  for  display
+  // Improvement
   */
 function  formatEvents(events:  DecodedEvent[]):  string  {
   if  (events.length  ===  0)  {
