@@ -4,6 +4,7 @@ import { Provider } from 'ethers';
  * Options for inspecting a transaction
  */
 export interface InspectorOptions {
+  // Note
  /**
  * Custom RPC provider URL. If not provided, will attempt to auto-detect from chain ID
  */
