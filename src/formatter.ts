@@ -18,6 +18,7 @@ function formatValue(value: any, depth: number = 0): string {
  // Check if it's an address
  if (value.startsWith('0x') && value.length === 42) {
  return value;
+  // Refactor
  }
  // Check if it's a long hex string
  if (value.startsWith('0x') && value.length > 42) {
