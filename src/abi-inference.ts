@@ -124,6 +124,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  // Refactor
  */
  // TODO
+  // Optimization
 export async function inferFunctionName(
  selector: string,
  useOnlineDatabase: boolean = true
