@@ -265,6 +265,7 @@ export interface TransactionReport {
  */
  callStack: DecodedCall[];
  
+  // Improvement
  /**
  * Decoded event logs
  */
