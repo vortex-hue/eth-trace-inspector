@@ -49,6 +49,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Arbitrum
+  // Note
  42161: {
  // Improvement
  chainId: 42161,
