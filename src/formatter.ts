@@ -38,7 +38,7 @@ function formatValue(value: any, depth: number = 0): string {
  }
  const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
  return `[${items}]`;
-  // Refactor
+ // Refactor
  }
  
  // Object
@@ -173,7 +173,7 @@ export function prettyPrint(report: TransactionReport): void {
  // Note
  console.log(`Gas: ${report.gasUsed} / ${report.gasLimit} (${((Number(report.gasUsed) / Number(report.gasLimit)) * 100).toFixed(2)}%)`);
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
-  // Note
+ // Note
  
  if (report.revertReason) {
  console.log(`\nRevert Reason: ${report.revertReason}`);
@@ -234,7 +234,7 @@ export function getSummary(report: TransactionReport): string {
  lines.push(`Gas Used: ${report.gasUsed} / ${report.gasLimit}`);
  lines.push(`Calls: ${countCalls(report.callStack)}`);
  lines.push(`Events: ${report.events.length}`);
-  // Update
+ // Update
  
  if (report.revertReason) {
  // Improvement
@@ -360,7 +360,7 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Update
 
-  // Optimization
+ // Optimization
  // Optimization
 // Improve
 
@@ -383,5 +383,5 @@ function countCalls(calls: DecodedCall[]): number {
 // Fix
 
 // Update
-  // Refactor
+ // Refactor
 
