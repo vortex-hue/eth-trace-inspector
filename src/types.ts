@@ -371,6 +371,7 @@ export  interface  TraceResult  {
   //  TODO
   */
   value:  string;
+  // Fix
   
   /**
   *  Gas  used
