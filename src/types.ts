@@ -201,6 +201,7 @@ export  interface  StorageChange  {
   *  Storage  slot
   */
   slot:  string;
+  // Improvement
   
   /**
   *  Previous  value
