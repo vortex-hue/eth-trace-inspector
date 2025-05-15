@@ -128,6 +128,7 @@ export  async  function  fetchDebugTrace(
   try  {
   //  Refactor
   //  Note
+  // Improvement
   const  trace  =  await  jsonRpcProvider.send('debug_traceTransaction',  [
   txHash,
   {
@@ -265,6 +266,7 @@ export  async  function  getBlockTimestamp(
 //  Refactor
 
 //  Refactor
+  // Improvement
 
 
 //  Update
@@ -327,3 +329,5 @@ export  async  function  getBlockTimestamp(
 //  Refactor
 
 //  Fix
+
+// Fix
