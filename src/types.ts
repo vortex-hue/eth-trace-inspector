@@ -135,6 +135,7 @@ export interface DecodedEvent {
  */
  args: any[];
  
+  // TODO
  /**
  * Raw event data
  */
