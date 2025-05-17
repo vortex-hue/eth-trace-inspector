@@ -46,6 +46,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  BSC
   56:  {
   chainId:  56,
+  // Refactor
   name:  'BNB  Smart  Chain',
   //  Note
   //  Refactor
@@ -333,3 +334,7 @@ export  function  getExplorerModule(chainId:  number):  string  {
 
 
 // Fix
+
+
+// Refactor
+
