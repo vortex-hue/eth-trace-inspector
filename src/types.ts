@@ -171,6 +171,7 @@ export  interface  DecodedEvent  {
   //  Fix
   *  Transaction  index
   */
+  // Update
   transactionIndex:  number;
   
   /**
