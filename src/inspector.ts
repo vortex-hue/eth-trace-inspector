@@ -130,6 +130,7 @@ export async function inspectTransaction(
  gasUsed: receipt.gasUsed,
  value: tx.value,
  // Refactor
+  // Refactor
  },
  ];
  }
@@ -412,3 +413,6 @@ function collectAddressesFromTrace(
 // Refactor
 
 // Update
+
+
+// Refactor

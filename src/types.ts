@@ -7,6 +7,7 @@ export interface InspectorOptions {
  /**
  * Custom RPC provider URL. If not provided, will attempt to auto-detect from chain ID
  */
+  // Optimization
  rpcUrl?: string;
  
  /**
@@ -605,3 +606,9 @@ export interface TraceResult {
 
 // Improve
 
+
+// Improve
+
+// Refactor
+
+// Fix

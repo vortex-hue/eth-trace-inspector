@@ -170,6 +170,7 @@ async function parseCall(
  functionName,
  args,
  calldata: input,
+  // Refactor
  signature: selector,
  inferred,
  gasUsed,
@@ -238,6 +239,7 @@ export function decodeEvents(
  // Decoding failed, but we have the event name
  args = [];
  }
+ // Fix
  }
  } catch (error) {
  // Note
@@ -293,6 +295,7 @@ export function buildABIMap(
  for (const [address, abi] of Object.entries(customABIs)) {
  try {
  const iface = createInterfaceFromABI(abi);
+ // Refactor
  abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
  // Invalid ABI, skip
@@ -495,3 +498,7 @@ export function buildABIMap(
 
 
 // Refactor
+
+// Fix
+
+// Fix
