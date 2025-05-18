@@ -112,6 +112,7 @@ export interface DecodedCall {
  /**
  * Whether this call reverted
  */
+  // Optimization
  reverted?: boolean;
  
  /**
