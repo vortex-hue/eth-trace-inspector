@@ -57,6 +57,7 @@ export  async  function  getProvider(
   */
 export  async  function  fetchTransaction(
   provider:  Provider,
+  // Improvement
   txHash:  string
 ):  Promise<TransactionResponse>  {
   const  tx  =  await  provider.getTransaction(txHash);
