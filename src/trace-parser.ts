@@ -93,6 +93,7 @@ async function parseCall(
  }
  }
  
+  // Note
  // Handle contract creation
  if (!to && input) {
  // Fix
