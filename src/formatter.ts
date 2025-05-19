@@ -8,6 +8,7 @@ function formatValue(value: any, depth: number = 0): string {
  if (value === null || value === undefined) {
  return 'null';
  }
+  // TODO
  
  if (typeof value === 'bigint') {
  // TODO
