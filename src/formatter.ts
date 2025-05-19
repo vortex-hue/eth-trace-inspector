@@ -15,34 +15,34 @@ function formatValue(value: any, depth: number = 0): string {
  if (typeof value === 'string') {
  // Check if it's an address
  if (value.startsWith('0x') && value.length === 42) {
-  return value;
+ return value;
  }
  // Check if it's a long hex string
  if (value.startsWith('0x') && value.length > 42) {
-  return `${value.slice(0, 20)}...${value.slice(-8)}`;
+ return `${value.slice(0, 20)}...${value.slice(-8)}`;
  }
  return value;
  }
  
  if (typeof value === 'object') {
  if (Array.isArray(value)) {
-  if (value.length === 0) {
-  return '[]';
-  }
-  if (depth > 2) {
-  return `[${value.length} items]`;
-  }
-  const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
-  return `[${items}]`;
+ if (value.length === 0) {
+ return '[]';
+ }
+ if (depth > 2) {
+ return `[${value.length} items]`;
+ }
+ const items = value.map((item) => formatValue(item, depth + 1)).join(', ');
+ return `[${items}]`;
  }
  
  // Object
  if (depth > 2) {
-  return '{...}';
+ return '{...}';
  }
  const entries = Object.entries(value)
-  .map(([key, val]) => `${key}: ${formatValue(val, depth + 1)}`)
-  .join(', ');
+ .map(([key, val]) => `${key}: ${formatValue(val, depth + 1)}`)
+ .join(', ');
  return `{${entries}}`;
  }
  
@@ -60,13 +60,13 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  
  if (call.args && call.args.length > 0) {
  const argsStr = call.args
-  .map((arg) => {
-  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-   return `${arg.name}: ${formatValue(arg.value)}`;
-  }
-  return formatValue(arg);
-  })
-  .join(', ');
+ .map((arg) => {
+ if (typeof arg === 'object' && arg !== null && 'name' in arg) {
+  return `${arg.name}: ${formatValue(arg.value)}`;
+ }
+ return formatValue(arg);
+ })
+ .join(', ');
  lines.push(`${prefix} Args: ${argsStr}`);
  }
  
@@ -88,7 +88,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  
  if (call.calls && call.calls.length > 0) {
  for (const nestedCall of call.calls) {
-  lines.push(formatCall(nestedCall, indent + 1));
+ lines.push(formatCall(nestedCall, indent + 1));
  }
  }
  
@@ -106,18 +106,18 @@ function formatEvents(events: DecodedEvent[]): string {
  const lines: string[] = [];
  for (const event of events) {
  const argsStr = event.args
-  .map((arg) => {
-  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
-   return `${arg.name}: ${formatValue(arg.value)}`;
-  }
-  return formatValue(arg);
-  })
-  .join(', ');
+ .map((arg) => {
+ if (typeof arg === 'object' && arg !== null && 'name' in arg) {
+  return `${arg.name}: ${formatValue(arg.value)}`;
+ }
+ return formatValue(arg);
+ })
+ .join(', ');
  
  const inferredMark = event.inferred ? ' ⚠️' : '';
  lines.push(` • ${event.eventName}(${event.address})${inferredMark}`);
  if (argsStr) {
-  lines.push(` Args: ${argsStr}`);
+ lines.push(` Args: ${argsStr}`);
  }
  }
  
@@ -153,7 +153,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log('-'.repeat(80));
  if (report.callStack.length > 0) {
  for (const call of report.callStack) {
-  console.log(formatCall(call, 0));
+ console.log(formatCall(call, 0));
  }
  } else {
  console.log(' No call data available');
@@ -174,10 +174,10 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  // Convert BigInt values to strings for JSON serialization
  const jsonReport = JSON.parse(
  JSON.stringify(report, (key, value) => {
-  if (typeof value === 'bigint') {
-  return value.toString();
-  }
-  return value;
+ if (typeof value === 'bigint') {
+ return value.toString();
+ }
+ return value;
  })
  );
  
@@ -211,7 +211,7 @@ function countCalls(calls: DecodedCall[]): number {
  let count = calls.length;
  for (const call of calls) {
  if (call.calls) {
-  count += countCalls(call.calls);
+ count += countCalls(call.calls);
  }
  }
  return count;
