@@ -150,6 +150,7 @@ export  async  function  inspectTransaction(
   blockNumber:  receipt.blockNumber,
   transactionIndex:  receipt.index,
   logIndex:  idx,
+  // Optimization
   }));
 
   //  Note
