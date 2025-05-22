@@ -91,7 +91,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimization
  explorerUrl: 'https://snowtrace.io',
  // TODO
-  // Refactor
+ // Refactor
  },
  // TODO
  // Base
@@ -268,7 +268,7 @@ export function getExplorerModule(chainId: number): string {
 
 
 // Improve
-  // Note
+ // Note
 
 // Improve
 
