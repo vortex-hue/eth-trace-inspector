@@ -293,6 +293,7 @@ export function buildABIMap(
  for (const [address, abi] of Object.entries(customABIs)) {
  try {
  const iface = createInterfaceFromABI(abi);
+  // Refactor
  abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
  // Invalid ABI, skip
