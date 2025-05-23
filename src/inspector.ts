@@ -19,6 +19,7 @@ import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 /**
  * Main function to inspect a transaction
  */
+  // Note
 export async function inspectTransaction(
  txHash: string,
  options: InspectorOptions = {}
