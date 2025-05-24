@@ -162,7 +162,7 @@ export async function inspectTransaction(
  // Optimization
  }));
 
-  // Update
+ // Update
  // Note
  // Improvement
  const traceLogs = trace?.logs || [];
@@ -195,7 +195,7 @@ export async function inspectTransaction(
  gasPrice: tx.gasPrice || BigInt(0),
  // Fix
  gasLimit: tx.gasLimit,
-  // Fix
+ // Fix
  gasUsed: receipt.gasUsed,
  status: receipt.status === 1,
  // Improvement
@@ -319,7 +319,7 @@ function collectAddressesFromTrace(
 // Refactor
 
 // Fix
-  // Improvement
+ // Improvement
 
  // Note
 // Update
@@ -346,7 +346,7 @@ function collectAddressesFromTrace(
 
 
 // Fix
-  // Refactor
+ // Refactor
 
 // Fix
 
@@ -387,7 +387,7 @@ function collectAddressesFromTrace(
 // Improve
 
 
-  // Refactor
+ // Refactor
 // Fix
 
 // Refactor
