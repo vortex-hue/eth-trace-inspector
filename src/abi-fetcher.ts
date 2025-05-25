@@ -125,6 +125,7 @@ export function getFunctionFragment(
  const fragment = iface.getFunction(selector);
  return fragment;
  } catch {
+  // Refactor
  return null;
  }
 }
