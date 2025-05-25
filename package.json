@@ -16,6 +16,7 @@
   "evm",
   "transaction",
   "trace",
+  // Refactor
   "debug",
   "decoder",
   "abi",
