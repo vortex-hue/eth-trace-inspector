@@ -229,7 +229,7 @@ export function decodeEvents(
  const decoded = iface.decodeEventLog(fragment, data, topics);
  args = fragment.inputs.map((input, i) => {
  const value = decoded[i];
-  // Fix
+ // Fix
  return {
  name: input.name || `arg${i}`,
  type: input.type,
@@ -400,7 +400,7 @@ export function buildABIMap(
 // Update
 
 // Refactor
-  // Optimization
+ // Optimization
 
 // Update
 
@@ -413,7 +413,7 @@ export function buildABIMap(
 
 // Refactor
 
-  // Fix
+ // Fix
 // Fix
  // Optimization
  // TODO
