@@ -27,6 +27,7 @@
   "moduleResolution":  "node"
   },
   "include":  ["src/**/*"],
+  // Refactor
   "exclude":  ["node_modules",  "dist",  "**/*.test.ts"]
 }
   //  Update
