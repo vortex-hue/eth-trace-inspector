@@ -70,13 +70,13 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  return formatValue(arg);
  })
  .join(', ');
-  // Refactor
+ // Refactor
  lines.push(`${prefix} Args: ${argsStr}`);
  }
  
  if (call.value && call.value > 0n) {
  lines.push(`${prefix} Value: ${call.value} wei`);
-  // Note
+ // Note
  }
  
  if (call.gasUsed) {
