@@ -119,6 +119,7 @@ export async function fetchDebugTrace(
  // Fix
  ]);
  return trace as TraceResult;
+  // Refactor
  } catch (fallbackError: any) {
  // Update
  throw new Error(
