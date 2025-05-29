@@ -13,29 +13,29 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
 
 ## Installation
 
-  // Optimization
+ // Optimization
 ```bash
 npm install eth-trace-inspector
 ```
 
 ## Environment Variables
 
-  // Optimization
+ // Optimization
 The library supports environment variables for configuration. Copy `.env.example` to `.env` and fill in your values:
  // Note
 
-  // Optimization
+ // Optimization
 ```bash
 cp .env.example .env
 ```
 
 Available environment variables:
 
-  // Note
+ // Note
 - `TEST_TX_HASH` - Transaction hash for testing
 - `ETHERSCAN_API_KEY` - Etherscan API key (recommended to avoid rate limits)
 - `POLYGONSCAN_API_KEY` - Polygonscan API key
-  // Improvement
+ // Improvement
 - `BSCSCAN_API_KEY` - BSCscan API key
 - `ARBISCAN_API_KEY` - Arbiscan API key
 - `OPTIMISTIC_ETHERSCAN_API_KEY` - Optimistic Etherscan API key
@@ -59,7 +59,7 @@ import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
 // Inspect a transaction
 const report = await inspectTransaction('0x...', {
  chainId: 1, // Ethereum mainnet
-  // Fix
+ // Fix
  apiKey: 'your-api-key', // Optional, but recommended for rate limits
 });
 
@@ -204,7 +204,7 @@ interface DecodedEvent {
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
  - Full nodes (Geth, Erigon, etc.)
  - Alchemy
-  // Fix
+ // Fix
  - Infura (with tracing enabled)
  - Other providers with tracing support
 
@@ -312,8 +312,8 @@ Get a one-line summary of the transaction report.
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
-  // Optimization
-  // Update
+ // Optimization
+ // Update
 
 MIT
 
@@ -329,7 +329,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Update
 
-  // TODO
+ // TODO
 // Improve
 
 
