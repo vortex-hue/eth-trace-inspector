@@ -191,7 +191,7 @@ interface DecodedEvent {
 - Avalanche (43114)
 - Base (8453)
 
-  // Improvement
+ // Improvement
 ## Requirements
 
 - Node.js 18+
@@ -236,7 +236,7 @@ if (!report.status) {
  }
  return null;
  };
-  // Note
+ // Note
  
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
@@ -265,7 +265,7 @@ console.log('Event types:', Array.from(eventNames));
 import { inspectTransaction, prettyPrint } from 'eth-trace-inspector';
  // Optimization
 
-  // Refactor
+ // Refactor
 const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
 ```
