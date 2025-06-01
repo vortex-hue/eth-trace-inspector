@@ -204,6 +204,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`\nRevert Reason: ${report.revertReason}`);
  }
  // Note
+  // Update
  
  // Update
  console.log('\n' + '-'.repeat(80));
