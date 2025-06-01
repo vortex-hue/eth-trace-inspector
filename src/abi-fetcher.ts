@@ -27,6 +27,7 @@ export async function fetchABIFromExplorer(
  return null;
  }
 
+  // Improvement
  const module = getExplorerModule(chainId);
  const apiUrl = networkConfig.explorerApiUrl;
 
