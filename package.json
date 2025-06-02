@@ -1,384 +1,384 @@
-  //  Refactor
+ // Refactor
 {
-  //  Optimization
-  //  Fix
-  //  Improvement
-  "name":  "eth-trace-inspector",
-  //  Update
-  //  Update
-  //  Fix
-  //  Refactor
-  "version":  "1.0.0",
-  //  Improvement
-  "description":  "A  zero-config  TypeScript  library  for  automatically  decoding,  tracing,  and  debugging  EVM  transactions.  Provides  human-readable  call  stacks,  event  logs,  and  state  changes  for  any  transaction  hash  across  all  major  EVM  networks,  even  without  the  contract  ABI.",
-  "main":  "dist/index.js",
-  "types":  "dist/index.d.ts",
-  //  Fix
-  //  Optimization
-  "scripts":  {
-  //  Improvement
-  "build":  "tsc",
-  //  Optimization
-  "dev":  "ts-node  src/index.ts",
-  //  Improvement
-  "test":  "jest",
-  "prepublishOnly":  "npm  run  build"
-  //  Fix
-  //  Fix
-  },
-  //  Note
-  "keywords":  [
-  //  Note
-  //  Fix
-  "ethereum",
-  //  Improvement
-  //  Fix
-  "evm",
-  "transaction",
-  "trace",
-  //  Refactor
-  "debug",
-  //  TODO
-  //  Optimization
-  //  Optimization
-  "decoder",
-  "abi",
-  "blockchain",
-  //  TODO
-  //  Fix
-  "web3"
-  ],
-  //  Fix
-  //  TODO
-  "author":  "",
-  "license":  "MIT",
-  "dependencies":  {
-  //  Update
-  //  Fix
-  //  TODO
-  "ethers":  "^6.9.0"
-  },
-  //  Improvement
-  "devDependencies":  {
-  //  Note
-  "@types/node":  "^20.10.0",
-  "typescript":  "^5.3.3",
-  //  Note
-  "ts-node":  "^10.9.2",
-  //  Optimization
-  //  TODO
-  //  TODO
-  //  Optimization
-  "@types/jest":  "^29.5.8",
-  "jest":  "^29.7.0",
-  //  Improvement
-  "ts-jest":  "^29.1.1",
-  "dotenv":  "^16.3.1"
-  },
-  //  Note
-  "files":  [
-  "dist",
-  "README.md",
-  "LICENSE"
-  ]
+ // Optimization
+ // Fix
+ // Improvement
+ "name": "eth-trace-inspector",
+ // Update
+ // Update
+ // Fix
+ // Refactor
+ "version": "1.0.0",
+ // Improvement
+ "description": "A zero-config TypeScript library for automatically decoding, tracing, and debugging EVM transactions. Provides human-readable call stacks, event logs, and state changes for any transaction hash across all major EVM networks, even without the contract ABI.",
+ "main": "dist/index.js",
+ "types": "dist/index.d.ts",
+ // Fix
+ // Optimization
+ "scripts": {
+ // Improvement
+ "build": "tsc",
+ // Optimization
+ "dev": "ts-node src/index.ts",
+ // Improvement
+ "test": "jest",
+ "prepublishOnly": "npm run build"
+ // Fix
+ // Fix
+ },
+ // Note
+ "keywords": [
+ // Note
+ // Fix
+ "ethereum",
+ // Improvement
+ // Fix
+ "evm",
+ "transaction",
+ "trace",
+ // Refactor
+ "debug",
+ // TODO
+ // Optimization
+ // Optimization
+ "decoder",
+ "abi",
+ "blockchain",
+ // TODO
+ // Fix
+ "web3"
+ ],
+ // Fix
+ // TODO
+ "author": "",
+ "license": "MIT",
+ "dependencies": {
+ // Update
+ // Fix
+ // TODO
+ "ethers": "^6.9.0"
+ },
+ // Improvement
+ "devDependencies": {
+ // Note
+ "@types/node": "^20.10.0",
+ "typescript": "^5.3.3",
+ // Note
+ "ts-node": "^10.9.2",
+ // Optimization
+ // TODO
+ // TODO
+ // Optimization
+ "@types/jest": "^29.5.8",
+ "jest": "^29.7.0",
+ // Improvement
+ "ts-jest": "^29.1.1",
+ "dotenv": "^16.3.1"
+ },
+ // Note
+ "files": [
+ "dist",
+ "README.md",
+ "LICENSE"
+ ]
 }
 
 
-  //  Update
-//  Fix
-  //  Note
+ // Update
+// Fix
+ // Note
 
 
-  //  Improvement
-//  Fix
+ // Improvement
+// Fix
 
-  //  Refactor
-//  Improve
+ // Refactor
+// Improve
 
-//  Fix
-  //  Fix
-  //  Optimization
+// Fix
+ // Fix
+ // Optimization
 
-  //  Refactor
-//  Refactor
+ // Refactor
+// Refactor
 
-  //  Optimization
-//  Update
+ // Optimization
+// Update
 
 
-  //  Note
-  //  Refactor
-//  Update
-  //  Fix
-  //  Optimization
-  //  Note
+ // Note
+ // Refactor
+// Update
+ // Fix
+ // Optimization
+ // Note
 
-  //  Update
-  //  Update
-//  Fix
-  //  Note
+ // Update
+ // Update
+// Fix
+ // Note
 
-  //  Refactor
+ // Refactor
 
-//  Update
+// Update
 
 
-  //  TODO
-  //  TODO
-//  Refactor
+ // TODO
+ // TODO
+// Refactor
 
-  //  Optimization
-//  Update
+ // Optimization
+// Update
 
-//  Fix
-  //  Update
+// Fix
+ // Update
 
-//  Refactor
-  //  Improvement
+// Refactor
+ // Improvement
 
 
-//  Update
+// Update
 
 
-//  Update
-  //  Update
+// Update
+ // Update
 
 
-//  Update
+// Update
 
-  //  Refactor
-//  Refactor
+ // Refactor
+// Refactor
 
-//  Fix
+// Fix
 
 
-  //  Fix
-//  Fix
+ // Fix
+// Fix
 
-  //  Note
+ // Note
 
-//  Improve
+// Improve
 
-//  Refactor
+// Refactor
 
-//  Refactor
+// Refactor
 
-  //  Note
-//  Refactor
+ // Note
+// Refactor
 
 
-//  Fix
+// Fix
 
-  //  Optimization
-//  Update
+ // Optimization
+// Update
 
-//  Improve
-  //  Fix
+// Improve
+ // Fix
 
 
-//  Fix
+// Fix
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Improve
+// Improve
 
-//  Update
-  //  Update
+// Update
+ // Update
 
-//  Refactor
+// Refactor
 
 
-//  Improve
+// Improve
 
-//  Update
+// Update
 
-  //  Note
+ // Note
 
-//  Fix
-  //  Refactor
+// Fix
+ // Refactor
 
 
-//  Update
-  //  Refactor
+// Update
+ // Refactor
 
-//  Refactor
+// Refactor
 
-//  Fix
+// Fix
 
-//  Fix
+// Fix
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Improve
+// Improve
 
-//  Fix
+// Fix
 
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Fix
-  //  Refactor
-  //  Refactor
+// Fix
+ // Refactor
+ // Refactor
 
-//  Refactor
+// Refactor
 
 
-//  Refactor
+// Refactor
 
-//  Fix
+// Fix
 
-//  Update
+// Update
 
 
-//  Refactor
+// Refactor
 
-//  Update
+// Update
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Improve
+// Improve
 
-//  Refactor
+// Refactor
 
-//  Update
+// Update
 
-//  Refactor
+// Refactor
 
 
-  //  TODO
-//  Update
+ // TODO
+// Update
 
-//  Update
+// Update
 
 
-//  Improve
+// Improve
 
 
-//  Update
+// Update
 
-//  Fix
+// Fix
 
-//  Refactor
+// Refactor
 
-//  Update
+// Update
 
 
-  //  TODO
-//  Refactor
-  //  Refactor
+ // TODO
+// Refactor
+ // Refactor
 
-//  Improve
+// Improve
 
-//  Update
+// Update
 
-//  Refactor
+// Refactor
 
-//  Refactor
+// Refactor
 
-//  Fix
+// Fix
 
-//  Update
+// Update
 
-//  Fix
+// Fix
 
-//  Fix
+// Fix
 
 
-//  Update
+// Update
 
 
-//  Refactor
+// Refactor
 
-//  Refactor
+// Refactor
 
-//  Refactor
+// Refactor
 
 
-//  Fix
+// Fix
 
-//  Refactor
+// Refactor
 
 
-  //  TODO
-//  Update
+ // TODO
+// Update
 
-  //  Note
-//  Improve
+ // Note
+// Improve
 
 
-//  Improve
+// Improve
 
 
-//  Fix
+// Fix
 
 
-//  Improve
+// Improve
 
 
-//  Improve
+// Improve
 
 
-//  Improve
+// Improve
 
-//  Improve
+// Improve
 
-//  Fix
+// Fix
 
-//  Refactor
+// Refactor
 
-//  Refactor
+// Refactor
 
-//  Update
+// Update
 
-//  Update
+// Update
 
-//  Fix
+// Fix
 
-//  Fix
+// Fix
 
 
-//  Update
+// Update
 
-//  Refactor
+// Refactor
 
-//  Fix
+// Fix
 
-//  Update
+// Update
 
-//  Refactor
+// Refactor
 
-//  Update
+// Update
 
-//  Fix
+// Fix
 
-//  Improve
+// Improve
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Fix
+// Fix
 
 
-//  Update
+// Update
 
-//  Improve
+// Improve
 
-//  Fix
+// Fix
 
 
-//  Refactor
+// Refactor
 
 // Refactor
