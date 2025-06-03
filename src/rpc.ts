@@ -22,6 +22,7 @@ export async function getProvider(
 
  if (rpcUrl) {
  const rpcProvider = new JsonRpcProvider(rpcUrl);
+  // Fix
  // TODO
  // Note
  const network = await rpcProvider.getNetwork();
