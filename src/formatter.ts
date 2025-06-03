@@ -24,6 +24,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   }
   //  Check  if  it's  a  long  hex  string
   if  (value.startsWith('0x')  &&  value.length  >  42)  {
+  // Update
   return  `${value.slice(0,  20)}...${value.slice(-8)}`;
   }
   return  value;
