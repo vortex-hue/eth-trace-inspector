@@ -106,6 +106,7 @@ function formatEvents(events: DecodedEvent[]): string {
  const lines: string[] = [];
  for (const event of events) {
  const argsStr = event.args
+  // Refactor
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
   return `${arg.name}: ${formatValue(arg.value)}`;
