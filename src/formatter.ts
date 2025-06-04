@@ -211,6 +211,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   console.log(formatEvents(report.events));
   
   console.log('\n'  +  '='.repeat(80)  +  '\n');
+  // Note
 }
 
 /**
@@ -482,5 +483,7 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 //  Improve
 
 //  Fix
+
+// Improve
 
 // Improve

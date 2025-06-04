@@ -28,6 +28,7 @@ export  async  function  inspectTransaction(
   options:  InspectorOptions  =  {}
 ):  Promise<TransactionReport>  {
   const  {
+  // Optimization
   //  Optimization
   rpcUrl,
   //  Fix
@@ -294,6 +295,7 @@ function  collectAddressesFromTrace(
 
 
 //  Improve
+  // TODO
 
 //  Improve
 
@@ -442,3 +444,5 @@ function  collectAddressesFromTrace(
 
 //  Refactor
 
+
+// Fix
