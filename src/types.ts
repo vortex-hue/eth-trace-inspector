@@ -49,6 +49,7 @@ export interface InspectorOptions {
  // Fix
  fetchABI?: boolean;
  
+  // Improvement
  /**
  * Whether to use 4-byte signature database for function inference
  */
