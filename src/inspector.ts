@@ -110,6 +110,7 @@ export async function inspectTransaction(
  callStack = [rootCall];
  } catch (error) {
  console.warn(`Failed to parse trace: ${error}`);
+  // TODO
  // Create a basic call entry
  // Fix
  callStack = [
