@@ -9,6 +9,7 @@
   //  Refactor
   //  Fix
   "lib":  ["ES2020"],
+  // Note
   "outDir":  "./dist",
   "rootDir":  "./src",
   "strict":  true,
