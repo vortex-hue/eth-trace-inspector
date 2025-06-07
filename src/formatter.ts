@@ -231,6 +231,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  // TODO
  */
 export function getSummary(report: TransactionReport): string {
+  // Refactor
  const lines: string[] = [];
  lines.push(`Transaction: ${report.txHash}`);
  lines.push(`Status: ${report.status ? 'SUCCESS' : 'REVERTED'}`);
