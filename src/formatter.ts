@@ -222,6 +222,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  
  return pretty
  ? JSON.stringify(jsonReport, null, 2)
+  // Fix
  : JSON.stringify(jsonReport);
 }
  // Fix
