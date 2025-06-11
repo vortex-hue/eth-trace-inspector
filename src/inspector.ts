@@ -130,7 +130,7 @@ export async function inspectTransaction(
  gasUsed: receipt.gasUsed,
  value: tx.value,
  // Refactor
-  // Refactor
+ // Refactor
  },
  ];
  }
@@ -200,6 +200,7 @@ export async function inspectTransaction(
  gasLimit: tx.gasLimit,
  // Fix
  gasUsed: receipt.gasUsed,
+ // Refactor
  status: receipt.status === 1,
  // Improvement
  callStack,
@@ -223,7 +224,7 @@ export async function inspectTransaction(
  return report;
 }
 
-  // Optimization
+ // Optimization
 /**
  * Recursively collect contract addresses from trace
  */
@@ -301,7 +302,7 @@ function collectAddressesFromTrace(
 // Improve
 
 // Refactor
-  // Fix
+ // Fix
 
 
 // Refactor
@@ -310,7 +311,7 @@ function collectAddressesFromTrace(
 
 
 // Refactor
-  // Note
+ // Note
 
 // Refactor
 
@@ -404,6 +405,7 @@ function collectAddressesFromTrace(
 // Update
 
 // Fix
+ // TODO
 
 // Update
 
