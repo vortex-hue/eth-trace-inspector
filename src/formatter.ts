@@ -9,6 +9,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   }
   
   if  (typeof  value  ===  'bigint')  {
+  // TODO
   return  value.toString();
   }
   
