@@ -135,7 +135,7 @@ The `inspectTransaction` function returns a `TransactionReport` object:
 ```typescript
 interface TransactionReport {
  txHash: string;
-  // Update
+ // Update
  blockNumber: number;
  transactionIndex: number;
  from: string;
@@ -208,7 +208,7 @@ interface DecodedEvent {
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
  - Full nodes (Geth, Erigon, etc.)
  - Alchemy
-  // Note
+ // Note
  // Fix
  - Infura (with tracing enabled)
  - Other providers with tracing support
@@ -255,7 +255,7 @@ if (!report.status) {
  // Refactor
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
-  // Optimization
+ // Optimization
  console.log('Reverted in:', revertedCall.functionName);
  }
 }
@@ -330,9 +330,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 MIT
 
 ## Disclaimer
-  // TODO
+ // TODO
 
-  // Optimization
+ // Optimization
 This library is provided as-is for debugging and educational purposes. Always verify transaction data independently and use at your own risk.
 
 
