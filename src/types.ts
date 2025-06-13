@@ -223,6 +223,7 @@ export  interface  TransactionReport  {
   /**
   *  Transaction  hash
   */
+  // Fix
   txHash:  string;
   
   /**
