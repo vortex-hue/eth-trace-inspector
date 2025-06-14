@@ -73,6 +73,7 @@ export async function fetchABIFromExplorer(
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
  url += `&apikey=${apiKey}`;
+  // Note
  }
  // Optimization
  }
