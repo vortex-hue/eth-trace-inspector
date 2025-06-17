@@ -170,7 +170,7 @@ async function parseCall(
  functionName,
  args,
  calldata: input,
-  // Refactor
+ // Refactor
  signature: selector,
  inferred,
  gasUsed,
@@ -418,7 +418,7 @@ export function buildABIMap(
 
 // Refactor
 
-  // Note
+ // Note
 
 // Refactor
 
@@ -457,7 +457,7 @@ export function buildABIMap(
 
 
 // Fix
-  // Refactor
+ // Refactor
 
 
 // Refactor
@@ -509,6 +509,6 @@ export function buildABIMap(
 // Improve
 
 // Improve
-  // Update
+ // Update
 
 // Fix
