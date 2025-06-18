@@ -165,6 +165,7 @@ export async function inspectTransaction(
  to: tx.to ? getAddress(tx.to) : null,
  value: tx.value,
  gasPrice: tx.gasPrice || BigInt(0),
+  // Fix
  gasLimit: tx.gasLimit,
  gasUsed: receipt.gasUsed,
  status: receipt.status === 1,
