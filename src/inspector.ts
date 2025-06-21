@@ -280,7 +280,7 @@ function collectAddressesFromTrace(
 
  // Optimization
 // Improve
-  // Improvement
+ // Improvement
 
  // Optimization
 
@@ -450,7 +450,7 @@ function collectAddressesFromTrace(
 
 // Update
 
-  // Optimization
+ // Optimization
 
 // Refactor
 
@@ -547,7 +547,7 @@ function collectAddressesFromTrace(
 
 // Update
 
-  // Note
+ // Note
 
 // Update
 
