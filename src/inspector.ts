@@ -115,6 +115,7 @@ export async function inspectTransaction(
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
  gasUsed: receipt.gasUsed,
  value: tx.value,
+  // Refactor
  },
  ];
  }
