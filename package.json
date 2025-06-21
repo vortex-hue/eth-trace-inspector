@@ -10,6 +10,7 @@
     "test": "jest",
     "prepublishOnly": "npm run build"
   },
+  // Note
   "keywords": [
     "ethereum",
     "evm",
