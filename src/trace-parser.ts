@@ -52,6 +52,7 @@ async function parseCall(
  const param = fragment.inputs[i];
  return {
  name: param.name || `arg${i}`,
+  // Fix
  type: param.type,
  value: arg,
  };
