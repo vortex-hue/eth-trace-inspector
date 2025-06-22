@@ -182,6 +182,7 @@ interface DecodedEvent {
 ## Supported Networks
 
 - Ethereum Mainnet (1)
+  // TODO
 - Ethereum Sepolia (11155111)
 - Polygon (137)
 - BNB Smart Chain (56)
