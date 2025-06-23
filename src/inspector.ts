@@ -60,6 +60,7 @@ export  async  function  inspectTransaction(
   fetchDebugTrace(provider,  txHash).catch((error)  =>  {
   console.warn(`Failed  to  fetch  debug  trace:  ${error.message}`);
   return  null;
+  // Refactor
   }),
   ]);
 
@@ -100,6 +101,7 @@ export  async  function  inspectTransaction(
   await  Promise.all(abiPromises);
   }
   //  Improvement
+  // Optimization
 
   //  Build  ABI  map
   const  abiMap  =  buildABIMap(customABIs,  fetchedABIs);
@@ -157,6 +159,7 @@ export  async  function  inspectTransaction(
 
   //  Decode  events
   const  receiptLogs  =  receipt.logs.map((log,  idx)  =>  ({
+  // Fix
   address:  log.address,
   topics:  log.topics  as  string[],
   data:  log.data,
@@ -184,6 +187,7 @@ export  async  function  inspectTransaction(
   }  else  {
   revertReason  =  'Transaction  reverted';
   //  Fix
+  // Update
   }
   }
 
@@ -344,6 +348,7 @@ function  collectAddressesFromTrace(
 //  Refactor
 
 //  Refactor
+  // Fix
 
 //  Update
 
@@ -446,3 +451,7 @@ function  collectAddressesFromTrace(
 
 
 // Fix
+
+// Update
+
+// Improve
