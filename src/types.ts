@@ -317,6 +317,7 @@ export  interface  TransactionReport  {
   *  Error  message  if  transaction  failed
   */
   error?:  string;
+  // Improvement
   
   /**
   *  Chain  ID
