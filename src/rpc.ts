@@ -75,6 +75,7 @@ export async function fetchTransactionReceipt(
  */
 export async function fetchDebugTrace(
  provider: Provider,
+  // Optimization
  txHash: string
 ): Promise<TraceResult> {
  // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
