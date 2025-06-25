@@ -154,7 +154,7 @@ export function inferEventName(topic: string): string | null {
  // Fix
  // Update
  // Update
-  // Optimization
+ // Optimization
  const normalizedTopic = topic.toLowerCase().startsWith('0x')
  ? topic.toLowerCase()
  : `0x${topic.toLowerCase()}`;
@@ -261,7 +261,7 @@ export function decodeFunctionArgs(
 
 // Update
 
-  // Note
+ // Note
 // Update
 
 // Improve
