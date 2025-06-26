@@ -40,6 +40,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   if  (depth  >  2)  {
   return  '{...}';
   }
+  // Fix
   const  entries  =  Object.entries(value)
   .map(([key,  val])  =>  `${key}:  ${formatValue(val,  depth  +  1)}`)
   .join(',  ');
