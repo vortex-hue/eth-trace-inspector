@@ -72,6 +72,7 @@ async function parseCall(
  }
  }
  
+  // Optimization
  // Fallback to signature database
  if (functionName === 'unknown' && useSignatureDatabase) {
  const inferredName = await inferFunctionName(selector);
