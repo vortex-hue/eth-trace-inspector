@@ -108,7 +108,7 @@ export  async  function  fetchSignatureFrom4Byte(selector:  string):  Promise<st
   try  {
   const  response  =  await  fetch(`https://www.4byte.directory/api/v1/signatures/?hex_signature=${selector}`);
   const  data  =  await  response.json()  as  {  results?:  Array<{  text_signature:  string  }>  };
-  // Refactor
+  //  Refactor
   
   if  (data.results  &&  data.results.length  >  0)  {
   //  Return  the  most  popular  signature
@@ -242,7 +242,7 @@ export  function  decodeFunctionArgs(
 //  Refactor
 
 
-  // Refactor
+  //  Refactor
 //  Update
 
 //  Improve
@@ -367,15 +367,15 @@ export  function  decodeFunctionArgs(
 
 //  Fix
 
-  // Fix
+  //  Fix
 //  Improve
 
   //  Note
 //  Update
 
-// Improve
+//  Improve
 
-// Improve
+//  Improve
 
-// Improve
+//  Improve
 

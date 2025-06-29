@@ -29,6 +29,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  name: 'Sepolia',
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
  // Update
+  // TODO
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  // TODO
  explorerUrl: 'https://sepolia.etherscan.io',
@@ -342,3 +343,5 @@ export function getExplorerModule(chainId: number): string {
 // Update
 
 // Refactor
+
+// Fix
