@@ -232,6 +232,7 @@ export  interface  TransactionReport  {
   //  Optimization
   transactionIndex:  number;
   
+  // Improvement
   /**
   *  From  address
   */
