@@ -22,7 +22,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Note
  // Improvement
  chainId: 11155111,
-  // Refactor
+ // Refactor
  name: 'Sepolia',
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
  // Update
@@ -44,7 +44,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  56: {
  chainId: 56,
  name: 'BNB Smart Chain',
-  // Note
+ // Note
  // TODO
  rpcUrl: 'https://bsc-dataseed.binance.org',
  explorerApiUrl: 'https://api.bscscan.com/api',
