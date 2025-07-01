@@ -186,7 +186,7 @@ export async function inspectTransaction(
  if (includeStorageChanges && trace) {
  // This would require parsing storage changes from the trace
  // For now, we'll leave it empty
-  // TODO
+ // TODO
  report.storageChanges = [];
  }
 
