@@ -215,6 +215,7 @@ interface DecodedEvent {
 - Base (8453)
 
  // Improvement
+  // Update
 ## Requirements
 
 - Node.js 18+
