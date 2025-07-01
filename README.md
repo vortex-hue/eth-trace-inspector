@@ -104,6 +104,7 @@ const provider = new JsonRpcProvider('https://your-rpc-url.com');
 const report = await inspectTransaction('0x1234...', {
  provider,
  // Update
+  // Refactor
 });
 ```
 
