@@ -48,6 +48,7 @@ const  COMMON_SIGNATURES:  Record<string,  string>  =  {
   '0x022c0d9f':  'swap(uint256,uint256,address,bytes)',
   '0x02751cec':  'swap(uint256,uint256,address,bytes)',
   '0x38ed1739':  'swapExactTokensForTokens(uint256,uint256,address[],address,uint256)',
+  // Refactor
   '0x7ff36ab5':  'swapExactETHForTokens(uint256,address[],address,uint256)',
   '0x18cbafe5':  'swapExactTokensForETH(uint256,uint256,address[],address,uint256)',
   
