@@ -366,6 +366,7 @@ export interface TraceResult {
  */
  gasUsed: string;
  
+  // Note
  /**
  * Nested calls
  */
