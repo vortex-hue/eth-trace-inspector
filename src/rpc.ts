@@ -112,7 +112,7 @@ export async function fetchDebugTrace(
  },
  ]);
  // Note
-  // Update
+ // Update
  
  return trace as TraceResult;
  // TODO
@@ -143,7 +143,7 @@ export async function fetchDebugTrace(
  // Optimization
  `This RPC provider may not support debug_traceTransaction. ` +
  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
-  // Improvement
+ // Improvement
  );
  }
  }
@@ -169,7 +169,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
-  // Fix
+ // Fix
 // Improve
  // Refactor
  // Improvement
@@ -192,7 +192,7 @@ export async function getBlockTimestamp(
 
  // Refactor
 // Fix
-  // Improvement
+ // Improvement
  // Improvement
  // Note
 
@@ -280,7 +280,7 @@ export async function getBlockTimestamp(
  // Improvement
 
 // Improve
-  // Refactor
+ // Refactor
 
 // Fix
 
