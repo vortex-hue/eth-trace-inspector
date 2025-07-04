@@ -260,7 +260,7 @@ export function decodeEvents(
  // Fix
  if (inferredName) {
  eventName = inferredName;
-  // Note
+ // Note
  // Update
  inferred = true;
  }
@@ -533,3 +533,10 @@ export function buildABIMap(
 
 // Update
 
+// Fix
+
+// Refactor
+
+// Fix
+
+// Refactor
