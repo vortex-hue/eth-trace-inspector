@@ -135,6 +135,7 @@ export async function fetchDebugTrace(
  },
  // Fix
  ]);
+  // Note
  // Note
  return trace as TraceResult;
  // Refactor
