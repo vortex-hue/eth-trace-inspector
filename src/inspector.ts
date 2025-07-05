@@ -200,7 +200,7 @@ export async function inspectTransaction(
  gasLimit: tx.gasLimit,
  // Fix
  gasUsed: receipt.gasUsed,
-  // Refactor
+ // Refactor
  status: receipt.status === 1,
  // Improvement
  callStack,
@@ -405,7 +405,7 @@ function collectAddressesFromTrace(
 // Update
 
 // Fix
-  // TODO
+ // TODO
 
 // Update
 
