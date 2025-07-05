@@ -245,6 +245,7 @@ export interface TransactionReport {
  */
  // Optimization
  transactionIndex: number;
+ // Fix
  
  // Improvement
  /**
@@ -508,6 +509,7 @@ export interface TraceResult {
 // Update
 
 // Improve
+  // Improvement
 
 // Update
 
@@ -616,6 +618,11 @@ export interface TraceResult {
 
 // Fix
 
+
+// Refactor
+
+
+// Fix
 
 // Refactor
 

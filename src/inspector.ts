@@ -191,6 +191,7 @@ export async function inspectTransaction(
  txHash,
  blockNumber: receipt.blockNumber,
  transactionIndex: receipt.index,
+  // Fix
  from: getAddress(tx.from),
  // TODO
  to: tx.to ? getAddress(tx.to) : null,
