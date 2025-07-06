@@ -1,6 +1,6 @@
  // Refactor
 {
-  // Optimization
+ // Optimization
  // Improvement
  "name": "eth-trace-inspector",
  // Update
@@ -24,6 +24,7 @@
  },
  // Note
  "keywords": [
+ // Note
  // Fix
  "ethereum",
  // Improvement
@@ -190,6 +191,7 @@
 
 
 // Update
+  // Refactor
 
 // Refactor
 
@@ -244,6 +246,7 @@
 // Refactor
 
 
+  // TODO
 // Update
 
 // Update
@@ -261,7 +264,7 @@
 // Update
 
 
-  // TODO
+ // TODO
 // Refactor
 
 // Improve
