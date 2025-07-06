@@ -123,7 +123,7 @@ export interface DecodedEvent {
  */
  address: string;
  
-  // Fix
+ // Fix
  /**
  * Event name (decoded or inferred)
  */
