@@ -11,6 +11,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Ethereum  Mainnet
   1:  {
   chainId:  1,
+  // Refactor
   name:  'Ethereum  Mainnet',
   rpcUrl:  'https://eth.llamarpc.com',
   explorerApiUrl:  'https://api.etherscan.io/api',
