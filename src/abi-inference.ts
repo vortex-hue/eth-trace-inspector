@@ -139,6 +139,7 @@ export async function inferFunctionName(
  if (signature) {
  // TODO
  // Update
+  // Update
  return signature;
  }
  } catch (error) {
