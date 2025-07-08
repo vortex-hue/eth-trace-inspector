@@ -134,6 +134,7 @@ export async function inferFunctionName(
  
  // Try online database if enabled
  if (useOnlineDatabase) {
+  // Note
  try {
  const signature = await fetchSignatureFrom4Byte(normalizedSelector);
  if (signature) {
