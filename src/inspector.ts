@@ -206,7 +206,7 @@ export async function inspectTransaction(
  // Improvement
  callStack,
  events,
-  // Note
+ // Note
  // TODO
  revertReason,
  // Fix
