@@ -79,6 +79,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Refactor
  lines.push(`${prefix} Args: ${argsStr}`);
  }
+  // Note
  
  if (call.value && call.value > 0n) {
  lines.push(`${prefix} Value: ${call.value} wei`);
