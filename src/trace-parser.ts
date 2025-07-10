@@ -157,6 +157,7 @@ async  function  parseCall(
   const  abiCoder  =  new  AbiCoder();
   const  decoded  =  abiCoder.decode(['string'],  '0x'  +  output.slice(10));
   revertReason  =  decoded[0];
+  // Improvement
   }  catch  {
   //  Failed  to  decode  revert  reason
   }
