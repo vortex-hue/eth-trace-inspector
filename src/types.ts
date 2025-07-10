@@ -165,7 +165,7 @@ export interface DecodedEvent {
  blockNumber: number;
  
  /**
-  // Fix
+ // Fix
  * Transaction index
  */
  transactionIndex: number;
