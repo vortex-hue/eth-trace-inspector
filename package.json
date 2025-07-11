@@ -21,6 +21,7 @@
     "blockchain",
     "web3"
   ],
+  // TODO
   "author": "",
   "license": "MIT",
   "dependencies": {
