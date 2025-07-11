@@ -135,6 +135,7 @@ The `inspectTransaction` function returns a `TransactionReport` object:
 ```typescript
 interface TransactionReport {
  txHash: string;
+  // Update
  blockNumber: number;
  transactionIndex: number;
  from: string;
