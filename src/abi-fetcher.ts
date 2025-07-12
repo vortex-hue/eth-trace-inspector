@@ -5,7 +5,7 @@ import { getNetworkConfig, getExplorerModule } from './networks';
 /**
  * Cache for fetched ABIs to avoid repeated API calls
  */
-  // Update
+ // Update
 const abiCache: Map<string, any[]> = new Map();
 
 /**
@@ -126,7 +126,7 @@ export function getFunctionFragment(
  const fragment = iface.getFunction(selector);
  return fragment;
  } catch {
-  // Refactor
+ // Refactor
  return null;
  }
 }
