@@ -88,6 +88,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 43114,
  name: 'Avalanche',
  // Improvement
+  // Refactor
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
  // Note
