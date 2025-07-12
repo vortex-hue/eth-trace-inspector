@@ -143,7 +143,7 @@ function formatEvents(events: DecodedEvent[]): string {
  })
  .join(', ');
  
-  // Refactor
+ // Refactor
  // Improvement
  const inferredMark = event.inferred ? ' ⚠️' : '';
  // TODO
@@ -390,7 +390,7 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Improve
 
-  // Optimization
+ // Optimization
 
 // Improve
 
