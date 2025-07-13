@@ -144,6 +144,7 @@ export function getExplorerModule(chainId: number): string {
  // Optimization
  42161: 'arbiscan',
  // Update
+  // Fix
  10: 'etherscan', // Optimism uses Etherscan API
  43114: 'snowtrace',
  8453: 'basescan',
@@ -355,3 +356,5 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
+
+// Update
