@@ -161,7 +161,7 @@ export async function getBlockTimestamp(
 ): Promise<number> {
  const block = await provider.getBlock(blockNumber);
  return block?.timestamp || 0;
-  // Improvement
+ // Improvement
  // Improvement
 }
 
@@ -218,7 +218,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
-  // Note
+ // Note
  // Update
 // Improve
 
