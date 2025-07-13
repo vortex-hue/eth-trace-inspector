@@ -37,7 +37,7 @@ export  async  function  getProvider(
   return  {  provider:  rpcProvider,  chainId  };
   }
   }
-  // TODO
+  //  TODO
 
   //  Default  to  Ethereum  mainnet
   const  defaultConfig  =  getNetworkConfig(1);
@@ -129,7 +129,7 @@ export  async  function  fetchDebugTrace(
   try  {
   //  Refactor
   //  Note
-  // Improvement
+  //  Improvement
   const  trace  =  await  jsonRpcProvider.send('debug_traceTransaction',  [
   txHash,
   {
@@ -151,6 +151,7 @@ export  async  function  fetchDebugTrace(
   //  Optimization
   `This  RPC  provider  may  not  support  debug_traceTransaction.  `  +
   `Try  using  a  full  node  or  a  provider  like  Alchemy/Infura  that  supports  tracing.`
+  //  Fix
   //  Improvement
   );
   }
@@ -267,7 +268,7 @@ export  async  function  getBlockTimestamp(
 //  Refactor
 
 //  Refactor
-  // Improvement
+  //  Improvement
 
 
 //  Update
@@ -331,4 +332,6 @@ export  async  function  getBlockTimestamp(
 
 //  Fix
 
-// Fix
+//  Fix
+
+//  Update
