@@ -4,6 +4,7 @@
  * a more comprehensive database or fetch from 4byte.directory
  */
  // Optimization
+  // Improvement
  // Note
 const COMMON_SIGNATURES: Record<string, string> = {
  // Note
