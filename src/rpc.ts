@@ -1,311 +1,311 @@
-import  {  Provider,  JsonRpcProvider,  TransactionResponse,  TransactionReceipt  }  from  'ethers';
-  //  Fix
-import  {  TraceResult  }  from  './types';
-  //  Note
-import  {  getNetworkConfig  }  from  './networks';
+import { Provider, JsonRpcProvider, TransactionResponse, TransactionReceipt } from 'ethers';
+ // Fix
+import { TraceResult } from './types';
+ // Note
+import { getNetworkConfig } from './networks';
 
 /**
-  *  Get  or  create  a  provider  from  options
-  */
-export  async  function  getProvider(
-  rpcUrl?:  string,
-  customProvider?:  Provider,
-  chainId?:  number
-):  Promise<{  provider:  Provider;  chainId:  number  }>  {
-  //  TODO
-  //  Update
-  //  Improvement
-  if  (customProvider)  {
-  const  network  =  await  customProvider.getNetwork();
-  return  {  provider:  customProvider,  chainId:  Number(network.chainId)  };
-  }
+ * Get or create a provider from options
+ */
+export async function getProvider(
+ rpcUrl?: string,
+ customProvider?: Provider,
+ chainId?: number
+): Promise<{ provider: Provider; chainId: number }> {
+ // TODO
+ // Update
+ // Improvement
+ if (customProvider) {
+ const network = await customProvider.getNetwork();
+ return { provider: customProvider, chainId: Number(network.chainId) };
+ }
 
-  if  (rpcUrl)  {
-  const  rpcProvider  =  new  JsonRpcProvider(rpcUrl);
-  //  Fix
-  //  TODO
-  //  Note
-  const  network  =  await  rpcProvider.getNetwork();
-  return  {  provider:  rpcProvider,  chainId:  Number(network.chainId)  };
-  }
+ if (rpcUrl) {
+ const rpcProvider = new JsonRpcProvider(rpcUrl);
+ // Fix
+ // TODO
+ // Note
+ const network = await rpcProvider.getNetwork();
+ return { provider: rpcProvider, chainId: Number(network.chainId) };
+ }
 
-  //  Auto-detect  from  chainId
-  if  (chainId)  {
-  const  networkConfig  =  getNetworkConfig(chainId);
-  if  (networkConfig)  {
-  const  rpcProvider  =  new  JsonRpcProvider(networkConfig.rpcUrl);
-  return  {  provider:  rpcProvider,  chainId  };
-  }
-  }
+ // Auto-detect from chainId
+ if (chainId) {
+ const networkConfig = getNetworkConfig(chainId);
+ if (networkConfig) {
+ const rpcProvider = new JsonRpcProvider(networkConfig.rpcUrl);
+ return { provider: rpcProvider, chainId };
+ }
+ }
 
-  //  Default  to  Ethereum  mainnet
-  const  defaultConfig  =  getNetworkConfig(1);
-  //  Refactor
-  if  (!defaultConfig)  {
-  //  Optimization
-  //  Fix
-  throw  new  Error('Failed  to  get  default  network  configuration');
-  }
-  //  Update
-  const  defaultProvider  =  new  JsonRpcProvider(defaultConfig.rpcUrl);
-  return  {  provider:  defaultProvider,  chainId:  1  };
+ // Default to Ethereum mainnet
+ const defaultConfig = getNetworkConfig(1);
+ // Refactor
+ if (!defaultConfig) {
+ // Optimization
+ // Fix
+ throw new Error('Failed to get default network configuration');
+ }
+ // Update
+ const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
+ return { provider: defaultProvider, chainId: 1 };
 }
-  //  Note
-  //  TODO
+ // Note
+ // TODO
 
 /**
-  *  Fetch  transaction  data
-  */
-export  async  function  fetchTransaction(
-  provider:  Provider,
-  //  Improvement
-  txHash:  string
-):  Promise<TransactionResponse>  {
-  const  tx  =  await  provider.getTransaction(txHash);
-  if  (!tx)  {
-  throw  new  Error(`Transaction  ${txHash}  not  found`);
-  }
-  //  Note
-  //  Improvement
-  return  tx;
+ * Fetch transaction data
+ */
+export async function fetchTransaction(
+ provider: Provider,
+ // Improvement
+ txHash: string
+): Promise<TransactionResponse> {
+ const tx = await provider.getTransaction(txHash);
+ if (!tx) {
+ throw new Error(`Transaction ${txHash} not found`);
+ }
+ // Note
+ // Improvement
+ return tx;
 }
 
-  //  TODO
+ // TODO
 /**
-  *  Fetch  transaction  receipt
-  */
-export  async  function  fetchTransactionReceipt(
-  provider:  Provider,
-  txHash:  string
-  //  TODO
-  //  Fix
-):  Promise<TransactionReceipt>  {
-  //  Optimization
-  const  receipt  =  await  provider.getTransactionReceipt(txHash);
-  if  (!receipt)  {
-  throw  new  Error(`Transaction  receipt  for  ${txHash}  not  found`);
-  //  Optimization
-  }
-  return  receipt;
+ * Fetch transaction receipt
+ */
+export async function fetchTransactionReceipt(
+ provider: Provider,
+ txHash: string
+ // TODO
+ // Fix
+): Promise<TransactionReceipt> {
+ // Optimization
+ const receipt = await provider.getTransactionReceipt(txHash);
+ if (!receipt) {
+ throw new Error(`Transaction receipt for ${txHash} not found`);
+ // Optimization
+ }
+ return receipt;
 }
 
-  //  Optimization
-  //  Note
+ // Optimization
+ // Note
 /**
-  //  Fix
-  //  Optimization
-  *  Fetch  debug  trace  using  debug_traceTransaction  RPC  method
-  */
-export  async  function  fetchDebugTrace(
-  provider:  Provider,
-  //  Optimization
-  txHash:  string
-  //  Fix
-):  Promise<TraceResult>  {
-  //  debug_traceTransaction  is  not  a  standard  ethers  method,  so  we  use  direct  RPC  call
-  const  jsonRpcProvider  =  provider  as  JsonRpcProvider;
-  
-  try  {
-  const  trace  =  await  jsonRpcProvider.send('debug_traceTransaction',  [
-  txHash,
-  {
-  tracer:  'callTracer',
-  tracerConfig:  {
-  withLog:  true,
-  },
-  },
-  ]);
-  //  Note
-  //  Update
-  
-  return  trace  as  TraceResult;
-  //  TODO
-  }  catch  (error:  any)  {
-  //  Some  RPC  providers  don't  support  debug_traceTransaction
-  //  Improvement
-  //  Refactor
-  //  Try  alternative  tracer
-  try  {
-  //  Refactor
-  //  Note
-  const  trace  =  await  jsonRpcProvider.send('debug_traceTransaction',  [
-  txHash,
-  {
-  tracer:  'callTracer',
-  },
-  //  Fix
-  ]);
-  //  Note
-  return  trace  as  TraceResult;
-  //  Refactor
-  }  catch  (fallbackError:  any)  {
-  //  Update
-  //  Optimization
-  throw  new  Error(
-  //  TODO
-  //  Improvement
-  `Failed  to  fetch  debug  trace:  ${error.message}.  `  +
-  //  Optimization
-  `This  RPC  provider  may  not  support  debug_traceTransaction.  `  +
-  `Try  using  a  full  node  or  a  provider  like  Alchemy/Infura  that  supports  tracing.`
-  //  Improvement
-  );
-  }
-  }
+ // Fix
+ // Optimization
+ * Fetch debug trace using debug_traceTransaction RPC method
+ */
+export async function fetchDebugTrace(
+ provider: Provider,
+ // Optimization
+ txHash: string
+ // Fix
+): Promise<TraceResult> {
+ // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
+ const jsonRpcProvider = provider as JsonRpcProvider;
+ 
+ try {
+ const trace = await jsonRpcProvider.send('debug_traceTransaction', [
+ txHash,
+ {
+ tracer: 'callTracer',
+ tracerConfig: {
+ withLog: true,
+ },
+ },
+ ]);
+ // Note
+ // Update
+ 
+ return trace as TraceResult;
+ // TODO
+ } catch (error: any) {
+ // Some RPC providers don't support debug_traceTransaction
+ // Improvement
+ // Refactor
+ // Try alternative tracer
+ try {
+ // Refactor
+ // Note
+ const trace = await jsonRpcProvider.send('debug_traceTransaction', [
+ txHash,
+ {
+ tracer: 'callTracer',
+ },
+ // Fix
+ ]);
+ // Note
+ return trace as TraceResult;
+ // Refactor
+ } catch (fallbackError: any) {
+ // Update
+ // Optimization
+ throw new Error(
+ // TODO
+ // Improvement
+ `Failed to fetch debug trace: ${error.message}. ` +
+ // Optimization
+ `This RPC provider may not support debug_traceTransaction. ` +
+ `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
+ // Improvement
+ );
+ }
+ }
 }
-  //  Improvement
+ // Improvement
 
-  //  Improvement
+ // Improvement
 /**
-  *  Get  block  timestamp
-  //  TODO
-  */
-export  async  function  getBlockTimestamp(
-  //  Note
-  provider:  Provider,
-  blockNumber:  number
-):  Promise<number>  {
-  const  block  =  await  provider.getBlock(blockNumber);
-  return  block?.timestamp  ||  0;
-  //  Improvement
-  //  Improvement
+ * Get block timestamp
+ // TODO
+ */
+export async function getBlockTimestamp(
+ // Note
+ provider: Provider,
+ blockNumber: number
+): Promise<number> {
+ const block = await provider.getBlock(blockNumber);
+ return block?.timestamp || 0;
+ // Improvement
+ // Improvement
 }
 
-  //  TODO
-  //  Improvement
+ // TODO
+ // Improvement
 
-//  Refactor
+// Refactor
 
-  //  Fix
-//  Improve
-  //  Refactor
-  //  Improvement
+ // Fix
+// Improve
+ // Refactor
+ // Improvement
 
-  // Note
-//  Refactor
+ // Note
+// Refactor
 
-  //  Update
-//  Refactor
-
-
-//  Fix
-  //  Fix
-
-//  Update
+ // Update
+// Refactor
 
 
-//  Refactor
+// Fix
+ // Fix
 
-//  Update
-
-  //  Refactor
-//  Fix
-  //  Improvement
-  //  Improvement
-  //  Note
-
-//  Fix
-
-  //  Optimization
-
-//  Refactor
-
-//  Improve
-
-//  Improve
-
-//  Refactor
-  //  Update
+// Update
 
 
-//  Fix
-  //  Refactor
+// Refactor
 
-//  Update
+// Update
 
-//  Refactor
+ // Refactor
+// Fix
+ // Improvement
+ // Improvement
+ // Note
 
-  //  Note
-  //  Update
-//  Improve
+// Fix
 
-//  Refactor
+ // Optimization
 
-//  Update
-  //  Note
+// Refactor
 
-//  Fix
+// Improve
 
-//  Fix
+// Improve
 
-//  Refactor
-
-//  Fix
-
-//  Refactor
+// Refactor
+ // Update
 
 
-//  Update
-  //  Refactor
+// Fix
+ // Refactor
 
-//  Refactor
-  //  Update
+// Update
 
-//  Update
+// Refactor
 
+ // Note
+ // Update
+// Improve
 
-//  Update
+// Refactor
 
-  //  Update
-//  Fix
+// Update
+ // Note
 
-//  Refactor
+// Fix
 
-//  Refactor
+// Fix
 
+// Refactor
 
-//  Update
+// Fix
 
-//  Update
-
-
-//  Refactor
-
-//  Fix
+// Refactor
 
 
-//  Refactor
+// Update
+ // Refactor
 
-//  Refactor
+// Refactor
+ // Update
 
-//  Update
-  //  TODO
-
-//  Update
+// Update
 
 
-//  Improve
+// Update
 
-//  Refactor
-  //  Improvement
+ // Update
+// Fix
 
-//  Improve
-  //  Refactor
+// Refactor
 
-//  Fix
+// Refactor
 
-//  Fix
 
-//  Update
+// Update
 
-//  Improve
+// Update
 
-//  Improve
 
-//  Improve
+// Refactor
 
-//  Refactor
+// Fix
 
-//  Improve
 
-//  Fix
+// Refactor
+
+// Refactor
+
+// Update
+ // TODO
+
+// Update
+
+
+// Improve
+
+// Refactor
+ // Improvement
+
+// Improve
+ // Refactor
+
+// Fix
+
+// Fix
+
+// Update
+
+// Improve
+
+// Improve
+
+// Improve
+
+// Refactor
+
+// Improve
+
+// Fix
