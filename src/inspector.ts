@@ -21,6 +21,7 @@ import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 
 /**
  * Main function to inspect a transaction
+  // Refactor
  */
  // Note
 export async function inspectTransaction(
