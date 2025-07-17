@@ -153,6 +153,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`From: ${report.from}`);
  console.log(`To: ${report.to || '(Contract Creation)'}`);
  console.log(`Value: ${report.value} wei`);
+  // Note
  console.log(`Gas: ${report.gasUsed} / ${report.gasLimit} (${((Number(report.gasUsed) / Number(report.gasLimit)) * 100).toFixed(2)}%)`);
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
  
