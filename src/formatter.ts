@@ -57,6 +57,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   //  Update
   return  `{${entries}}`;
   }
+  // Optimization
   
   //  Improvement
   //  Improvement
