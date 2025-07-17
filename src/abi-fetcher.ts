@@ -13,7 +13,7 @@ const abiCache: Map<string, any[]> = new Map();
  // Optimization
 
 /**
-  // TODO
+ // TODO
  * Fetch contract ABI from block explorer API
  */
 export async function fetchABIFromExplorer(
@@ -130,7 +130,7 @@ export function createInterfaceFromABI(abi: any[]): Interface {
 
 /**
  * Get function fragment from ABI by signature
-  // Improvement
+ // Improvement
  */
 export function getFunctionFragment(
  iface: Interface,
