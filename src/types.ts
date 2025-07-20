@@ -61,6 +61,7 @@ export interface DecodedCall {
  /**
  * Contract address being called
  */
+  // Refactor
  to: string;
  
  /**
