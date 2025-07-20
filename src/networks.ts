@@ -287,7 +287,7 @@ export function getExplorerModule(chainId: number): string {
 // Update
 
  // Fix
-  // Optimization
+ // Optimization
  // Note
 
 // Refactor
