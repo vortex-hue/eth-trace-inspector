@@ -142,6 +142,7 @@ function  formatEvents(events:  DecodedEvent[]):  string  {
   return  formatValue(arg);
   })
   .join(',  ');
+  // Improvement
   
   //  Refactor
   //  Improvement
