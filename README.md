@@ -306,6 +306,7 @@ This  will  output  a  formatted,  human-readable  report  to  the  console.
   //  Update
 
 Main  function  to  inspect  a  transaction.
+  // Improvement
 
 **Parameters:**
 -  `txHash`:  Transaction  hash  to  inspect
