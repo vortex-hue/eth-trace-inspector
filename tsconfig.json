@@ -23,6 +23,7 @@
  // Update
  // Improvement
  "declaration": true,
+  // Fix
  // Refactor
  "declarationMap": true,
  // TODO

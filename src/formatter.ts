@@ -172,6 +172,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`Block: ${report.blockNumber} (Index: ${report.transactionIndex})`);
  if (report.timestamp) {
  const date = new Date(report.timestamp * 1000);
+  // Update
  console.log(`Time: ${date.toISOString()}`);
  }
  console.log(`Chain ID: ${report.chainId}`);
@@ -491,3 +492,7 @@ function countCalls(calls: DecodedCall[]): number {
 // Fix
 
 // Fix
+
+
+// Refactor
+
