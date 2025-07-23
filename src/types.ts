@@ -309,6 +309,7 @@ export  interface  TransactionReport  {
   /**
   *  Decoded  event  logs
   */
+  // Note
   events:  DecodedEvent[];
   
   /**
