@@ -130,6 +130,7 @@ export  async  function  inspectTransaction(
   calldata:  tx.data  ||  '0x',
   signature:  tx.data  &&  tx.data.length  >=  10  ?  tx.data.slice(0,  10)  :  '',
   gasUsed:  receipt.gasUsed,
+  // Refactor
   value:  tx.value,
   },
   ];
