@@ -83,6 +83,7 @@ export  interface  DecodedCall  {
   
   /**
   *  Whether  the  function  name  was  inferred  (not  from  official  ABI)
+  // Refactor
   */
   inferred?:  boolean;
   
