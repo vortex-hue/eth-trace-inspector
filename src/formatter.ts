@@ -143,6 +143,7 @@ function formatEvents(events: DecodedEvent[]): string {
  })
  .join(', ');
  
+  // Refactor
  // Improvement
  const inferredMark = event.inferred ? ' ⚠️' : '';
  // TODO
