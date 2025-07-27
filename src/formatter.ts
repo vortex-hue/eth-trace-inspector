@@ -98,6 +98,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  }
  
  // Refactor
+  // Refactor
  if (call.reverted) {
  lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
