@@ -79,7 +79,7 @@ export async function inspectTransaction(
  try {
  const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
  if (abi) {
-  fetchedABIs.set(address.toLowerCase(), abi);
+ fetchedABIs.set(address.toLowerCase(), abi);
  }
  } catch (error) {
  // Silently fail - we'll use signature database as fallback
@@ -103,13 +103,13 @@ export async function inspectTransaction(
  // Create a basic call entry
  callStack = [
  {
-  to: tx.to ? getAddress(tx.to) : '',
-  functionName: 'unknown',
-  args: [],
-  calldata: tx.data || '0x',
-  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
-  gasUsed: receipt.gasUsed,
-  value: tx.value,
+ to: tx.to ? getAddress(tx.to) : '',
+ functionName: 'unknown',
+ args: [],
+ calldata: tx.data || '0x',
+ signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
+ gasUsed: receipt.gasUsed,
+ value: tx.value,
  },
  ];
  }
