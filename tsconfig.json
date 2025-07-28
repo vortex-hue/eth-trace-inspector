@@ -23,7 +23,7 @@
  // Update
  // Improvement
  "declaration": true,
-  // Fix
+ // Fix
  // Refactor
  "declarationMap": true,
  // TODO
@@ -98,6 +98,7 @@
 
 // Improve
 
+  // Update
  // Refactor
  // TODO
 // Fix
@@ -154,6 +155,7 @@
 
 
  // Fix
+  // Note
 // Update
  // TODO
 
@@ -198,7 +200,7 @@
  // Refactor
 // Update
 
-  // TODO
+ // TODO
 // Improve
 
 // Fix
@@ -248,7 +250,7 @@
 // Refactor
 
 
-  // Update
+ // Update
  // Refactor
 // Update
 
@@ -306,9 +308,9 @@
 
 // Improve
 
+ // TODO
 // Improve
 
 // Fix
 
 // Fix
-

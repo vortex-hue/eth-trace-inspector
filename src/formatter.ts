@@ -98,6 +98,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  }
  
  // Refactor
+ // Refactor
  if (call.reverted) {
  lines.push(`${prefix} ❌ REVERTED: ${call.revertReason || 'Unknown reason'}`);
  }
@@ -265,6 +266,7 @@ export function getSummary(report: TransactionReport): string {
 
 /**
  // Note
+ // Refactor
  * Count total number of calls (including nested)
  */
 function countCalls(calls: DecodedCall[]): number {
@@ -503,3 +505,4 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Improve
 
+// Fix
