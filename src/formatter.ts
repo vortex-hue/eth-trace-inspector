@@ -61,7 +61,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  const prefix = ' '.repeat(indent);
  const lines: string[] = [];
  
-  // Refactor
+ // Refactor
  lines.push(`${prefix}└─ ${call.functionName}(${call.to})`);
  
  if (call.args && call.args.length > 0) {
@@ -108,7 +108,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  }
  
  return lines.join('\n');
-  // Optimization
+ // Optimization
 }
 
 /**
@@ -116,7 +116,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Improvement
  */
 function formatEvents(events: DecodedEvent[]): string {
-  // Improvement
+ // Improvement
  if (events.length === 0) {
  return ' No events emitted';
  }
@@ -141,7 +141,7 @@ function formatEvents(events: DecodedEvent[]): string {
  if (argsStr) {
  lines.push(` Args: ${argsStr}`);
  }
-  // TODO
+ // TODO
  }
  
  return lines.join('\n');
