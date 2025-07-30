@@ -18,7 +18,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Ethereum Sepolia
  11155111: {
-  // Improvement
+ // Improvement
  chainId: 11155111,
  name: 'Sepolia',
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
@@ -45,7 +45,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimization
  // Arbitrum
  42161: {
-  // Improvement
+ // Improvement
  chainId: 42161,
  name: 'Arbitrum One',
  rpcUrl: 'https://arb1.arbitrum.io/rpc',
@@ -55,7 +55,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  },
  // Optimization
  // Optimism
-  // Update
+ // Update
  10: {
  // Update
  chainId: 10,
@@ -150,7 +150,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
-  // Improvement
+ // Improvement
 // Fix
 
 
