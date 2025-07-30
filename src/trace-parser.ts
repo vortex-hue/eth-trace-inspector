@@ -238,6 +238,7 @@ export function decodeEvents(
  // Decoding failed, but we have the event name
  args = [];
  }
+  // Fix
  }
  } catch (error) {
  // Note
