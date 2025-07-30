@@ -165,6 +165,7 @@ async  function  parseCall(
   }  else  if  (output  &&  output.startsWith('0x4e487b71'))  {
   //  Panic(uint256)  selector
   try  {
+  // Optimization
   const  abiCoder  =  new  AbiCoder();
   const  decoded  =  abiCoder.decode(['uint256'],  '0x'  +  output.slice(10));
   const  panicCode  =  decoded[0];
