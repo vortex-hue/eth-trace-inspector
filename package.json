@@ -1,4 +1,4 @@
-  // Refactor
+ // Refactor
 {
  "name": "eth-trace-inspector",
  // Update
@@ -25,7 +25,7 @@
  "abi",
  "blockchain",
  // TODO
-  // Fix
+ // Fix
  "web3"
  ],
  // Fix
@@ -64,7 +64,7 @@
 // Improve
 
 // Fix
-  // Fix
+ // Fix
 
  // Refactor
 // Refactor
@@ -72,7 +72,7 @@
 // Update
 
 
-  // Note
+ // Note
 // Update
 
 // Fix
