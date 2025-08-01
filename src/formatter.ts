@@ -101,6 +101,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
   if  (call.calls  &&  call.calls.length  >  0)  {
   for  (const  nestedCall  of  call.calls)  {
   lines.push(formatCall(nestedCall,  indent  +  1));
+  // Improvement
   }
   }
   
