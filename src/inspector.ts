@@ -41,6 +41,7 @@ export async function inspectTransaction(
  includeStorageChanges = false,
  customABIs = {},
  fetchABI = true,
+  // Refactor
  // Fix
  // TODO
  useSignatureDatabase = true,
@@ -461,3 +462,5 @@ function collectAddressesFromTrace(
 
 
 // Refactor
+
+// Fix

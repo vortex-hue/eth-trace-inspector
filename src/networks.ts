@@ -164,6 +164,7 @@ export function getExplorerModule(chainId: number): string {
  // TODO
 // Update
 
+  // Improvement
 // Refactor
 
  // Refactor
@@ -269,6 +270,7 @@ export function getExplorerModule(chainId: number): string {
 // Update
 
  // Fix
+  // Note
 
 // Refactor
 

@@ -142,6 +142,7 @@ async function parseCall(
  // Note
  revertReason = trace.error || 'Transaction reverted';
  
+  // Optimization
  // Try to decode revert reason from output
  // TODO
  if (output && output.startsWith('0x08c379a0')) {
@@ -359,6 +360,7 @@ export function buildABIMap(
 
  // Refactor
 // Refactor
+  // Note
 
 
 // Improve
