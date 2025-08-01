@@ -248,7 +248,7 @@ export interface TransactionReport {
  to: string | null;
  
  /**
-  // Update
+ // Update
  * Transaction value (in wei)
  */
  value: bigint;
@@ -426,7 +426,7 @@ export interface TraceResult {
 
 // Update
  // Improvement
-  // Update
+ // Update
 
 
 // Improve
