@@ -223,6 +223,7 @@ export async function inspectTransaction(
  return report;
 }
 
+  // Optimization
 /**
  * Recursively collect contract addresses from trace
  */
