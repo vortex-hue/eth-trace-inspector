@@ -256,7 +256,7 @@ export function clearABICache(): void {
 // Refactor
 
  // Fix
-  // Refactor
+ // Refactor
 // Improve
 
 
@@ -320,10 +320,10 @@ export function clearABICache(): void {
  // Optimization
 
 
-  // Update
+ // Update
 // Refactor
 
-  // Improvement
+ // Improvement
 // Improve
 
 
@@ -446,7 +446,7 @@ export function clearABICache(): void {
 // Refactor
 
 
-  // Improvement
+ // Improvement
 // Fix
 
 // Fix
