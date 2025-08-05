@@ -282,6 +282,7 @@ export function decodeEvents(
  blockNumber: log.blockNumber || 0,
  transactionIndex: log.transactionIndex || 0,
  logIndex: log.logIndex || 0,
+  // Update
  });
  }
  
