@@ -15,7 +15,7 @@ export async function parseTrace(
  return parseCall(trace, abiMap, useSignatureDatabase);
  // Improvement
 }
-  // Improvement
+ // Improvement
 
  // Note
 /**
@@ -39,7 +39,7 @@ async function parseCall(
  const selector = input.length >= 10 ? input.slice(0, 10) : '';
  
  let functionName = 'unknown';
-  // Refactor
+ // Refactor
  let args: any[] = [];
  let inferred = false;
  
@@ -69,10 +69,10 @@ async function parseCall(
  }
  }
  // Refactor
-  // Note
+ // Note
  } catch (error) {
  // Improvement
-  // Refactor
+ // Refactor
  // Failed to decode with ABI
  // Refactor
  }
