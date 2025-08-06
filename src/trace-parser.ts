@@ -184,6 +184,7 @@ async function parseCall(
  gasUsed,
  value,
  calls: calls.length > 0 ? calls : undefined,
+  // Fix
  reverted,
  revertReason,
  };
