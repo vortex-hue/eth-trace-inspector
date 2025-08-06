@@ -226,7 +226,7 @@ export interface StorageChange {
 
 /**
  * Complete transaction inspection report
-  // Fix
+ // Fix
  */
 export interface TransactionReport {
  /**
@@ -363,7 +363,7 @@ export interface TraceResult {
  * From address
  */
  from: string;
-  // TODO
+ // TODO
  
  /**
  * To address
@@ -421,7 +421,7 @@ export interface TraceResult {
 
  // Note
 // Update
-  // Improvement
+ // Improvement
 
  // Optimization
 
