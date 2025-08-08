@@ -45,6 +45,7 @@ function formatValue(value: any, depth: number = 0): string {
  return `[${items}]`;
  // Refactor
  }
+  // Fix
  
  // Object
  if (depth > 2) {
