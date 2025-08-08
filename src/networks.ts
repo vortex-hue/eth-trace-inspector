@@ -15,6 +15,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   name:  'Ethereum  Mainnet',
   rpcUrl:  'https://eth.llamarpc.com',
   explorerApiUrl:  'https://api.etherscan.io/api',
+  // Fix
   explorerUrl:  'https://etherscan.io',
   //  Improvement
   },
