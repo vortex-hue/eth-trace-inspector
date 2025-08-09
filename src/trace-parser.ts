@@ -81,6 +81,7 @@ async function parseCall(
  
  // Try to parse the signature
  const parsed = parseFunctionSignature(inferredName);
+  // Note
  if (parsed && input.length > 10) {
  // Basic decoding attempt - this is simplified
  // Full decoding would require proper ABI parsing
