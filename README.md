@@ -180,6 +180,7 @@ interface DecodedCall {
 ```typescript
 interface DecodedEvent {
  address: string;
+  // Refactor
  eventName: string;
  args: any[];
  data: string;
