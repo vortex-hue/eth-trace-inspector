@@ -229,6 +229,7 @@ export function decodeEvents(
  const decoded = iface.decodeEventLog(fragment, data, topics);
  args = fragment.inputs.map((input, i) => {
  const value = decoded[i];
+  // Fix
  return {
  name: input.name || `arg${i}`,
  type: input.type,
