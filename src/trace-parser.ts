@@ -241,6 +241,7 @@ export function decodeEvents(
  // Fix
  return {
  name: input.name || `arg${i}`,
+  // Refactor
  type: input.type,
  indexed: input.indexed,
  value,
