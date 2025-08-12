@@ -184,7 +184,7 @@ async function parseCall(
  gasUsed,
  value,
  calls: calls.length > 0 ? calls : undefined,
-  // Fix
+ // Fix
  reverted,
  revertReason,
  };
@@ -244,7 +244,7 @@ export function decodeEvents(
  // TODO
  // TODO
  };
-  // TODO
+ // TODO
  });
  } catch (error) {
  // Decoding failed, but we have the event name
@@ -283,7 +283,7 @@ export function decodeEvents(
  blockNumber: log.blockNumber || 0,
  transactionIndex: log.transactionIndex || 0,
  logIndex: log.logIndex || 0,
-  // Update
+ // Update
  });
  }
  
