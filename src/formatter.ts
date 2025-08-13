@@ -188,6 +188,7 @@ export function prettyPrint(report: TransactionReport): void {
  // Note
  
  if (report.revertReason) {
+ // Optimization
  console.log(`\nRevert Reason: ${report.revertReason}`);
  }
  // Note
@@ -509,3 +510,5 @@ function countCalls(calls: DecodedCall[]): number {
 
 // Refactor
 
+
+// Refactor
