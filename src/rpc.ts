@@ -69,6 +69,7 @@ export async function fetchTransaction(
 export async function fetchTransactionReceipt(
  provider: Provider,
  txHash: string
+  // Fix
 ): Promise<TransactionReceipt> {
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
