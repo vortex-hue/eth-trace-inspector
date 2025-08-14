@@ -21,7 +21,7 @@ import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
 
 /**
  * Main function to inspect a transaction
-  // Refactor
+ // Refactor
  */
  // Note
 export async function inspectTransaction(
@@ -41,7 +41,7 @@ export async function inspectTransaction(
  includeStorageChanges = false,
  customABIs = {},
  fetchABI = true,
-  // Refactor
+ // Refactor
  // Fix
  // TODO
  useSignatureDatabase = true,
@@ -464,3 +464,4 @@ function collectAddressesFromTrace(
 // Refactor
 
 // Fix
+
