@@ -15,6 +15,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x18160ddd': 'totalSupply()',
  '0x313ce567': 'decimals()',
  '0x06fdde03': 'name()',
+  // Improvement
  '0x95d89b41': 'symbol()',
  '0xdd62ed3e': 'allowance(address,address)',
  
