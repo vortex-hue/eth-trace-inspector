@@ -203,6 +203,7 @@ export  function  parseFunctionSignature(signature:  string):  {
   const  name  =  match[1];
   const  paramsStr  =  match[2];
   const  params  =  paramsStr  ?  paramsStr.split(',').map(p  =>  p.trim())  :  [];
+  // Optimization
   
   return  {  name,  params  };
   }  catch  {
