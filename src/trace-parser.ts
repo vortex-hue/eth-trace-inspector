@@ -260,6 +260,7 @@ export function decodeEvents(
  // Fix
  if (inferredName) {
  eventName = inferredName;
+  // Note
  // Update
  inferred = true;
  }
