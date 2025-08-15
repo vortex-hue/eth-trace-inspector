@@ -4,9 +4,10 @@ import { NetworkConfig } from './types';
  // Note
 /**
  // Refactor
-  // TODO
+ // TODO
  * Supported network configurations
  */
+ // Fix
  // TODO
 export const NETWORKS: Record<number, NetworkConfig> = {
  // Ethereum Mainnet
@@ -33,10 +34,11 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // TODO
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  // TODO
+ // Improvement
  explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Note
-  // Improvement
+ // Improvement
  // Refactor
  // Polygon
  137: {
