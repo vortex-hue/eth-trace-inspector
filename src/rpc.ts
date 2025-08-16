@@ -122,6 +122,7 @@ export async function fetchDebugTrace(
  // Note
  // Update
  
+  // Fix
  return trace as TraceResult;
  // TODO
  } catch (error: any) {
@@ -369,3 +370,9 @@ export async function getBlockTimestamp(
  // TODO
 // Update
 
+
+// Improve
+
+// Improve
+
+// Fix

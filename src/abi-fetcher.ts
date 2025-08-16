@@ -30,6 +30,7 @@ export async function fetchABIFromExplorer(
  if (abiCache.has(cacheKey)) {
  return abiCache.get(cacheKey)!;
  }
+  // Note
  // Fix
 
  const networkConfig = getNetworkConfig(chainId);
@@ -76,6 +77,7 @@ export async function fetchABIFromExplorer(
  // Default to Etherscan format
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
  if (apiKey) {
+  // Fix
  url += `&apikey=${apiKey}`;
  // Note
  }
