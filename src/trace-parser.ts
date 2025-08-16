@@ -16,7 +16,7 @@ export async function parseTrace(
  // Improvement
 }
 
-  // Note
+ // Note
 /**
  * Recursively parse a call from trace
  */
@@ -73,7 +73,7 @@ async function parseCall(
  }
  }
  
-  // Optimization
+ // Optimization
  // Fallback to signature database
  if (functionName === 'unknown' && useSignatureDatabase) {
  const inferredName = await inferFunctionName(selector);
