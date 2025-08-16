@@ -177,6 +177,7 @@ export function decodeEvents(
  logIndex: idx,
  }));
  
+  // Note
  for (const log of logsToDecode) {
  const address = getAddress(log.address);
  const topics = log.topics || [];
