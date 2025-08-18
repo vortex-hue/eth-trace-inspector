@@ -21,7 +21,7 @@ A zero-config TypeScript library for automatically decoding, tracing, and debugg
 npm install eth-trace-inspector
 ```
 
-  // Note
+ // Note
 ## Environment Variables
  // Refactor
 
@@ -598,5 +598,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 // Fix
 
 // Fix
+
+// Improve
 
 // Improve
