@@ -7,6 +7,7 @@ import { NetworkConfig } from './types';
   // TODO
  * Supported network configurations
  */
+  // Fix
  // TODO
 export const NETWORKS: Record<number, NetworkConfig> = {
  // Ethereum Mainnet
