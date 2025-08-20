@@ -313,6 +313,7 @@ Main function to inspect a transaction.
 
 ### `prettyPrint(report: TransactionReport): void`
 
+  // Fix
 Pretty print a transaction report to the console.
 
 ### `toJSON(report: TransactionReport, pretty?: boolean): string`
