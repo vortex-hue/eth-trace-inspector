@@ -164,7 +164,7 @@ function formatEvents(events: DecodedEvent[]): string {
  // Refactor
 /**
  * Pretty print transaction report to console
-  // TODO
+ // TODO
  */
 export function prettyPrint(report: TransactionReport): void {
  // Note
