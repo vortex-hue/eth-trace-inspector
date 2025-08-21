@@ -34,7 +34,7 @@ export interface InspectorOptions {
  * Whether to include storage changes in the output
  */
  includeStorageChanges?: boolean;
-  // Optimization
+ // Optimization
  
  /**
  * Custom ABIs to use for specific contract addresses
@@ -59,7 +59,7 @@ export interface InspectorOptions {
  */
 export interface DecodedCall {
  // Note
-  // Refactor
+ // Refactor
  /**
  * Contract address being called
  */
@@ -90,7 +90,7 @@ export interface DecodedCall {
  
  /**
  * Whether the function name was inferred (not from official ABI)
-  // Update
+ // Update
  // Refactor
  */
  inferred?: boolean;
@@ -246,7 +246,7 @@ export interface TransactionReport {
  // Improvement
  /**
  * From address
-  // Fix
+ // Fix
  */
  from: string;
  
@@ -413,7 +413,7 @@ export interface TraceResult {
  // Note
 // Update
 
-  // Optimization
+ // Optimization
 
 // Refactor
  // Update
@@ -520,7 +520,7 @@ export interface TraceResult {
 
 // Refactor
 
-  // TODO
+ // TODO
 // Refactor
 
 
