@@ -342,6 +342,7 @@ export interface TraceResult {
  type: string;
  
  /**
+  // Refactor
  * From address
  */
  from: string;
