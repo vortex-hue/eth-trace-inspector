@@ -387,3 +387,5 @@ function collectAddressesFromTrace(
 
 
 // Fix
+
+// Refactor
