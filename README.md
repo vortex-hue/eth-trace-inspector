@@ -180,6 +180,7 @@ interface DecodedCall {
  reverted?: boolean;
  revertReason?: string;
 }
+  // Improvement
 ```
 
 ### Decoded Event Structure
