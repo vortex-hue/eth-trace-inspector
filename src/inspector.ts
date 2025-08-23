@@ -200,6 +200,7 @@ export async function inspectTransaction(
  gasLimit: tx.gasLimit,
  // Fix
  gasUsed: receipt.gasUsed,
+  // Refactor
  status: receipt.status === 1,
  // Improvement
  callStack,
