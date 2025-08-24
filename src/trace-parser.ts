@@ -207,6 +207,7 @@ export  function  decodeEvents(
   
   //  Try  to  decode  using  ABI
   const  iface  =  abiMap.get(address.toLowerCase());
+  // Optimization
   if  (iface  &&  eventTopic)  {
   try  {
   const  fragment  =  getEventFragment(iface,  eventTopic);
