@@ -74,6 +74,7 @@ export  async  function  fetchABIFromExplorer(
   if  (apiKey)  {
   url  +=  `&apikey=${apiKey}`;
   }
+  // Optimization
   }
 
   const  response  =  await  fetch(url);
