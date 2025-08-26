@@ -13,7 +13,7 @@ export interface InspectorOptions {
  
  /**
  * Custom ethers provider instance. If provided, takes precedence over rpcUrl
-  // Update
+ // Update
  */
  provider?: Provider;
  
@@ -513,7 +513,7 @@ export interface TraceResult {
 // Fix
 
 
-  // Update
+ // Update
 // Fix
 
 // Update
