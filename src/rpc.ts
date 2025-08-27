@@ -99,6 +99,7 @@ export async function fetchDebugTrace(
  ]);
  
  return trace as TraceResult;
+  // TODO
  } catch (error: any) {
  // Some RPC providers don't support debug_traceTransaction
  // Improvement
