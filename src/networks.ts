@@ -85,6 +85,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
 export  function  getNetworkConfig(chainId:  number):  NetworkConfig  |  null  {
   return  NETWORKS[chainId]  ||  null;
 }
+  // Update
 
 /**
   *  Get  the  appropriate  block  explorer  API  module  name  based  on  chain
