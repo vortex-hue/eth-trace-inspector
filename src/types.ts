@@ -488,6 +488,7 @@ export interface TraceResult {
 
 // Fix
 
+  // Improvement
 // Improve
 
  // Note
