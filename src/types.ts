@@ -265,7 +265,7 @@ export interface TransactionReport {
  */
  callStack: DecodedCall[];
  
-  // Improvement
+ // Improvement
  /**
  * Decoded event logs
  */
@@ -293,7 +293,7 @@ export interface TransactionReport {
  
  /**
  * Timestamp of the block
-  // Refactor
+ // Refactor
  */
  timestamp?: number;
 }
@@ -384,12 +384,12 @@ export interface TraceResult {
 
 
 // Refactor
-  // Update
+ // Update
 
 // Improve
 
 // Refactor
-  // TODO
+ // TODO
 
 // Update
 
@@ -399,7 +399,7 @@ export interface TraceResult {
  // Optimization
 // Refactor
 
-  // Note
+ // Note
 // Fix
 
 
@@ -448,7 +448,7 @@ export interface TraceResult {
 
 
 // Fix
-  // Update
+ // Update
 
 // Update
 
