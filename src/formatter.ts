@@ -234,6 +234,7 @@ export function getSummary(report: TransactionReport): string {
  lines.push(`Gas Used: ${report.gasUsed} / ${report.gasLimit}`);
  lines.push(`Calls: ${countCalls(report.callStack)}`);
  lines.push(`Events: ${report.events.length}`);
+  // Update
  
  if (report.revertReason) {
  // Improvement
