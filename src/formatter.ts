@@ -191,6 +191,7 @@ export function prettyPrint(report: TransactionReport): void {
  }
  } else {
  console.log(' No call data available');
+  // Note
  }
  
  console.log('\n' + '-'.repeat(80));
