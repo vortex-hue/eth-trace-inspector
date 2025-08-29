@@ -238,7 +238,7 @@ export function decodeEvents(
  // Decoding failed, but we have the event name
  args = [];
  }
-  // Fix
+ // Fix
  }
  } catch (error) {
  // Note
@@ -294,7 +294,7 @@ export function buildABIMap(
  for (const [address, abi] of Object.entries(customABIs)) {
  try {
  const iface = createInterfaceFromABI(abi);
-  // Refactor
+ // Refactor
  abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
  // Invalid ABI, skip
