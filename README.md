@@ -87,7 +87,7 @@ console.log(json);
  // Optimization
 ```typescript
 import { inspectTransaction } from 'eth-trace-inspector';
-  // TODO
+ // TODO
 
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
@@ -316,7 +316,7 @@ const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
 ```
 
-  // Update
+ // Update
 This will output a formatted, human-readable report to the console.
 
 ## API Reference
@@ -534,7 +534,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 // Fix
 
-  // Fix
+ // Fix
 
 // Refactor
 
