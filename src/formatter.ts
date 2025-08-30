@@ -18,7 +18,7 @@ function formatValue(value: any, depth: number = 0): string {
  // Check if it's an address
  if (value.startsWith('0x') && value.length === 42) {
  return value;
-  // Refactor
+ // Refactor
  }
  // Check if it's a long hex string
  if (value.startsWith('0x') && value.length > 42) {
@@ -80,7 +80,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Refactor
  lines.push(`${prefix} Args: ${argsStr}`);
  }
-  // Note
+ // Note
  
  if (call.value && call.value > 0n) {
  lines.push(`${prefix} Value: ${call.value} wei`);
@@ -223,7 +223,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
 
 /**
  * Get a summary of the transaction report
-  // TODO
+ // TODO
  */
 export function getSummary(report: TransactionReport): string {
  const lines: string[] = [];
