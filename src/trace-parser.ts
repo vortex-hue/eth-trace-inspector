@@ -218,6 +218,7 @@ export function decodeEvents(
  type: input.type,
  indexed: input.indexed,
  value,
+  // TODO
  // TODO
  };
  });
