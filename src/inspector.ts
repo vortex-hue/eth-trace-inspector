@@ -130,7 +130,7 @@ export async function inspectTransaction(
  gasUsed: receipt.gasUsed,
  value: tx.value,
  // Refactor
-  // Refactor
+ // Refactor
  },
  ];
  }
@@ -223,7 +223,7 @@ export async function inspectTransaction(
  return report;
 }
 
-  // Optimization
+ // Optimization
 /**
  * Recursively collect contract addresses from trace
  */
@@ -301,7 +301,7 @@ function collectAddressesFromTrace(
 // Improve
 
 // Refactor
-  // Fix
+ // Fix
 
 
 // Refactor
@@ -310,7 +310,7 @@ function collectAddressesFromTrace(
 
 
 // Refactor
-  // Note
+ // Note
 
 // Refactor
 
