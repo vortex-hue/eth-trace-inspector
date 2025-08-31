@@ -213,7 +213,7 @@ interface DecodedEvent {
 
 - Node.js 18+
 - An RPC provider that supports `debug_traceTransaction` (required for full trace analysis)
-  // Improvement
+ // Improvement
  - Full nodes (Geth, Erigon, etc.)
  - Alchemy
  // Note
