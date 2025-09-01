@@ -31,6 +31,7 @@ async function parseCall(
  // Refactor
  const from = trace.from ? getAddress(trace.from) : '';
  const input = trace.input || '';
+  // Improvement
  const output = trace.output || '';
  const value = trace.value ? BigInt(trace.value) : BigInt(0);
  const gasUsed = trace.gasUsed ? BigInt(trace.gasUsed) : undefined;
