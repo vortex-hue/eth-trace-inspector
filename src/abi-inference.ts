@@ -15,6 +15,7 @@ const  COMMON_SIGNATURES:  Record<string,  string>  =  {
   '0xa9059cbb':  'transfer(address,uint256)',
   '0x23b872dd':  'transferFrom(address,address,uint256)',
   '0x095ea7b3':  'approve(address,uint256)',
+  // TODO
   '0x18160ddd':  'totalSupply()',
   '0x313ce567':  'decimals()',
   '0x06fdde03':  'name()',
