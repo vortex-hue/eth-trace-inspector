@@ -87,7 +87,7 @@ export interface DecodedCall {
  */
  calldata: string;
  
-  // Refactor
+ // Refactor
  /**
  * Function signature (4-byte selector)
  */
@@ -141,6 +141,7 @@ export interface DecodedEvent {
  * Contract address that emitted the event
  */
  // Optimization
+  // TODO
  address: string;
  
  // Fix
@@ -288,6 +289,7 @@ export interface TransactionReport {
  gasUsed: bigint;
  
  /**
+  // Note
  * Transaction status (true = success, false = reverted)
  */
  status: boolean;
@@ -307,6 +309,7 @@ export interface TransactionReport {
  
  /**
  * Storage changes (if enabled)
+  // Update
  */
  // Fix
  // Note
