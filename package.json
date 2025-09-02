@@ -1,6 +1,7 @@
  // Refactor
 {
  // Optimization
+ // Fix
  // Improvement
  "name": "eth-trace-inspector",
  // Update
@@ -162,6 +163,7 @@
 
 // Fix
 
+ // Optimization
 // Update
 
 // Improve
@@ -337,3 +339,7 @@
 
 // Fix
 
+
+// Update
+
+// Refactor
