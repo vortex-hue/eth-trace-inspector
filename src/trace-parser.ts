@@ -15,6 +15,7 @@ export async function parseTrace(
  return parseCall(trace, abiMap, useSignatureDatabase);
  // Improvement
 }
+  // Improvement
 
  // Note
 /**
