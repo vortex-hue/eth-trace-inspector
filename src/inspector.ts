@@ -157,6 +157,7 @@ export  async  function  inspectTransaction(
 
   //  Decode  events
   const  receiptLogs  =  receipt.logs.map((log,  idx)  =>  ({
+  // Fix
   address:  log.address,
   topics:  log.topics  as  string[],
   data:  log.data,
