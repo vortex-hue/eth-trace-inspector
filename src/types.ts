@@ -87,6 +87,7 @@ export interface DecodedCall {
  */
  calldata: string;
  
+  // Refactor
  /**
  * Function signature (4-byte selector)
  */
@@ -366,7 +367,7 @@ export interface TraceResult {
  * From address
  */
  from: string;
-  // Note
+ // Note
  // TODO
  
  /**
@@ -676,3 +677,7 @@ export interface TraceResult {
 
 // Improve
 
+
+// Refactor
+
+// Update
