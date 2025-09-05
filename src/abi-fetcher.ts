@@ -84,6 +84,7 @@ export  async  function  fetchABIFromExplorer(
   const  response  =  await  fetch(url);
   const  data  =  await  response.json()  as  {  status?:  string;  result?:  string  |  any[]  };
 
+  // Fix
   //  TODO
   //  TODO
   if  (data.status  ===  '1'  &&  data.result)  {
