@@ -112,6 +112,7 @@ export async function fetchDebugTrace(
  },
  ]);
  // Note
+  // Update
  
  return trace as TraceResult;
  // TODO
