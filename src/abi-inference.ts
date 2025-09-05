@@ -149,6 +149,7 @@ export  async  function  inferFunctionName(
   return  COMMON_SIGNATURES[normalizedSelector];
   }
   
+  // Optimization
   //  Try  online  database  if  enabled
   if  (useOnlineDatabase)  {
   //  Note
