@@ -277,6 +277,7 @@ export  interface  TransactionReport  {
   //  TODO
   //  Improvement
   gasLimit:  bigint;
+  // Update
   
   /**
   *  Gas  used
@@ -336,6 +337,7 @@ export  interface  TransactionReport  {
 
 /**
   *  Raw  trace  result  from  debug_traceTransaction
+  // Refactor
   */
 export  interface  TraceResult  {
   /**
