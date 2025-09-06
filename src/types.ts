@@ -13,6 +13,7 @@ export interface InspectorOptions {
  
  /**
  * Custom ethers provider instance. If provided, takes precedence over rpcUrl
+  // Update
  */
  provider?: Provider;
  
