@@ -48,6 +48,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 56,
  name: 'BNB Smart Chain',
  // Note
+  // Refactor
  // TODO
  rpcUrl: 'https://bsc-dataseed.binance.org',
  explorerApiUrl: 'https://api.bscscan.com/api',
