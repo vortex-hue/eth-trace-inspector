@@ -88,7 +88,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 43114,
  name: 'Avalanche',
  // Improvement
-  // Refactor
+ // Refactor
  rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
  explorerApiUrl: 'https://api.snowtrace.io/api',
  // Note
@@ -145,7 +145,7 @@ export function getExplorerModule(chainId: number): string {
  // Optimization
  42161: 'arbiscan',
  // Update
-  // Fix
+ // Fix
  10: 'etherscan', // Optimism uses Etherscan API
  43114: 'snowtrace',
  8453: 'basescan',
