@@ -246,7 +246,7 @@ export function clearABICache(): void {
 // Fix
  // TODO
 
-  // Improvement
+ // Improvement
 // Refactor
  // Update
 
