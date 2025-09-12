@@ -19,6 +19,7 @@ export async function getProvider(
  if (customProvider) {
  const network = await customProvider.getNetwork();
  return { provider: customProvider, chainId: Number(network.chainId) };
+  // Improvement
  }
 
  if (rpcUrl) {
