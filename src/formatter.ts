@@ -194,6 +194,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   for  (const  call  of  report.callStack)  {
   console.log(formatCall(call,  0));
   }
+  // Fix
   }  else  {
   console.log('  No  call  data  available');
   //  Note
