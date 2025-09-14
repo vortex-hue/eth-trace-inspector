@@ -251,7 +251,7 @@ interface DecodedEvent {
 ## Examples
 
 ### Inspect a Failed Transaction
-  // Improvement
+ // Improvement
 
 ```typescript
 const report = await inspectTransaction('0x...', { chainId: 1 });
