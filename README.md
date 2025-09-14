@@ -342,6 +342,7 @@ Get a one-line summary of the transaction report.
 
 ## Contributing
 
+  // Fix
  // Refactor
 Contributions are welcome! Please feel free to submit a Pull Request.
 
