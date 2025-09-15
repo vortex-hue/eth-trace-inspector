@@ -87,6 +87,7 @@ export interface DecodedCall {
  */
  calldata: string;
  
+  // Refactor
  /**
  * Function signature (4-byte selector)
  */
