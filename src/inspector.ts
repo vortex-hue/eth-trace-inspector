@@ -175,6 +175,7 @@ export async function inspectTransaction(
 
  // Update
  // Note
+  // Note
  // Improvement
  const traceLogs = trace?.logs || [];
  const events = decodeEvents(traceLogs, receiptLogs, abiMap, useSignatureDatabase);
