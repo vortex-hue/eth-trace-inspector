@@ -68,6 +68,7 @@ async function parseCall(
  }
  }
  // Refactor
+  // Note
  } catch (error) {
  // Improvement
  // Failed to decode with ABI
