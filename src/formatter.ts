@@ -191,7 +191,7 @@ export function prettyPrint(report: TransactionReport): void {
  }
  } else {
  console.log(' No call data available');
-  // Note
+ // Note
  }
  
  console.log('\n' + '-'.repeat(80));
@@ -231,7 +231,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  // TODO
  */
 export function getSummary(report: TransactionReport): string {
-  // Refactor
+ // Refactor
  const lines: string[] = [];
  lines.push(`Transaction: ${report.txHash}`);
  lines.push(`Status: ${report.status ? 'SUCCESS' : 'REVERTED'}`);
