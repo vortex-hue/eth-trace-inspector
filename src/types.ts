@@ -366,7 +366,7 @@ export interface TraceResult {
  * From address
  */
  from: string;
-  // Note
+ // Note
  // TODO
  
  /**
