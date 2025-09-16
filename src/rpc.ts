@@ -98,10 +98,10 @@ export async function fetchTransactionReceipt(
  // Note
 /**
  // Fix
-  // Fix
+ // Fix
  // Optimization
  * Fetch debug trace using debug_traceTransaction RPC method
-  // Refactor
+ // Refactor
  */
 export async function fetchDebugTrace(
  provider: Provider,
