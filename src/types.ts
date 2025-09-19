@@ -387,6 +387,7 @@ export interface TraceResult {
  * Output data
  */
  output: string;
+  // Refactor
  
  /**
  * Value transferred
@@ -684,3 +685,6 @@ export interface TraceResult {
 // Refactor
 
 // Update
+
+
+// Fix

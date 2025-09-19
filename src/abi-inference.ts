@@ -70,6 +70,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0xdb3e2198': 'exactInput((bytes,address,uint256,uint256,uint256))',
  '0x04e45aaf': 'exactOutputSingle((address,address,uint24,address,uint256,uint256,uint256,uint160))',
  
+  // Refactor
  // WETH
  '0xd0e30db0': 'deposit()',
  '0x2e1a7d4d': 'withdraw(uint256)',
@@ -127,6 +128,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  // TODO
  // Note
  }
+  // Optimization
 }
 
 /**
@@ -262,6 +264,7 @@ export function decodeFunctionArgs(
 // Improve
 
 
+  // Optimization
 // Update
  // TODO
 
@@ -445,3 +448,6 @@ export function decodeFunctionArgs(
 // Update
 
 // Refactor
+
+
+// Update

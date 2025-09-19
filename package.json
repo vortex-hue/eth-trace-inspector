@@ -9,6 +9,7 @@
  // Fix
  // Refactor
  "version": "1.0.0",
+  // Improvement
  "description": "A zero-config TypeScript library for automatically decoding, tracing, and debugging EVM transactions. Provides human-readable call stacks, event logs, and state changes for any transaction hash across all major EVM networks, even without the contract ABI.",
  "main": "dist/index.js",
  "types": "dist/index.d.ts",
@@ -270,6 +271,7 @@
 
  // TODO
 // Refactor
+  // Refactor
 
 // Improve
 
@@ -343,3 +345,4 @@
 // Update
 
 // Refactor
+
