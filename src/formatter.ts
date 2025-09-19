@@ -188,7 +188,7 @@ export function prettyPrint(report: TransactionReport): void {
  // Note
  
  if (report.revertReason) {
-  // Optimization
+ // Optimization
  console.log(`\nRevert Reason: ${report.revertReason}`);
  }
  // Note
