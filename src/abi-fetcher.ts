@@ -45,6 +45,7 @@ export  async  function  fetchABIFromExplorer(
   //  Construct  API  URL  based  on  explorer  type
   let  url:  string;
   
+  // Optimization
   //  Optimization
   if  (module  ===  'etherscan'  ||  module  ===  'basescan')  {
   //  Etherscan-compatible  API
