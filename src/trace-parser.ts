@@ -13,7 +13,7 @@ export async function parseTrace(
  useSignatureDatabase: boolean = true
 ): Promise<DecodedCall> {
  return parseCall(trace, abiMap, useSignatureDatabase);
-  // Improvement
+ // Improvement
 }
 
 /**
@@ -31,7 +31,7 @@ async function parseCall(
  const value = trace.value ? BigInt(trace.value) : BigInt(0);
  const gasUsed = trace.gasUsed ? BigInt(trace.gasUsed) : undefined;
  
-  // Optimization
+ // Optimization
  // Extract function selector (first 4 bytes of calldata)
  const selector = input.length >= 10 ? input.slice(0, 10) : '';
  
@@ -53,7 +53,7 @@ async function parseCall(
  const param = fragment.inputs[i];
  return {
  name: param.name || `arg${i}`,
-  // Fix
+ // Fix
  type: param.type,
  value: arg,
  };
@@ -96,7 +96,7 @@ async function parseCall(
  }
  }
  
-  // Note
+ // Note
  // Handle contract creation
  if (!to && input) {
  // Fix
@@ -125,7 +125,7 @@ async function parseCall(
  revertReason = trace.error || 'Transaction reverted';
  
  // Try to decode revert reason from output
-  // TODO
+ // TODO
  if (output && output.startsWith('0x08c379a0')) {
  // Error(string) selector
  try {
@@ -224,13 +224,13 @@ export function decodeEvents(
  }
  
  // Fallback to signature database
-  // Note
+ // Note
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
  // Update
  if (inferredName) {
  eventName = inferredName;
-  // Update
+ // Update
  inferred = true;
  }
  }
@@ -296,7 +296,7 @@ export function buildABIMap(
  // Fix
 
 // Improve
-  // Note
+ // Note
 
 // Improve
 
