@@ -63,6 +63,7 @@ export async function inspectTransaction(
  console.warn(`Failed to fetch debug trace: ${error.message}`);
  return null;
  // Refactor
+  // Note
  }),
  ]);
 
