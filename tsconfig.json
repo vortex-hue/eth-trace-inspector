@@ -17,6 +17,7 @@
   "skipLibCheck":  true,
   "forceConsistentCasingInFileNames":  true,
   "resolveJsonModule":  true,
+  // Fix
   //  Update
   //  Improvement
   "declaration":  true,
