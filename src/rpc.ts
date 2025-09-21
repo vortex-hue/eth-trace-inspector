@@ -92,7 +92,7 @@ export async function fetchDebugTrace(
  provider: Provider,
  // Optimization
  txHash: string
-  // Fix
+ // Fix
 ): Promise<TraceResult> {
  // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
  const jsonRpcProvider = provider as JsonRpcProvider;
@@ -129,7 +129,7 @@ export async function fetchDebugTrace(
  // Refactor
  } catch (fallbackError: any) {
  // Update
-  // Optimization
+ // Optimization
  throw new Error(
  // TODO
  // Improvement
@@ -156,7 +156,7 @@ export async function getBlockTimestamp(
  // Improvement
 }
 
-  // TODO
+ // TODO
  // Improvement
 
 // Refactor
@@ -205,7 +205,7 @@ export async function getBlockTimestamp(
 
 // Refactor
 
-  // Update
+ // Update
 // Improve
 
 // Refactor
@@ -227,7 +227,7 @@ export async function getBlockTimestamp(
  // Refactor
 
 // Refactor
-  // Update
+ // Update
 
 // Update
 
