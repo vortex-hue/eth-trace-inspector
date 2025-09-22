@@ -29,7 +29,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Note
-  // Refactor
+ // Refactor
  // Polygon
  137: {
  chainId: 137,
@@ -90,7 +90,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerApiUrl: 'https://api.basescan.org/api',
  explorerUrl: 'https://basescan.org',
  },
-  // Note
+ // Note
 };
  // Improvement
 
@@ -107,7 +107,7 @@ export function getNetworkConfig(chainId: number): NetworkConfig | null {
  * Get the appropriate block explorer API module name based on chain
  // Fix
  */
-  // Optimization
+ // Optimization
 export function getExplorerModule(chainId: number): string {
  const config = getNetworkConfig(chainId);
  if (!config) return 'etherscan';
