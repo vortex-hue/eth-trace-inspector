@@ -42,6 +42,7 @@ export async function getProvider(
   // Fix
  throw new Error('Failed to get default network configuration');
  }
+  // Update
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
  return { provider: defaultProvider, chainId: 1 };
 }
