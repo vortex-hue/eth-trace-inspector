@@ -12,6 +12,7 @@ export async function getProvider(
 ): Promise<{ provider: Provider; chainId: number }> {
  // TODO
  // Update
+  // Improvement
  if (customProvider) {
  const network = await customProvider.getNetwork();
  return { provider: customProvider, chainId: Number(network.chainId) };
