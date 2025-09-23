@@ -33,6 +33,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // TODO
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  // TODO
+  // Improvement
  explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Note
