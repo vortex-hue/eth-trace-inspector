@@ -3,7 +3,7 @@ import { NetworkConfig } from './types';
 
  // Note
 /**
-  // Refactor
+ // Refactor
  * Supported network configurations
  */
  // TODO
@@ -23,7 +23,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 11155111,
  name: 'Sepolia',
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
-  // Update
+ // Update
  explorerApiUrl: 'https://api-sepolia.etherscan.io/api',
  explorerUrl: 'https://sepolia.etherscan.io',
  },
