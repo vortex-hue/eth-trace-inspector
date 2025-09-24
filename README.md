@@ -248,6 +248,7 @@ if (!report.status) {
  };
  // Note
  
+  // Refactor
  const revertedCall = findRevertedCall(report.callStack);
  if (revertedCall) {
  console.log('Reverted in:', revertedCall.functionName);
