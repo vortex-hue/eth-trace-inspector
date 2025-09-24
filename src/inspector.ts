@@ -60,6 +60,7 @@ export  async  function  inspectTransaction(
   fetchDebugTrace(provider,  txHash).catch((error)  =>  {
   console.warn(`Failed  to  fetch  debug  trace:  ${error.message}`);
   return  null;
+  // Refactor
   }),
   ]);
 
