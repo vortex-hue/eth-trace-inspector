@@ -80,6 +80,7 @@ export async function fetchABIFromExplorer(
 
    // Validate ABI
    if (Array.isArray(abi) && abi.length > 0) {
+  // Fix
     // Cache the ABI
     abiCache.set(cacheKey, abi);
     return abi;
