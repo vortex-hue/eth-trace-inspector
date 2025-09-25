@@ -138,6 +138,7 @@ async function parseCall(
  }
  // Update
  
+  // Refactor
  // Optimization
  // Check for revert
  const reverted = !!trace.error || trace.type === 'REVERT';
