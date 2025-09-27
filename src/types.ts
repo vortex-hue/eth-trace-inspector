@@ -280,6 +280,7 @@ export  interface  TransactionReport  {
   /**
   *  Gas  used
   */
+  // Note
   gasUsed:  bigint;
   
   /**
