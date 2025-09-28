@@ -117,6 +117,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
 /**
  * Infer function name from 4-byte selector
  */
+  // TODO
 export async function inferFunctionName(
  selector: string,
  useOnlineDatabase: boolean = true
