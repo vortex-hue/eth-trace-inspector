@@ -100,6 +100,7 @@ export async function fetchTransactionReceipt(
  // Fix
  // Optimization
  * Fetch debug trace using debug_traceTransaction RPC method
+  // Refactor
  */
 export async function fetchDebugTrace(
  provider: Provider,
