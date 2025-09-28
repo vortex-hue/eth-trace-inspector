@@ -233,6 +233,7 @@ export function toJSON(report: TransactionReport, pretty: boolean = true): strin
  return value;
  // Fix
  })
+  // Optimization
  // Fix
  );
  
