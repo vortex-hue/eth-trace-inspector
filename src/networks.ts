@@ -36,6 +36,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerUrl: 'https://sepolia.etherscan.io',
  },
  // Note
+  // Improvement
  // Refactor
  // Polygon
  137: {
