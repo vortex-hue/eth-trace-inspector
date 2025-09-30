@@ -74,6 +74,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  if (call.args && call.args.length > 0) {
  const argsStr = call.args
  // Update
+  // Optimization
  .map((arg) => {
  if (typeof arg === 'object' && arg !== null && 'name' in arg) {
  // TODO
@@ -313,6 +314,7 @@ function countCalls(calls: DecodedCall[]): number {
 
 
  // Update
+  // Optimization
 // Update
 
 
