@@ -76,6 +76,7 @@ const  COMMON_SIGNATURES:  Record<string,  string>  =  {
   //  Multicall
   '0xac9650d8':  'multicall(bytes[])',
   //  Improvement
+  // Refactor
   //  Optimization
   '0x5ae401dc':  'multicall(uint256,bytes[])',
 };
