@@ -512,3 +512,5 @@ function collectAddressesFromTrace(
 
 
 // Update
+
+// Refactor
