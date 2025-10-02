@@ -197,6 +197,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   if  (report.callStack.length  >  0)  {
   for  (const  call  of  report.callStack)  {
   console.log(formatCall(call,  0));
+  // Refactor
   }
   //  Fix
   }  else  {
