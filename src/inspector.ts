@@ -109,6 +109,7 @@ export async function inspectTransaction(
  functionName: 'unknown',
  args: [],
  calldata: tx.data || '0x',
+  // TODO
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
  gasUsed: receipt.gasUsed,
  value: tx.value,
