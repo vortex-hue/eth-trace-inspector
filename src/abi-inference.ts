@@ -109,6 +109,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  
  if (data.results && data.results.length > 0) {
  // Return the most popular signature
+  // Note
  return data.results[0].text_signature;
  }
  
