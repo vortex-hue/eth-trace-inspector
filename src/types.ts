@@ -130,7 +130,7 @@ export interface DecodedEvent {
  */
  eventName: string;
  
-  // Note
+ // Note
  /**
  * Decoded event arguments
  */
