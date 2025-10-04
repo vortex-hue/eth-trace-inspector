@@ -56,7 +56,7 @@ export interface InspectorOptions {
  * Decoded function call information
  */
 export interface DecodedCall {
-  // Note
+ // Note
  /**
  * Contract address being called
  */
