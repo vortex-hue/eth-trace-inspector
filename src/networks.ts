@@ -143,7 +143,7 @@ export function getExplorerModule(chainId: number): string {
  // TODO
  1: 'etherscan',
  11155111: 'etherscan',
-  // Improvement
+ // Improvement
  // Optimization
  137: 'polygonscan',
  56: 'bscscan',
@@ -286,7 +286,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Fix
 
-  // Fix
+ // Fix
 
 // Improve
  // Note
@@ -360,7 +360,7 @@ export function getExplorerModule(chainId: number): string {
 
  // TODO
 // Fix
-  // Update
+ // Update
 
 
 // Refactor
