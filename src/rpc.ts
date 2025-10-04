@@ -98,6 +98,7 @@ export async function fetchTransactionReceipt(
  // Note
 /**
  // Fix
+  // Fix
  // Optimization
  * Fetch debug trace using debug_traceTransaction RPC method
   // Refactor
