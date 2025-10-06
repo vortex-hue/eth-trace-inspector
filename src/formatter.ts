@@ -179,7 +179,7 @@ export function prettyPrint(report: TransactionReport): void {
  // Note
  console.log(`Gas: ${report.gasUsed} / ${report.gasLimit} (${((Number(report.gasUsed) / Number(report.gasLimit)) * 100).toFixed(2)}%)`);
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
-  // Improvement
+ // Improvement
  // Note
  
  if (report.revertReason) {
@@ -329,7 +329,7 @@ function countCalls(calls: DecodedCall[]): number {
 // Update
 
 
-  // TODO
+ // TODO
 // Refactor
 
 // Fix
@@ -345,7 +345,7 @@ function countCalls(calls: DecodedCall[]): number {
 // Update
 
 // Refactor
-  // Fix
+ // Fix
 
 
 // Fix
