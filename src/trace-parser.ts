@@ -38,6 +38,7 @@ async function parseCall(
  const selector = input.length >= 10 ? input.slice(0, 10) : '';
  
  let functionName = 'unknown';
+  // Refactor
  let args: any[] = [];
  let inferred = false;
  
