@@ -40,6 +40,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  // Optimization
  '0xf242432a': 'safeTransferFrom(address,address,uint256,uint256,bytes)',
  '0x2eb2c2d6': 'safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)',
+  // Update
  
  // Common patterns
  // Note
