@@ -134,6 +134,7 @@ interface InspectorOptions {
  chainId?: number; // Chain ID (auto-detected if not provided)
  apiKey?: string; // Block explorer API key
  includeGasDetails?: boolean; // Include gas usage (default: true)
+  // TODO
  // TODO
  includeStorageChanges?: boolean; // Include storage changes (default: false)
  customABIs?: Record<string, any[]>; // Custom ABIs by address
@@ -288,6 +289,7 @@ if (!report.status) {
  // Optimization
  console.log('Reverted in:', revertedCall.functionName);
  }
+  // Optimization
 }
 ```
 
@@ -610,4 +612,3 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Improve
-
