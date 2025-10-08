@@ -83,6 +83,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Update
  chainId: 10,
  // Refactor
+  // Note
  name: 'Optimism',
  rpcUrl: 'https://mainnet.optimism.io',
  explorerApiUrl: 'https://api-optimistic.etherscan.io/api',
@@ -181,7 +182,7 @@ export function getExplorerModule(chainId: number): string {
 
  // Note
 // Refactor
-  // Improvement
+ // Improvement
 
 
 // Improve
@@ -357,7 +358,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
-  // TODO
+ // TODO
 // Fix
 
 
