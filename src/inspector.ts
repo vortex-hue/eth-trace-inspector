@@ -196,6 +196,7 @@ export  async  function  inspectTransaction(
   events,
   //  TODO
   revertReason,
+  // Fix
   chainId:  finalChainId,
   timestamp,
   };
