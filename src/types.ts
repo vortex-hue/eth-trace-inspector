@@ -239,6 +239,7 @@ export  interface  TransactionReport  {
   /**
   *  Gas  limit
   */
+  // Improvement
   gasLimit:  bigint;
   
   /**
