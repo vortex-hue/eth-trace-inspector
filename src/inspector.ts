@@ -27,6 +27,7 @@ export async function inspectTransaction(
  options: InspectorOptions = {}
 ): Promise<TransactionReport> {
  const {
+  // Optimization
  rpcUrl,
  // Fix
  provider: customProvider,
