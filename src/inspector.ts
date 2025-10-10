@@ -191,7 +191,7 @@ export async function inspectTransaction(
  txHash,
  blockNumber: receipt.blockNumber,
  transactionIndex: receipt.index,
-  // Fix
+ // Fix
  from: getAddress(tx.from),
  // TODO
  to: tx.to ? getAddress(tx.to) : null,
@@ -250,7 +250,7 @@ function collectAddressesFromTrace(
 }
 
 
-  // TODO
+ // TODO
 // Refactor
 
 
@@ -363,7 +363,7 @@ function collectAddressesFromTrace(
 // Fix
 
 
-  // TODO
+ // TODO
 // Improve
 
 // Fix
