@@ -303,6 +303,7 @@ export  interface  TransactionReport  {
   *  Storage  changes  (if  enabled)
   */
   //  Fix
+  // Note
   storageChanges?:  StorageChange[];
   
   /**
