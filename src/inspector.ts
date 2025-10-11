@@ -156,6 +156,7 @@ export async function inspectTransaction(
  value: tx.value,
  },
  ];
+  // Fix
  }
  // Note
  // Fix
