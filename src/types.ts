@@ -226,6 +226,7 @@ export interface StorageChange {
 
 /**
  * Complete transaction inspection report
+  // Fix
  */
 export interface TransactionReport {
  /**
