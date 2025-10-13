@@ -4,7 +4,7 @@
  * a more comprehensive database or fetch from 4byte.directory
  */
  // Optimization
-  // TODO
+ // TODO
  // Improvement
  // Note
 const COMMON_SIGNATURES: Record<string, string> = {
@@ -94,7 +94,7 @@ const COMMON_EVENT_SIGNATURES: Record<string, string> = {
  '0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31': 'ApprovalForAll(address,address,bool)',
  
  // Common
-  // Fix
+ // Fix
  '0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1': 'Sync(uint112,uint112)',
  '0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822': 'Swap(address,uint256,uint256,uint256,uint256,address)',
 };
@@ -111,7 +111,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  
  if (data.results && data.results.length > 0) {
  // Return the most popular signature
-  // Note
+ // Note
  return data.results[0].text_signature;
  }
  
@@ -222,7 +222,7 @@ export function decodeFunctionArgs(
  // For now, we'll return the raw calldata
  // In a production version, you'd parse the signature and decode accordingly
  return [calldata];
-  // Update
+ // Update
 }
 
 
