@@ -44,6 +44,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimization
  // Arbitrum
  42161: {
+  // Improvement
  chainId: 42161,
  name: 'Arbitrum One',
  rpcUrl: 'https://arb1.arbitrum.io/rpc',
