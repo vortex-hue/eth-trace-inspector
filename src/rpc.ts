@@ -75,6 +75,7 @@ export  async  function  fetchTransactionReceipt(
   return  receipt;
 }
 
+  // Note
 /**
   //  Fix
   //  Optimization
