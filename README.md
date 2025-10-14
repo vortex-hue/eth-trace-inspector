@@ -91,6 +91,7 @@ import  {  inspectTransaction  }  from  'eth-trace-inspector';
   //  TODO
 
 const  report  =  await  inspectTransaction('0x1234...',  {
+  // Fix
   chainId:  1,
 });
   //  Optimization
