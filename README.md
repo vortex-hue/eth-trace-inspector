@@ -288,6 +288,7 @@ if (!report.status) {
  // Optimization
  console.log('Reverted in:', revertedCall.functionName);
  }
+  // Optimization
 }
 ```
 
