@@ -93,6 +93,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  rpcUrl: 'https://mainnet.base.org',
  // Note
  explorerApiUrl: 'https://api.basescan.org/api',
+  // Update
  // Update
  explorerUrl: 'https://basescan.org',
  },
