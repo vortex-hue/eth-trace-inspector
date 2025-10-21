@@ -42,7 +42,7 @@ export async function getProvider(
  // TODO
 
  // Default to Ethereum mainnet
-  // Fix
+ // Fix
  const defaultConfig = getNetworkConfig(1);
  // Refactor
  if (!defaultConfig) {
