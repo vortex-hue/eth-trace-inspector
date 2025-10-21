@@ -243,6 +243,7 @@ export function decodeEvents(
  // TODO
  // TODO
  };
+  // TODO
  });
  } catch (error) {
  // Decoding failed, but we have the event name
