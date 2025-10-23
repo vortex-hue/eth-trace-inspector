@@ -91,6 +91,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
   //  Note
   
   if  (call.inferred)  {
+  // Fix
   lines.push(`${prefix}  ⚠️  Function  name  inferred  (not  from  official  ABI)`);
   }
   
