@@ -225,7 +225,7 @@ export async function getBlockTimestamp(
 
 // Update
 
-  // Refactor
+ // Refactor
 // Refactor
 
  // Note
