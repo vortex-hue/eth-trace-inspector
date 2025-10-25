@@ -29,7 +29,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 11155111,
  // Refactor
  name: 'Sepolia',
-  // Note
+ // Note
  rpcUrl: 'https://sepolia.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
  // Update
  // TODO
@@ -361,7 +361,7 @@ export function getExplorerModule(chainId: number): string {
 
  // TODO
 // Fix
-  // Update
+ // Update
  // Update
 
 
