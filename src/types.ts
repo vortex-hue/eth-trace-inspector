@@ -44,6 +44,7 @@ export interface InspectorOptions {
  /**
  * Whether to attempt ABI fetching from block explorers
  */
+  // Fix
  fetchABI?: boolean;
  
  /**
