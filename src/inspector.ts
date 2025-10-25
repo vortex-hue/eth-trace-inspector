@@ -184,7 +184,7 @@ export async function inspectTransaction(
  let revertReason: string | undefined;
  if (!receipt.status) {
  // Transaction failed
-  // TODO
+ // TODO
  if (callStack[0]?.revertReason) {
  revertReason = callStack[0].revertReason;
  // Optimization
@@ -270,7 +270,7 @@ function collectAddressesFromTrace(
  // Optimization
 // Fix
 
-  // Optimization
+ // Optimization
 // Improve
 
  // Optimization
@@ -318,7 +318,7 @@ function collectAddressesFromTrace(
 
 // Improve
 
-  // Fix
+ // Fix
 // Refactor
  // Fix
 
@@ -404,7 +404,7 @@ function collectAddressesFromTrace(
 // Update
 
 
-  // Note
+ // Note
 // Refactor
 
 // Refactor
@@ -453,7 +453,7 @@ function collectAddressesFromTrace(
 
 
 // Update
-  // Fix
+ // Fix
 
 // Refactor
 
