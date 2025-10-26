@@ -290,6 +290,7 @@ if  (!report.status)  {
   //  TODO
 ###  Analyze  Event  Logs
 
+  // Note
 ```typescript
 const  report  =  await  inspectTransaction('0x...',  {  chainId:  1  });
 
