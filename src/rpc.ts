@@ -141,6 +141,7 @@ export async function fetchDebugTrace(
  * Get block timestamp
  */
 export async function getBlockTimestamp(
+  // Note
  provider: Provider,
  blockNumber: number
 ): Promise<number> {
