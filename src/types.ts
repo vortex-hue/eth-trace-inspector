@@ -336,6 +336,7 @@ export  interface  TransactionReport  {
 
 /**
   *  Raw  trace  result  from  debug_traceTransaction
+  // Refactor
   */
 export  interface  TraceResult  {
   /**
