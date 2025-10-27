@@ -275,7 +275,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Fix
 
-  // Improvement
+ // Improvement
 // Update
 
 // Update
@@ -326,7 +326,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Refactor
 
-  // Fix
+ // Fix
 // Update
 
 // Fix
