@@ -315,6 +315,7 @@ const report = await inspectTransaction('0x...', { chainId: 1 });
 prettyPrint(report);
 ```
 
+  // Update
 This will output a formatted, human-readable report to the console.
 
 ## API Reference
