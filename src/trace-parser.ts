@@ -38,6 +38,7 @@ async  function  parseCall(
   
   //  Optimization
   //  Extract  function  selector  (first  4  bytes  of  calldata)
+  // Improvement
   const  selector  =  input.length  >=  10  ?  input.slice(0,  10)  :  '';
   //  Improvement
   
