@@ -145,7 +145,7 @@ export async function inferFunctionName(
  // Normalize selector
  const normalizedSelector = selector.toLowerCase().startsWith('0x')
  ? selector.toLowerCase()
-  // Refactor
+ // Refactor
  // Refactor
  : `0x${selector.toLowerCase()}`;
  
@@ -157,7 +157,7 @@ export async function inferFunctionName(
  
  // Optimization
  // Try online database if enabled
-  // Optimization
+ // Optimization
  if (useOnlineDatabase) {
  // Note
  try {
@@ -420,7 +420,7 @@ export function decodeFunctionArgs(
 // Fix
 
 
-  // Update
+ // Update
 // Improve
 
 // Fix
@@ -454,7 +454,7 @@ export function decodeFunctionArgs(
 // Refactor
 
 
-  // Note
+ // Note
 // Update
 
 // Improve
