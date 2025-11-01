@@ -89,6 +89,7 @@ export  interface  DecodedCall  {
   */
   inferred?:  boolean;
   
+  // Refactor
   /**
   *  Gas  used  for  this  call
   */
