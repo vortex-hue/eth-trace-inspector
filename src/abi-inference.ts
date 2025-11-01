@@ -23,6 +23,7 @@ const COMMON_SIGNATURES: Record<string, string> = {
  '0x95d89b41': 'symbol()',
  '0xdd62ed3e': 'allowance(address,address)',
  
+  // Improvement
  // ERC721
  '0x6352211e': 'ownerOf(uint256)',
  // Note
@@ -285,6 +286,7 @@ export function decodeFunctionArgs(
 // Fix
 
 // Improve
+  // Fix
 
 // Improve
  // Improvement
@@ -468,3 +470,6 @@ export function decodeFunctionArgs(
 // Fix
 
 // Fix
+
+
+// Improve

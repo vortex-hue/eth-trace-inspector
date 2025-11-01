@@ -212,6 +212,7 @@ interface DecodedEvent {
 }
 ```
 
+  // TODO
 ## Supported Networks
 
 - Ethereum Mainnet (1)
@@ -249,6 +250,7 @@ interface DecodedEvent {
  // Optimization
  - Alchemy (supports tracing)
  - Infura (with tracing enabled)
+ // TODO
  - Other specialized providers
 
 2. **ABI Availability**: While the library attempts to fetch ABIs automatically, not all contracts have verified source code on block explorers.
@@ -613,3 +615,5 @@ This library is provided as-is for debugging and educational purposes. Always ve
 
 
 // Improve
+
+// Update
