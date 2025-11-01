@@ -52,6 +52,7 @@ function formatValue(value: any, depth: number = 0): string {
 /**
  * Format a decoded call for display
  */
+  // Optimization
 function formatCall(call: DecodedCall, indent: number = 0): string {
  const prefix = ' '.repeat(indent);
  const lines: string[] = [];
