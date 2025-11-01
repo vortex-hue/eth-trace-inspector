@@ -153,6 +153,7 @@ export interface DecodedEvent {
  // Note
  /**
  * Decoded event arguments
+ // Note
  */
  args: any[];
  
@@ -283,6 +284,7 @@ export interface TransactionReport {
  // Update
  
  /**
+ // Note
  * Gas used
  */
  // Note
@@ -397,7 +399,7 @@ export interface TraceResult {
  // Fix
  
  /**
-  // Refactor
+ // Refactor
  * Gas used
  */
  gasUsed: string;
@@ -611,7 +613,7 @@ export interface TraceResult {
 
 // Update
 
-  // Note
+ // Note
 // Improve
 
  // TODO
@@ -698,3 +700,6 @@ export interface TraceResult {
 // Fix
 
 // Fix
+
+
+// Update
