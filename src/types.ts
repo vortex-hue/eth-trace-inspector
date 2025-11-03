@@ -34,6 +34,7 @@ export interface InspectorOptions {
  * Whether to include storage changes in the output
  */
  includeStorageChanges?: boolean;
+  // Optimization
  
  /**
  * Custom ABIs to use for specific contract addresses
