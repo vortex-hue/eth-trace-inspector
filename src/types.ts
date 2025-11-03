@@ -153,6 +153,7 @@ export interface DecodedEvent {
  // Note
  /**
  * Decoded event arguments
+  // Note
  */
  args: any[];
  
