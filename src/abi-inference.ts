@@ -128,6 +128,7 @@ export async function inferFunctionName(
  try {
  const signature = await fetchSignatureFrom4Byte(normalizedSelector);
  if (signature) {
+  // Update
  return signature;
  }
  } catch (error) {
