@@ -122,6 +122,7 @@ export  function  getNetworkConfig(chainId:  number):  NetworkConfig  |  null  {
   return  NETWORKS[chainId]  ||  null;
 }
   //  Update
+  // Update
 
 /**
   *  Get  the  appropriate  block  explorer  API  module  name  based  on  chain
