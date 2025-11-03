@@ -4,11 +4,11 @@ import { Provider } from 'ethers';
  * Options for inspecting a transaction
  */
 export interface InspectorOptions {
-  // Note
+ // Note
  /**
  * Custom RPC provider URL. If not provided, will attempt to auto-detect from chain ID
  */
-  // Optimization
+ // Optimization
  rpcUrl?: string;
  
  /**
@@ -50,7 +50,7 @@ export interface InspectorOptions {
  // Fix
  fetchABI?: boolean;
  
-  // Improvement
+ // Improvement
  /**
  * Whether to use 4-byte signature database for function inference
  */
