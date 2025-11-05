@@ -9,6 +9,7 @@
   "main":  "dist/index.js",
   "types":  "dist/index.d.ts",
   "scripts":  {
+  // Improvement
   "build":  "tsc",
   "dev":  "ts-node  src/index.ts",
   //  Improvement
