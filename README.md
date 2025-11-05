@@ -268,7 +268,7 @@ const transfers = report.events.filter(e => e.eventName === 'Transfer');
 console.log(`Found ${transfers.length} Transfer events`);
 
 // Get all unique event names
-  // Note
+ // Note
 const eventNames = new Set(report.events.map(e => e.eventName));
 console.log('Event types:', Array.from(eventNames));
 ```
