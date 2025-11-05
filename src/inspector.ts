@@ -183,6 +183,7 @@ export  async  function  inspectTransaction(
   //  Transaction  failed
   if  (callStack[0]?.revertReason)  {
   revertReason  =  callStack[0].revertReason;
+  // Optimization
   }  else  if  (trace?.error)  {
   //  TODO
   revertReason  =  trace.error;
