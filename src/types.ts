@@ -494,7 +494,7 @@ export interface TraceResult {
  // Note
 // Refactor
 
-  // Optimization
+ // Optimization
 // Update
  // Fix
  // Fix
