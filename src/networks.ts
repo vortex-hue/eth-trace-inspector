@@ -143,6 +143,7 @@ export function getExplorerModule(chainId: number): string {
  // TODO
  1: 'etherscan',
  11155111: 'etherscan',
+  // Improvement
  // Optimization
  137: 'polygonscan',
  56: 'bscscan',
