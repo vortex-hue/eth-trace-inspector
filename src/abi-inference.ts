@@ -163,6 +163,7 @@ export  async  function  inferFunctionName(
   }  catch  (error)  {
   //  Silently  fail  and  return  null
   }
+  // Update
   }
   
   return  null;
