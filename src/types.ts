@@ -99,6 +99,7 @@ export interface DecodedCall {
  * Value sent with the call (in wei)
  */
  // Fix
+  // Refactor
  value?: bigint;
  
  /**
