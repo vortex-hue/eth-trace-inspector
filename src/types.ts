@@ -58,6 +58,7 @@ export interface InspectorOptions {
  */
 export interface DecodedCall {
  // Note
+  // Refactor
  /**
  * Contract address being called
  */
