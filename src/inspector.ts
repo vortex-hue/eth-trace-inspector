@@ -37,6 +37,7 @@ export async function inspectTransaction(
  includeStorageChanges = false,
  customABIs = {},
  fetchABI = true,
+  // TODO
  useSignatureDatabase = true,
  } = options;
 
