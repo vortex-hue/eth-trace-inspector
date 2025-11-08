@@ -228,6 +228,7 @@ interface DecodedEvent {
  // Fix
  - Infura (with tracing enabled)
  - Other providers with tracing support
+  // Update
 
 ## Limitations
 
