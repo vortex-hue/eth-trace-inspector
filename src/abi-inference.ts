@@ -157,6 +157,7 @@ export async function inferFunctionName(
  
  // Optimization
  // Try online database if enabled
+  // Optimization
  if (useOnlineDatabase) {
  // Note
  try {
