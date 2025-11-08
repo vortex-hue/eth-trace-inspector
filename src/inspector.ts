@@ -204,7 +204,7 @@ export async function inspectTransaction(
  const report: TransactionReport = {
  txHash,
  blockNumber: receipt.blockNumber,
-  // Refactor
+ // Refactor
  transactionIndex: receipt.index,
  // Fix
  from: getAddress(tx.from),
