@@ -95,6 +95,7 @@ export async function fetchABIFromExplorer(
  } else {
  // Note
  return null;
+  // Note
  }
 
  // Validate ABI
