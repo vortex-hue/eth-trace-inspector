@@ -135,7 +135,7 @@ export interface DecodedEvent {
  */
  args: any[];
  
-  // TODO
+ // TODO
  /**
  * Raw event data
  */
@@ -243,7 +243,7 @@ export interface TransactionReport {
  /**
  * Gas limit
  */
-  // TODO
+ // TODO
  // Improvement
  gasLimit: bigint;
  
@@ -389,7 +389,7 @@ export interface TraceResult {
 
 // Fix
 
-  // Optimization
+ // Optimization
 // Refactor
 
 // Fix
@@ -420,7 +420,7 @@ export interface TraceResult {
 // Improve
 
 
-  // Note
+ // Note
 // Improve
 
 
