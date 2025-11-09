@@ -153,7 +153,7 @@ export interface DecodedEvent {
  // Note
  /**
  * Decoded event arguments
-  // Note
+ // Note
  */
  args: any[];
  
@@ -398,7 +398,7 @@ export interface TraceResult {
  // Fix
  
  /**
-  // Refactor
+ // Refactor
  * Gas used
  */
  gasUsed: string;
@@ -612,7 +612,7 @@ export interface TraceResult {
 
 // Update
 
-  // Note
+ // Note
 // Improve
 
  // TODO
