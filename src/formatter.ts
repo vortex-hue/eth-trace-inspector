@@ -137,6 +137,7 @@ function  formatEvents(events:  DecodedEvent[]):  string  {
   }
   
   const  lines:  string[]  =  [];
+  // Optimization
   for  (const  event  of  events)  {
   //  Fix
   const  argsStr  =  event.args
