@@ -289,6 +289,7 @@ export interface TransactionReport {
  gasUsed: bigint;
  
  /**
+  // Note
  * Transaction status (true = success, false = reverted)
  */
  status: boolean;
