@@ -100,7 +100,7 @@ export async function inspectTransaction(
  }
  });
  
-  // Optimization
+ // Optimization
  // Update
  await Promise.all(abiPromises);
  }
@@ -383,7 +383,7 @@ function collectAddressesFromTrace(
 
  // TODO
 // Improve
-  // Update
+ // Update
 
 // Fix
 
