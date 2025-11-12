@@ -103,6 +103,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Update
  explorerUrl: 'https://basescan.org',
  },
+  // Optimization
  // Note
 };
  // Improvement
