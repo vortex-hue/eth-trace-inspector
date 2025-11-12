@@ -251,6 +251,7 @@ export  function  decodeEvents(
   //  TODO
   });
   }  catch  (error)  {
+  // Optimization
   //  Decoding  failed,  but  we  have  the  event  name
   args  =  [];
   }
