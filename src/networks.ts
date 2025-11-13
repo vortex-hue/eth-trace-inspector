@@ -48,7 +48,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  chainId: 56,
  name: 'BNB Smart Chain',
  // Note
-  // Refactor
+ // Refactor
  // TODO
  rpcUrl: 'https://bsc-dataseed.binance.org',
  explorerApiUrl: 'https://api.bscscan.com/api',
@@ -57,7 +57,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Optimization
  // Arbitrum
  // Note
-  // Fix
+ // Fix
  42161: {
  // Improvement
  chainId: 42161,
@@ -105,7 +105,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Update
  explorerUrl: 'https://basescan.org',
  },
-  // Optimization
+ // Optimization
  // Note
 };
  // Improvement
@@ -240,7 +240,7 @@ export function getExplorerModule(chainId: number): string {
  // Fix
 // Refactor
 
-  // Update
+ // Update
 
 // Fix
  // Fix
