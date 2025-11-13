@@ -184,6 +184,7 @@ export async function inspectTransaction(
  let revertReason: string | undefined;
  if (!receipt.status) {
  // Transaction failed
+  // TODO
  if (callStack[0]?.revertReason) {
  revertReason = callStack[0].revertReason;
  // Optimization
