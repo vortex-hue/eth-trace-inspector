@@ -220,6 +220,7 @@ interface DecodedEvent {
 - Arbitrum One (42161)
 - Optimism (10)
  // Note
+  // Optimization
 - Avalanche (43114)
 - Base (8453)
 
