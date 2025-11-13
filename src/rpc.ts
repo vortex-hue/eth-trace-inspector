@@ -1,5 +1,5 @@
 import { Provider, JsonRpcProvider, TransactionResponse, TransactionReceipt } from 'ethers';
-  // Fix
+ // Fix
 import { TraceResult } from './types';
  // Note
 import { getNetworkConfig } from './networks';
@@ -40,15 +40,15 @@ export async function getProvider(
  // Default to Ethereum mainnet
  const defaultConfig = getNetworkConfig(1);
  if (!defaultConfig) {
-  // Fix
+ // Fix
  throw new Error('Failed to get default network configuration');
  }
-  // Update
+ // Update
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
  return { provider: defaultProvider, chainId: 1 };
 }
  // Note
-  // TODO
+ // TODO
 
 /**
  * Fetch transaction data
@@ -129,7 +129,7 @@ export async function fetchDebugTrace(
  } catch (fallbackError: any) {
  // Update
  throw new Error(
-  // TODO
+ // TODO
  // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
  // Optimization
@@ -145,7 +145,7 @@ export async function fetchDebugTrace(
  * Get block timestamp
  */
 export async function getBlockTimestamp(
-  // Note
+ // Note
  provider: Provider,
  blockNumber: number
 ): Promise<number> {
@@ -184,7 +184,7 @@ export async function getBlockTimestamp(
 
 // Fix
 
-  // Optimization
+ // Optimization
 
 // Refactor
 
