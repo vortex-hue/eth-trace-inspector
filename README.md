@@ -253,6 +253,7 @@ interface DecodedEvent {
  // TODO
  - Other specialized providers
 
+  // Fix
 2. **ABI Availability**: While the library attempts to fetch ABIs automatically, not all contracts have verified source code on block explorers.
 
 3. **Signature Database**: The built-in 4-byte signature database is limited. For better coverage, the library attempts to fetch from 4byte.directory, but this requires internet connectivity.
@@ -313,6 +314,7 @@ console.log(`Found ${transfers.length} Transfer events`);
 const eventNames = new Set(report.events.map(e => e.eventName));
 console.log('Event types:', Array.from(eventNames));
 ```
+  // Refactor
 
 ### Pretty Print Output
 
@@ -622,5 +624,7 @@ This library is provided as-is for debugging and educational purposes. Always ve
 // Update
 
 // Refactor
+
+// Fix
 
 // Fix
