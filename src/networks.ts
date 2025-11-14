@@ -181,7 +181,7 @@ export function getExplorerModule(chainId: number): string {
 
  // Note
 // Refactor
-  // Improvement
+ // Improvement
 
 
 // Improve
@@ -357,7 +357,7 @@ export function getExplorerModule(chainId: number): string {
 
 // Update
 
-  // TODO
+ // TODO
 // Fix
 
 
