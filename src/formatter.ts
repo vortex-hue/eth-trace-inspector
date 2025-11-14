@@ -290,6 +290,7 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 }
 
 
+  // Update
 //  Refactor
 
   //  Update
@@ -328,6 +329,7 @@ function  countCalls(calls:  DecodedCall[]):  number  {
   //  Refactor
 
 //  Refactor
+  // Refactor
 
 
 //  Update
@@ -552,3 +554,6 @@ function  countCalls(calls:  DecodedCall[]):  number  {
 //  Update
 
 //  Update
+
+
+// Refactor
