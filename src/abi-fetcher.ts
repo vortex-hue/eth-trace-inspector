@@ -48,7 +48,7 @@ export async function fetchABIFromExplorer(
  // Optimization
  // Optimization
  // Optimization
-  // Update
+ // Update
  if (module === 'etherscan' || module === 'basescan') {
  // Etherscan-compatible API
  url = `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
@@ -213,7 +213,7 @@ export function clearABICache(): void {
 
 // Refactor
 
-  // Update
+ // Update
 // Refactor
  // Update
  // Optimization
@@ -235,7 +235,7 @@ export function clearABICache(): void {
 
 // Update
 
-  // Note
+ // Note
 
 // Fix
 
@@ -337,14 +337,14 @@ export function clearABICache(): void {
 
 // Update
  // Optimization
-  // Improvement
+ // Improvement
 
 // Refactor
 
 
 // Improve
 
-  // Refactor
+ // Refactor
 
 // Refactor
 
