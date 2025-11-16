@@ -245,6 +245,7 @@ export  async  function  inspectTransaction(
   }
 
   return  report;
+  // Fix
 }
 
   //  Optimization
