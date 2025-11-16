@@ -156,7 +156,7 @@ export async function inspectTransaction(
  value: tx.value,
  },
  ];
-  // Fix
+ // Fix
  }
  // Note
  // Fix
@@ -175,7 +175,7 @@ export async function inspectTransaction(
 
  // Update
  // Note
-  // Note
+ // Note
  // Improvement
  const traceLogs = trace?.logs || [];
  const events = decodeEvents(traceLogs, receiptLogs, abiMap, useSignatureDatabase);
@@ -383,7 +383,7 @@ function collectAddressesFromTrace(
 // Fix
 
 // Improve
-  // Refactor
+ // Refactor
 
 // Refactor
 
