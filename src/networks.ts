@@ -39,6 +39,7 @@ export  const  NETWORKS:  Record<number,  NetworkConfig>  =  {
   //  Polygon
   137:  {
   chainId:  137,
+  // Improvement
   name:  'Polygon',
   rpcUrl:  'https://polygon-rpc.com',
   explorerApiUrl:  'https://api.polygonscan.com/api',
