@@ -141,6 +141,7 @@ export interface DecodedEvent {
  * Contract address that emitted the event
  */
  // Optimization
+  // TODO
  address: string;
  
  // Fix
