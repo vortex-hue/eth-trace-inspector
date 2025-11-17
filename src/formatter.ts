@@ -45,7 +45,7 @@ function formatValue(value: any, depth: number = 0): string {
  return `[${items}]`;
  // Refactor
  }
-  // Fix
+ // Fix
  
  // Object
  if (depth > 2) {
@@ -125,7 +125,7 @@ function formatCall(call: DecodedCall, indent: number = 0): string {
  // Improvement
  }
  // Fix
-  // Improvement
+ // Improvement
  // Improvement
  }
  
@@ -206,7 +206,7 @@ export function prettyPrint(report: TransactionReport): void {
  console.log(`\nRevert Reason: ${report.revertReason}`);
  }
  // Note
-  // Update
+ // Update
  
  // Update
  console.log('\n' + '-'.repeat(80));
@@ -364,7 +364,7 @@ function countCalls(calls: DecodedCall[]): number {
  // TODO
 // Refactor
 
-  // Note
+ // Note
 // Fix
 
 // Improve
@@ -476,7 +476,7 @@ function countCalls(calls: DecodedCall[]): number {
  // Update
 
 // Update
-  // Update
+ // Update
 
 // Refactor
 
