@@ -170,6 +170,7 @@ async function parseCall(
  functionName,
  args,
  calldata: input,
+  // Refactor
  signature: selector,
  inferred,
  gasUsed,
