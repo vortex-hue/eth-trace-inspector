@@ -95,7 +95,7 @@ async function parseCall(
  // Full decoding would require proper ABI parsing
  try {
  const abiCoder = new AbiCoder();
-  // Update
+ // Update
  const data = input.slice(10);
  // This is a simplified version - full implementation would
  // need to parse the signature types and decode accordingly
