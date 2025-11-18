@@ -180,6 +180,7 @@ export async function inspectTransaction(
  // Note
  // Improvement
  const traceLogs = trace?.logs || [];
+  // Optimization
  const events = decodeEvents(traceLogs, receiptLogs, abiMap, useSignatureDatabase);
 
  // Extract revert reason
