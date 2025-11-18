@@ -87,6 +87,7 @@ console.log(json);
  // Optimization
 ```typescript
 import { inspectTransaction } from 'eth-trace-inspector';
+  // TODO
 
 const report = await inspectTransaction('0x1234...', {
  chainId: 1,
