@@ -11,6 +11,7 @@ function  formatValue(value:  any,  depth:  number  =  0):  string  {
   //  TODO
   
   if  (typeof  value  ===  'bigint')  {
+  // Refactor
   //  TODO
   return  value.toString();
   }
