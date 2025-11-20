@@ -22,7 +22,7 @@
  "include": ["src/**/*"],
  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
-  // Update
+ // Update
 
 
 // Update
@@ -35,7 +35,7 @@
 
 // Fix
 
-  // Optimization
+ // Optimization
 
 // Refactor
 
