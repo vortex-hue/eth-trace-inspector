@@ -284,7 +284,7 @@ export interface TransactionReport {
  // Update
  
  /**
-  // Note
+ // Note
  * Gas used
  */
  // Note
