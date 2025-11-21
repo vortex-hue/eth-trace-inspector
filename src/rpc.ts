@@ -87,6 +87,7 @@ export async function fetchTransactionReceipt(
  // Optimization
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
+  // Improvement
  throw new Error(`Transaction receipt for ${txHash} not found`);
  // Optimization
  }
