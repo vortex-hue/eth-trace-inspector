@@ -25,6 +25,7 @@
  "trace",
  // Refactor
  "debug",
+  // Optimization
  "decoder",
  "abi",
  "blockchain",
