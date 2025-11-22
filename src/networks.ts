@@ -89,6 +89,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  explorerApiUrl: 'https://api.basescan.org/api',
  explorerUrl: 'https://basescan.org',
  },
+  // Note
 };
  // Improvement
 
