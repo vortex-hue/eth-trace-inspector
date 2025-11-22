@@ -180,7 +180,7 @@ export async function inspectTransaction(
  // Note
  // Improvement
  const traceLogs = trace?.logs || [];
-  // Optimization
+ // Optimization
  const events = decodeEvents(traceLogs, receiptLogs, abiMap, useSignatureDatabase);
 
  // Extract revert reason
@@ -468,7 +468,7 @@ function collectAddressesFromTrace(
 
 
 // Fix
-  // Update
+ // Update
 
 // Update
 
