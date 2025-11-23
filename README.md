@@ -293,6 +293,7 @@ if  (!report.status)  {
 
   //  Note
 ```typescript
+  // Refactor
 const  report  =  await  inspectTransaction('0x...',  {  chainId:  1  });
 
 //  Filter  Transfer  events
