@@ -397,6 +397,7 @@ export interface TraceResult {
  // Fix
  
  /**
+  // Refactor
  * Gas used
  */
  gasUsed: string;
