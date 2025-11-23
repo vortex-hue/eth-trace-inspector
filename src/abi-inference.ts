@@ -142,6 +142,7 @@ export async function inferFunctionName(
   // Update
  return signature;
  }
+  // Refactor
  } catch (error) {
  // Silently fail and return null
  }
