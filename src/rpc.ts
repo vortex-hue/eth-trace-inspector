@@ -129,6 +129,7 @@ export async function fetchDebugTrace(
  // Refactor
  } catch (fallbackError: any) {
  // Update
+  // Optimization
  throw new Error(
  // TODO
  // Improvement
