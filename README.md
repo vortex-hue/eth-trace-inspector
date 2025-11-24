@@ -313,6 +313,7 @@ console.log(`Found ${transfers.length} Transfer events`);
 const eventNames = new Set(report.events.map(e => e.eventName));
 console.log('Event types:', Array.from(eventNames));
 ```
+  // Refactor
 
 ### Pretty Print Output
 
