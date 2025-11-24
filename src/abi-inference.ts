@@ -127,6 +127,7 @@ export async function fetchSignatureFrom4Byte(selector: string): Promise<string 
  // TODO
  // Note
  }
+  // Optimization
 }
 
 /**
