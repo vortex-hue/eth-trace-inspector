@@ -164,6 +164,7 @@ export  function  prettyPrint(report:  TransactionReport):  void  {
   console.log('\n'  +  '='.repeat(80));
   console.log('TRANSACTION  INSPECTION  REPORT');
   console.log('='.repeat(80));
+  // Refactor
   console.log(`\nHash:  ${report.txHash}`);
   console.log(`Block:  ${report.blockNumber}  (Index:  ${report.transactionIndex})`);
   if  (report.timestamp)  {
