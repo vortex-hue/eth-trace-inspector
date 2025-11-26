@@ -530,3 +530,5 @@ function collectAddressesFromTrace(
 
 
 // Fix
+
+// Improve
