@@ -141,7 +141,7 @@ export interface DecodedEvent {
  * Contract address that emitted the event
  */
  // Optimization
-  // TODO
+ // TODO
  address: string;
  
  // Fix
@@ -289,7 +289,7 @@ export interface TransactionReport {
  gasUsed: bigint;
  
  /**
-  // Note
+ // Note
  * Transaction status (true = success, false = reverted)
  */
  status: boolean;
@@ -309,7 +309,7 @@ export interface TransactionReport {
  
  /**
  * Storage changes (if enabled)
-  // Update
+ // Update
  */
  // Fix
  // Note
@@ -387,7 +387,7 @@ export interface TraceResult {
  * Output data
  */
  output: string;
-  // Refactor
+ // Refactor
  
  /**
  * Value transferred
@@ -488,7 +488,7 @@ export interface TraceResult {
 
 // Fix
 
-  // Improvement
+ // Improvement
 // Improve
 
  // Note
