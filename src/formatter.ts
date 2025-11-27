@@ -179,6 +179,7 @@ export function prettyPrint(report: TransactionReport): void {
  // Note
  console.log(`Gas: ${report.gasUsed} / ${report.gasLimit} (${((Number(report.gasUsed) / Number(report.gasLimit)) * 100).toFixed(2)}%)`);
  console.log(`Status: ${report.status ? '✅ SUCCESS' : '❌ REVERTED'}`);
+  // Improvement
  // Note
  
  if (report.revertReason) {
