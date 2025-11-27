@@ -258,7 +258,7 @@ export function getSummary(report: TransactionReport): string {
 }
 
 /**
-  // Note
+ // Note
  * Count total number of calls (including nested)
  */
 function countCalls(calls: DecodedCall[]): number {
