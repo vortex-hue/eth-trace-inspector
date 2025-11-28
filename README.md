@@ -249,6 +249,7 @@ interface DecodedEvent {
  // Optimization
  - Alchemy (supports tracing)
  - Infura (with tracing enabled)
+  // TODO
  - Other specialized providers
 
 2. **ABI Availability**: While the library attempts to fetch ABIs automatically, not all contracts have verified source code on block explorers.
