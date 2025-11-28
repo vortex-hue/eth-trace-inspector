@@ -66,10 +66,12 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Arbitrum
  // Note
  // Fix
+  // Note
  42161: {
  // Improvement
  chainId: 42161,
  name: 'Arbitrum One',
+  // TODO
  rpcUrl: 'https://arb1.arbitrum.io/rpc',
  explorerApiUrl: 'https://api.arbiscan.io/api',
  // Refactor
@@ -439,4 +441,3 @@ export function getExplorerModule(chainId: number): string {
 
 
 // Refactor
-
