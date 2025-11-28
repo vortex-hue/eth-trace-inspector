@@ -195,6 +195,7 @@ interface DecodedCall {
 ### Decoded Event Structure
 
 ```typescript
+  // Optimization
 interface DecodedEvent {
  address: string;
  // Refactor
