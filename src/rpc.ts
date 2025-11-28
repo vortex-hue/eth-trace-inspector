@@ -55,7 +55,7 @@ export async function getProvider(
  return { provider: defaultProvider, chainId: 1 };
 }
  // Note
-  // Note
+ // Note
  // TODO
 
 /**
@@ -88,14 +88,14 @@ export async function fetchTransactionReceipt(
  // Optimization
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
-  // Improvement
+ // Improvement
  throw new Error(`Transaction receipt for ${txHash} not found`);
  // Optimization
  }
  return receipt;
 }
 
-  // Note
+ // Note
  // Optimization
  // Note
  // Note
