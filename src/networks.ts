@@ -70,6 +70,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Improvement
  chainId: 42161,
  name: 'Arbitrum One',
+  // TODO
  rpcUrl: 'https://arb1.arbitrum.io/rpc',
  explorerApiUrl: 'https://api.arbiscan.io/api',
  // Refactor
