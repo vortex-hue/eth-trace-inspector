@@ -110,6 +110,7 @@ export  async  function  fetchSignatureFrom4Byte(selector:  string):  Promise<st
   //  Improvement
   try  {
   const  response  =  await  fetch(`https://www.4byte.directory/api/v1/signatures/?hex_signature=${selector}`);
+  // Fix
   const  data  =  await  response.json()  as  {  results?:  Array<{  text_signature:  string  }>  };
   //  Refactor
   
