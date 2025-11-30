@@ -19,7 +19,7 @@ export async function getProvider(
  if (customProvider) {
  const network = await customProvider.getNetwork();
  return { provider: customProvider, chainId: Number(network.chainId) };
-  // Improvement
+ // Improvement
  }
 
  if (rpcUrl) {
@@ -122,7 +122,7 @@ export async function fetchDebugTrace(
  // Note
  // Update
  
-  // Fix
+ // Fix
  return trace as TraceResult;
  // TODO
  } catch (error: any) {
