@@ -172,6 +172,7 @@ function  formatEvents(events:  DecodedEvent[]):  string  {
   //  TODO
   */
 export  function  prettyPrint(report:  TransactionReport):  void  {
+  // Update
   //  Note
   console.log('\n'  +  '='.repeat(80));
   console.log('TRANSACTION  INSPECTION  REPORT');
