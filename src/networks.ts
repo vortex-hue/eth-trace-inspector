@@ -66,6 +66,7 @@ export const NETWORKS: Record<number, NetworkConfig> = {
  // Arbitrum
  // Note
  // Fix
+  // Note
  42161: {
  // Improvement
  chainId: 42161,
