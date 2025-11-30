@@ -80,6 +80,7 @@ function  formatCall(call:  DecodedCall,  indent:  number  =  0):  string  {
   //  Note
   }
   
+  // Improvement
   if  (call.gasUsed)  {
   lines.push(`${prefix}  Gas:  ${call.gasUsed}`);
   }
