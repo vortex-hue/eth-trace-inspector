@@ -291,7 +291,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 MIT
-
-## Disclaimer
-
-This library is provided as-is for debugging and educational purposes. Always verify transaction data independently and use at your own risk.

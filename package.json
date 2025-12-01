@@ -1,9 +1,16 @@
 {
-  "name": "eth-trace-inspector",
-  "version": "1.2.6",
+  "name": "@vortex-hue/eth-trace-inspector",
+  "version": "1.3.6",
   "description": "A zero-config TypeScript library for automatically decoding, tracing, and debugging EVM transactions. Provides human-readable call stacks, event logs, and state changes for any transaction hash across all major EVM networks, even without the contract ABI.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vortex-hue/eth-trace-inspector.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "ts-node src/index.ts",
