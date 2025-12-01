@@ -6,6 +6,7 @@ dist/
 coverage/
 *.tsbuildinfo
 debug_trace.js
+debug_trace_utils.js
 .history-*.tmp
 temp-history-*.tmp
 test_tx.js
