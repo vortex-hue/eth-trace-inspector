@@ -66,7 +66,9 @@ temp-history-*.tmp
 debug_trace.js
 debug_trace_utils.js
 test_tx.js
-test_tx*.js
+test_tx 2.js
+test_tx 3.js
+test_tx 4.js
 USAGE-test_tx*.md
 test.sh
 re-run-test.sh
