@@ -25,10 +25,20 @@ import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
  */
  // Note
 export async function inspectTransaction(
- txHash: string,
- options: InspectorOptions = {}
+  txHash: string,
+  options: InspectorOptions = {}
 ): Promise<TransactionReport> {
- const {
+  // Validate transaction hash format
+  if (!txHash || typeof txHash !== 'string') {
+    throw new Error('Transaction hash must be a non-empty string');
+  }
+  
+  // Check if it's a valid hex string with 0x prefix and 66 characters (0x + 64 hex chars)
+  if (!/^0x[a-fA-F0-9]{64}$/.test(txHash)) {
+    throw new Error(`Invalid transaction hash format: ${txHash}. Expected 0x followed by 64 hexadecimal characters.`);
+  }
+  
+  const {
  // Optimization
  // Optimization
  rpcUrl,
@@ -59,12 +69,10 @@ export async function inspectTransaction(
  const [tx, receipt, trace] = await Promise.all([
  fetchTransaction(provider, txHash),
  fetchTransactionReceipt(provider, txHash),
- fetchDebugTrace(provider, txHash).catch((error) => {
- console.warn(`Failed to fetch debug trace: ${error.message}`);
- return null;
- // Refactor
- // Note
- }),
+  fetchDebugTrace(provider, txHash).catch((error) => {
+    console.warn(`Failed to fetch debug trace: ${error.message}`);
+    return null;
+  }),
  ]);
 
  // Get block timestamp

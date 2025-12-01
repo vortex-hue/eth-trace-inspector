@@ -407,11 +407,50 @@ export  interface  TraceResult  {
   */
   gasUsed:  string;
   
-  //  Note
   /**
-  *  Nested  calls
-  */
-  call
+   * Nested calls
+   */
+  calls?: TraceResult[];
+  
+  /**
+   * Logs emitted
+   */
+  logs?: Array<{
+    address: string;
+    topics: string[];
+    data: string;
+  }>;
+}
+
+/**
+ * Network configuration for block explorer APIs
+ */
+export interface NetworkConfig {
+  /**
+   * Chain ID
+   */
+  chainId: number;
+  
+  /**
+   * Network name
+   */
+  name: string;
+  
+  /**
+   * Default RPC URL
+   */
+  rpcUrl: string;
+  
+  /**
+   * Block explorer API base URL
+   */
+  explorerApiUrl: string;
+  
+  /**
+   * Block explorer website URL
+   */
+  explorerUrl: string;
+}
 //  Fix
 
 //  Fix

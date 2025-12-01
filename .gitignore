@@ -8,4 +8,7 @@ coverage/
 debug_trace.js
 .history-*.tmp
 temp-history-*.tmp
-
+test_tx.js
+USAGE-test_tx.md
+test.sh
+re-run-test.sh

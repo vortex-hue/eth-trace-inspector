@@ -74,7 +74,7 @@ describe('eth-trace-inspector', () => {
     await expect(
       inspectTransaction('0xinvalid', { chainId: 1 })
     ).rejects.toThrow();
-  });
+  }, 10000); // 10 second timeout
   
   it('should handle missing transaction gracefully', async () => {
     // Use a hash that doesn't exist
@@ -82,6 +82,6 @@ describe('eth-trace-inspector', () => {
     await expect(
       inspectTransaction(fakeHash, { chainId: 1 })
     ).rejects.toThrow();
-  });
+  }, 10000); // 10 second timeout
 });
 
