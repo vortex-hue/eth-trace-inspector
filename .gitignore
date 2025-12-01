@@ -1,15 +1,80 @@
+# Dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+# Note: package-lock.json should be committed for libraries
+
+# Build outputs
 dist/
-*.log
-.DS_Store
-.env
-coverage/
+build/
 *.tsbuildinfo
-debug_trace.js
-debug_trace_utils.js
+*.map
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
 .history-*.tmp
 temp-history-*.tmp
+
+# Debug and utility scripts (not part of the library)
+debug_trace.js
+debug_trace_utils.js
 test_tx.js
-USAGE-test_tx.md
+test_tx*.js
+USAGE-test_tx*.md
 test.sh
 re-run-test.sh
+remove-files-from-history.sh
+push-all-branches.sh
+generate-history.js
+HISTORY-GENERATOR.md
+
+# TypeScript
+*.tsbuildinfo
+
