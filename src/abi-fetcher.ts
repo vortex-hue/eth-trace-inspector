@@ -1,47 +1,31 @@
-  //  Note
 import  {  Interface,  Fragment,  FunctionFragment,  EventFragment  }  from  'ethers';
 import  {  getNetworkConfig,  getExplorerModule  }  from  './networks';
 
-  //  TODO
-  //  Refactor
-  //  Optimization
 /**
   *  Cache  for  fetched  ABIs  to  avoid  repeated  API  calls
   */
-  //  Update
-  //  Refactor
 const  abiCache:  Map<string,  any[]>  =  new  Map();
-  //  Optimization
 
 /**
-  //  Note
-  //  Update
-  //  TODO
   *  Fetch  contract  ABI  from  block  explorer  API
   */
 export  async  function  fetchABIFromExplorer(
   contractAddress:  string,
   chainId:  number,
   apiKey?:  string
-  //  Refactor
 ):  Promise<any[]  |  null>  {
   const  cacheKey  =  `${chainId}:${contractAddress.toLowerCase()}`;
-  //  Fix
   
   //  Check  cache  first
   if  (abiCache.has(cacheKey))  {
   return  abiCache.get(cacheKey)!;
   }
-  //  Note
-  //  Fix
 
   const  networkConfig  =  getNetworkConfig(chainId);
   if  (!networkConfig)  {
   return  null;
   }
 
-  //  TODO
-  //  Improvement
   const  module  =  getExplorerModule(chainId);
   const  apiUrl  =  networkConfig.explorerApiUrl;
 
@@ -49,16 +33,10 @@ export  async  function  fetchABIFromExplorer(
   //  Construct  API  URL  based  on  explorer  type
   let  url:  string;
   
-  //  Optimization
-  //  Optimization
-  //  Optimization
-  //  Update
   if  (module  ===  'etherscan'  ||  module  ===  'basescan')  {
   //  Etherscan-compatible  API
   url  =  `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
-  //  Refactor
   if  (apiKey)  {
-  //  Refactor
   url  +=  `&apikey=${apiKey}`;
   }
   }  else  if  (module  ===  'polygonscan'  ||  module  ===  'arbiscan'  ||  module  ===  'bscscan')  {
@@ -66,13 +44,9 @@ export  async  function  fetchABIFromExplorer(
   url  =  `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
   if  (apiKey)  {
   url  +=  `&apikey=${apiKey}`;
-  //  TODO
   }
   }  else  if  (module  ===  'snowtrace')  {
-  //  Fix
   //  Snowtrace  (Avalanche)
-  //  Refactor
-  //  Update
   url  =  `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
   if  (apiKey)  {
   url  +=  `&apikey=${apiKey}`;
@@ -81,19 +55,13 @@ export  async  function  fetchABIFromExplorer(
   //  Default  to  Etherscan  format
   url  =  `${apiUrl}?module=contract&action=getabi&address=${contractAddress}`;
   if  (apiKey)  {
-  //  Fix
   url  +=  `&apikey=${apiKey}`;
-  //  Note
   }
-  //  Optimization
   }
 
   const  response  =  await  fetch(url);
   const  data  =  await  response.json()  as  {  status?:  string;  result?:  string  |  any[]  };
 
-  //  Fix
-  //  TODO
-  //  TODO
   if  (data.status  ===  '1'  &&  data.result)  {
   let  abi:  any[];
   
@@ -103,30 +71,21 @@ export  async  function  fetchABIFromExplorer(
   abi  =  JSON.parse(data.result);
   }  catch  {
   return  null;
-  //  Improvement
   }
   }  else  if  (Array.isArray(data.result))  {
   abi  =  data.result;
   }  else  {
-  //  TODO
-  //  Note
   return  null;
-  //  Note
-  //  TODO
   }
 
   //  Validate  ABI
   if  (Array.isArray(abi)  &&  abi.length  >  0)  {
-  //  Fix
   //  Cache  the  ABI
   abiCache.set(cacheKey,  abi);
-  //  Improvement
   return  abi;
-  //  Note
   }
   }
 
-  //  Optimization
   return  null;
   }  catch  (error)  {
   console.warn(`Failed  to  fetch  ABI  from  explorer:  ${error}`);
@@ -135,43 +94,30 @@ export  async  function  fetchABIFromExplorer(
 }
 
 /**
-  //  Optimization
   *  Create  an  Interface  from  ABI
   */
-  //  Fix
 export  function  createInterfaceFromABI(abi:  any[]):  Interface  {
-  //  Note
   try  {
-  //  Improvement
-  //  Optimization
   return  new  Interface(abi);
   }  catch  (error)  {
   throw  new  Error(`Invalid  ABI:  ${error}`);
-  //  Optimization
   }
-  //  TODO
 }
 
 /**
   *  Get  function  fragment  from  ABI  by  signature
-  //  Improvement
-  //  Update
   */
 export  function  getFunctionFragment(
   iface:  Interface,
   signature:  string
 ):  FunctionFragment  |  null  {
-  //  Fix
   try  {
   //  Try  to  get  by  selector  (4-byte)
   const  selector  =  signature.slice(0,  10);
   const  fragment  =  iface.getFunction(selector);
   return  fragment;
   }  catch  {
-  //  Refactor
   return  null;
-  //  Note
-  //  Refactor
   }
 }
 
@@ -180,12 +126,10 @@ export  function  getFunctionFragment(
   */
 export  function  getEventFragment(
   iface:  Interface,
-  //  Note
   signature:  string
 ):  EventFragment  |  null  {
   try  {
   //  Event  signature  is  the  first  topic
-  //  Fix
   const  topic  =  signature.slice(0,  66);  //  0x  +  64  hex  chars
   const  fragment  =  iface.getEvent(topic);
   return  fragment;
@@ -196,322 +140,155 @@ export  function  getEventFragment(
 
 /**
   *  Clear  ABI  cache
-  //  TODO
   */
 export  function  clearABICache():  void  {
   abiCache.clear();
 }
 
-  //  TODO
-  //  Optimization
 
-//  Fix
-  //  Fix
-  //  Fix
 
-  //  Note
-  //  Note
-  //  Fix
 
-//  Refactor
-  //  Note
 
-//  Improve
 
 
-  //  TODO
-//  Fix
-  //  TODO
 
-  //  TODO
-//  Update
 
-//  Refactor
 
-  //  Improvement
-  //  Update
-  //  Optimization
-//  Refactor
-  //  Update
-  //  Optimization
-  //  TODO
 
-  //  TODO
-//  Fix
-  //  Update
 
-  //  Optimization
-//  Update
 
-  //  Update
-  //  TODO
 
-//  Update
 
-//  Improve
 
 
-//  Update
 
-  //  Note
-  //  Improvement
 
-//  Fix
-  //  Refactor
 
-//  Refactor
 
-  //  Fix
-  //  Refactor
-//  Improve
 
 
-//  Improve
 
 
-//  Improve
-  //  Fix
 
-//  Fix
 
-//  Fix
-  //  Improvement
 
-//  Improve
 
-//  Refactor
 
-  //  TODO
-//  Fix
 
-//  Update
 
-//  Fix
-  //  TODO
 
-  //  Improvement
-//  Refactor
-  //  Update
 
 
-  //  Note
-//  Fix
 
-//  Update
 
-  //  Optimization
-//  Improve
 
-//  Improve
-  //  TODO
 
-  //  Fix
 
-//  Improve
 
-  //  Fix
-//  Update
 
 
-//  Fix
-  //  TODO
-  //  Fix
 
-  //  Fix
-  //  Note
 
-//  Update
 
 
-//  Update
-  //  Optimization
 
 
-  //  Update
-//  Refactor
 
-  //  Improvement
-//  Improve
 
 
-//  Update
 
 
-//  Update
-  //  TODO
 
-//  Update
 
-//  Refactor
-  //  Improvement
 
 
-//  Improve
-  //  TODO
-  //  TODO
 
 
-//  Fix
 
-  //  TODO
-  //  Improvement
-//  Improve
 
 
-//  Refactor
 
-  //  Update
-//  Improve
 
 
-//  Refactor
 
-//  Update
-  //  Optimization
-  //  Improvement
 
-//  Refactor
 
 
-//  Improve
 
-  //  Refactor
 
-//  Refactor
 
-//  Improve
 
-//  Improve
 
 
-//  Update
-  //  Fix
 
-//  Improve
 
-  //  Fix
-//  Update
 
-//  Fix
 
-//  Refactor
 
 
-//  Update
 
 
-//  Fix
 
-//  Improve
 
 
-//  Fix
 
-  //  Optimization
-//  Fix
 
 
-//  Update
 
-//  Fix
 
-  //  Note
-//  Refactor
 
 
-//  Refactor
 
 
-//  Fix
 
-//  Update
 
-  //  Fix
-//  Update
 
 
-  //  Improvement
-//  Fix
 
 
-//  Fix
 
-//  Improve
 
 
-//  Update
 
-//  Refactor
 
-//  Update
 
-//  Improve
 
-//  Improve
 
-//  Refactor
 
 
-//  Refactor
 
 
-  //  Improvement
-//  Fix
 
-//  Fix
 
-//  Improve
 
-//  Fix
 
 
-//  Refactor
 
 
-//  Fix
 
 
-//  Update
 
-//  Improve
 
 
-//  Fix
 
 
-//  Refactor
 
 
-//  Update
 
-//  Improve
 
-//  Improve
 
-//  Refactor
 
-//  Improve
 
 
-//  Improve
 
-//  Refactor
 
-//  Fix
 
-//  Fix
 
-//  Improve
 
 
-//  Improve
 
-//  Improve
 
-//  Improve
 
 
-//  Improve
 
 
-// Improve

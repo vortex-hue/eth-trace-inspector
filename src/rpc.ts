@@ -1,34 +1,22 @@
 import { Provider, JsonRpcProvider, TransactionResponse, TransactionReceipt } from 'ethers';
- // Improvement
- // Fix
 import { TraceResult } from './types';
- // TODO
- // Note
 import { getNetworkConfig } from './networks';
 
 /**
  * Get or create a provider from options
  */
 export async function getProvider(
- // Update
  rpcUrl?: string,
  customProvider?: Provider,
  chainId?: number
 ): Promise<{ provider: Provider; chainId: number }> {
- // TODO
- // Update
- // Improvement
  if (customProvider) {
  const network = await customProvider.getNetwork();
  return { provider: customProvider, chainId: Number(network.chainId) };
- // Improvement
  }
 
  if (rpcUrl) {
  const rpcProvider = new JsonRpcProvider(rpcUrl);
- // Fix
- // TODO
- // Note
  const network = await rpcProvider.getNetwork();
  return { provider: rpcProvider, chainId: Number(network.chainId) };
  }
@@ -41,79 +29,50 @@ export async function getProvider(
  return { provider: rpcProvider, chainId };
  }
  }
- // TODO
 
  // Default to Ethereum mainnet
- // Fix
  const defaultConfig = getNetworkConfig(1);
- // Refactor
  if (!defaultConfig) {
- // Optimization
- // Fix
  throw new Error('Failed to get default network configuration');
  }
- // Update
  const defaultProvider = new JsonRpcProvider(defaultConfig.rpcUrl);
  return { provider: defaultProvider, chainId: 1 };
 }
- // Note
- // Note
- // TODO
 
 /**
  * Fetch transaction data
  */
 export async function fetchTransaction(
  provider: Provider,
- // Improvement
  txHash: string
 ): Promise<TransactionResponse> {
  const tx = await provider.getTransaction(txHash);
  if (!tx) {
  throw new Error(`Transaction ${txHash} not found`);
  }
- // Note
- // Improvement
  return tx;
- // Improvement
 }
 
- // TODO
 /**
  * Fetch transaction receipt
  */
 export async function fetchTransactionReceipt(
  provider: Provider,
  txHash: string
- // TODO
- // Fix
 ): Promise<TransactionReceipt> {
- // Optimization
  const receipt = await provider.getTransactionReceipt(txHash);
  if (!receipt) {
- // Improvement
  throw new Error(`Transaction receipt for ${txHash} not found`);
- // Optimization
  }
  return receipt;
 }
 
- // Note
- // Optimization
- // Note
- // Note
 /**
- // Fix
- // Fix
- // Optimization
  * Fetch debug trace using debug_traceTransaction RPC method
- // Refactor
  */
 export async function fetchDebugTrace(
  provider: Provider,
- // Optimization
  txHash: string
- // Fix
 ): Promise<TraceResult> {
  // debug_traceTransaction is not a standard ethers method, so we use direct RPC call
  const jsonRpcProvider = provider as JsonRpcProvider;
@@ -128,338 +87,168 @@ export async function fetchDebugTrace(
  },
  },
  ]);
- // Note
- // Update
  
- // Fix
  return trace as TraceResult;
- // TODO
- // Improvement
  } catch (error: any) {
  // Some RPC providers don't support debug_traceTransaction
- // Improvement
- // Refactor
  // Try alternative tracer
  try {
- // Refactor
- // Note
- // Improvement
  const trace = await jsonRpcProvider.send('debug_traceTransaction', [
  txHash,
  {
  tracer: 'callTracer',
  },
- // Fix
  ]);
- // Note
- // Note
  return trace as TraceResult;
- // Refactor
  } catch (fallbackError: any) {
- // Update
- // Optimization
  throw new Error(
- // TODO
- // Improvement
  `Failed to fetch debug trace: ${error.message}. ` +
- // Optimization
  `This RPC provider may not support debug_traceTransaction. ` +
  `Try using a full node or a provider like Alchemy/Infura that supports tracing.`
- // Fix
- // Improvement
  );
  }
  }
- // Improvement
 }
- // Improvement
 
- // Improvement
 /**
  * Get block timestamp
- // TODO
  */
 export async function getBlockTimestamp(
- // Note
  provider: Provider,
  blockNumber: number
 ): Promise<number> {
  const block = await provider.getBlock(blockNumber);
  return block?.timestamp || 0;
- // Improvement
- // Improvement
 }
 
- // Improvement
- // TODO
- // Improvement
 
-// Refactor
 
- // Fix
-// Improve
- // Refactor
- // Improvement
 
- // Note
-// Refactor
- // TODO
 
- // Update
-// Refactor
 
 
-// Fix
- // Fix
 
-// Update
 
 
-// Refactor
 
-// Update
 
- // Refactor
-// Fix
- // Improvement
- // Improvement
- // Note
 
-// Fix
 
- // Optimization
 
-// Refactor
 
-// Improve
 
-// Improve
 
-// Refactor
- // Update
 
 
-// Fix
- // Refactor
- // Refactor
 
-// Update
 
- // Refactor
-// Refactor
 
- // Note
- // Update
-// Improve
 
-// Refactor
 
-// Update
- // Note
 
-// Fix
- // Update
 
-// Fix
 
-// Refactor
 
-// Fix
 
-// Refactor
 
 
-// Update
- // Refactor
- // Fix
 
-// Refactor
- // Optimization
- // Update
- // Fix
 
-// Update
- // Improvement
 
 
-// Update
 
- // Update
-// Fix
 
-// Refactor
 
-// Refactor
- // Improvement
 
- // Note
 
-// Update
 
-// Update
 
 
-// Refactor
 
-// Fix
 
 
-// Refactor
 
-// Refactor
 
-// Update
- // TODO
 
-// Update
 
 
-// Improve
 
-// Refactor
- // Improvement
 
-// Improve
- // Refactor
 
-// Fix
 
-// Fix
 
-// Update
 
-// Improve
 
-// Improve
 
-// Improve
 
-// Refactor
 
-// Improve
 
-// Fix
 
 
-// Improve
 
-// Refactor
 
 
-// Fix
-  // Note
 
-// Fix
 
 
-// Refactor
 
-// Fix
 
-// Fix
 
-// Update
 
 
-// Fix
 
-  // Update
 
-// Refactor
 
-// Update
 
-// Improve
 
-// Refactor
 
-// Update
 
-// Improve
 
 
-// Improve
 
 
-// Improve
 
- // TODO
-// Update
 
 
-// Improve
-  // Update
 
-// Improve
 
-// Fix
 
 
-// Fix
 
-// Update
 
-// Refactor
 
 
- // Optimization
-// Improve
 
-// Update
 
-// Improve
 
 
-// Improve
 
-// Improve
 
 
-// Fix
 
-// Update
 
-// Refactor
 
-// Update
 
 
-// Fix
 
-// Improve
 
-// Fix
 
-// Update
 
 
-// Update
 
-// Update
 
 
-// Fix
 
 
-// Fix
 
 
-// Refactor
 
-// Fix
 
-// Fix
 
-// Update
 
-// Improve
 
 
-// Refactor
 
 
-// Update
 
-// Fix
 
-// Update

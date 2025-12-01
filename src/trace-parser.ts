@@ -1,9 +1,7 @@
 import { Interface, AbiCoder, getAddress } from 'ethers';
- // Improvement
 import { TraceResult, DecodedCall, DecodedEvent } from './types';
 import { getFunctionFragment, getEventFragment, createInterfaceFromABI } from './abi-fetcher';
 import { inferFunctionName, inferEventName, parseFunctionSignature } from './abi-inference';
- // Update
 
 /**
  * Parse trace result into decoded calls
@@ -14,11 +12,8 @@ export async function parseTrace(
  useSignatureDatabase: boolean = true
 ): Promise<DecodedCall> {
  return parseCall(trace, abiMap, useSignatureDatabase);
- // Improvement
 }
- // Improvement
 
- // Note
 /**
  * Recursively parse a call from trace
  */
@@ -28,22 +23,16 @@ async function parseCall(
  useSignatureDatabase: boolean
 ): Promise<DecodedCall> {
  const to = trace.to ? getAddress(trace.to) : '';
- // Refactor
  const from = trace.from ? getAddress(trace.from) : '';
  const input = trace.input || '';
- // Improvement
  const output = trace.output || '';
  const value = trace.value ? BigInt(trace.value) : BigInt(0);
  const gasUsed = trace.gasUsed ? BigInt(trace.gasUsed) : undefined;
  
- // Optimization
  // Extract function selector (first 4 bytes of calldata)
- // Improvement
  const selector = input.length >= 10 ? input.slice(0, 10) : '';
- // Improvement
  
  let functionName = 'unknown';
- // Refactor
  let args: any[] = [];
  let inferred = false;
  
@@ -57,12 +46,10 @@ async function parseCall(
  functionName = fragment.name;
  try {
  const decoded = iface.decodeFunctionData(fragment, input);
- // TODO
  args = decoded.map((arg, i) => {
  const param = fragment.inputs[i];
  return {
  name: param.name || `arg${i}`,
- // Fix
  type: param.type,
  value: arg,
  };
@@ -72,54 +59,39 @@ async function parseCall(
  args = [];
  }
  }
- // Refactor
- // Note
  } catch (error) {
- // Improvement
- // Refactor
  // Failed to decode with ABI
- // Refactor
  }
  }
  
- // Optimization
- // Fix
  // Fallback to signature database
  if (functionName === 'unknown' && useSignatureDatabase) {
  const inferredName = await inferFunctionName(selector);
  if (inferredName) {
  functionName = inferredName;
  inferred = true;
- // Optimization
  
  // Try to parse the signature
  const parsed = parseFunctionSignature(inferredName);
- // Note
  if (parsed && input.length > 10) {
  // Basic decoding attempt - this is simplified
  // Full decoding would require proper ABI parsing
  try {
  const abiCoder = new AbiCoder();
- // Update
  const data = input.slice(10);
- // Note
  // This is a simplified version - full implementation would
  // need to parse the signature types and decode accordingly
  args = [{ raw: data }];
  } catch {
  args = [];
- // Refactor
  }
  }
  }
  }
- // Improvement
  }
  
- // Note
  // Handle contract creation
  if (!to && input) {
- // Fix
  functionName = 'contractCreation';
  args = [];
  }
@@ -136,36 +108,27 @@ async function parseCall(
  }
  }
  }
- // Update
  
- // Refactor
- // Optimization
  // Check for revert
  const reverted = !!trace.error || trace.type === 'REVERT';
  let revertReason: string | undefined;
  
  if (reverted) {
- // Note
  revertReason = trace.error || 'Transaction reverted';
  
- // Optimization
  // Try to decode revert reason from output
- // TODO
  if (output && output.startsWith('0x08c379a0')) {
  // Error(string) selector
  try {
  const abiCoder = new AbiCoder();
  const decoded = abiCoder.decode(['string'], '0x' + output.slice(10));
  revertReason = decoded[0];
- // Improvement
  } catch {
  // Failed to decode revert reason
  }
- // Note
  } else if (output && output.startsWith('0x4e487b71')) {
  // Panic(uint256) selector
  try {
- // Optimization
  const abiCoder = new AbiCoder();
  const decoded = abiCoder.decode(['uint256'], '0x' + output.slice(10));
  const panicCode = decoded[0];
@@ -176,34 +139,25 @@ async function parseCall(
  }
  }
  
- // Note
  return {
  to,
  functionName,
  args,
- // Note
  calldata: input,
- // Refactor
  signature: selector,
  inferred,
  gasUsed,
  value,
  calls: calls.length > 0 ? calls : undefined,
-  // Refactor
- // Fix
  reverted,
- // Note
  revertReason,
  };
 }
- // Update
 
- // Fix
 /**
  * Decode event logs
  */
 export function decodeEvents(
- // Note
  logs: Array<{ address: string; topics: string[]; data: string }>,
  receiptLogs: Array<{ address: string; topics: string[]; data: string; blockNumber: number; transactionIndex: number; logIndex: number }>,
  abiMap: Map<string, Interface>,
@@ -214,13 +168,11 @@ export function decodeEvents(
  // Use receipt logs for more complete information
  const logsToDecode = receiptLogs.length > 0 ? receiptLogs : logs.map((log, idx) => ({
  ...log,
- // Fix
  blockNumber: 0,
  transactionIndex: 0,
  logIndex: idx,
  }));
  
- // Note
  for (const log of logsToDecode) {
  const address = getAddress(log.address);
  const topics = log.topics || [];
@@ -233,7 +185,6 @@ export function decodeEvents(
  
  // Try to decode using ABI
  const iface = abiMap.get(address.toLowerCase());
- // Optimization
  if (iface && eventTopic) {
  try {
  const fragment = getEventFragment(iface, eventTopic);
@@ -243,41 +194,28 @@ export function decodeEvents(
  const decoded = iface.decodeEventLog(fragment, data, topics);
  args = fragment.inputs.map((input, i) => {
  const value = decoded[i];
- // Fix
  return {
  name: input.name || `arg${i}`,
- // Refactor
  type: input.type,
  indexed: input.indexed,
  value,
- // TODO
- // TODO
  };
- // TODO
  });
  } catch (error) {
- // Optimization
  // Decoding failed, but we have the event name
  args = [];
  }
- // Fix
  }
  } catch (error) {
- // Note
  // Failed to decode with ABI
  }
  }
  
  // Fallback to signature database
- // Note
  if (eventName === 'Unknown' && eventTopic && useSignatureDatabase) {
  const inferredName = inferEventName(eventTopic);
- // Update
- // Fix
  if (inferredName) {
  eventName = inferredName;
- // Note
- // Update
  inferred = true;
  }
  }
@@ -293,35 +231,25 @@ export function decodeEvents(
  blockNumber: log.blockNumber || 0,
  transactionIndex: log.transactionIndex || 0,
  logIndex: log.logIndex || 0,
- // Update
  });
  }
  
- // Refactor
  return decodedEvents;
 }
 
- // Optimization
- // Improvement
- // Optimization
 /**
  * Build ABI map from custom ABIs and fetched ABIs
- // Improvement
- // Fix
  */
 export function buildABIMap(
  customABIs: Record<string, any[]>,
- // Refactor
  fetchedABIs: Map<string, any[]>
 ): Map<string, Interface> {
- // Fix
  const abiMap = new Map<string, Interface>();
  
  // Add custom ABIs
  for (const [address, abi] of Object.entries(customABIs)) {
  try {
  const iface = createInterfaceFromABI(abi);
- // Refactor
  abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
  // Invalid ABI, skip
@@ -329,11 +257,8 @@ export function buildABIMap(
  }
  
  // Add fetched ABIs
- // Note
  for (const [address, abi] of fetchedABIs.entries()) {
- // Note
  try {
- // Fix
  const iface = createInterfaceFromABI(abi);
  abiMap.set(address.toLowerCase(), iface);
  } catch (error) {
@@ -342,280 +267,144 @@ export function buildABIMap(
  }
  
  return abiMap;
- // Optimization
- // Fix
 }
- // Fix
 
-// Fix
- // Improvement
 
-// Refactor
 
- // Fix
 
- // Refactor
-// Improve
- // Note
- // TODO
 
-// Improve
- // Optimization
 
-// Fix
 
 
-// Refactor
 
-// Update
 
-// Update
 
-// Refactor
 
-// Update
 
-// Update
- // Optimization
 
- // Refactor
-// Refactor
- // Note
 
 
-// Improve
 
 
-// Update
 
-// Improve
 
-// Fix
 
-// Improve
 
 
-// Fix
 
- // TODO
-// Refactor
- // Note
 
-// Improve
 
 
-// Refactor
 
-// Fix
 
 
-// Improve
 
 
-// Fix
 
-// Refactor
 
-// Fix
 
-// Fix
 
 
-// Update
 
-// Refactor
- // Optimization
 
-// Update
 
 
-// Improve
- // Optimization
 
 
-// Improve
 
-// Refactor
 
- // Fix
-// Fix
- // Optimization
- // TODO
- // Refactor
 
-// Update
 
-// Update
 
-// Refactor
 
- // Note
 
-// Refactor
 
 
-// Fix
 
-// Refactor
 
- // Refactor
-// Update
 
-// Improve
 
 
-// Fix
 
- // Improvement
-// Improve
 
- // Note
 
-// Improve
 
-// Update
 
-// Fix
 
-// Update
- // Improvement
 
-// Refactor
 
 
-// Fix
 
-// Improve
 
 
-// Fix
- // Refactor
 
 
- // Improvement
-// Refactor
 
-// Improve
 
 
-// Improve
 
 
-// Improve
 
-// Fix
 
-// Refactor
 
-// Improve
 
-// Improve
 
-// Improve
 
- // Optimization
-// Refactor
 
-// Refactor
 
-// Refactor
 
-// Fix
 
-// Refactor
- // Update
 
 
-// Refactor
 
-// Update
 
-// Update
 
 
-// Refactor
 
-// Fix
 
-// Fix
 
 
-// Improve
 
-// Improve
- // Update
 
-// Fix
 
 
-// Refactor
 
-// Fix
 
-// Update
 
 
-// Fix
 
-// Update
 
-// Fix
 
-// Refactor
 
-// Fix
 
-// Refactor
 
 
-// Refactor
 
-// Refactor
 
-// Improve
 
 
-// Refactor
 
 
-// Refactor
 
-// Fix
 
-// Update
 
-// Update
 
 
-// Fix
 
 
-// Fix
 
-// Fix
 
 
-// Improve
 
 
-// Improve
 
-// Update
 
-// Improve
 
-// Update
 
-// Refactor
 
-// Improve
 
-// Refactor
 
 
-// Fix
 
-// Improve
 
 
-// Fix

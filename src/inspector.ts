@@ -5,25 +5,19 @@ import {
  DecodedCall,
  DecodedEvent,
 } from './types';
- // TODO
 import {
- // TODO
  getProvider,
  fetchTransaction,
  fetchTransactionReceipt,
  fetchDebugTrace,
  getBlockTimestamp,
 } from './rpc';
- // Fix
 import { fetchABIFromExplorer } from './abi-fetcher';
 import { buildABIMap, parseTrace, decodeEvents } from './trace-parser';
- // TODO
 
 /**
  * Main function to inspect a transaction
- // Refactor
  */
- // Note
 export async function inspectTransaction(
   txHash: string,
   options: InspectorOptions = {}
@@ -39,21 +33,14 @@ export async function inspectTransaction(
   }
   
   const {
- // Optimization
- // Optimization
  rpcUrl,
- // Fix
  provider: customProvider,
  chainId,
- // Refactor
  apiKey,
  includeGasDetails = true,
  includeStorageChanges = false,
  customABIs = {},
  fetchABI = true,
- // Refactor
- // Fix
- // TODO
  useSignatureDatabase = true,
  } = options;
 
@@ -76,12 +63,10 @@ export async function inspectTransaction(
  ]);
 
  // Get block timestamp
- // TODO
  const timestamp = await getBlockTimestamp(provider, receipt.blockNumber).catch(
  () => undefined
  );
 
- // Fix
  // Collect unique contract addresses from transaction and trace
  const contractAddresses = new Set<string>();
  
@@ -96,7 +81,6 @@ export async function inspectTransaction(
  // Fetch ABIs for all contracts
  const fetchedABIs = new Map<string, any[]>();
  if (fetchABI) {
- // Note
  const abiPromises = Array.from(contractAddresses).map(async (address) => {
  try {
  const abi = await fetchABIFromExplorer(address, finalChainId, apiKey);
@@ -104,18 +88,12 @@ export async function inspectTransaction(
  fetchedABIs.set(address.toLowerCase(), abi);
  }
  } catch (error) {
- // Refactor
  // Silently fail - we'll use signature database as fallback
  }
  });
  
- // Optimization
- // Optimization
- // Update
  await Promise.all(abiPromises);
  }
- // Improvement
- // Optimization
 
  // Build ABI map
  const abiMap = buildABIMap(customABIs, fetchedABIs);
@@ -123,93 +101,62 @@ export async function inspectTransaction(
  // Parse trace if available
  let callStack: DecodedCall[] = [];
  if (trace) {
- // Optimization
- // Improvement
  try {
- // Optimization
  const rootCall = await parseTrace(trace, abiMap, useSignatureDatabase);
  callStack = [rootCall];
  } catch (error) {
  console.warn(`Failed to parse trace: ${error}`);
- // TODO
  // Create a basic call entry
- // Update
- // Fix
  callStack = [
  {
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
- // TODO
  args: [],
- // Refactor
  calldata: tx.data || '0x',
- // TODO
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
  gasUsed: receipt.gasUsed,
  value: tx.value,
- // Refactor
- // Refactor
  },
- // Fix
  ];
  }
- // Refactor
  } else {
  // No trace available, create basic call entry
  callStack = [
  {
- // Note
  to: tx.to ? getAddress(tx.to) : '',
  functionName: 'unknown',
  args: [],
  calldata: tx.data || '0x',
  signature: tx.data && tx.data.length >= 10 ? tx.data.slice(0, 10) : '',
  gasUsed: receipt.gasUsed,
- // Refactor
  value: tx.value,
  },
  ];
- // Fix
  }
- // Note
- // Fix
 
  // Decode events
  const receiptLogs = receipt.logs.map((log, idx) => ({
- // Fix
  address: log.address,
  topics: log.topics as string[],
  data: log.data,
  blockNumber: receipt.blockNumber,
  transactionIndex: receipt.index,
  logIndex: idx,
- // Optimization
  }));
 
- // Update
- // Note
- // Note
- // Improvement
  const traceLogs = trace?.logs || [];
- // Improvement
- // Optimization
  const events = decodeEvents(traceLogs, receiptLogs, abiMap, useSignatureDatabase);
 
  // Extract revert reason
  let revertReason: string | undefined;
  if (!receipt.status) {
  // Transaction failed
- // TODO
  if (callStack[0]?.revertReason) {
  revertReason = callStack[0].revertReason;
- // Optimization
  } else if (trace?.error) {
- // TODO
  revertReason = trace.error;
  } else {
  revertReason = 'Transaction reverted';
- // Fix
- // Update
  }
  }
 
@@ -217,27 +164,17 @@ export async function inspectTransaction(
  const report: TransactionReport = {
  txHash,
  blockNumber: receipt.blockNumber,
- // Refactor
  transactionIndex: receipt.index,
- // Fix
  from: getAddress(tx.from),
- // TODO
  to: tx.to ? getAddress(tx.to) : null,
  value: tx.value,
  gasPrice: tx.gasPrice || BigInt(0),
- // Fix
  gasLimit: tx.gasLimit,
- // Fix
  gasUsed: receipt.gasUsed,
- // Refactor
  status: receipt.status === 1,
- // Improvement
  callStack,
  events,
- // Note
- // TODO
  revertReason,
- // Fix
  chainId: finalChainId,
  timestamp,
  };
@@ -246,18 +183,12 @@ export async function inspectTransaction(
  if (includeStorageChanges && trace) {
  // This would require parsing storage changes from the trace
  // For now, we'll leave it empty
- // TODO
- // Note
- // Fix
  report.storageChanges = [];
- // Improvement
  }
 
  return report;
- // Fix
 }
 
- // Optimization
 /**
  * Recursively collect contract addresses from trace
  */
@@ -265,7 +196,6 @@ function collectAddressesFromTrace(
  trace: any,
  addresses: Set<string>
 ): void {
- // Fix
  if (trace.to) {
  try {
  addresses.add(getAddress(trace.to));
@@ -282,322 +212,167 @@ function collectAddressesFromTrace(
 }
 
 
- // TODO
-// Refactor
 
 
- // Optimization
-// Fix
 
- // Optimization
-// Improve
- // Improvement
 
- // Optimization
 
- // Update
-// Refactor
 
 
-// Improve
 
-// Fix
 
- // Improvement
-// Fix
 
-// Update
 
 
-// Improve
 
- // TODO
-// Improve
 
-// Update
 
 
-// Improve
 
-// Fix
 
-// Refactor
 
-// Update
 
 
-// Improve
- // TODO
 
- // Fix
-// Improve
 
-// Update
 
-// Fix
 
 
-// Improve
 
- // Fix
-// Refactor
- // Fix
 
 
-// Refactor
 
-// Fix
 
 
-// Refactor
- // Note
 
-// Refactor
 
-// Update
 
-// Refactor
 
-// Fix
 
- // Optimization
 
-// Refactor
 
-// Fix
- // Improvement
 
- // Note
-// Update
 
-// Refactor
 
 
-// Fix
 
-// Refactor
 
-// Refactor
- // Fix
 
-// Update
 
 
-// Fix
 
-// Fix
 
 
- // Refactor
-// Refactor
 
 
-// Fix
- // Refactor
 
-// Fix
 
 
-// Fix
 
 
- // TODO
-// Improve
- // Update
 
-// Fix
 
-// Improve
- // Refactor
 
-// Refactor
 
-// Fix
 
 
-// Refactor
 
-// Update
 
-// Fix
 
-// Improve
 
-// Update
 
 
- // Note
-// Refactor
 
-// Refactor
 
-// Fix
 
-// Fix
 
-// Improve
 
 
- // Refactor
-// Fix
 
-// Refactor
 
-// Refactor
 
 
-// Update
 
-// Fix
- // Refactor
- // TODO
 
-// Update
 
 
-// Update
- // Refactor
 
-// Improve
 
-// Refactor
 
-// Update
 
- // Optimization
 
-// Refactor
 
-// Refactor
 
-// Refactor
 
-// Refactor
 
-// Improve
 
 
-// Update
- // Fix
 
-// Refactor
 
-// Update
 
-// Refactor
 
 
-// Fix
- // Update
 
-// Update
 
-// Improve
 
-// Refactor
 
- // TODO
 
-// Refactor
 
-// Fix
 
 
-// Refactor
 
-// Fix
 
 
-// Refactor
 
-// Update
 
-// Fix
 
 
-// Refactor
 
 
-// Fix
 
 
-// Fix
 
 
-// Update
 
-// Fix
 
 
-// Fix
 
-// Refactor
 
-// Update
 
-// Refactor
 
 
-// Update
 
-// Refactor
 
-// Fix
 
-// Improve
 
 
-// Refactor
 
 
-// Fix
 
-// Improve
 
-// Fix
 
 
-// Refactor
 
-// Update
 
- // Note
 
-// Update
 
-// Fix
 
 
-// Fix
 
-// Update
 
-// Improve
 
 
-// Update
 
-// Update
 
 
-// Update
 
-// Update
 
-// Refactor
 
-// Improve
 
-// Fix
 
-// Refactor
 
 
-// Improve
 
 
-// Update
 
-// Improve
 
-// Fix
